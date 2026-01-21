@@ -1,0 +1,6 @@
+@AutoTrust.Api_HostAddress = http://localhost:5230
+
+GET {{AutoTrust.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

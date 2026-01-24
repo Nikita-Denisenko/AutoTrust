@@ -9,8 +9,6 @@
         public int UserId { get; private set; }
         public User? User { get; private set; }
         public DateTime CreatedAt { get; private set; }
-        public bool IsEmailVerified { get; private set; }
-        public bool IsPhoneVerified { get; private set; }
 
         private Account() { }
 
@@ -20,16 +18,11 @@
             Phone = phone;
             PasswordHash = passwordHash;
             CreatedAt = DateTime.UtcNow;
-            IsEmailVerified = false;
-            IsPhoneVerified = false;
         }
 
         public void UpdatePassword(string newPasswordHash)
         {
             PasswordHash = newPasswordHash;
         }
-
-        public void VerifyEmail() => IsEmailVerified = true;
-        public void VerifyPhone() => IsPhoneVerified = true;
     }
 }

@@ -1,4 +1,5 @@
-﻿using AutoTrust.Domain.Enums;
+﻿using AutoTrust.Domain.Entities.Listings;
+using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Domain.Entities
 {

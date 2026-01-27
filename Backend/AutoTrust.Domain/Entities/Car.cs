@@ -7,6 +7,7 @@ namespace AutoTrust.Domain.Entities
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
+        public int ReleaseYear { get; private set; }
         public string ImageUrl { get; private set; }
         public CarColor Color { get; private set; }
         public decimal EngineMileage { get; private set; }

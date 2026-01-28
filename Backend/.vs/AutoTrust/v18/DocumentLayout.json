@@ -3,72 +3,72 @@
   "WorkspaceRootPath": "D:\\Projects\\AutoTrust\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\saledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\saledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\enums\\listingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\enums\\listingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\saledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\saledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\enums\\listingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\enums\\listingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,11 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BuyDetails.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\BuyDetails.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\BuyDetails.cs",
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "SaleDetails.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\SaleDetails.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\SaleDetails.cs",
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "ListingType.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Enums\\ListingType.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Enums\\ListingType.cs",
@@ -128,8 +128,7 @@
               "RelativeToolTip": "AutoTrust.Domain\\Enums\\ListingType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T20:08:18.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T20:08:18.597Z"
             },
             {
               "$type": "Document",
@@ -157,72 +156,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Account.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Account.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Account.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Account.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Account.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-24T14:06:07.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Message.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Message.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T18:36:33.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "ChatParticipant.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\ChatParticipant.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\ChatParticipant.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\ChatParticipant.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\ChatParticipant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T18:06:49.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Chat.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Chat.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Chat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T17:56:08.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CarOwnership.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\CarOwnership.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\CarOwnership.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\CarOwnership.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\CarOwnership.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T17:21:53.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Brand.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Brand.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Brand.cs",
@@ -235,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Car.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Car.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Car.cs",
@@ -248,39 +247,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Listing.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Listing.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Listing.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Listing.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Listing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T17:07:49.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Review.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Review.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Review.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Review.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T14:59:19.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\User.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T14:57:38.769Z",
               "EditorCaption": ""
@@ -299,20 +298,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "Follow.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Follow.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Follow.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Follow.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Follow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T14:58:53.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 7,
               "Title": "City.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\City.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\City.cs",
@@ -325,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "Country.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Country.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Country.cs",
@@ -344,7 +343,7 @@
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Notification.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Notification.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T14:58:23.476Z",
               "EditorCaption": ""

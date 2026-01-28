@@ -26,7 +26,6 @@ namespace AutoTrust.Domain.Entities.Listings
             int userId,
             string description,
             ListingType type,
-            DateTime createdAt,
             int countryLocationId,
             int cityLocationId
         ) 
@@ -35,7 +34,7 @@ namespace AutoTrust.Domain.Entities.Listings
             UserId = userId;
             Description = description;
             Type = type;
-            CreatedAt = createdAt;
+            CreatedAt = DateTime.UtcNow;
             CountryLocationId = countryLocationId;
             CityLocationId = cityLocationId;
         }

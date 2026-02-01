@@ -17,7 +17,6 @@ namespace AutoTrust.Domain.Entities
         public int? CityId { get; private set; }
         public City? City { get; private set; }
         public ICollection<Listing> Listings { get; private set; } = [];
-        public ICollection<Follow> Follows { get; private set; } = [];
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
 
         private User() { }

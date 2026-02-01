@@ -1,6 +1,6 @@
 ﻿using AutoTrust.Domain.Enums;
 
-namespace AutoTrust.Domain.Entities.Listings
+namespace AutoTrust.Domain.Entities
 {
     public class Listing
     {

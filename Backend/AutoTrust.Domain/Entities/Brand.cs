@@ -8,6 +8,7 @@
         public string LogoUrl { get; private set; }
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
+        public bool IsActive { get; private set; } = true;
 
         private Brand() { }
 

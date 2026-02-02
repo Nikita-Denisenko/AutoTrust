@@ -15,7 +15,8 @@ namespace AutoTrust.Infrastructure.Configurations
 
             builder.HasOne(u => u.Account)
                 .WithOne(a => a.User)
-                .HasForeignKey<Account>(a => a.UserId);
+                .HasForeignKey<Account>(a => a.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(u => u.Country)
                 .WithMany()
@@ -33,7 +34,7 @@ namespace AutoTrust.Infrastructure.Configurations
             builder.HasMany(u => u.ChatParticipants)
                 .WithOne(cp => cp.User)
                 .HasForeignKey(cp => cp.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

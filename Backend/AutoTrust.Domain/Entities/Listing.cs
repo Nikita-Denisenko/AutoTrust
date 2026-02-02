@@ -11,9 +11,9 @@ namespace AutoTrust.Domain.Entities
         public string Description { get; private set; }
         public ListingType Type { get; private set; }
         public DateTime CreatedAt { get; private set; }
-        public int CountryLocationId { get; private set; }
+        public int CountryId { get; private set; }
         public Country Country { get; private set; }
-        public int CityLocationId { get; private set; }
+        public int CityId { get; private set; }
         public City City { get; private set; }
         public SaleDetails? SaleDetails { get; private set; }
         public BuyDetails? BuyDetails { get; private set; }
@@ -26,8 +26,8 @@ namespace AutoTrust.Domain.Entities
             int userId,
             string description,
             ListingType type,
-            int countryLocationId,
-            int cityLocationId
+            int countryId,
+            int cityId
         ) 
         { 
             Name = name;
@@ -35,8 +35,8 @@ namespace AutoTrust.Domain.Entities
             Description = description;
             Type = type;
             CreatedAt = DateTime.UtcNow;
-            CountryLocationId = countryLocationId;
-            CityLocationId = cityLocationId;
+            CountryId = countryId;
+            CityId = cityId;
         }
     }
 }

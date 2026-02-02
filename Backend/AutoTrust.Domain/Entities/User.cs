@@ -1,5 +1,4 @@
-﻿using AutoTrust.Domain.Entities.Listings;
-using AutoTrust.Domain.Enums;
+﻿using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Domain.Entities
 {
@@ -18,6 +17,7 @@ namespace AutoTrust.Domain.Entities
         public City? City { get; private set; }
         public ICollection<Listing> Listings { get; private set; } = [];
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
+        public bool IsDeleted { get; private set; } = false;
 
         private User() { }
 

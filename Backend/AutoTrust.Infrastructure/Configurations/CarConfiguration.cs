@@ -23,11 +23,13 @@ namespace AutoTrust.Infrastructure.Configurations
 
             builder.HasMany(c => c.OwnershipHistory)
                 .WithOne(oh => oh.Car)
-                .HasForeignKey(oh => oh.CarId);
+                .HasForeignKey(oh => oh.CarId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(c => c.Brand)
                 .WithMany()
-                .HasForeignKey(c => c.BrandId);
+                .HasForeignKey(c => c.BrandId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

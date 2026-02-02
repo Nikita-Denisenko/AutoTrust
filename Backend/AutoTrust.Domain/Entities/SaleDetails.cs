@@ -1,6 +1,4 @@
-﻿using AutoTrust.Domain.Entities.Listings;
-
-namespace AutoTrust.Domain.Entities
+﻿namespace AutoTrust.Domain.Entities
 {
     public class SaleDetails
     {

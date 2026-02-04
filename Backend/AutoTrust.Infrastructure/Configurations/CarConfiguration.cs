@@ -26,9 +26,9 @@ namespace AutoTrust.Infrastructure.Configurations
                 .HasForeignKey(oh => oh.CarId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(c => c.Brand)
+            builder.HasOne(c => c.Model)
                 .WithMany()
-                .HasForeignKey(c => c.BrandId)
+                .HasForeignKey(c => c.ModelId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

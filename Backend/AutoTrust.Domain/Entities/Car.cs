@@ -12,8 +12,8 @@ namespace AutoTrust.Domain.Entities
         public CarColor Color { get; private set; }
         public decimal EngineMileage { get; private set; }
         public List<CarOwnership> OwnershipHistory { get; private set; } = [];
-        public int BrandId { get; private set; }
-        public Brand Brand { get; private set; }
+        public int ModelId { get; private set; }
+        public Model Model { get; private set; }
         public int LocationCityId { get; private set; }
         public City LocationCity { get; private set; }
         public int LocationCountryId { get; private set; }
@@ -28,7 +28,7 @@ namespace AutoTrust.Domain.Entities
             string imageUrl,
             CarColor color,
             decimal engineMileage,
-            int brandId,
+            int modelId,
             int locationCityId,
             int locationCountryId
         )
@@ -38,7 +38,7 @@ namespace AutoTrust.Domain.Entities
             ImageUrl = imageUrl;
             Color = color;
             EngineMileage = engineMileage;
-            BrandId = brandId;
+            ModelId = modelId;
             LocationCityId = locationCityId;
             LocationCountryId = locationCountryId;
         }

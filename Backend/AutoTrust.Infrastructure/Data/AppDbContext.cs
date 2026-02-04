@@ -17,6 +17,7 @@ namespace AutoTrust.Infrastructure.Data
         public DbSet<Follow> Follows { get; set; }
         public DbSet<Listing> Listings { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Model> Models { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Review> Reviews { get; set; }
 

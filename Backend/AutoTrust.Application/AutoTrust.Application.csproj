@@ -12,8 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\DTOs\Responses\CreatedDtos\" />
-    <Folder Include="Models\DTOs\Responses\ReadDtos\" />
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>

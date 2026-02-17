@@ -11,7 +11,6 @@
         public DateOnly? ToDate { get; private set; }
         public int CarId { get; private set; }
         public Car Car { get; private set; }
-        public bool HasAccident { get; private set; } = false;
 
         private CarOwnership() {}
 
@@ -22,8 +21,7 @@
             decimal mileageAfter,
             DateOnly fromDate,
             DateOnly toDate,
-            int carId,
-            bool hasAnccident
+            int carId
         )
         {
             UserId = userId;
@@ -32,7 +30,6 @@
             FromDate = fromDate;
             ToDate = toDate;
             CarId = carId;
-            HasAccident = hasAnccident;
         }
     }
 }

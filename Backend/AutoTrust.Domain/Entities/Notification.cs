@@ -7,7 +7,7 @@
         public string Text { get; private set; }
         public int UserId { get; private set; }
         public User User { get; private set; }
-        public bool IsRead { get; private set; } = false;
+        public bool IsRead { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
         private Notification() { }
@@ -16,14 +16,13 @@
         (
             string title, 
             string text, 
-            int userId, 
-            bool isRead
+            int userId
         )
         {
             Title = title;
             Text = text;
             UserId = userId;
-            IsRead = isRead;
+            IsRead = false;
             CreatedAt = DateTime.UtcNow;
         }
     }

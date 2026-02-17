@@ -7,7 +7,7 @@
         public string Description { get; private set; }
         public int BrandId { get; private set; }
         public Brand Brand { get; private set; }
-        public bool IsActive { get; private set; } = true;
+        public bool IsActive { get; private set; }
 
         private Model() { }
 
@@ -15,14 +15,13 @@
         (
             string name, 
             string description, 
-            int brandId, 
-            bool isActive
+            int brandId 
         )
         {
             Name = name;
             Description = description;
             BrandId = brandId;
-            IsActive = isActive;
+            IsActive = true;
         }
     }
 }

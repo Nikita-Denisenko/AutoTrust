@@ -8,7 +8,7 @@
         public Chat Chat { get; private set; }
         public int ChatParticipantId { get; private set; }
         public ChatParticipant ChatParticipant { get; private set; }
-        public bool IsRead { get; private set; } = false;
+        public bool IsRead { get; private set; }
         public DateTime SentAt { get; private set; }
 
         private Message() { }
@@ -17,14 +17,13 @@
         (
             string text,
             int chatId,
-            int chatParticipantId,
-            bool isRead
+            int chatParticipantId
         )
         {
             Text = text; 
             ChatId = chatId; 
             ChatParticipantId = chatParticipantId; 
-            IsRead = isRead;
+            IsRead = false;
             SentAt = DateTime.UtcNow;
         }
     }

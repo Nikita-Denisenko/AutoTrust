@@ -1,7 +1,15 @@
-﻿namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 {
     public record CreateFollowDto
     (
-        
+        [Required]
+        [Range(1, int.MaxValue)]
+        int FollowerId,
+
+        [Required]
+        [Range(1, int.MaxValue)]
+        int UserId
     );
 }

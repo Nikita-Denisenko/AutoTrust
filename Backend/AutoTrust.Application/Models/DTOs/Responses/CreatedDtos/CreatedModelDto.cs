@@ -2,6 +2,8 @@
 {
     public record CreatedModelDto
     (
-        
+        int Id,
+        string Name,
+        int BrandId
     );
 }

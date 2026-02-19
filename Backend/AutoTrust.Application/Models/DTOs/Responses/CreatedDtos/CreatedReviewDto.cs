@@ -1,9 +1,10 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.CreatedDtos
 {
-    public record CreatedMessageDto
+    public record CreatedReviewDto
     (
         int Id,
-        int ChatId,
-        int ChatParticipantId
+        int Stars,
+        int ReviewerId,
+        int UserId
     );
 }

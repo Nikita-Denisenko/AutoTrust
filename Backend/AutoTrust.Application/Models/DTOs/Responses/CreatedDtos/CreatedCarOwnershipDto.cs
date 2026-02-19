@@ -2,6 +2,8 @@
 {
     public record CreatedCarOwnershipDto
     (
-        
+        int Id,
+        int UserId,
+        int CarId
     );
 }

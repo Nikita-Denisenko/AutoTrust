@@ -6,7 +6,7 @@
         public int UserId { get; private set; }
         public User User { get; private set; }
         public decimal MileageBefore { get; private set; }
-        public decimal MileageAfter { get; private set; }
+        public decimal? MileageAfter { get; private set; }
         public DateOnly FromDate { get; private set; }
         public DateOnly? ToDate { get; private set; }
         public int CarId { get; private set; }

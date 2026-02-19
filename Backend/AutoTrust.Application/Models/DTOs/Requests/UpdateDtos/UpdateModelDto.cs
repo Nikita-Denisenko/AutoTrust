@@ -1,7 +1,15 @@
-﻿namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos
 {
     public record UpdateModelDto
     (
-        
+        [MinLength(2)]
+        [MaxLength(50)]
+        string? Name,
+
+        [MinLength(1)]
+        [MaxLength(900)]
+        string? Description
     );
 }

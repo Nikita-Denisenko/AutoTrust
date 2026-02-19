@@ -2,6 +2,8 @@
 {
     public record CreatedFollowDto
     (
-        
+        int Id,
+        int FollowerId,
+        int UserId
     );
 }

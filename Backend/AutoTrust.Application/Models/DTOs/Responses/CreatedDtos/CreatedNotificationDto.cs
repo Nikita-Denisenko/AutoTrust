@@ -2,6 +2,8 @@
 {
     public record CreatedNotificationDto
     (
-        
+        int Id,
+        string Title,
+        int UserId
     );
 }

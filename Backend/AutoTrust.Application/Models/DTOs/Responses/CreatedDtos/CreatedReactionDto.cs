@@ -2,6 +2,9 @@
 {
     public record CreatedReactionDto
     (
-        
+        int Id,
+        string Name,
+        int UserId,
+        int ListingId
     );
 }

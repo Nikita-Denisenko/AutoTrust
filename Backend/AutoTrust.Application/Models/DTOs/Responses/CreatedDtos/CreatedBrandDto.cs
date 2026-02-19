@@ -2,6 +2,8 @@
 {
     public record CreatedBrandDto
     (
-        
+        int Id,
+        string Name,
+        int CountryId
     );
 }

@@ -7,7 +7,7 @@ namespace AutoTrust.Domain.Entities
         public int Id { get; private set; }
         public string Name { get; private set; }
         public DateOnly BirthDate { get; private set; }
-        public string AvatarUrl { get; private set; }
+        public string? AvatarUrl { get; private set; } 
         public Gender Gender { get; private set; }
         public string AboutInfo { get; private set; } = string.Empty;
         public Account? Account { get; private set; }

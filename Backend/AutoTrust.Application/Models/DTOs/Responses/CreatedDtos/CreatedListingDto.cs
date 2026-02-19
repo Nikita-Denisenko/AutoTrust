@@ -2,6 +2,10 @@
 {
     public record CreatedListingDto
     (
-        
+        int Id,
+        string Name,
+        int UserId,
+        int CountryId,
+        int CityId
     );
 }

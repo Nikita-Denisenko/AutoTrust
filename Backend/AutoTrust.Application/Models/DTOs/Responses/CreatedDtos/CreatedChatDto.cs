@@ -2,6 +2,7 @@
 {
     public record CreatedChatDto
     (
-        
+        int Id,
+        string Name
     );
 }

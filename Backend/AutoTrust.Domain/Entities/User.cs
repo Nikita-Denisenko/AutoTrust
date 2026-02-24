@@ -18,6 +18,7 @@ namespace AutoTrust.Domain.Entities
         public ICollection<Listing> Listings { get; private set; } = [];
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
         public bool IsDeleted { get; private set; } = false;
+        public bool IsBlocked { get; private set; } = false;
 
         private User() { }
 

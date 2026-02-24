@@ -19,6 +19,8 @@ namespace AutoTrust.Domain.Entities
         public int LocationCountryId { get; private set; }
         public Country LocationCountry { get; private set; }
         public bool HasAccident { get; private set; } = false;
+        public bool InSale { get; private set; } = false;
+        public bool IsDeleted { get; private set; } = false;
 
         private Car() { }
 
@@ -46,6 +48,7 @@ namespace AutoTrust.Domain.Entities
             LocationCityId = locationCityId;
             LocationCountryId = locationCountryId;
             HasAccident = hasAccident;
+            InSale = false;
         }
     }
 }

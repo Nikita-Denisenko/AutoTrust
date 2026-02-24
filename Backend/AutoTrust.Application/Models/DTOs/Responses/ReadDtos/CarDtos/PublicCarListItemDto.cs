@@ -2,7 +2,7 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
 {
-    public record CarListItemDto
+    public record PublicCarListItemDto
     (
         int Id,
         int ReleaseYear,

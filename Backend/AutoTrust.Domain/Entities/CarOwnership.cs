@@ -12,6 +12,8 @@
         public int CarId { get; private set; }
         public Car Car { get; private set; }
 
+        public bool IsCurrent => ToDate == null;
+
         private CarOwnership() {}
 
         public CarOwnership

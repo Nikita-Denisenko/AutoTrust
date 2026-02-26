@@ -21,6 +21,8 @@ namespace AutoTrust.Infrastructure.Data
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Reaction> Reactions { get; set; }
+        public DbSet<SaleDetails> SaleDetails { get; set; }
+        public DbSet<BuyDetails> BuyDetails { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

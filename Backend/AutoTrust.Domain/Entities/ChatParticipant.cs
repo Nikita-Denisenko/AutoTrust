@@ -8,16 +8,21 @@
         public int ChatId { get; private set; }
         public Chat Chat { get; private set; }
 
+        public string? UserAvatarUrl { get; private set; }
+        public string UserName { get; private set; }
+
         private ChatParticipant() { }
 
         public ChatParticipant
         (
-            int userId, 
-            int chatId 
+            int chatId,
+            User user
         )
         {
-            UserId = userId;
+            UserId = user.Id;
             ChatId = chatId;
+            UserAvatarUrl = user.AvatarUrl;
+            UserName = user.Name;
         }
     }
 }

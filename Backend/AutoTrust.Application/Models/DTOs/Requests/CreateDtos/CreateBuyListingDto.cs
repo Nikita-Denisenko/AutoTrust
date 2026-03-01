@@ -29,7 +29,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 
         [Required]
         [Range(1, int.MaxValue)]
-        int BrandId,
+        int ModelId,
 
         [Range(0, int.MaxValue)]
         decimal? MinPrice,

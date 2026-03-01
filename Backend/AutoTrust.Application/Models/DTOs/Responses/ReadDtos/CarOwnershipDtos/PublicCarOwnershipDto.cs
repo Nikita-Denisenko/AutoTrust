@@ -1,10 +1,11 @@
-﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarOwnershipDtos
+﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
+
+namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarOwnershipDtos
 {
     public record PublicCarOwnershipDto
     (
         int Id,
-        int UserId,
-        string UserName,
+        UserShortDto User,
         decimal MileageBefore,
         decimal? MileageAfter,
         DateOnly FromDate,

@@ -5,8 +5,8 @@
         public int Id { get; private set; }
         public int FollowerId { get; private set; }
         public User Follower {  get; private set; }
-        public int UserId { get; private set; }
-        public User User { get; private set; }
+        public int TargetId { get; private set; }
+        public User Target { get; private set; }
         public DateTime FollowedAt { get; private set; }
 
         private Follow() { }
@@ -14,11 +14,11 @@
         public Follow
         (
             int followerId,
-            int userId
+            int targetId
         ) 
         { 
             FollowerId = followerId;
-            UserId = userId;
+            TargetId = targetId;
             FollowedAt = DateTime.UtcNow;
         }
     }

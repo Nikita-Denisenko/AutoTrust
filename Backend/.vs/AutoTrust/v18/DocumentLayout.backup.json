@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "D:\\Projects\\AutoTrust\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\followdtos\\userfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\followdtos\\userfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|d:\\projects\\autotrust\\backend\\autotrust.infrastructure\\configurations\\followconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|solutionrelative:autotrust.infrastructure\\configurations\\followconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\adminchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\adminchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatdtos\\userchatinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\countrydtos\\countryshortdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\countrydtos\\countryshortdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\countrydtos\\countryinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\countrydtos\\countryinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\citydtos\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\citydtos\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatparticipantdtos\\chatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatparticipantdtos\\chatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\chatparticipantdtos\\shortchatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\chatparticipantdtos\\shortchatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\createdtos\\createchatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\createdtos\\createchatparticipantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chatparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publicuserownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,28 +51,16 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publicownershiplistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\messagedtos\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\messagedtos\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publiccarownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publiccarownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershiplistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershiplistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publiccarownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\publiccarownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\carownershipdtos\\adminownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\publiccarlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,36 +71,80 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\publiccardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\admincarlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\admincarlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\admincardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\cardtos\\admincardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\publicbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbrandlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|d:\\projects\\autotrust\\backend\\autotrust.infrastructure\\configurations\\carconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|solutionrelative:autotrust.infrastructure\\configurations\\carconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\branddtos\\adminbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\adminaccountlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\adminaccountlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\adminaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\adminaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\accountdtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\reaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\reaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\carownership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\createddtos\\createdbranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -129,14 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\createddtos\\createdcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -161,14 +189,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\createddtos\\createdmodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\createddtos\\createdmodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\reaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\reaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -178,31 +198,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 30,
               "Title": "Car.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Car.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Car.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Car.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Car.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T14:05:47.196Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "Listing.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Listing.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Listing.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Listing.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Listing.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAywCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-19T19:56:27.255Z",
               "IsPinned": true,
@@ -210,33 +229,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateChatParticipantDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatParticipantDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatParticipantDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatParticipantDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatParticipantDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FollowConfiguration.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
+              "RelativeToolTip": "AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:50:42.078Z",
+              "WhenOpened": "2026-03-01T16:13:54.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ChatParticipant.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\ChatParticipant.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\ChatParticipant.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\ChatParticipant.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\ChatParticipant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "AdminChatDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:38:36.695Z",
+              "WhenOpened": "2026-03-01T15:50:12.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserChatInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatInfoDto.cs",
@@ -244,103 +263,12 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatInfoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:28:41.571Z",
+              "WhenOpened": "2026-03-01T15:50:12.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MessageDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:15:48.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Message.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:14:58.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShortChatParticipantDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ShortChatParticipantDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ShortChatParticipantDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ShortChatParticipantDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ShortChatParticipantDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T17:02:51.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatParticipantDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:43:13.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Chat.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Chat.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Chat.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:24:00.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserChatListItemDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:12:17.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminChatDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:09:32.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PublicUserOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicUserOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicUserOwnershipDto.cs",
@@ -348,7 +276,46 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicUserOwnershipDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:09:29.745Z",
+              "WhenOpened": "2026-03-01T15:50:05.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PublicOwnershipListItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:50:04.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PublicCarOwnershipDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:50:03.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminOwnershipListItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:50:02.266Z",
               "EditorCaption": ""
             },
             {
@@ -361,113 +328,231 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:09:28.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminOwnershipListItemDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:09:27.498Z",
+              "WhenOpened": "2026-03-01T15:50:00.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "PublicCarOwnershipDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T16:09:26.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CarConfiguration.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
-              "RelativeToolTip": "AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T14:58:45.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AdminCarDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T14:53:44.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PublicOwnershipListItemDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T14:34:14.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "PublicCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T14:33:52.686Z",
+              "WhenOpened": "2026-03-01T15:49:58.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "AdminCarListItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T14:16:11.409Z",
+              "WhenOpened": "2026-03-01T15:49:55.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminCarDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:49:55.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdminBrandDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:49:51.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdminAccountListItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:49:48.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdminAccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:49:47.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:49:31.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountryShortDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryShortDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryShortDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryShortDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryShortDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:37:40.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CountryInfoDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryInfoDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryInfoDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryInfoDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CountryDtos\\CountryInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:27:06.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserFollowDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:24:22.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CityDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CityDtos\\CityDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CityDtos\\CityDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CityDtos\\CityDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CityDtos\\CityDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T15:24:02.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Follow.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Follow.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Follow.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Follow.cs",
+              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Follow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T21:19:18.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "Model.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Model.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Model.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Model.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Model.cs",
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Message.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
+              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Message.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T13:53:36.857Z"
+              "WhenOpened": "2026-02-26T21:19:13.911Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
+              "Title": "ChatParticipantDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatParticipantDtos\\ChatParticipantDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T16:43:13.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Chat.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
+              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Chat.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T16:24:00.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserChatListItemDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T16:12:17.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "AutoTrust.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T14:16:11.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "PublicCarListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarListItemDto.cs",
@@ -480,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 36,
               "Title": "CreatedBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedBrandDto.cs",
@@ -492,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "CreateSaleListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateSaleListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateSaleListingDto.cs",
@@ -504,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "CreateBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateBrandDto.cs",
@@ -516,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Review.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Review.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Review.cs",
@@ -528,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "AdminBrandListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandListItemDto.cs",
@@ -536,23 +621,25 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandListItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T17:49:50.142Z"
+              "WhenOpened": "2026-02-21T17:49:50.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 27,
               "Title": "Country.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Country.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Country.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Country.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Country.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T17:34:35.87Z"
+              "WhenOpened": "2026-02-21T17:34:35.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 19,
               "Title": "PublicBrandListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandListItemDto.cs",
@@ -560,11 +647,12 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandListItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T17:32:12.916Z"
+              "WhenOpened": "2026-02-21T17:32:12.916Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 20,
               "Title": "PublicBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandDto.cs",
@@ -572,11 +660,12 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T17:30:28.611Z"
+              "WhenOpened": "2026-02-21T17:30:28.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "CreatedFollowDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedFollowDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedFollowDto.cs",
@@ -588,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "CreatedChatParticipantDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedChatParticipantDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedChatParticipantDto.cs",
@@ -600,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "CreatedReviewDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReviewDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReviewDto.cs",
@@ -612,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 32,
               "Title": "Reaction.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Reaction.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Reaction.cs",
@@ -624,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "CreatedReactionDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReactionDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReactionDto.cs",
@@ -636,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "CreatedMessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedMessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedMessageDto.cs",
@@ -648,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 35,
               "Title": "Notification.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Notification.cs",
@@ -660,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "CreatedCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarDto.cs",
@@ -672,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 34,
               "Title": "CarOwnership.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\CarOwnership.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\CarOwnership.cs",
@@ -684,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "BuyDetails.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\BuyDetails.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\BuyDetails.cs",
@@ -696,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": "CreatedModelDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedModelDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedModelDto.cs",

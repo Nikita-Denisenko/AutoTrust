@@ -1,4 +1,5 @@
-﻿using AutoTrust.Domain.Enums;
+﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
+using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
 {
@@ -14,7 +15,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
         int OwnershipsQuantity,
         int ModelId,
         string ModelName,
-        string LocationDisplayName,
+        LocationDto Location,
         bool HasAccident,
         bool InSale
     );

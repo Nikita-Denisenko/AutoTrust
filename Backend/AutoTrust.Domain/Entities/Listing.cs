@@ -17,6 +17,8 @@ namespace AutoTrust.Domain.Entities
         public City City { get; private set; }
         public SaleDetails? SaleDetails { get; private set; }
         public BuyDetails? BuyDetails { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
+        public bool IsActive { get; private set; } = true;
 
         private Listing() { }
 

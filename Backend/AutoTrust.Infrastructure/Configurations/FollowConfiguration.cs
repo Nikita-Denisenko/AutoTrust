@@ -13,9 +13,9 @@ namespace AutoTrust.Infrastructure.Configurations
             builder.Property(f => f.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.HasOne(f => f.User)
+            builder.HasOne(f => f.Target)
                 .WithMany()
-                .HasForeignKey(f => f.UserId)
+                .HasForeignKey(f => f.TargetId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(f => f.Follower)

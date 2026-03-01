@@ -7,8 +7,8 @@ namespace AutoTrust.Domain.Entities
         public int Id { get; private set; }
         public int ListingId { get; private set; }
         public Listing Listing { get; private set; }
-        public int BrandId { get; private set; }
-        public Brand Brand { get; private set; }
+        public int ModelId { get; private set; }
+        public Model Model { get; private set; }
         public decimal MinPrice { get; private set; }
         public decimal MaxPrice { get; private set; }   
         public int MinReleaseYear { get; private set; }
@@ -20,7 +20,7 @@ namespace AutoTrust.Domain.Entities
         public BuyDetails
         (
             int listingId, 
-            int brandId,
+            int modelId,
             decimal minPrice, 
             decimal maxPrice, 
             int minReleaseYear, 
@@ -29,7 +29,7 @@ namespace AutoTrust.Domain.Entities
         )
         {
             ListingId = listingId;
-            BrandId = brandId;
+            ModelId = modelId;
             MinPrice = minPrice;
             MaxPrice = maxPrice;
             MinReleaseYear = minReleaseYear;

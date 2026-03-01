@@ -7,6 +7,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatDtos
         int Id,
         string Name,
         string CompanionAvatarUrl,
-        List<MessageDto> LastMessage
+        MessageDto LastMessage
     );
 }

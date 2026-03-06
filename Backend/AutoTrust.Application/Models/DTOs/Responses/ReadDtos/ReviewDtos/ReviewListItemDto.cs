@@ -2,11 +2,10 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReviewDtos
 {
-    public record ReviewDto
+    public record ReviewListItemDto
     (
         int Id,
         string Title,
-        string Message,
         int Stars,
         UserShortDto Reviewer,
         DateTime CreatedAt

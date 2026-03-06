@@ -9,6 +9,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos
     public record FeedListingDto
     (
         int Id,
+        string Name,
         UserShortDto Author,
         ListingType Type,
         DateTime CreatedAt,

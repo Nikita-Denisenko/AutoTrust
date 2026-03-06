@@ -10,7 +10,7 @@
         public int ListingId { get; private set; }
         public Listing Listing { get; private set; }
 
-        public DateTime ReactedAt { get; private set; }
+        public DateTime CreatedAt { get; private set; }
 
         private Reaction() { }
 
@@ -26,7 +26,7 @@
             Name = name;
             UserId = userId;
             ListingId = listingId;
-            ReactedAt = DateTime.UtcNow;
+            CreatedAt = DateTime.UtcNow;
         }
     }
 }

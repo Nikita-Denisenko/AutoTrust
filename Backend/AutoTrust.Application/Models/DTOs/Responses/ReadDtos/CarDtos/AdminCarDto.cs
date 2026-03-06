@@ -1,4 +1,5 @@
 ﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
 using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
@@ -13,8 +14,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
         string StateNumber,
         decimal EngineMileage,
         int OwnershipsQuantity,
-        int ModelId,
-        string ModelName,
+        ModelShortDto Model,
         LocationDto Location,
         bool HasAccident,
         bool InSale,

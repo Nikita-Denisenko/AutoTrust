@@ -2,11 +2,12 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReactionDtos
 {
-    public record ReactionDto
+    public record AdminListingReactionDto
     (
         int Id,
         string Emoji,
         UserShortDto User,
-        DateTime CreatedAt
+        DateTime CreatedAt,
+        bool IsDeleted
     );
 }

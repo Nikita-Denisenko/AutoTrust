@@ -2,13 +2,14 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReviewDtos
 {
-    public record ReviewDto
+    public record AdminReviewToUserDto
     (
         int Id,
         string Title,
         string Message,
         int Stars,
         UserShortDto Reviewer,
-        DateTime CreatedAt
+        DateTime CreatedAt,
+        bool IsDeleted
     );
 }

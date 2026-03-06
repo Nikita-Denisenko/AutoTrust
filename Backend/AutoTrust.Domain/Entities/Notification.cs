@@ -9,6 +9,7 @@
         public User User { get; private set; }
         public bool IsRead { get; private set; }
         public DateTime CreatedAt { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
         private Notification() { }
 

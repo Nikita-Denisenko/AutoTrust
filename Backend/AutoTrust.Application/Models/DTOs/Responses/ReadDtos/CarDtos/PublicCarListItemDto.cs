@@ -1,4 +1,5 @@
 ﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
 using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
@@ -7,7 +8,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
     (
         int Id,
         int ReleaseYear,
-        string ModelName,
+        ModelShortDto Model,
         string ImageUrl,
         CarColor Color,
         LocationDto Location,

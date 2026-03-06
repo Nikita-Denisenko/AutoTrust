@@ -4,12 +4,14 @@
     {
         public int Id { get; private set; }
         public int Stars { get; private set; }
+        public string Title { get; private set; }
         public string Message { get; private set; }
         public int ReviewerId { get; private set; }
         public User Reviewer { get; private set; }
         public int UserId { get; private set; }
         public User User { get; private set; }
         public DateTime CreatedAt { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
         private Review() { }
 

@@ -1,9 +1,9 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.NotificationDtos
 {
-    public record NotificationDto
+    public record NotificationListItemDto
     (
+        int Id,
         string Title,
-        string Text,
         bool IsRead,
         DateTime CreatedAt
     );

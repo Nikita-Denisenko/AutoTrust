@@ -2,11 +2,10 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos
 {
-    public record ModelDto
+    public record ModelListItemDto
     (
         int Id,
         string Name,
-        string Description,
         string ModelImageUrl,
         BrandShortDto Brand
     );

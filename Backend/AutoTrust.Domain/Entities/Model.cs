@@ -5,6 +5,7 @@
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
+        public string ModelImageUrl { get; private set; }
         public int BrandId { get; private set; }
         public Brand Brand { get; private set; }
         public bool IsActive { get; private set; }
@@ -15,11 +16,13 @@
         (
             string name, 
             string description, 
+            string modelImageUrl,
             int brandId 
         )
         {
             Name = name;
             Description = description;
+            ModelImageUrl = modelImageUrl;
             BrandId = brandId;
             IsActive = true;
         }

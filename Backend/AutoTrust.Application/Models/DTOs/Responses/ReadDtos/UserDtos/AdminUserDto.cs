@@ -3,7 +3,7 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
 {
-    public record UserProfileDto
+    public record AdminUserDto
     (
         int Id,
         string Name,
@@ -11,6 +11,8 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
         string? AvatarUrl,
         Gender Gender,
         string AboutInfo,
-        LocationDto Location
+        LocationDto Location,
+        bool IsDeleted,
+        bool IsBlocked
     );
 }

@@ -23,6 +23,7 @@ namespace AutoTrust.Infrastructure.Data
         public DbSet<Reaction> Reactions { get; set; }
         public DbSet<SaleDetails> SaleDetails { get; set; }
         public DbSet<BuyDetails> BuyDetails { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

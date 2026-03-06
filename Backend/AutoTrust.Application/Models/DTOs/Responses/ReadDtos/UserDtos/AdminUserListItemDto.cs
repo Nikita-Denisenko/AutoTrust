@@ -1,16 +1,15 @@
 ﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
-using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
 {
-    public record UserProfileDto
+    public record AdminUserListItemDto
     (
         int Id,
         string Name,
         DateOnly BirthDate,
         string? AvatarUrl,
-        Gender Gender,
-        string AboutInfo,
-        LocationDto Location
+        LocationDto Location,
+        bool IsDeleted,
+        bool IsBlocked
     );
 }

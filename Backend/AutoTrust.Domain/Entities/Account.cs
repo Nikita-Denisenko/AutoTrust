@@ -1,10 +1,14 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using AutoTrust.Domain.ValueObjects;
+using System.Numerics;
+using System.Text.RegularExpressions;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Account
     {
         public int Id { get; private set; }
-        public string Email { get; private set; }
-        public string Phone { get; private set; }
+        public Email Email { get; private set; }
+        public Phone Phone { get; private set; }
         public string PasswordHash { get; private set; }
         public int UserId { get; private set; }
         public User? User { get; private set; }
@@ -12,17 +16,33 @@
 
         private Account() { }
 
-        public Account(string email, string phone, string passwordHash)
+        public Account(Email email, Phone phone, string passwordHash, int userId)
         {
-            Email = email;
-            Phone = phone;
+            Email = email ?? throw new ArgumentNullException(nameof(email));
+            Phone = phone ?? throw new ArgumentNullException(nameof(phone));
+
+            if (string.IsNullOrWhiteSpace(passwordHash))
+                throw new ArgumentException("Password hash cannot be empty");
+
+            if (userId <= 0)
+                throw new ArgumentException("UserId must be positive");
+
             PasswordHash = passwordHash;
+            UserId = userId;
             CreatedAt = DateTime.UtcNow;
         }
 
         public void UpdatePassword(string newPasswordHash)
         {
+            if (string.IsNullOrWhiteSpace(newPasswordHash))
+                throw new ArgumentException("Password hash cannot be empty");
+
             PasswordHash = newPasswordHash;
+        }
+
+        public void UpdatePhone(Phone newPhone)
+        {
+            Phone = newPhone ?? throw new ArgumentNullException(nameof(newPhone));
         }
     }
 }

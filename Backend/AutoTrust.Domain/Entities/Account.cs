@@ -1,6 +1,4 @@
 ﻿using AutoTrust.Domain.ValueObjects;
-using System.Numerics;
-using System.Text.RegularExpressions;
 
 namespace AutoTrust.Domain.Entities
 {
@@ -11,7 +9,7 @@ namespace AutoTrust.Domain.Entities
         public Phone Phone { get; private set; }
         public string PasswordHash { get; private set; }
         public int UserId { get; private set; }
-        public User? User { get; private set; }
+        public User User { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
         private Account() { }

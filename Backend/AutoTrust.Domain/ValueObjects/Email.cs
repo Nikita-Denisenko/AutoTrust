@@ -10,6 +10,7 @@ namespace AutoTrust.Domain.ValueObjects
         {
             if (!IsValid(value))
                 throw new ArgumentException("Email is not valid.");
+
             Value = value;
         }
 

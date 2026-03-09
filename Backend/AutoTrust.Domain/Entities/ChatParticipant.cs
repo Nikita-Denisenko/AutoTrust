@@ -8,21 +8,22 @@
         public int ChatId { get; private set; }
         public Chat Chat { get; private set; }
 
-        public string? UserAvatarUrl { get; private set; }
-        public string UserName { get; private set; }
-
         private ChatParticipant() { }
 
         public ChatParticipant
         (
-            int chatId,
-            User user
+            int userId,
+            int chatId
         )
         {
-            UserId = user.Id;
+            if (userId <= 0)
+                throw new ArgumentException("UserId must be positive!");
+
+            if (chatId <= 0)
+                throw new ArgumentException("ChatId must be positive!");
+
+            UserId = userId;
             ChatId = chatId;
-            UserAvatarUrl = user.AvatarUrl;
-            UserName = user.Name;
         }
     }
 }

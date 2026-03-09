@@ -2,14 +2,10 @@
 
 namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 {
-    public record CreateChatParticipantDto
+    public record CreateChatDto
     (
         [Required]
         [Range(1, int.MaxValue)]
-        int UserId,
-
-        [Required]
-        [Range(1, int.MaxValue)]
-        int ChatId
+        int CompanionId
     );
 }

@@ -1,4 +1,4 @@
-﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatParticipantDtos;
+﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatDtos
 {
@@ -8,6 +8,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatDtos
         int LastMessageId,
         DateTime CreatedAt,
         int PinnedMessageId,
-        List<ChatParticipantDto> ChatParticipants
+        List<UserShortDto> Participants
     );
 }

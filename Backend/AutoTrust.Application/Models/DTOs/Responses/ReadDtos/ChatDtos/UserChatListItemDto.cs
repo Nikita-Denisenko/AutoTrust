@@ -1,12 +1,12 @@
 ﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.MessageDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatDtos
 {
     public record UserChatListItemDto
     (
         int Id,
-        string Name,
-        string CompanionAvatarUrl,
+        UserShortDto Companion,
         MessageDto LastMessage
     );
 }

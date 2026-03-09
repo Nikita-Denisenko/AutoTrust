@@ -6,32 +6,61 @@
         public int UserId { get; private set; }
         public User User { get; private set; }
         public decimal MileageBefore { get; private set; }
-        public decimal? MileageAfter { get; private set; }
+        public decimal? MileageAfter { get; private set; } 
         public DateOnly FromDate { get; private set; }
         public DateOnly? ToDate { get; private set; }
+        public bool HadMajorRepair { get; private set; } = false;
         public int CarId { get; private set; }
         public Car Car { get; private set; }
+        public bool IsCurrent { get; private set; }
 
-        public bool IsCurrent => ToDate == null;
-
-        private CarOwnership() {}
+        private CarOwnership() { }
 
         public CarOwnership
         (
             int userId,
             decimal mileageBefore,
-            decimal mileageAfter,
+            decimal? mileageAfter,
             DateOnly fromDate,
-            DateOnly toDate,
+            DateOnly? toDate,
             int carId
         )
         {
+            if (userId <= 0) 
+                throw new ArgumentException("UserId must be positive");
+
+            if (carId <= 0) 
+                throw new ArgumentException("CarId must be positive");
+
+            if (mileageBefore < 0) 
+                throw new ArgumentException("Mileage cannot be negative");
+
+            if (mileageAfter < 0)
+                throw new ArgumentException("Mileage cannot be negative");
+
             UserId = userId;
             MileageBefore = mileageBefore;
-            MileageAfter = mileageAfter;
             FromDate = fromDate;
             ToDate = toDate;
             CarId = carId;
+            IsCurrent = toDate == null;
+        }
+
+        public void MakeMajorRepair() 
+        {
+            if (HadMajorRepair) 
+                throw new InvalidOperationException("MajorRepair was already done!");
+
+            HadMajorRepair = true;
+        }
+
+        public void EndOwnership(decimal mileageAfter)
+        {
+            if (!IsCurrent) 
+                throw new InvalidOperationException("Only current owner can end ownership!");
+
+            MileageAfter = mileageAfter;
+            ToDate = DateOnly.FromDateTime(DateTime.UtcNow);
         }
     }
 }

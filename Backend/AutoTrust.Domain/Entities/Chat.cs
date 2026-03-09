@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace AutoTrust.Domain.Entities
+﻿namespace AutoTrust.Domain.Entities
 {
     public class Chat
     {
@@ -13,5 +11,15 @@ namespace AutoTrust.Domain.Entities
         {
             CreatedAt = DateTime.UtcNow;
         }
+
+        public void PinMessage(int messageId)
+        {
+            if (messageId <= 0)
+                throw new ArgumentException("MessageId must be positive!");
+
+            PinnedMessageId = messageId;
+        } 
+
+        public void UnpinCurrentMessage() => PinnedMessageId = null;
     }
 }

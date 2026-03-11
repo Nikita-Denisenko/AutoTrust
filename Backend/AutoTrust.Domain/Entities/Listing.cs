@@ -11,6 +11,7 @@ namespace AutoTrust.Domain.Entities
         public string Description { get; private set; }
         public ListingType Type { get; private set; }
         public DateTime CreatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; private set; } = null;
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
         public int CityId { get; private set; }
@@ -31,7 +32,22 @@ namespace AutoTrust.Domain.Entities
             int countryId,
             int cityId
         ) 
-        { 
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Name cannot be empty!");
+
+            if (userId <= 0)
+                throw new ArgumentException("UserId must be positive!");
+
+            if (string.IsNullOrWhiteSpace(description))
+                throw new ArgumentException("Description cannot be empty!");
+
+            if (countryId <= 0) 
+                throw new ArgumentException("CountryId must be positive!");
+
+            if (cityId <= 0) 
+                throw new ArgumentException("CityId must be positive!");
+
             Name = name;
             UserId = userId;
             Description = description;
@@ -40,5 +56,22 @@ namespace AutoTrust.Domain.Entities
             CountryId = countryId;
             CityId = cityId;
         }
+
+        public void UpdateInfo(string? newName, string? newDescription)
+        {
+            if (newName != null && string.IsNullOrWhiteSpace(newName))
+                throw new ArgumentException("Listing Name cannot be empty!");
+
+            if (newDescription != null && string.IsNullOrWhiteSpace(newDescription))
+                throw new ArgumentException("Description cannot be empty!");
+
+            Name = newName ?? Name;
+            Description = newDescription ?? Description;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void Delete() => IsDeleted = true;
+        public void Deactivate() => IsActive = false;
+        public void Activate() => IsActive = true;
     }
 }

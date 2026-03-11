@@ -49,7 +49,7 @@
         public void UpdateDescription(string newDescription)
         {
             if (string.IsNullOrWhiteSpace(newDescription))
-                throw new ArgumentException("Name cannot be empty!");
+                throw new ArgumentException("Description cannot be empty!");
 
             Description = newDescription;
         }
@@ -64,5 +64,6 @@
         }
 
         public void Deactivate() => IsActive = false;
+        public void Activate() => IsActive = true;
     }
 }

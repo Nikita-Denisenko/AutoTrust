@@ -76,29 +76,29 @@ namespace AutoTrust.Domain.Entities
 
         public void UpdateInfo
         (
-            string description,
-            string imageUrl,
-            CarColor color,
-            StateNumber stateNumber,
-            decimal engineMileage,
-            bool hasAccident
+            string? description,
+            string? imageUrl,
+            CarColor? color,
+            StateNumber? stateNumber,
+            decimal? engineMileage,
+            bool? hasAccident
         ) 
         {
-            if (string.IsNullOrWhiteSpace(description))
+            if (description != null && string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
 
-            if (string.IsNullOrWhiteSpace(imageUrl))
+            if (imageUrl != null && string.IsNullOrWhiteSpace(imageUrl))
                 throw new ArgumentException("ImageUrl cannot be empty!");
 
             if (engineMileage < 0)
                 throw new ArgumentException("Engine mileage cannot be negative!");
 
-            Description = description;
-            ImageUrl= imageUrl;
-            Color = color;
-            StateNumber = stateNumber;
-            EngineMileage = engineMileage;  
-            HasAccident = hasAccident;
+            Description = description ?? Description;
+            ImageUrl= imageUrl ?? ImageUrl;
+            Color = color ?? Color;
+            StateNumber = stateNumber ?? StateNumber;
+            EngineMileage = engineMileage ?? EngineMileage;  
+            HasAccident = hasAccident ?? HasAccident;
         }
 
         public void MakeForSale() => InSale = true;

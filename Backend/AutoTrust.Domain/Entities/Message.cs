@@ -8,7 +8,7 @@
         public Chat Chat { get; private set; }
         public int ChatParticipantId { get; private set; }
         public ChatParticipant ChatParticipant { get; private set; }
-        public bool IsRead { get; private set; }
+        public bool IsRead { get; private set; } = false;
         public bool IsDeleted { get; private set; } = false;
         public DateTime SentAt { get; private set; }
 
@@ -21,11 +21,30 @@
             int chatParticipantId
         )
         {
+            if (string.IsNullOrWhiteSpace(text))
+                throw new ArgumentException("Message cannot be empty!");
+
+            if (chatId <= 0)
+                throw new ArgumentException("ChatId must be positive!");
+
+            if (chatParticipantId <= 0)
+                throw new ArgumentException("ChatParticipantId must be positive!");
+
             Text = text; 
             ChatId = chatId; 
             ChatParticipantId = chatParticipantId; 
-            IsRead = false;
             SentAt = DateTime.UtcNow;
         }
+
+        public void Update(string newText)
+        {
+            if (string.IsNullOrWhiteSpace(newText))
+                throw new ArgumentException("Message cannot be empty!");
+
+            Text = newText;
+        }
+
+        public void Delete() => IsDeleted = true;
+        public void Read() => IsRead = true;
     }
 }

@@ -8,6 +8,7 @@
         public int TargetId { get; private set; }
         public User Target { get; private set; }
         public DateTime FollowedAt { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
         private Follow() { }
 
@@ -16,10 +17,18 @@
             int followerId,
             int targetId
         ) 
-        { 
+        {
+            if (followerId <= 0)
+                throw new ArgumentException("FollowerId must be positive!");
+
+            if (targetId <= 0)
+                throw new ArgumentException("TargetId must be positive!");
+
             FollowerId = followerId;
             TargetId = targetId;
             FollowedAt = DateTime.UtcNow;
         }
+
+        public void Delete() => IsDeleted = true;
     }
 }

@@ -18,9 +18,26 @@
             decimal price
         )
         {
+            if (listingId <= 0)
+                throw new ArgumentException("ListingId must be positive!");
+
+            if (carId <= 0)
+                throw new ArgumentException("CarId must be positive!");
+
+            if (price < 0)
+                throw new ArgumentException("Price cannot be negative!");
+
             ListingId = listingId;
             CarId = carId;
             Price = price;
+        }
+
+        public void UpdatePrice(decimal newPrice)
+        {
+            if (newPrice < 0)
+                throw new ArgumentException("Price cannot be negative!");
+
+            Price = newPrice;
         }
     }
 }

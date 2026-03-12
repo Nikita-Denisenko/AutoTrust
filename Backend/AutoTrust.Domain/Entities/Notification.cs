@@ -1,4 +1,6 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Notification
     {
@@ -20,10 +22,34 @@
             int userId
         )
         {
+            if (string.IsNullOrWhiteSpace(title))
+                throw new ArgumentException("Title cannot be empty");
+
+            if (string.IsNullOrWhiteSpace(text))
+                throw new ArgumentException("Text cannot be empty");
+
+            if (userId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
+
             Title = title;
             Text = text;
             UserId = userId;
             CreatedAt = DateTime.UtcNow;
         }
+
+        public void Update(string? newTitle, string? newText)
+        {
+            if (newTitle != null && string.IsNullOrWhiteSpace(newTitle))
+                throw new ArgumentException("Title cannot be empty");
+
+            if (newText != null && string.IsNullOrWhiteSpace(newText))
+                throw new ArgumentException("Text cannot be empty");
+
+            Title = newTitle ?? Title;
+            Text = newText ?? Text;
+        }
+
+        public void MakeAsRead() => IsRead = true;
+        public void Delete() => IsDeleted = true;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using static System.Net.WebRequestMethods;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Review
     {
@@ -17,17 +19,48 @@
 
         public Review
         (
-           int stars,
-           string message,
-           int reviewerId,
-           int userId
+            string title,
+            int stars,
+            string message,
+            int reviewerId,
+            int userId
         ) 
-        { 
+        {
+            if (string.IsNullOrWhiteSpace(title))
+                throw new ArgumentException("Title cannot be empty!");
+
+            if (stars <= 0)
+                throw new ArgumentOutOfRangeException(nameof(stars), stars, "Stars must be positive!");
+
+            if (string.IsNullOrWhiteSpace(message))
+                throw new ArgumentException("Message cannot be empty!");
+
+            if (reviewerId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(reviewerId), reviewerId, "ReviewerId must be positive");
+
+            if (userId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
+
+            Title = title;
             Stars = stars;
             Message = message;
             ReviewerId = reviewerId;
             UserId = userId;
             CreatedAt = DateTime.UtcNow;
         }
+
+        public void Update(string? newTitle, string? newMessage)
+        {
+            if (newTitle != null && string.IsNullOrWhiteSpace(newTitle))
+                throw new ArgumentException("Title cannot be empty!");
+
+            if (newMessage != null && string.IsNullOrWhiteSpace(newMessage))
+                throw new ArgumentException("Message cannot be empty!");
+
+            Title = newTitle ?? Title;
+            Message = newMessage ?? Message;
+        }
+
+        public void Delete() => IsDeleted = true;
     }
 }

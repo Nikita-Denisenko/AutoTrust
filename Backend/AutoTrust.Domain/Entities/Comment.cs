@@ -23,10 +23,10 @@
         )
         {
             if (userId <= 0)
-                throw new ArgumentException("UserId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             if (listingId <= 0)
-                throw new ArgumentException("ListingId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(listingId), listingId, "ListingId must be positive!");
 
             if (string.IsNullOrWhiteSpace(text))
                 throw new ArgumentException("Comment cannot be empty!");

@@ -19,10 +19,10 @@
         ) 
         {
             if (followerId <= 0)
-                throw new ArgumentException("FollowerId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(followerId), followerId, "FollowerId must be positive!");
 
             if (targetId <= 0)
-                throw new ArgumentException("TargetId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(targetId), targetId, "TargetId must be positive!");
 
             FollowerId = followerId;
             TargetId = targetId;

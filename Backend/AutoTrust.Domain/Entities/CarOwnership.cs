@@ -27,16 +27,16 @@
         )
         {
             if (userId <= 0) 
-                throw new ArgumentException("UserId must be positive");
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             if (carId <= 0) 
-                throw new ArgumentException("CarId must be positive");
+                throw new ArgumentOutOfRangeException(nameof(carId), carId, "CarId must be positive");
 
             if (mileageBefore < 0) 
-                throw new ArgumentException("Mileage cannot be negative");
+                throw new ArgumentOutOfRangeException(nameof(mileageBefore), mileageBefore, "Mileage cannot be negative");
 
             if (mileageAfter < 0)
-                throw new ArgumentException("Mileage cannot be negative");
+                throw new ArgumentOutOfRangeException(nameof(mileageAfter), mileageAfter, "Mileage cannot be negative");
 
             UserId = userId;
             MileageBefore = mileageBefore;

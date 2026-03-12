@@ -43,22 +43,42 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentException("Description cannot be empty!");
 
             if (releaseYear < 1900 || releaseYear > DateTime.UtcNow.Year)
-                throw new ArgumentException("Year cannot be less than 1900 or greater than the current year!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(releaseYear), 
+                    releaseYear, 
+                    "Year cannot be less than 1900 or greater than the current year!"
+                    );
 
             if (string.IsNullOrWhiteSpace(imageUrl))
                 throw new ArgumentException("ImageUrl cannot be empty!");
 
             if (engineMileage < 0)
-                throw new ArgumentException("Engine mileage cannot be negative!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(engineMileage), 
+                    engineMileage, 
+                    "Engine mileage cannot be negative!"
+                    );
 
             if (modelId <= 0)
-                throw new ArgumentException("ModelId must be positive!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(modelId), 
+                    modelId, 
+                    "ModelId must be positive!"
+                    );
 
             if (locationCityId <= 0)
-                throw new ArgumentException("LocationCityId must be positive!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(locationCityId), 
+                    locationCityId, 
+                    "LocationCityId must be positive!"
+                    );
 
             if (locationCountryId <= 0)
-                throw new ArgumentException("LocationCountryId must be positive!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(locationCountryId), 
+                    locationCountryId, 
+                    "LocationCountryId must be positive!"
+                    );
 
 
             Description = description;
@@ -91,7 +111,11 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentException("ImageUrl cannot be empty!");
 
             if (engineMileage < 0)
-                throw new ArgumentException("Engine mileage cannot be negative!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(engineMileage), 
+                    engineMileage, 
+                    "Engine mileage cannot be negative!"
+                    );
 
             Description = description ?? Description;
             ImageUrl= imageUrl ?? ImageUrl;

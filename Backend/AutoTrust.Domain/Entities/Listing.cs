@@ -37,16 +37,20 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentException("Name cannot be empty!");
 
             if (userId <= 0)
-                throw new ArgumentException("UserId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
 
-            if (countryId <= 0) 
-                throw new ArgumentException("CountryId must be positive!");
+            if (countryId <= 0)
+                throw new ArgumentOutOfRangeException(
+                    nameof(countryId),
+                    countryId,
+                    "CountryId must be positive!"
+                    );
 
             if (cityId <= 0) 
-                throw new ArgumentException("CityId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
             Name = name;
             UserId = userId;

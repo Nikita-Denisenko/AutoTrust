@@ -10,7 +10,17 @@
         private City() { }
 
         public City(string name, int countryId) 
-        { 
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Name cannot be empty!");
+
+            if (countryId <= 0)
+                throw new ArgumentOutOfRangeException(
+                    nameof(countryId),
+                    countryId,
+                    "CountryId must be positive!"
+                    );
+
             Name = name;
             CountryId = countryId;
         }

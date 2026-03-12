@@ -23,7 +23,7 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentException("Password hash cannot be empty");
 
             if (userId <= 0)
-                throw new ArgumentException("UserId must be positive");
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             PasswordHash = passwordHash;
             UserId = userId;

@@ -30,7 +30,7 @@
                 throw new ArgumentException("Image URL cannot be empty!");
 
             if (brandId <= 0)
-                throw new ArgumentException("BrandId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(brandId), brandId, "BrandId must be positive!");
 
             Name = name;
             Description = description;
@@ -38,7 +38,7 @@
             BrandId = brandId;
         }
 
-        public void UpdateName(string newName)
+        public void Rename(string newName)
         {
             if (string.IsNullOrWhiteSpace(newName))
                 throw new ArgumentException("Name cannot be empty!");

@@ -6,8 +6,6 @@
         public string Name { get; private set; }
         public string Code { get; private set; }
         public string FlagImageUrl { get; private set; }
-        public string PhoneCode { get; private set; }
-        public string Currency { get; private set; }
 
         private Country() { }
 
@@ -15,15 +13,12 @@
         (
             string name, 
             string code,
-            string flagImageUrl,
-            string phoneCode, 
-            string currency) 
+            string flagImageUrl
+        ) 
         {
             Name = name;
             Code = code;
             FlagImageUrl = flagImageUrl;
-            PhoneCode = phoneCode;
-            Currency = currency;
         }
     }
 }

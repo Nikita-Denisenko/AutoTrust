@@ -19,13 +19,13 @@
         )
         {
             if (listingId <= 0)
-                throw new ArgumentException("ListingId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(listingId), listingId, "ListingId must be positive!");
 
             if (carId <= 0)
-                throw new ArgumentException("CarId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(carId), carId, "CarId must be positive!");
 
             if (price < 0)
-                throw new ArgumentException("Price cannot be negative!");
+                throw new ArgumentOutOfRangeException(nameof(price), price, "Price cannot be negative!");
 
             ListingId = listingId;
             CarId = carId;
@@ -35,7 +35,7 @@
         public void UpdatePrice(decimal newPrice)
         {
             if (newPrice < 0)
-                throw new ArgumentException("Price cannot be negative!");
+                throw new ArgumentOutOfRangeException(nameof(newPrice), newPrice, "Price cannot be negative!");
 
             Price = newPrice;
         }

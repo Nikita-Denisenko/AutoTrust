@@ -29,22 +29,38 @@ namespace AutoTrust.Domain.Entities
         )
         {
             if (listingId <= 0)
-                throw new ArgumentException("ListingId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(listingId), listingId, "ListingId must be positive!");
 
             if (modelId <= 0)
-                throw new ArgumentException("ModelId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(modelId), modelId, "ModelId must be positive!");
 
             if (minPrice < 0)
-                throw new ArgumentException("Minimal price cannot be negative!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(minPrice),
+                    minPrice,
+                    "Minimal price cannot be negative!"
+                    );
 
             if (maxPrice < minPrice)
-                throw new ArgumentException("Maximal price cannot be less than minimal price!");
+                throw new ArgumentOutOfRangeException(
+                   nameof(maxPrice),
+                   maxPrice,
+                   "Maximal price cannot be less than minimal price!"
+                   );
 
-            if (minReleaseYear < 1900)
-                throw new ArgumentException("Minimal release year cannot be less than 1900!");
+            if (minReleaseYear < 1900 || minReleaseYear > DateTime.UtcNow.Year)
+                throw new ArgumentOutOfRangeException(
+                    nameof(minReleaseYear),
+                    minReleaseYear,
+                    "Minimal release year cannot be less than 1900 or greater than the current year!"
+                    );
 
-            if (maxReleaseYear < minReleaseYear)
-                throw new ArgumentException("Maximal release year cannot be less than minimal release year!");
+            if (maxReleaseYear < minReleaseYear || maxReleaseYear > DateTime.UtcNow.Year)
+                throw new ArgumentOutOfRangeException(
+                    nameof(maxReleaseYear),
+                    maxReleaseYear,
+                    "Maximal release year cannot be less than minimal release year or greater than the current year!"
+                    );
 
             ListingId = listingId;
             ModelId = modelId;
@@ -65,16 +81,32 @@ namespace AutoTrust.Domain.Entities
         )
         {
             if (minPrice < 0)
-                throw new ArgumentException("Minimal price cannot be negative!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(minPrice), 
+                    minPrice, 
+                    "Minimal price cannot be negative!"
+                    );
 
             if (maxPrice < (minPrice ?? MaxPrice))
-                throw new ArgumentException("Maximal price cannot be less than minimal price!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(maxPrice), 
+                    maxPrice, 
+                    "Maximal price cannot be less than minimal price!"
+                    );
 
             if (minReleaseYear < 1900 || minReleaseYear > DateTime.UtcNow.Year)
-                throw new ArgumentException("Minimal release year cannot be less than 1900 or greater than the current year!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(minReleaseYear), 
+                    minReleaseYear, 
+                    "Minimal release year cannot be less than 1900 or greater than the current year!"
+                    );
 
             if (maxReleaseYear < (minReleaseYear ?? MinReleaseYear) || maxReleaseYear > DateTime.UtcNow.Year)
-                throw new ArgumentException("Maximal release year cannot be less than minimal release year or greater than the current year!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(maxReleaseYear),
+                    maxReleaseYear,
+                    "Maximal release year cannot be less than minimal release year or greater than the current year!"
+                    );
 
             MinPrice = minPrice ?? MinPrice;
             MaxPrice = maxPrice ?? MaxPrice;

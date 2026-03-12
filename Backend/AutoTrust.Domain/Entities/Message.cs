@@ -25,10 +25,14 @@
                 throw new ArgumentException("Message cannot be empty!");
 
             if (chatId <= 0)
-                throw new ArgumentException("ChatId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(chatId), chatId, "ChatId must be positive!");
 
             if (chatParticipantId <= 0)
-                throw new ArgumentException("ChatParticipantId must be positive!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(chatParticipantId), 
+                    chatParticipantId, 
+                    "ChatParticipantId must be positive!"
+                    );
 
             Text = text; 
             ChatId = chatId; 

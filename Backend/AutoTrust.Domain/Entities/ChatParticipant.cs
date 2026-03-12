@@ -17,10 +17,10 @@
         )
         {
             if (userId <= 0)
-                throw new ArgumentException("UserId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             if (chatId <= 0)
-                throw new ArgumentException("ChatId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(chatId), chatId, "ChatId must be positive!");
 
             UserId = userId;
             ChatId = chatId;

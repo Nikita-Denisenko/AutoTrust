@@ -15,7 +15,7 @@
         public void PinMessage(int messageId)
         {
             if (messageId <= 0)
-                throw new ArgumentException("MessageId must be positive!");
+                throw new ArgumentOutOfRangeException(nameof(messageId), messageId, "MessageId must be positive!");
 
             PinnedMessageId = messageId;
         } 

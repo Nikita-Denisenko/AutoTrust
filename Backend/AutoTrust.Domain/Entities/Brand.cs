@@ -30,7 +30,11 @@
                 throw new ArgumentException("Logo URL cannot be empty!");
 
             if (countryId <= 0)
-                throw new ArgumentException("CountryId must be positive!");
+                throw new ArgumentOutOfRangeException(
+                    nameof(countryId), 
+                    countryId, 
+                    "CountryId must be positive!"
+                    );
 
             Name = name;
             Description = description;

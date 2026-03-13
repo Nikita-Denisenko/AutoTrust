@@ -1,14 +1,11 @@
 ﻿using AutoTrust.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos
+namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.User
 {
     public record UpdateUserInfoDto
     (
         DateOnly? BirthDate,
-
-        [Url]
-        string? AvatarUrl,
 
         Gender? Gender,
 

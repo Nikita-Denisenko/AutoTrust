@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos
+namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Model
 {
-    public record UpdateModelDto
+    public record UpdateModelInfoDto
     (
         [MinLength(2)]
         [MaxLength(50)]

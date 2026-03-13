@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos
+namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Message
 {
     public record UpdateMessageDto
     (

@@ -12,15 +12,16 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         [Range(0, int.MaxValue)]
         decimal MileageBefore,
 
-        [Required]
         [Range(0, int.MaxValue)]
-        decimal MileageAfter,
+        decimal? MileageAfter,
 
         [Required]
         DateOnly FromDate,
 
+        DateOnly? ToDate,
+
         [Required]
-        DateOnly ToDate,
+        bool HadMajorRepair,
 
         [Required]
         [Range(1, int.MaxValue)]

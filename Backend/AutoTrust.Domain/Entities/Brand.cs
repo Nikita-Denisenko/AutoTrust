@@ -1,11 +1,13 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using AutoTrust.Domain.ValueObjects;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Brand
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public string LogoUrl { get; private set; }
+        public Url LogoUrl { get; private set; }
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
         public bool IsActive { get; private set; } = true;
@@ -16,7 +18,7 @@
         (
             string name,
             string description,
-            string logoUrl,
+            Url logoUrl,
             int countryId
         )
         {
@@ -25,9 +27,6 @@
 
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
-
-            if (string.IsNullOrWhiteSpace(logoUrl))
-                throw new ArgumentException("Logo URL cannot be empty!");
 
             if (countryId <= 0)
                 throw new ArgumentOutOfRangeException(
@@ -42,29 +41,18 @@
             CountryId = countryId;
         }
 
-        public void UpdateName(string newName)
+        public void Update(string? newName, string? newDescription, Url newLogoUrl)
         {
-            if (string.IsNullOrWhiteSpace(newName))
+            if (newName != null && string.IsNullOrWhiteSpace(newName))
                 throw new ArgumentException("Name cannot be empty!");
 
-            Name = newName;
-        }
-
-        public void UpdateDescription(string newDescription)
-        {
-            if (string.IsNullOrWhiteSpace(newDescription))
+            if (newDescription != null && string.IsNullOrWhiteSpace(newDescription))
                 throw new ArgumentException("Description cannot be empty!");
 
-            Description = newDescription;
-        }
+            Name = newName ?? Name;
+            Description = newDescription ?? Description;
+            LogoUrl = newLogoUrl ?? LogoUrl;
 
-
-        public void UpdateLogo(string newLogo)
-        {
-            if (string.IsNullOrWhiteSpace(newLogo))
-                throw new ArgumentException("Logo URL cannot be empty!");
-
-            LogoUrl = newLogo;
         }
 
         public void Deactivate() => IsActive = false;

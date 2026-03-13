@@ -9,7 +9,7 @@
         public decimal? MileageAfter { get; private set; } 
         public DateOnly FromDate { get; private set; }
         public DateOnly? ToDate { get; private set; }
-        public bool HadMajorRepair { get; private set; } = false;
+        public bool HadMajorRepair { get; private set; }
         public int CarId { get; private set; }
         public Car Car { get; private set; }
         public bool IsCurrent { get; private set; }
@@ -23,6 +23,7 @@
             decimal? mileageAfter,
             DateOnly fromDate,
             DateOnly? toDate,
+            bool hadMajorRepair,
             int carId
         )
         {
@@ -42,6 +43,7 @@
             MileageBefore = mileageBefore;
             FromDate = fromDate;
             ToDate = toDate;
+            HadMajorRepair = hadMajorRepair;
             CarId = carId;
             IsCurrent = toDate == null;
         }

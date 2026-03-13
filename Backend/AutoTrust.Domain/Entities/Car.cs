@@ -8,7 +8,7 @@ namespace AutoTrust.Domain.Entities
         public int Id { get; private set; } 
         public string Description { get; private set; }
         public int ReleaseYear { get; private set; }
-        public string ImageUrl { get; private set; }
+        public Url ImageUrl { get; private set; }
         public CarColor Color { get; private set; }
         public StateNumber StateNumber { get; private set; }
         public decimal EngineMileage { get; private set; }
@@ -29,7 +29,7 @@ namespace AutoTrust.Domain.Entities
         (
             string description,
             int releaseYear,
-            string imageUrl,
+            Url imageUrl,
             CarColor color,
             StateNumber stateNumber,
             decimal engineMileage,
@@ -48,9 +48,6 @@ namespace AutoTrust.Domain.Entities
                     releaseYear, 
                     "Year cannot be less than 1900 or greater than the current year!"
                     );
-
-            if (string.IsNullOrWhiteSpace(imageUrl))
-                throw new ArgumentException("ImageUrl cannot be empty!");
 
             if (engineMileage < 0)
                 throw new ArgumentOutOfRangeException(
@@ -97,7 +94,7 @@ namespace AutoTrust.Domain.Entities
         public void UpdateInfo
         (
             string? description,
-            string? imageUrl,
+            Url? imageUrl,
             CarColor? color,
             StateNumber? stateNumber,
             decimal? engineMileage,
@@ -106,9 +103,6 @@ namespace AutoTrust.Domain.Entities
         {
             if (description != null && string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
-
-            if (imageUrl != null && string.IsNullOrWhiteSpace(imageUrl))
-                throw new ArgumentException("ImageUrl cannot be empty!");
 
             if (engineMileage < 0)
                 throw new ArgumentOutOfRangeException(

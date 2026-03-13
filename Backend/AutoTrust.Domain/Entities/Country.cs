@@ -1,22 +1,27 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using AutoTrust.Domain.ValueObjects;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Country
     {
         public int Id { get; private set; }
-        public string Name { get; private set; }
+        public string EnName { get; private set; }
+        public string RuName { get; private set; }
         public string Code { get; private set; }
-        public string FlagImageUrl { get; private set; }
+        public Url FlagImageUrl { get; private set; }
 
         private Country() { }
 
         public Country
         (
-            string name, 
+            string enName, 
+            string ruName,
             string code,
-            string flagImageUrl
+            Url flagImageUrl
         ) 
         {
-            Name = name;
+            EnName = enName;
+            RuName = ruName;
             Code = code;
             FlagImageUrl = flagImageUrl;
         }

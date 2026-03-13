@@ -1,11 +1,13 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using AutoTrust.Domain.ValueObjects;
+
+namespace AutoTrust.Domain.Entities
 {
     public class Model
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public string ImageUrl { get; private set; }
+        public Url ImageUrl { get; private set; }
         public int BrandId { get; private set; }
         public Brand Brand { get; private set; }
         public bool IsActive { get; private set; } = true;
@@ -15,8 +17,8 @@
         public Model
         (
             string name, 
-            string description, 
-            string imageUrl,
+            string description,
+            Url imageUrl,
             int brandId 
         )
         {
@@ -25,9 +27,6 @@
 
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
-
-            if (string.IsNullOrWhiteSpace(imageUrl))
-                throw new ArgumentException("Image URL cannot be empty!");
 
             if (brandId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(brandId), brandId, "BrandId must be positive!");
@@ -55,11 +54,8 @@
         }
 
 
-        public void UpdateImage(string newImageUrl)
+        public void UpdateImage(Url newImageUrl)
         {
-            if (string.IsNullOrWhiteSpace(newImageUrl))
-                throw new ArgumentException("Image URL cannot be empty!");
-
             ImageUrl = newImageUrl;
         }
 

@@ -2,15 +2,10 @@
 
 namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account
 {
-    public record UpdateAccountDto
+    public record ChangePasswordDto
     (
-        [EmailAddress]
-        string? Email,
-
-        [Phone]
-        string? Phone,
-
+        [Required]
         [MinLength(8)]
-        string? PasswordHash
+        string Password
     );
 }

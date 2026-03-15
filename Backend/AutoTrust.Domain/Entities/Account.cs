@@ -11,6 +11,7 @@ namespace AutoTrust.Domain.Entities
         public int UserId { get; private set; }
         public User User { get; private set; }
         public DateTime CreatedAt { get; private set; }
+        public bool IsDeleted {  get; private set; } = false;
 
         private Account() { }
 
@@ -42,5 +43,7 @@ namespace AutoTrust.Domain.Entities
         {
             Phone = newPhone ?? throw new ArgumentNullException(nameof(newPhone));
         }
+
+        public void Delete() => IsDeleted = true;
     }
 }

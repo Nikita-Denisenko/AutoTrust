@@ -2,7 +2,7 @@
 
 namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.User
 {
-    public record UpdateAvatarUrl
+    public record UpdateAvatarUrlDto
     (
         [Url]
         string? AvatarUrl

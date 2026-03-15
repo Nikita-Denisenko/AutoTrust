@@ -6,6 +6,7 @@
         int UserId,
         string Email,
         string Phone,
-        DateTime CreatedAt
+        DateTime CreatedAt,
+        bool IsDeleted
     );
 }

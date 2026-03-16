@@ -2,7 +2,7 @@
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;
 
-namespace AutoTrust.Application.Interfaces
+namespace AutoTrust.Application.Interfaces.Services
 {
     public interface IAccountService
     {

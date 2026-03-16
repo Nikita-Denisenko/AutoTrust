@@ -5,6 +5,7 @@
         int Id,
         string Name,
         string LogoUrl,
-        bool IsActive
+        int CarQuantity,
+        bool IsDeleted
     );
 }

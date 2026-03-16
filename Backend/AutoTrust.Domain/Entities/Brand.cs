@@ -10,7 +10,7 @@ namespace AutoTrust.Domain.Entities
         public Url LogoUrl { get; private set; }
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
-        public bool IsActive { get; private set; } = true;
+        public bool IsDeleted { get; private set; } = false;
 
         private Brand() { }
 
@@ -41,7 +41,7 @@ namespace AutoTrust.Domain.Entities
             CountryId = countryId;
         }
 
-        public void Update(string? newName, string? newDescription, Url newLogoUrl)
+        public void Update(string? newName, string? newDescription, Url? newLogoUrl)
         {
             if (newName != null && string.IsNullOrWhiteSpace(newName))
                 throw new ArgumentException("Name cannot be empty!");
@@ -54,8 +54,6 @@ namespace AutoTrust.Domain.Entities
             LogoUrl = newLogoUrl ?? LogoUrl;
 
         }
-
-        public void Deactivate() => IsActive = false;
-        public void Activate() => IsActive = true;
+        public void Delete() => IsDeleted = true; 
     }
 }

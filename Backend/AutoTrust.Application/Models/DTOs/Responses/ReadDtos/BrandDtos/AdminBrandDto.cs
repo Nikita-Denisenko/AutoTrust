@@ -7,6 +7,7 @@
         string Description,
         string LogoUrl,
         string CountryName,
-        bool IsActive
+        int CarQuantity,
+        bool IsDeleted
     );
 }

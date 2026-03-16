@@ -1,3 +1,7 @@
+using AutoTrust.Application.Interfaces.Services;
+using AutoTrust.Application.Interfaces.Validators;
+using AutoTrust.Application.Services;
+using AutoTrust.Application.Validators;
 using AutoTrust.Domain.Interfaces;
 using AutoTrust.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +36,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
+
+builder.Services.AddScoped<IBrandValidator, BrandValidator>();
+
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
 
 // Configure the HTTP request pipeline.
 

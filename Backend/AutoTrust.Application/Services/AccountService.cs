@@ -1,4 +1,4 @@
-﻿using AutoTrust.Application.Interfaces;
+﻿using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account;
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;

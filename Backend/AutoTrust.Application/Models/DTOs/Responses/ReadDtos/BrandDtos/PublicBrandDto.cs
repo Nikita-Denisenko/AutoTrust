@@ -6,6 +6,7 @@
         string Name,
         string Description,
         string LogoUrl,
+        int CarQuantity,
         string CountryName
     );
 }

@@ -10,7 +10,6 @@ using AutoTrust.Domain.Enums.OrderParams;
 using AutoTrust.Domain.Interfaces;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace AutoTrust.Application.Services
 {
@@ -54,9 +53,25 @@ namespace AutoTrust.Application.Services
                     brand.CountryId
                 );
             }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                throw new InvalidOperationException($"Failed to create brand: {ex.Message}", ex);
+            }
             catch (ArgumentException ex)
             {
                 throw new InvalidOperationException($"Failed to create brand: {ex.Message}", ex);
+            }
+        }
+
+        public async Task DeleteBrandAsync(int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                await _repo.DeleteByIdAsync(id, cancellationToken);
+            }
+            catch(KeyNotFoundException)
+            {
+                throw new KeyNotFoundException($"Brand by Id {id} was not found!");
             }
         }
 
@@ -192,7 +207,11 @@ namespace AutoTrust.Application.Services
 
                 await _repo.SaveChangesAsync(cancellationToken);
             }
-            catch(ArgumentException ex)
+            catch (ArgumentOutOfRangeException ex)
+            {
+                throw new InvalidOperationException($"Failed to create brand: {ex.Message}", ex);
+            }
+            catch (ArgumentException ex)
             {
                 throw new InvalidOperationException($"Failed to update brand: {ex.Message}", ex);
             }

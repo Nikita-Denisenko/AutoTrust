@@ -25,14 +25,14 @@ namespace AutoTrust.Application.Validators
         public async Task<ValidationResult> CanCreate(CreateBrandDto dto, CancellationToken cancellationToken)
         {
             var result = await IsBrandNameUnique(dto.Name, cancellationToken);
-            return new ValidationResult(result, "Brand with this name already exists.");
+            return new ValidationResult(result, result ? null : "Brand with this name already exists.");
         }
 
         public async Task<ValidationResult> CanUpdate(int id, UpdateBrandDto dto, CancellationToken cancellationToken)
         {
             var name = dto.Name;
             var result = name == null || await IsBrandNameUniqueForUpdate(id, name, cancellationToken);
-            return new ValidationResult(result, "Brand with this name already exists.");
+            return new ValidationResult(result, result ? null : "Brand with this name already exists.");
         }
     }
 }

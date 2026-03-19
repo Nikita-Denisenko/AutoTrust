@@ -1,5 +1,6 @@
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
+using AutoTrust.Application.Mappings;
 using AutoTrust.Application.Services;
 using AutoTrust.Application.Validators;
 using AutoTrust.Domain.Interfaces;
@@ -34,6 +35,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
                 new MySqlServerVersion(new Version(9, 5, 0))
     )
 );
+
+builder.Services.AddAutoMapper(typeof(SharedMappingProfile).Assembly);
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
 

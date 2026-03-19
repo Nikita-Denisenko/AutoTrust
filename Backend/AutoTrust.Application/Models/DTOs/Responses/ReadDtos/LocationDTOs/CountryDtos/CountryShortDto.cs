@@ -3,7 +3,8 @@
     public record CountryShortDto
     (
         int Id,
-        string Name,
+        string RuName,
+        string EnName,
         string FlagImageUrl
     );
 }

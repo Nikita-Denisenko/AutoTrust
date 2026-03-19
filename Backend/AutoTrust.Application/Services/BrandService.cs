@@ -1,4 +1,5 @@
-﻿using AutoTrust.Application.Interfaces.Services;
+﻿using AutoMapper;
+using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Brand;
@@ -18,12 +19,21 @@ namespace AutoTrust.Application.Services
         private readonly IRepository<Brand> _repo;
         private readonly IRepository<Car> _carRepo;
         private readonly IBrandValidator _validator;
+        private readonly IMapper _mapper;
 
-        public BrandService(IRepository<Brand> repo, IBrandValidator validator, IRepository<Car> carRepo)
+        public BrandService
+        (
+            IRepository<Brand> repo, 
+            IBrandValidator validator, 
+            IRepository<Car> carRepo,
+            IMapper mapper
+        )
         {
             _repo = repo;
             _validator = validator;
             _carRepo = carRepo;
+            _mapper = mapper;
+
         }
 
         public async Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto, CancellationToken cancellationToken)

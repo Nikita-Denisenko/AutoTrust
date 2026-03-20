@@ -14,12 +14,8 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(l => l.City)
-                .WithMany()
+                .WithMany(c => c.Listings)
                 .HasForeignKey(l => l.CityId);
-
-            builder.HasOne(l => l.Country)
-                .WithMany()
-                .HasForeignKey(l => l.CountryId);
 
             builder.HasOne(l => l.SaleDetails)
                 .WithOne(sd => sd.Listing)

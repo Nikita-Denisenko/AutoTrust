@@ -6,8 +6,8 @@
         public string Text { get; private set; }
         public int ChatId { get; private set; }
         public Chat Chat { get; private set; }
-        public int ChatParticipantId { get; private set; }
-        public ChatParticipant ChatParticipant { get; private set; }
+        public User User { get; private set; }
+        public int UserId { get; private set; }
         public bool IsRead { get; private set; } = false;
         public bool IsDeleted { get; private set; } = false;
         public DateTime SentAt { get; private set; }
@@ -18,7 +18,7 @@
         (
             string text,
             int chatId,
-            int chatParticipantId
+            int userId
         )
         {
             if (string.IsNullOrWhiteSpace(text))
@@ -27,16 +27,16 @@
             if (chatId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(chatId), chatId, "ChatId must be positive!");
 
-            if (chatParticipantId <= 0)
+            if (userId <= 0)
                 throw new ArgumentOutOfRangeException(
-                    nameof(chatParticipantId), 
-                    chatParticipantId, 
+                    nameof(userId),
+                    userId, 
                     "ChatParticipantId must be positive!"
                     );
 
             Text = text; 
             ChatId = chatId; 
-            ChatParticipantId = chatParticipantId; 
+            UserId = userId; 
             SentAt = DateTime.UtcNow;
         }
 

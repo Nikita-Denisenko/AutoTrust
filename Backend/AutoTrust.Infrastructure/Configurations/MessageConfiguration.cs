@@ -14,13 +14,13 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(m => m.Chat)
-                .WithMany()
+                .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.ChatId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(m => m.ChatParticipant)
+            builder.HasOne(m => m.User)
                 .WithMany()
-                .HasForeignKey(m => m.ChatParticipantId)
+                .HasForeignKey(m => m.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

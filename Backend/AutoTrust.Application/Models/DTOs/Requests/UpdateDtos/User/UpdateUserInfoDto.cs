@@ -14,9 +14,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.User
         string? AboutInfo,
 
         [Range(1, int.MaxValue)]
-        int? CountryId,
-
-        [Range(1, int.MaxValue)]
         int? CityId
     );
 }

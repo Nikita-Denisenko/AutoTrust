@@ -17,8 +17,6 @@ namespace AutoTrust.Domain.Entities
         public Model Model { get; private set; }
         public int LocationCityId { get; private set; }
         public City LocationCity { get; private set; }
-        public int LocationCountryId { get; private set; }
-        public Country LocationCountry { get; private set; }
         public bool HasAccident { get; private set; } = false;
         public bool InSale { get; private set; } = false;
         public bool IsDeleted { get; private set; } = false;
@@ -35,7 +33,6 @@ namespace AutoTrust.Domain.Entities
             decimal engineMileage,
             int modelId,
             int locationCityId,
-            int locationCountryId,
             bool hasAccident
         )
         {
@@ -70,13 +67,6 @@ namespace AutoTrust.Domain.Entities
                     "LocationCityId must be positive!"
                     );
 
-            if (locationCountryId <= 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(locationCountryId), 
-                    locationCountryId, 
-                    "LocationCountryId must be positive!"
-                    );
-
 
             Description = description;
             ReleaseYear = releaseYear;
@@ -86,7 +76,6 @@ namespace AutoTrust.Domain.Entities
             EngineMileage = engineMileage;
             ModelId = modelId;
             LocationCityId = locationCityId;
-            LocationCountryId = locationCountryId;
             HasAccident = hasAccident;
             InSale = false;
         }

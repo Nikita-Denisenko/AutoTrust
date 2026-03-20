@@ -11,6 +11,7 @@ namespace AutoTrust.Domain.Entities
         public int BrandId { get; private set; }
         public Brand Brand { get; private set; }
         public bool IsActive { get; private set; } = true;
+        public ICollection<Car> Cars { get; private set; } = [];
 
         private Model() { }
 

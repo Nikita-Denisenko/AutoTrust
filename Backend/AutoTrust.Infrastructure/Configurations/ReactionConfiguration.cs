@@ -14,16 +14,14 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(r => r.User)
-                .WithMany()
+                .WithMany(u => u.Reactions)
                 .HasForeignKey(r => r.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(r => r.Listing)
-                .WithMany()
+                .WithMany(l => l.Reactions)
                 .HasForeignKey(r => r.ListingId)
                 .OnDelete(DeleteBehavior.Cascade);
-            
-            builder.HasOne(m => )
         }
     }
 }

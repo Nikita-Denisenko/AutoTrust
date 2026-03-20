@@ -14,12 +14,12 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(r => r.User)
-                .WithMany()
+                .WithMany(u => u.Reviews)
                 .HasForeignKey(r => r.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(r => r.Reviewer)
-                .WithMany()
+                .WithMany(u => u.Reviews)
                 .HasForeignKey(r => r.ReviewerId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

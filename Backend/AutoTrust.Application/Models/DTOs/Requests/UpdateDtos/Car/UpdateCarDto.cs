@@ -22,9 +22,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Car
         [Range(1, int.MaxValue)]
         int? LocationCityId,
 
-        [Range(1, int.MaxValue)]
-        int? LocationCountryId,
-
         bool? HasAccident
     );
 }

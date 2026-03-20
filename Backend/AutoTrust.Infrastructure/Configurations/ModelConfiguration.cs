@@ -14,7 +14,7 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(m => m.Brand)
-                .WithMany()
+                .WithMany(b => b.Models)
                 .HasForeignKey(m => m.BrandId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

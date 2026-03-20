@@ -14,7 +14,7 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(b => b.Country)
-                .WithMany()
+                .WithMany(c => c.Brands)
                 .HasForeignKey(b => b.CountryId);
         }
     }

@@ -17,7 +17,6 @@ namespace AutoTrust.Application.Services
     public class BrandService : IBrandService
     {
         private readonly IRepository<Brand> _repo;
-        private readonly IRepository<Car> _carRepo;
         private readonly IBrandValidator _validator;
         private readonly IMapper _mapper;
 
@@ -25,13 +24,11 @@ namespace AutoTrust.Application.Services
         (
             IRepository<Brand> repo, 
             IBrandValidator validator, 
-            IRepository<Car> carRepo,
             IMapper mapper
         )
         {
             _repo = repo;
             _validator = validator;
-            _carRepo = carRepo;
             _mapper = mapper;
 
         }
@@ -45,23 +42,12 @@ namespace AutoTrust.Application.Services
 
             try
             {
-                var brand = new Brand
-                (
-                    createBrandDto.Name,
-                    createBrandDto.Description,
-                    Url.Create(createBrandDto.LogoUrl),
-                    createBrandDto.CountryId
-                );
+                var brand = _mapper.Map<Brand>(createBrandDto);
 
                 await _repo.AddAsync(brand, cancellationToken);
                 await _repo.SaveChangesAsync(cancellationToken);
 
-                return new CreatedBrandDto
-                (
-                    brand.Id,
-                    brand.Name,
-                    brand.CountryId
-                );
+                return _mapper.Map<CreatedBrandDto>(brand);
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -92,15 +78,7 @@ namespace AutoTrust.Application.Services
             if (brand == null)
                 throw new KeyNotFoundException($"Brand with id {id} was not found!");
 
-            return new PublicBrandDto
-            (
-                brand.Id,
-                brand.Name,
-                brand.Description,
-                brand.LogoUrl.Value,
-                _carRepo.GetQuery().Count(c => c.Model.BrandId == brand.Id),
-                brand.Country.RuName
-            );
+            return _mapper.Map<PublicBrandDto>(brand);
         }
 
         public async Task<AdminBrandDto> GetBrandForAdminAsync(int id, CancellationToken cancellationToken)
@@ -110,16 +88,7 @@ namespace AutoTrust.Application.Services
             if (brand == null)
                 throw new KeyNotFoundException($"Brand with id {id} was not found!");
 
-            return new AdminBrandDto
-            (
-                brand.Id,
-                brand.Name,
-                brand.Description,
-                brand.LogoUrl.Value,
-                brand.Country.RuName,
-                _carRepo.GetQuery().Count(c => c.Model.BrandId == brand.Id),
-                brand.IsDeleted
-            );
+            return _mapper.Map<AdminBrandDto>(brand);
         }
 
         public async Task<List<PublicBrandListItemDto>> GetBrandsAsync(BrandFilterDto filterDto, CancellationToken cancellationToken)
@@ -136,8 +105,8 @@ namespace AutoTrust.Application.Services
             query = filterDto.OrderParam switch
             {
                 BrandOrderParam.CarQuantity => filterDto.ByAscending 
-                    ? query.OrderBy(b => _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id)) 
-                    : query.OrderByDescending(b => _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id)),
+                    ? query.OrderBy(b => b.Models.SelectMany(m => m.Cars).Count()) 
+                    : query.OrderByDescending(b => b.Models.SelectMany(m => m.Cars).Count()),
 
                 _ => filterDto.ByAscending
                     ? query.OrderBy(b => b.Name)
@@ -147,13 +116,7 @@ namespace AutoTrust.Application.Services
             query = query.Skip((filterDto.Page - 1) * filterDto.Size)
                 .Take(filterDto.Size);
 
-            return await query.Select(b => new PublicBrandListItemDto
-            (
-                b.Id,
-                b.Name,
-                b.LogoUrl.Value,
-                _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id)
-            )).ToListAsync(cancellationToken);
+            return await _mapper.ProjectTo<PublicBrandListItemDto>(query).ToListAsync(cancellationToken);
         }
 
         public async Task<List<AdminBrandListItemDto>> GetBrandsForAdminAsync(AdminBrandFilterDto filterDto, CancellationToken cancellationToken)
@@ -173,8 +136,8 @@ namespace AutoTrust.Application.Services
             query = filterDto.OrderParam switch
             {
                 BrandOrderParam.CarQuantity => filterDto.ByAscending
-                    ? query.OrderBy(b => _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id))
-                    : query.OrderByDescending(b => _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id)),
+                    ? query.OrderBy(b => b.Models.SelectMany(m => m.Cars).Count())
+                    : query.OrderByDescending(b => b.Models.SelectMany(m => m.Cars).Count()),
 
                 _ => filterDto.ByAscending
                     ? query.OrderBy(b => b.Name)
@@ -184,14 +147,7 @@ namespace AutoTrust.Application.Services
             query = query.Skip((filterDto.Page - 1) * filterDto.Size)
                 .Take(filterDto.Size);
 
-           return await query.Select(b => new AdminBrandListItemDto
-           (
-                b.Id,
-                b.Name,
-                b.LogoUrl.Value,
-                _carRepo.GetQuery().Count(c => c.Model.BrandId == b.Id),
-                b.IsDeleted
-           )).ToListAsync(cancellationToken);
+           return await _mapper.ProjectTo<AdminBrandListItemDto>(query).ToListAsync(cancellationToken);
         }
 
         public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto, CancellationToken cancellationToken)

@@ -6,6 +6,9 @@
         public string Name { get; private set; }
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
+        public ICollection<User> Users { get; private set; } = [];
+        public ICollection<Car> Cars { get; private set; } = [];
+        public ICollection<Listing> Listings { get; private set; } = [];    
 
         private City() { }
 

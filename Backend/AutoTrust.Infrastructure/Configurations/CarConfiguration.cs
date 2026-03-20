@@ -13,12 +13,8 @@ namespace AutoTrust.Infrastructure.Configurations
             builder.Property(c => c.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.HasOne(c => c.LocationCountry)
-                .WithMany()
-                .HasForeignKey(c => c.LocationCountryId);
-
             builder.HasOne(c => c.LocationCity)
-                .WithMany()
+                .WithMany(ci => ci.Cars)
                 .HasForeignKey(c => c.LocationCityId);
 
             builder.HasMany(c => c.OwnershipHistory)
@@ -27,7 +23,7 @@ namespace AutoTrust.Infrastructure.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(c => c.Model)
-                .WithMany()
+                .WithMany(m => m.Cars)
                 .HasForeignKey(c => c.ModelId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

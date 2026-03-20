@@ -1,6 +1,5 @@
 ﻿using AutoTrust.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AutoTrust.Infrastructure.Configurations
@@ -15,7 +14,7 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
             
             builder.HasOne(n => n.User)
-                .WithMany()
+                .WithMany(u => u.Notifications)
                 .HasForeignKey(n => n.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

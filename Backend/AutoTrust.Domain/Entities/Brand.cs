@@ -11,6 +11,7 @@ namespace AutoTrust.Domain.Entities
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
         public bool IsDeleted { get; private set; } = false;
+        public ICollection<Model> Models { get; private set; } = [];    
 
         private Brand() { }
 

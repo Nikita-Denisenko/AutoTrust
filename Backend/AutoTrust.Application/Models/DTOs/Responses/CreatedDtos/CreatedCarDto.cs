@@ -4,7 +4,6 @@
     (
         int Id,
         int ModelId,
-        int LocationCityId,
-        int LocationCountryId
+        int LocationCityId
     );
 }

@@ -12,12 +12,17 @@ namespace AutoTrust.Domain.Entities
         public Gender Gender { get; private set; }
         public string AboutInfo { get; private set; } = string.Empty;
         public Account? Account { get; private set; }
-        public int CountryId { get; private set; }
-        public Country Country { get; private set; }
         public int CityId { get; private set; }
         public City City { get; private set; }
         public ICollection<Listing> Listings { get; private set; } = [];
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
+        public ICollection<CarOwnership> CarOwnerships { get; private set; } = [];
+        public ICollection<Comment> Comments { get; private set; } = [];
+        public ICollection<Follow> Follows { get; private set; } = [];
+        public ICollection<Notification> Notifications { get; private set; } = [];
+        public ICollection<Reaction> Reactions { get; private set; } = [];
+        public ICollection<Review> Reviews { get; private set; } = [];
+
         public bool IsDeleted { get; private set; } = false;
         public bool IsBlocked { get; private set; } = false;
 
@@ -29,7 +34,6 @@ namespace AutoTrust.Domain.Entities
             BirthDate birthDate,
             Gender gender,
             string aboutInfo,
-            int countryId,
             int cityId
         )
         {
@@ -39,13 +43,6 @@ namespace AutoTrust.Domain.Entities
             if (string.IsNullOrWhiteSpace(aboutInfo))
                 throw new ArgumentException("AboutInfo cannot be empty!");
 
-            if (countryId <= 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(countryId),
-                    countryId,
-                    "CountryId must be positive!"
-                    );
-
             if (cityId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
@@ -53,7 +50,6 @@ namespace AutoTrust.Domain.Entities
             BirthDate = birthDate;
             Gender = gender;
             AboutInfo = aboutInfo;
-            CountryId = countryId;
             CityId = cityId;
         }
 
@@ -65,7 +61,6 @@ namespace AutoTrust.Domain.Entities
             BirthDate? birthDate,
             Gender? gender,
             string? aboutInfo,
-            int? countryId,
             int? cityId
         )
         {
@@ -75,13 +70,6 @@ namespace AutoTrust.Domain.Entities
             if (aboutInfo != null && string.IsNullOrWhiteSpace(aboutInfo))
                 throw new ArgumentException("AboutInfo cannot be empty!");
 
-            if (countryId <= 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(countryId),
-                    countryId,
-                    "CountryId must be positive!"
-                    );
-
             if (cityId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
@@ -89,7 +77,6 @@ namespace AutoTrust.Domain.Entities
             BirthDate = birthDate ?? BirthDate;
             Gender = gender ?? Gender;
             AboutInfo = aboutInfo ?? AboutInfo;
-            CountryId = countryId ?? CountryId;
             CityId = cityId ?? CityId;
         }
 

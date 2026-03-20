@@ -14,7 +14,7 @@ namespace AutoTrust.Infrastructure.Configurations
                 .ValueGeneratedOnAdd();
 
             builder.HasOne(co => co.User)
-                .WithMany()
+                .WithMany(u => u.CarOwnerships)
                 .HasForeignKey(co => co.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

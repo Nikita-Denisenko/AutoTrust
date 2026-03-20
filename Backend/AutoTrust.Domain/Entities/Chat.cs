@@ -4,6 +4,7 @@
     {
         public int Id { get; private set; } 
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
+        public ICollection<Message> Messages { get; private set; } = [];
         public DateTime CreatedAt { get; private set; }
         public int? PinnedMessageId { get; private set; }
 

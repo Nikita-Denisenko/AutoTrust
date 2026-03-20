@@ -12,14 +12,14 @@ namespace AutoTrust.Domain.Entities
         public ListingType Type { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? UpdatedAt { get; private set; } = null;
-        public int CountryId { get; private set; }
-        public Country Country { get; private set; }
         public int CityId { get; private set; }
         public City City { get; private set; }
         public SaleDetails? SaleDetails { get; private set; }
         public BuyDetails? BuyDetails { get; private set; }
         public bool IsDeleted { get; private set; } = false;
         public bool IsActive { get; private set; } = true;
+        public ICollection<Comment> Comments {  get; private set; }
+        public ICollection<Reaction> Reactions { get; private set; }
 
         private Listing() { }
 
@@ -29,7 +29,6 @@ namespace AutoTrust.Domain.Entities
             int userId,
             string description,
             ListingType type,
-            int countryId,
             int cityId
         ) 
         {
@@ -42,13 +41,6 @@ namespace AutoTrust.Domain.Entities
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Description cannot be empty!");
 
-            if (countryId <= 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(countryId),
-                    countryId,
-                    "CountryId must be positive!"
-                    );
-
             if (cityId <= 0) 
                 throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
@@ -57,7 +49,6 @@ namespace AutoTrust.Domain.Entities
             Description = description;
             Type = type;
             CreatedAt = DateTime.UtcNow;
-            CountryId = countryId;
             CityId = cityId;
         }
 

@@ -18,12 +18,8 @@ namespace AutoTrust.Infrastructure.Configurations
                 .HasForeignKey<Account>(a => a.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(u => u.Country)
-                .WithMany()
-                .HasForeignKey(u => u.CountryId);
-
             builder.HasOne(u => u.City)
-                .WithMany()
+                .WithMany(c => c.Users)
                 .HasForeignKey(u => u.CityId);
 
             builder.HasMany(u => u.Listings)

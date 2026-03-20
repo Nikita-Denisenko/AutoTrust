@@ -16,7 +16,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 
         [Required]
         [Url]
-        string imageUrl,
+        string ImageUrl,
 
         [Required]
         [Range(1, int.MaxValue)]

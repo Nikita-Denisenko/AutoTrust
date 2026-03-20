@@ -15,6 +15,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 
         [Required]
         [Range(1, int.MaxValue)]
-        int ChatParticipantId
+        int UserId
     );
 }

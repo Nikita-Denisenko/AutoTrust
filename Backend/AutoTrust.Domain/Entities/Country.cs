@@ -9,6 +9,8 @@ namespace AutoTrust.Domain.Entities
         public string RuName { get; private set; }
         public string Code { get; private set; }
         public Url FlagImageUrl { get; private set; }
+        public ICollection<City> Cities { get; private set; } = [];
+        public ICollection<Brand> Brands { get; private set; } = [];
 
         private Country() { }
 

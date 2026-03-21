@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
@@ -73,22 +74,28 @@ namespace AutoTrust.Application.Services
 
         public async Task<PublicBrandDto> GetBrandAsync(int id, CancellationToken cancellationToken)
         {
-            var brand = await _repo.GetQuery().FirstOrDefaultAsync(b => b.Id == id, cancellationToken);
+            var brand = await _repo.GetQuery()
+                .Where(b => b.Id == id)
+                .ProjectTo<PublicBrandDto>(_mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync(cancellationToken);
             
             if (brand == null)
                 throw new KeyNotFoundException($"Brand with id {id} was not found!");
 
-            return _mapper.Map<PublicBrandDto>(brand);
+            return brand;
         }
 
         public async Task<AdminBrandDto> GetBrandForAdminAsync(int id, CancellationToken cancellationToken)
         {
-            var brand = await _repo.GetQuery().FirstOrDefaultAsync(b => b.Id == id, cancellationToken);
+            var brand = await _repo.GetQuery()
+               .Where(b => b.Id == id)
+               .ProjectTo<AdminBrandDto>(_mapper.ConfigurationProvider)
+               .FirstOrDefaultAsync(cancellationToken);
 
             if (brand == null)
                 throw new KeyNotFoundException($"Brand with id {id} was not found!");
 
-            return _mapper.Map<AdminBrandDto>(brand);
+            return brand;
         }
 
         public async Task<List<PublicBrandListItemDto>> GetBrandsAsync(BrandFilterDto filterDto, CancellationToken cancellationToken)
@@ -124,11 +131,9 @@ namespace AutoTrust.Application.Services
             var query = _repo.GetQuery();
 
             if (filterDto.IsDeleted != null) 
-                query = filterDto.IsDeleted.Value 
-                    ? query.Where(b => b.IsDeleted)
-                    : query.Where(b => !b.IsDeleted);
+                query = query.Where(b => b.IsDeleted == filterDto.IsDeleted.Value);
 
-            query = query.Where(b => b.Name.Contains(filterDto.SearchText));
+            query = query.Where(b => b.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
 
             if (filterDto.CountryId.HasValue)
                 query = query.Where(b => b.CountryId == filterDto.CountryId.Value);

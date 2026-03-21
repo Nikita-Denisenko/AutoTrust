@@ -1,6 +1,9 @@
-﻿using AutoTrust.Application.Interfaces.Services;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
+using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Car;
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Car;
 using AutoTrust.Application.Models.DTOs.Responses.CreatedDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos;
@@ -10,6 +13,7 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
 using AutoTrust.Domain.Entities;
+using AutoTrust.Domain.Enums.OrderParams;
 using AutoTrust.Domain.Interfaces;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
@@ -20,11 +24,18 @@ namespace AutoTrust.Application.Services
     {
         private readonly IRepository<Car> _repo;
         private readonly ICarValidator _validator;
+        private readonly IMapper _mapper;
 
-        public CarService(IRepository<Car> repo, ICarValidator validator)
+        public CarService
+        (
+            IRepository<Car> repo, 
+            ICarValidator validator, 
+            IMapper mapper
+        )
         {
             _repo = repo;
             _validator = validator;
+            _mapper = mapper;
         }
 
         public async Task<CreatedCarDto> CreateCarAsync(CreateCarDto createCarDto, CancellationToken cancellationToken)
@@ -36,30 +47,12 @@ namespace AutoTrust.Application.Services
 
             try
             {
-                var car = new Car
-                (
-                    createCarDto.Description,
-                    createCarDto.ReleaseYear,
-                    Url.Create(createCarDto.ImageUrl),
-                    createCarDto.Color,
-                    new StateNumber(createCarDto.StateNumber),
-                    createCarDto.EngineMileage,
-                    createCarDto.ModelId,
-                    createCarDto.LocationCityId,
-                    createCarDto.LocationCountryId,
-                    createCarDto.HasAccident
-                );
+                var car = _mapper.Map<Car>(createCarDto);
 
                 await _repo.AddAsync(car, cancellationToken);
                 await _repo.SaveChangesAsync(cancellationToken);
 
-                return new CreatedCarDto
-                (
-                    car.Id,
-                    car.ModelId,
-                    car.LocationCityId,
-                    car.LocationCountryId
-                );
+                return _mapper.Map<CreatedCarDto>(car);
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -86,112 +79,111 @@ namespace AutoTrust.Application.Services
         public async Task<PublicCarDto> GetCarAsync(int id, CancellationToken cancellationToken)
         {
            var car = await _repo.GetQuery()
-                .Include(c => c.Model)
-                .ThenInclude(m => m.Brand)
-                .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
-
+                .Where(c => c.Id == id)
+                .ProjectTo<PublicCarDto>(_mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync(cancellationToken);
+               
            if (car == null)
                throw new KeyNotFoundException($"Car by Id {id} was not found!");
 
-            return new PublicCarDto
-            (
-                car.Id,
-                car.Description,
-                car.ReleaseYear,
-                car.ImageUrl.Value,
-                car.Color,
-                car.StateNumber.Value,
-                car.EngineMileage,
-                car.OwnershipHistory.Count,
-                new ModelShortDto
-                (
-                    car.Model.Id,
-                    car.Model.Name,
-                    new BrandShortDto
-                    (
-                        car.Model.Brand.Id,
-                        car.Model.Brand.Name,
-                        car.Model.Brand.LogoUrl.ToString()
-                    )
-                ),
-                new LocationDto
-                (
-                    new CityDto
-                    (
-                        car.LocationCity.Id,
-                        car.LocationCity.Name
-                    ),
-                    new CountryShortDto
-                    (
-                        car.LocationCountryId,
-                        car.LocationCountry.RuName,
-                        car.LocationCountry.FlagImageUrl.ToString()
-                    )
-                ),
-                car.HasAccident,
-                car.InSale
-            );
+            return car;
         }
 
         public async Task<AdminCarDto> GetCarForAdminAsync(int id, CancellationToken cancellationToken)
         {
             var car = await _repo.GetQuery()
-                .Include(c => c.Model)
-                .ThenInclude(m => m.Brand)
-                .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+                .Where(c => c.Id == id)
+                .ProjectTo<AdminCarDto>(_mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync(cancellationToken);
 
             if (car == null)
                 throw new KeyNotFoundException($"Car by Id {id} was not found!");
 
-            return new AdminCarDto
+            return car;
+        }
+
+        public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, CancellationToken cancellationToken)
+        {
+            var query = _repo.GetQuery()
+                .Where(c => !c.IsDeleted);
+
+            query = query.Where
             (
-                car.Id,
-                car.Description,
-                car.ReleaseYear,
-                car.ImageUrl.Value,
-                car.Color,
-                car.StateNumber.Value,
-                car.EngineMileage,
-                car.OwnershipHistory.Count,
-                new ModelShortDto
-                (
-                    car.Model.Id,
-                    car.Model.Name,
-                    new BrandShortDto
-                    (
-                        car.Model.Brand.Id,
-                        car.Model.Brand.Name,
-                        car.Model.Brand.LogoUrl.ToString()
-                    )
-                ),
-                new LocationDto
-                (
-                    new CityDto
-                    (
-                        car.LocationCity.Id,
-                        car.LocationCity.Name
-                    ),
-                    new CountryShortDto
-                    (
-                        car.LocationCountryId,
-                        car.LocationCountry.RuName,
-                        car.LocationCountry.FlagImageUrl.ToString()
-                    )
-                ),
-                car.HasAccident,
-                car.InSale,
-                car.IsDeleted
+                c => (c.Model.Name + c.Model.Brand.Name).ToLower()
+                     .Contains(filterDto.SearchText.ToLower())
             );
+
+            if (filterDto.InSale != null)
+                query = query.Where(c => c.InSale == filterDto.InSale);
+
+            if (filterDto.HasAccident != null)
+                query = query.Where(c => c.HasAccident == filterDto.HasAccident);
+
+            if (filterDto.HadMajorRepair != null)
+                query = query.Where(c => c.OwnershipHistory.Any(co => co.HadMajorRepair) == filterDto.HadMajorRepair);
+
+            query = filterDto.OrderParam switch
+            {
+                CarOrderParam.EngineMileage => filterDto.ByAscending
+                    ? query.OrderBy(c => c.EngineMileage)
+                    : query.OrderByDescending(c => c.EngineMileage),
+
+                CarOrderParam.OwnershipsQuantity => filterDto.ByAscending
+                    ? query.OrderBy(c => c.OwnershipHistory.Count)
+                    : query.OrderByDescending(c => c.OwnershipHistory.Count),
+
+                _ => filterDto.ByAscending
+                    ? query.OrderBy(c => c.ReleaseYear)
+                    : query.OrderByDescending(c => c.ReleaseYear),
+            };
+
+            query = query.Skip((filterDto.Page - 1) * filterDto.Size)
+               .Take(filterDto.Size);
+
+            return _mapper.ProjectTo<PublicCarListItemDto>(query)
+                .ToListAsync(cancellationToken);
         }
 
-        public Task<List<PublicCarListItemDto>> GetCarsAsync(CancellationToken cancellationToken)
+        public Task<List<AdminCarListItemDto>> GetCarsForAdminAsync(AdminCarFilterDto filterDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
+            var query = _repo.GetQuery()
+                .Where(c => !c.IsDeleted);
 
-        public Task<List<AdminCarListItemDto>> GetCarsForAdminAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
+            query = query.Where
+            (
+                c => (c.Model.Name + c.Model.Brand.Name).ToLower()
+                     .Contains(filterDto.SearchText.ToLower())
+            );
+
+            if (filterDto.InSale != null)
+                query = query.Where(c => c.InSale == filterDto.InSale);
+
+            if (filterDto.HasAccident != null)
+                query = query.Where(c => c.HasAccident == filterDto.HasAccident);
+
+            if (filterDto.HadMajorRepair != null)
+                query = query.Where(c => c.OwnershipHistory.Any(co => co.HadMajorRepair) == filterDto.HadMajorRepair);
+
+            query = filterDto.OrderParam switch
+            {
+                CarOrderParam.EngineMileage => filterDto.ByAscending
+                    ? query.OrderBy(c => c.EngineMileage)
+                    : query.OrderByDescending(c => c.EngineMileage),
+
+                CarOrderParam.OwnershipsQuantity => filterDto.ByAscending
+                    ? query.OrderBy(c => c.OwnershipHistory.Count)
+                    : query.OrderByDescending(c => c.OwnershipHistory.Count),
+
+                _ => filterDto.ByAscending
+                    ? query.OrderBy(c => c.ReleaseYear)
+                    : query.OrderByDescending(c => c.ReleaseYear),
+            };
+
+            query = query.Skip((filterDto.Page - 1) * filterDto.Size)
+               .Take(filterDto.Size);
+
+            return _mapper.ProjectTo<AdminCarListItemDto>(query)
+                .ToListAsync(cancellationToken);
         }
 
         public async Task UpdateCarAsync(int id, UpdateCarDto updateCarDto, CancellationToken cancellationToken)

@@ -63,6 +63,7 @@
 
             MileageAfter = mileageAfter;
             ToDate = DateOnly.FromDateTime(DateTime.UtcNow);
+            IsCurrent = false;
         }
     }
 }

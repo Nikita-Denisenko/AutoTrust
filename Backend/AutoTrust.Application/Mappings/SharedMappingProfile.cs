@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;

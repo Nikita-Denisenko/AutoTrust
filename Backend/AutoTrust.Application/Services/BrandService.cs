@@ -34,6 +34,37 @@ namespace AutoTrust.Application.Services
 
         }
 
+        private IQueryable<Brand> ApplyFilters(BrandFilterDto filterDto)
+        {
+            var query = _repo.GetQuery();
+
+            if (filterDto is AdminBrandFilterDto adminFilterDto && adminFilterDto.IsDeleted != null)
+                query = query.Where(b => b.IsDeleted == adminFilterDto.IsDeleted.Value);
+            else
+                query = query.Where(b => !b.IsDeleted);
+
+            query = query.Where(b => b.Name.Contains(filterDto.SearchText));
+
+            if (filterDto.CountryId.HasValue)
+                query = query.Where(b => b.CountryId == filterDto.CountryId.Value);
+
+            query = filterDto.OrderParam switch
+            {
+                BrandOrderParam.CarQuantity => filterDto.ByAscending
+                    ? query.OrderBy(b => b.Models.SelectMany(m => m.Cars).Count())
+                    : query.OrderByDescending(b => b.Models.SelectMany(m => m.Cars).Count()),
+
+                _ => filterDto.ByAscending
+                    ? query.OrderBy(b => b.Name)
+                    : query.OrderByDescending(b => b.Name),
+            };
+
+            query = query.Skip((filterDto.Page - 1) * filterDto.Size)
+                .Take(filterDto.Size);
+            
+            return query;
+        }
+
         public async Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto, CancellationToken cancellationToken)
         {
             var validationResult = await _validator.CanCreate(createBrandDto, cancellationToken);
@@ -100,59 +131,20 @@ namespace AutoTrust.Application.Services
 
         public async Task<List<PublicBrandListItemDto>> GetBrandsAsync(BrandFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = _repo.GetQuery();
+            var query = ApplyFilters(filterDto);
 
-            query = query.Where(b => !b.IsDeleted);
-
-            query = query.Where(b => b.Name.Contains(filterDto.SearchText));
-
-            if (filterDto.CountryId.HasValue)
-                query = query.Where(b => b.CountryId == filterDto.CountryId.Value);
-
-            query = filterDto.OrderParam switch
-            {
-                BrandOrderParam.CarQuantity => filterDto.ByAscending 
-                    ? query.OrderBy(b => b.Models.SelectMany(m => m.Cars).Count()) 
-                    : query.OrderByDescending(b => b.Models.SelectMany(m => m.Cars).Count()),
-
-                _ => filterDto.ByAscending
-                    ? query.OrderBy(b => b.Name)
-                    : query.OrderByDescending(b => b.Name),
-            };
-
-            query = query.Skip((filterDto.Page - 1) * filterDto.Size)
-                .Take(filterDto.Size);
-
-            return await _mapper.ProjectTo<PublicBrandListItemDto>(query).ToListAsync(cancellationToken);
+            return await _mapper
+                .ProjectTo<PublicBrandListItemDto>(query)
+                .ToListAsync(cancellationToken);
         }
 
         public async Task<List<AdminBrandListItemDto>> GetBrandsForAdminAsync(AdminBrandFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = _repo.GetQuery();
+            var query = ApplyFilters(filterDto);
 
-            if (filterDto.IsDeleted != null) 
-                query = query.Where(b => b.IsDeleted == filterDto.IsDeleted.Value);
-
-            query = query.Where(b => b.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
-
-            if (filterDto.CountryId.HasValue)
-                query = query.Where(b => b.CountryId == filterDto.CountryId.Value);
-
-            query = filterDto.OrderParam switch
-            {
-                BrandOrderParam.CarQuantity => filterDto.ByAscending
-                    ? query.OrderBy(b => b.Models.SelectMany(m => m.Cars).Count())
-                    : query.OrderByDescending(b => b.Models.SelectMany(m => m.Cars).Count()),
-
-                _ => filterDto.ByAscending
-                    ? query.OrderBy(b => b.Name)
-                    : query.OrderByDescending(b => b.Name),
-            };
-
-            query = query.Skip((filterDto.Page - 1) * filterDto.Size)
-                .Take(filterDto.Size);
-
-           return await _mapper.ProjectTo<AdminBrandListItemDto>(query).ToListAsync(cancellationToken);
+            return await _mapper
+                .ProjectTo<AdminBrandListItemDto>(query)
+                .ToListAsync(cancellationToken);
         }
 
         public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto, CancellationToken cancellationToken)

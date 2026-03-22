@@ -13,6 +13,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos
         UserShortDto Author,
         ListingType Type,
         DateTime CreatedAt,
+        DateTime? UpdatedAt,
         LocationDto Location,
         BuyInfoDto? BuyInfoDto,
         SaleInfoDto? SaleInfoDto,

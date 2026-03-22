@@ -4,6 +4,6 @@
     (
         int Id,
         int ChatId,
-        int ChatParticipantId
+        int UserId
     );
 }

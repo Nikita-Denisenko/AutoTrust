@@ -3,6 +3,7 @@
     public record CreatedChatDto
     (
         int Id,
-        string Name
+        int CompanionId,
+        int CompanionName
     );
 }

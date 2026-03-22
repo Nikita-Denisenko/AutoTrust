@@ -1,4 +1,5 @@
-﻿using AutoTrust.Domain.Enums.OrderParams;
+﻿using AutoTrust.Domain.Enums;
+using AutoTrust.Domain.Enums.OrderParams;
 using static AutoTrust.Domain.Enums.OrderParams.CarOrderParam;
 
 namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Car
@@ -8,6 +9,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Car
         int Page = 1,
         int Size = 10,
         string SearchText = "",
+        CarColor? Color = null,
         bool? InSale = null,
         bool? HasAccident = null,
         bool? HadMajorRepair = null,

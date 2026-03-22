@@ -11,8 +11,7 @@ namespace AutoTrust.Application.Mappings
         public CarOwnershipMappingProfile() 
         {
             CreateMap<CarOwnership, PublicCarOwnershipDto>()
-                .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name))
-                .IncludeMembers(src => src.User);
+                .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name));
 
             CreateMap<CarOwnership, PublicUserOwnershipDto>()
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.Name))

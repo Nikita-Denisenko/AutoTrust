@@ -48,6 +48,9 @@ namespace AutoTrust.Application.Services
             else
                 query = query.Where(c => !c.IsDeleted);
 
+            if (filterDto.Color != null)
+                query = query.Where(c => c.Color == filterDto.Color);
+
             query = query.Where
             (
                 c => (c.Model.Name + c.Model.Brand.Name).ToLower()

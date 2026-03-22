@@ -6,7 +6,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyLi
     (
         int ModelId,
         string ModelName,
-        string? ModelImageUrl,
+        string ModelImageUrl,
         decimal MinPrice,
         decimal MaxPrice,
         CarColor? CarColor

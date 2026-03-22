@@ -4,6 +4,6 @@
     (
         int Id,
         int FollowerId,
-        int UserId
+        int TargetId
     );
 }

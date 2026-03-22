@@ -19,7 +19,6 @@ namespace AutoTrust.Domain.Entities
 
         public BuyDetails
         (
-            int listingId, 
             int modelId,
             decimal minPrice, 
             decimal maxPrice, 
@@ -28,9 +27,6 @@ namespace AutoTrust.Domain.Entities
             CarColor? carColor
         )
         {
-            if (listingId <= 0)
-                throw new ArgumentOutOfRangeException(nameof(listingId), listingId, "ListingId must be positive!");
-
             if (modelId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(modelId), modelId, "ModelId must be positive!");
 
@@ -62,7 +58,6 @@ namespace AutoTrust.Domain.Entities
                     "Maximal release year cannot be less than minimal release year or greater than the current year!"
                     );
 
-            ListingId = listingId;
             ModelId = modelId;
             MinPrice = minPrice;
             MaxPrice = maxPrice;

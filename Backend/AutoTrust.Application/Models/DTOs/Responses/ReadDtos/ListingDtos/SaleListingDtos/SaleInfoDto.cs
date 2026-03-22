@@ -6,7 +6,8 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleL
     (
         decimal Price,
         int CarId,
-        string CarName,
-        CarColor? CarColor
+        string CarImageUrl,
+        string ModelName,
+        CarColor CarColor
     );
 }

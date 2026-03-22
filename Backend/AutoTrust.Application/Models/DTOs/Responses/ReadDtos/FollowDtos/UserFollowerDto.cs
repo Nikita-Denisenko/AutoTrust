@@ -4,7 +4,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.FollowDtos
 {
     public record UserFollowerDto
     (
-        int FollowId,
+        int Id,
         UserShortDto Follower
     );
 }

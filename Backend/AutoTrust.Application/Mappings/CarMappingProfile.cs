@@ -18,16 +18,15 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
                 .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => src.StateNumber.Value))
                 .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory.Count))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => 
-                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name), 
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
+                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name),
                     new CountryShortDto
                     (
-                        src.LocationCity.CountryId, 
-                        src.LocationCity.Country.RuName, 
-                        src.LocationCity.Country.EnName, 
+                        src.LocationCity.CountryId,
+                        src.LocationCity.Country.RuName,
+                        src.LocationCity.Country.EnName,
                         src.LocationCity.Country.FlagImageUrl.Value
-                     ))))
-                .IncludeMembers(src => src.Model);
+                     ))));
 
             CreateMap<Car, AdminCarDto>()
                 .IncludeBase<Car, PublicCarDto>()
@@ -35,16 +34,15 @@ namespace AutoTrust.Application.Mappings
 
             CreateMap<Car, PublicCarListItemDto>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => 
-                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name), 
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
+                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name),
                     new CountryShortDto
                     (
-                        src.LocationCity.CountryId, 
-                        src.LocationCity.Country.RuName, 
-                        src.LocationCity.Country.EnName, 
+                        src.LocationCity.CountryId,
+                        src.LocationCity.Country.RuName,
+                        src.LocationCity.Country.EnName,
                         src.LocationCity.Country.FlagImageUrl.Value
-                     ))))
-                .IncludeMembers(src => src.Model);
+                     ))));
 
             CreateMap<Car, AdminCarListItemDto>()
                 .IncludeBase<Car, PublicCarListItemDto>()

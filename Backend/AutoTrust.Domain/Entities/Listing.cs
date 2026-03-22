@@ -52,6 +52,20 @@ namespace AutoTrust.Domain.Entities
             CityId = cityId;
         }
 
+        public void SetBuyDetails(BuyDetails buyDetails)
+        {
+            if (Type != ListingType.Buy)
+                throw new InvalidOperationException("Cannot add buy details to non-buy listing");
+            BuyDetails = buyDetails;
+        }
+
+        public void SetSaleDetails(SaleDetails saleDetails)
+        {
+            if (Type != ListingType.Sale)
+                throw new InvalidOperationException("Cannot add sale details to non-sale listing");
+            SaleDetails = saleDetails;
+        }
+
         public void UpdateInfo(string? newName, string? newDescription)
         {
             if (newName != null && string.IsNullOrWhiteSpace(newName))

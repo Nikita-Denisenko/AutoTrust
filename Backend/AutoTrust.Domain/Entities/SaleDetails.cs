@@ -13,21 +13,16 @@
 
         public SaleDetails
         (
-            int listingId,
             int carId,
             decimal price
         )
         {
-            if (listingId <= 0)
-                throw new ArgumentOutOfRangeException(nameof(listingId), listingId, "ListingId must be positive!");
-
             if (carId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(carId), carId, "CarId must be positive!");
 
             if (price < 0)
                 throw new ArgumentOutOfRangeException(nameof(price), price, "Price cannot be negative!");
 
-            ListingId = listingId;
             CarId = carId;
             Price = price;
         }

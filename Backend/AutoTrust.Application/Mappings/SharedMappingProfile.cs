@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
@@ -17,8 +16,7 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Brand, BrandShortDto>()
                 .ForMember(dest => dest.LogoUrl, opt => opt.MapFrom(src => src.LogoUrl.Value));
 
-            CreateMap<Model, ModelShortDto>()
-                .IncludeMembers(src => src.Brand);
+            CreateMap<Model, ModelShortDto>();
 
             CreateMap<Country, CountryShortDto>()
                 .ForMember(dest => dest.FlagImageUrl, opt => opt.MapFrom(src => src.FlagImageUrl.Value));
@@ -29,7 +27,7 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value));
 
             CreateMap<Listing, ListingShortDto>()
-                .IncludeMembers(src => src.User);
+                .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User));
         }
     }
 }

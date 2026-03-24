@@ -5,6 +5,6 @@
         int Id,
         int Stars,
         int ReviewerId,
-        int UserId
+        int ReceiverId
     );
 }

@@ -13,9 +13,9 @@ namespace AutoTrust.Infrastructure.Configurations
             builder.Property(r => r.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.HasOne(r => r.User)
+            builder.HasOne(r => r.Receiver)
                 .WithMany(u => u.Reviews)
-                .HasForeignKey(r => r.UserId)
+                .HasForeignKey(r => r.ReceiverId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(r => r.Reviewer)

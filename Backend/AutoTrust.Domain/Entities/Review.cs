@@ -1,6 +1,4 @@
-﻿using static System.Net.WebRequestMethods;
-
-namespace AutoTrust.Domain.Entities
+﻿namespace AutoTrust.Domain.Entities
 {
     public class Review
     {
@@ -10,8 +8,8 @@ namespace AutoTrust.Domain.Entities
         public string Message { get; private set; }
         public int ReviewerId { get; private set; }
         public User Reviewer { get; private set; }
-        public int UserId { get; private set; }
-        public User User { get; private set; }
+        public int ReceiverId { get; private set; }
+        public User Receiver { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public bool IsDeleted { get; private set; } = false;
 
@@ -23,7 +21,7 @@ namespace AutoTrust.Domain.Entities
             int stars,
             string message,
             int reviewerId,
-            int userId
+            int receiverId
         ) 
         {
             if (string.IsNullOrWhiteSpace(title))
@@ -38,14 +36,14 @@ namespace AutoTrust.Domain.Entities
             if (reviewerId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(reviewerId), reviewerId, "ReviewerId must be positive");
 
-            if (userId <= 0)
-                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
+            if (receiverId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(receiverId), receiverId, "ReceiverIdId must be positive");
 
             Title = title;
             Stars = stars;
             Message = message;
             ReviewerId = reviewerId;
-            UserId = userId;
+            ReceiverId = receiverId;
             CreatedAt = DateTime.UtcNow;
         }
 

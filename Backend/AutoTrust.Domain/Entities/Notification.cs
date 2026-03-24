@@ -1,6 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-
-namespace AutoTrust.Domain.Entities
+﻿namespace AutoTrust.Domain.Entities
 {
     public class Notification
     {

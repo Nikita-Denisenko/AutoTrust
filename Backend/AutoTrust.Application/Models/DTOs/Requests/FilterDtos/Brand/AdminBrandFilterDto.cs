@@ -2,6 +2,6 @@
 {
     public record AdminBrandFilterDto
     (
-        bool? IsDeleted = null
+        bool? IsActive = null
     ) : BrandFilterDto;
 }

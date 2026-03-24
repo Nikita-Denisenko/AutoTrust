@@ -38,10 +38,10 @@ namespace AutoTrust.Application.Services
         {
             var query = _repo.GetQuery();
 
-            if (filterDto is AdminBrandFilterDto adminFilterDto && adminFilterDto.IsDeleted != null)
-                query = query.Where(b => b.IsDeleted == adminFilterDto.IsDeleted.Value);
+            if (filterDto is AdminBrandFilterDto adminFilterDto && adminFilterDto.IsActive != null)
+                query = query.Where(b => b.IsActive == adminFilterDto.IsActive.Value);
             else
-                query = query.Where(b => !b.IsDeleted);
+                query = query.Where(b => b.IsActive);
 
             query = query.Where(b => b.Name.Contains(filterDto.SearchText));
 

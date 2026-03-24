@@ -10,7 +10,7 @@ namespace AutoTrust.Domain.Entities
         public Url LogoUrl { get; private set; }
         public int CountryId { get; private set; }
         public Country Country { get; private set; }
-        public bool IsDeleted { get; private set; } = false;
+        public bool IsActive { get; private set; } = true;
         public ICollection<Model> Models { get; private set; } = [];    
 
         private Brand() { }
@@ -55,6 +55,7 @@ namespace AutoTrust.Domain.Entities
             LogoUrl = newLogoUrl ?? LogoUrl;
 
         }
-        public void Delete() => IsDeleted = true; 
+        public void Deactivate() => IsActive = false; 
+        public void Activate() => IsActive = true;
     }
 }

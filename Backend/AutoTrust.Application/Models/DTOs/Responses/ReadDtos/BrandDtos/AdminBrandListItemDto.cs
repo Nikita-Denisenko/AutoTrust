@@ -6,6 +6,6 @@
         string Name,
         string LogoUrl,
         int CarQuantity,
-        bool IsDeleted
+        bool IsActive
     );
 }

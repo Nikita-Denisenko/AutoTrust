@@ -5,8 +5,8 @@ namespace AutoTrust.Domain.Entities
     public class BuyDetails
     {
         public int Id { get; private set; }
-        public int ListingId { get; private set; }
-        public Listing Listing { get; private set; }
+        public int? ListingId { get; private set; }
+        public Listing? Listing { get; private set; }
         public int ModelId { get; private set; }
         public Model Model { get; private set; }
         public decimal MinPrice { get; private set; }

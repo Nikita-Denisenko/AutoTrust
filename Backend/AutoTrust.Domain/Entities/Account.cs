@@ -27,11 +27,11 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
             PasswordHash = passwordHash;
-            UserId = userId;
             CreatedAt = DateTime.UtcNow;
+            UserId = userId;
         }
 
-        public void UpdatePassword(string newPasswordHash)
+        public void ChangePassword(string newPasswordHash)
         {
             if (string.IsNullOrWhiteSpace(newPasswordHash))
                 throw new ArgumentException("Password hash cannot be empty");
@@ -39,7 +39,7 @@ namespace AutoTrust.Domain.Entities
             PasswordHash = newPasswordHash;
         }
 
-        public void UpdatePhone(Phone newPhone)
+        public void ChangePhone(Phone newPhone)
         {
             Phone = newPhone ?? throw new ArgumentNullException(nameof(newPhone));
         }

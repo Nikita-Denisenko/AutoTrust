@@ -4,6 +4,7 @@
     (
        int Id,
        string Name,
+       string Surname,
        string? AvatarUrl
     );
 }

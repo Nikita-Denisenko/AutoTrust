@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoTrust.Application.Models.DTOs.AuthDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;
 using AutoTrust.Domain.Entities;
 

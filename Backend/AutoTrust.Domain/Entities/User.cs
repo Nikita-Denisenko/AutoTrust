@@ -7,6 +7,8 @@ namespace AutoTrust.Domain.Entities
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public string Patronymic { get; private set; }
         public BirthDate BirthDate { get; private set; }
         public Url? AvatarUrl { get; private set; } = null;
         public Gender Gender { get; private set; }
@@ -31,25 +33,30 @@ namespace AutoTrust.Domain.Entities
         public User
         (
             string name,
+            string surname,
+            string patronymic,
             BirthDate birthDate,
             Gender gender,
-            string aboutInfo,
             int cityId
         )
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name cannot be empty!");
 
-            if (string.IsNullOrWhiteSpace(aboutInfo))
-                throw new ArgumentException("AboutInfo cannot be empty!");
+            if (string.IsNullOrWhiteSpace(surname))
+                throw new ArgumentException("Surname cannot be empty!");
+
+            if (string.IsNullOrWhiteSpace(patronymic))
+                throw new ArgumentException("Partonymic cannot be empty!");
 
             if (cityId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
             Name = name;
+            Surname = surname;
+            Patronymic = patronymic;
             BirthDate = birthDate;
             Gender = gender;
-            AboutInfo = aboutInfo;
             CityId = cityId;
         }
 
@@ -58,6 +65,8 @@ namespace AutoTrust.Domain.Entities
         public void UpdateInfo
         (
             string? name,
+            string? surname,
+            string? patronymic,
             BirthDate? birthDate,
             Gender? gender,
             string? aboutInfo,
@@ -67,6 +76,12 @@ namespace AutoTrust.Domain.Entities
             if (name != null && string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name cannot be empty!");
 
+            if (surname != null && string.IsNullOrWhiteSpace(surname))
+                throw new ArgumentException("Surname cannot be empty!");
+
+            if (patronymic != null && string.IsNullOrWhiteSpace(patronymic))
+                throw new ArgumentException("Partonymic cannot be empty!");
+
             if (aboutInfo != null && string.IsNullOrWhiteSpace(aboutInfo))
                 throw new ArgumentException("AboutInfo cannot be empty!");
 
@@ -74,6 +89,8 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentOutOfRangeException(nameof(cityId), cityId, "CityId must be positive!");
 
             Name = name ?? Name;
+            Surname = surname ?? Surname;
+            Patronymic = patronymic ?? Patronymic;
             BirthDate = birthDate ?? BirthDate;
             Gender = gender ?? Gender;
             AboutInfo = aboutInfo ?? AboutInfo;

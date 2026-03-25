@@ -7,6 +7,8 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
     (
         int Id,
         string Name,
+        string Surname,
+        string Patronymic,
         DateOnly BirthDate,
         string? AvatarUrl,
         Gender Gender,

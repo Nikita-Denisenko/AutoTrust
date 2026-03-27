@@ -27,12 +27,16 @@
             Price = price;
         }
 
-        public void UpdatePrice(decimal newPrice)
+        public void UpdateInfo(int? carId, decimal? newPrice)
         {
+            if (carId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(carId), carId, "CarId must be positive!");
+
             if (newPrice < 0)
                 throw new ArgumentOutOfRangeException(nameof(newPrice), newPrice, "Price cannot be negative!");
 
-            Price = newPrice;
+            CarId = carId ?? CarId;
+            Price = newPrice ?? Price;
         }
     }
 }

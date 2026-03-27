@@ -68,6 +68,7 @@ namespace AutoTrust.Domain.Entities
 
         public void UpdateInfo
         (
+            int? modelId,
             decimal? minPrice, 
             decimal? maxPrice, 
             int? minReleaseYear, 
@@ -75,6 +76,9 @@ namespace AutoTrust.Domain.Entities
             CarColor? carColor
         )
         {
+            if (modelId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(modelId), modelId, "ModelId must be positive!");
+
             if (minPrice < 0)
                 throw new ArgumentOutOfRangeException(
                     nameof(minPrice), 
@@ -103,11 +107,12 @@ namespace AutoTrust.Domain.Entities
                     "Maximal release year cannot be less than minimal release year or greater than the current year!"
                     );
 
+            ModelId = modelId ?? ModelId;
             MinPrice = minPrice ?? MinPrice;
             MaxPrice = maxPrice ?? MaxPrice;
             MinReleaseYear = minReleaseYear ?? MinReleaseYear;
             MaxReleaseYear = maxReleaseYear ?? MaxReleaseYear;
-            CarColor = carColor ?? CarColor;
+            CarColor = carColor;
         }
     }
 }

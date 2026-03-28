@@ -2,17 +2,12 @@
 using AutoMapper.QueryableExtensions;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
+using AutoTrust.Application.Models.DTOs.Requests.Actions.Car;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
-using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Brand;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Car;
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Car;
 using AutoTrust.Application.Models.DTOs.Responses.CreatedDtos;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryDtos;
-using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
 using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.Enums.OrderParams;
 using AutoTrust.Domain.Interfaces;
@@ -29,8 +24,8 @@ namespace AutoTrust.Application.Services
 
         public CarService
         (
-            IRepository<Car> repo, 
-            ICarValidator validator, 
+            IRepository<Car> repo,
+            ICarValidator validator,
             IMapper mapper
         )
         {
@@ -41,7 +36,8 @@ namespace AutoTrust.Application.Services
 
         private IQueryable<Car> ApplyFilters(CarFilterDto filterDto)
         {
-            var query = _repo.GetQuery();
+            var query = _repo.GetQuery()
+                .AsNoTracking();
 
             if (filterDto is AdminCarFilterDto adminFilterDto && adminFilterDto.IsDeleted != null)
                 query = query.Where(c => c.IsDeleted == adminFilterDto.IsDeleted.Value);
@@ -107,7 +103,7 @@ namespace AutoTrust.Application.Services
             {
                 throw new InvalidOperationException($"Failed to create Car: {ex.Message}", ex);
             }
-            catch (ArgumentException ex) 
+            catch (ArgumentException ex)
             {
                 throw new InvalidOperationException($"Failed to create Car: {ex.Message}", ex);
             }
@@ -120,20 +116,27 @@ namespace AutoTrust.Application.Services
             if (car == null)
                 throw new KeyNotFoundException($"Car by Id {id} was not found!");
 
-            car.Delete();
-
-            await _repo.SaveChangesAsync(cancellationToken);
+            try
+            {
+                car.Delete();
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException($"Failed to delete Car: {ex.Message}", ex);
+            }
         }
 
         public async Task<PublicCarDto> GetCarAsync(int id, CancellationToken cancellationToken)
         {
-           var car = await _repo.GetQuery()
-                .Where(c => c.Id == id)
-                .ProjectTo<PublicCarDto>(_mapper.ConfigurationProvider)
-                .FirstOrDefaultAsync(cancellationToken);
-               
-           if (car == null)
-               throw new KeyNotFoundException($"Car by Id {id} was not found!");
+            var car = await _repo.GetQuery()
+                 .AsNoTracking()
+                 .Where(c => c.Id == id)
+                 .ProjectTo<PublicCarDto>(_mapper.ConfigurationProvider)
+                 .FirstOrDefaultAsync(cancellationToken);
+
+            if (car == null)
+                throw new KeyNotFoundException($"Car by Id {id} was not found!");
 
             return car;
         }
@@ -141,6 +144,7 @@ namespace AutoTrust.Application.Services
         public async Task<AdminCarDto> GetCarForAdminAsync(int id, CancellationToken cancellationToken)
         {
             var car = await _repo.GetQuery()
+                .AsNoTracking()
                 .Where(c => c.Id == id)
                 .ProjectTo<AdminCarDto>(_mapper.ConfigurationProvider)
                 .FirstOrDefaultAsync(cancellationToken);
@@ -176,7 +180,7 @@ namespace AutoTrust.Application.Services
             if (!validationResult.IsValid)
                 throw new InvalidOperationException(validationResult.ErrorMessage);
 
-            var car = await _repo.GetByIdAsync(id, cancellationToken) 
+            var car = await _repo.GetByIdAsync(id, cancellationToken)
                 ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
 
             try
@@ -200,6 +204,58 @@ namespace AutoTrust.Application.Services
             catch (ArgumentException ex)
             {
                 throw new InvalidOperationException($"Failed to update Car: {ex.Message}", ex);
+            }
+        }
+
+        public async Task MakeForSaleAsync(int id, CancellationToken cancellationToken)
+        {
+            var car = await _repo.GetByIdAsync(id, cancellationToken)
+                ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+            try
+            {
+                car.MakeForSale();
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException($"Failed to make Car for sale: {ex.Message}", ex);
+            }
+        }
+
+        public async Task TakeOffSaleAsync(int id, CancellationToken cancellationToken)
+        {
+            var car = await _repo.GetByIdAsync(id, cancellationToken)
+                ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+            try
+            {
+                car.TakeOffSale();
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException($"Failed to remove Car from sale: {ex.Message}", ex);
+            }
+        }
+
+        public async Task TransferOwnershipAsync(int id, TransferOwnershipDto transferOwnershipDto, CancellationToken cancellationToken)
+        {
+            var car = await _repo.GetQuery()
+                .Include(c => c.OwnershipHistory)
+                .FirstOrDefaultAsync(c => c.Id == id , cancellationToken)
+                
+                ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+            try
+            {
+                car.TransferOwnership(transferOwnershipDto.NewOwnerId, Url.Create(transferOwnershipDto.BillOfSalePhotoUrl));
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                throw new InvalidOperationException($"Failed to transfer Car ownership: {ex.Message}", ex);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException($"Failed to transfer Car ownership: {ex.Message}", ex);
             }
         }
     }

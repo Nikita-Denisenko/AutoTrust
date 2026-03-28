@@ -30,10 +30,13 @@ namespace AutoTrust.Domain.Entities
             Url imageUrl,
             CarColor color,
             StateNumber stateNumber,
-            decimal engineMileage,
             int modelId,
             int locationCityId,
-            bool hasAccident
+            bool hasAccident,
+            int userId,
+            DateOnly fromDate,
+            bool hadMajorRepair,
+            Url billOfSalePhotoUrl
         )
         {
             if (string.IsNullOrWhiteSpace(description))
@@ -44,13 +47,6 @@ namespace AutoTrust.Domain.Entities
                     nameof(releaseYear), 
                     releaseYear, 
                     "Year cannot be less than 1900 or greater than the current year!"
-                    );
-
-            if (engineMileage < 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(engineMileage), 
-                    engineMileage, 
-                    "Engine mileage cannot be negative!"
                     );
 
             if (modelId <= 0)
@@ -73,11 +69,23 @@ namespace AutoTrust.Domain.Entities
             ImageUrl = imageUrl;
             Color = color;
             StateNumber = stateNumber;
-            EngineMileage = engineMileage;
+            EngineMileage = 0;
             ModelId = modelId;
             LocationCityId = locationCityId;
             HasAccident = hasAccident;
             InSale = false;
+
+            var currentOwnership = new CarOwnership
+            (
+                userId,
+                0,
+                fromDate,
+                hadMajorRepair,
+                Id,
+                billOfSalePhotoUrl
+            );
+
+            OwnershipHistory.Add(currentOwnership);
         }
 
         public void UpdateInfo
@@ -108,8 +116,61 @@ namespace AutoTrust.Domain.Entities
             HasAccident = hasAccident ?? HasAccident;
         }
 
-        public void MakeForSale() => InSale = true;
-        public void TakeOffSale() => InSale = false;
-        public void Delete() => IsDeleted = true;
+        public void TransferOwnership(int newOwnerId, Url billOfSalePhotoUrl)
+        {
+            if (newOwnerId <= 0)
+                throw new ArgumentOutOfRangeException(nameof(newOwnerId), newOwnerId, "New owner id must be positive!");
+
+            if (!InSale)
+                throw new InvalidOperationException("Car is not for sale");
+
+            var currentOwnership = OwnershipHistory.First(o => o.IsCurrent);
+
+            if (newOwnerId == currentOwnership.UserId)
+                throw new InvalidOperationException("Cannot transfer ownership to yourself");
+
+            try
+            {
+                currentOwnership.EndOwnership();
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException(ex.Message, ex);
+            }
+
+            var newOwnership = new CarOwnership
+            (
+                newOwnerId,
+                currentOwnership.MileageAfter!.Value,
+                DateOnly.FromDateTime(DateTime.UtcNow),
+                currentOwnership.HadMajorRepair,
+                Id,
+                billOfSalePhotoUrl
+            );
+
+            OwnershipHistory.Add(newOwnership);
+        }
+
+        public void MakeForSale() 
+        {
+            if (InSale)
+                throw new InvalidOperationException("Car is already for sale!");
+
+            InSale = true;
+        }
+        public void TakeOffSale()
+        {
+            if (!InSale)
+                throw new InvalidOperationException("Car is not for sale!");
+
+            InSale = false;
+        }
+        public void Delete()
+        {
+            if (IsDeleted)
+                throw new InvalidOperationException("Car is already deleted");
+
+            IsDeleted = true;
+        }
     }
 }

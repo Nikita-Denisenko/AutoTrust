@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account
+namespace AutoTrust.Application.Models.DTOs.Requests.Actions.Account
 {
     public record ChangeEmailDto
     (

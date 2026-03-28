@@ -1,6 +1,6 @@
 ﻿using AutoTrust.Application.Interfaces.Services;
+using AutoTrust.Application.Models.DTOs.Requests.Actions.Account;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account;
-using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;
 using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.Interfaces;
@@ -34,6 +34,7 @@ namespace AutoTrust.Application.Services
         public async Task<AdminAccountDto> GetAccountForAdminAsync(int id, CancellationToken cancellationToken)
         {
             var account = await _repo.GetQuery()
+                .AsNoTracking()
                 .FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
 
             if (account == null)
@@ -52,7 +53,7 @@ namespace AutoTrust.Application.Services
 
         public async Task<List<AdminAccountListItemDto>> GetAccountsForAdminAsync(AdminAccountFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = _repo.GetQuery();
+            var query = _repo.GetQuery().AsNoTracking();
 
             if (filterDto.IsDeleted != null)
                 query = filterDto.IsDeleted.Value 

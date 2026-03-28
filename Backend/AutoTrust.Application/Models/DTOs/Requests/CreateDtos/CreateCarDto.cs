@@ -25,10 +25,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         string StateNumber,
 
         [Required]
-        [Range(0, int.MaxValue)]
-        decimal EngineMileage,
-
-        [Required]
         [Range(1, int.MaxValue)]
         int ModelId,
 
@@ -37,6 +33,20 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         int LocationCityId,
 
         [Required]
-        bool HasAccident
+        bool HasAccident,
+
+        [Required]
+        [Range(1, int.MaxValue)]
+        int UserId,
+
+        [Required]
+        DateOnly FromDate,
+
+        [Required]
+        bool HadMajorRepair,
+
+        [Required]
+        [Url]
+        string BillOfSalePhotoUrl
     );
 }

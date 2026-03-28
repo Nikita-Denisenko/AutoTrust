@@ -51,7 +51,23 @@ namespace AutoTrust.Application.Mappings
 
             CreateMap<CreateCarDto, Car>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => Url.Create(src.ImageUrl)))
-                .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => new StateNumber(src.StateNumber)));
+                .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => new StateNumber(src.StateNumber)))
+                .ForMember(dest => dest.OwnershipHistory, opt => opt.Ignore())
+                .ConstructUsing(src => new Car
+                (
+                    src.Description,
+                    src.ReleaseYear,
+                    Url.Create(src.ImageUrl),
+                    src.Color,
+                    new StateNumber(src.StateNumber),
+                    src.ModelId,
+                    src.LocationCityId,
+                    src.HasAccident,
+                    src.UserId,
+                    src.FromDate,
+                    src.HadMajorRepair,
+                    Url.Create(src.BillOfSalePhotoUrl)
+                ));
 
             CreateMap<Car, CreatedCarDto>();
         }

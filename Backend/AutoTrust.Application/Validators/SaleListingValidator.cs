@@ -12,11 +12,19 @@ namespace AutoTrust.Application.Validators
     public class SaleListingValidator : ISaleListingValidator
     {
         private readonly IRepository<User> _userRepo;
+        private readonly IRepository<Car> _carRepo;
 
-        public SaleListingValidator(IRepository<User> userRepo) => _userRepo = userRepo;
+        public SaleListingValidator(IRepository<User> userRepo, IRepository<Car> carRepo) 
+        {
+            _userRepo = userRepo;
+            _carRepo = carRepo;
+        }
 
         public async Task<ValidationResult> IsSaleValid (int userId, int carId, CancellationToken cancellationToken)
         {
+            if(!await _carRepo.GetQuery().AnyAsync(c => c.Id == carId))
+                return new ValidationResult(false, $"Car with ID {carId} does not exist!");
+
             var user = await _userRepo.GetQuery()
                 .Include(u => u.Listings)
                 .Include(u => u.CarOwnerships)

@@ -1,5 +1,5 @@
-﻿using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account;
-using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Account;
+﻿using AutoTrust.Application.Models.DTOs.Requests.Actions.Account;
+using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;
 
 namespace AutoTrust.Application.Interfaces.Services

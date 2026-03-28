@@ -27,8 +27,6 @@ namespace AutoTrust.Application.Mappings
             CreateMap<CarOwnership, AdminOwnershipListItemDto>()
                 .IncludeBase<CarOwnership, AdminOwnershipDto>();
 
-            CreateMap<CreateCarOwnershipDto, CarOwnership>();
-
             CreateMap<CarOwnership, CreatedCarOwnershipDto>();
         }
     }

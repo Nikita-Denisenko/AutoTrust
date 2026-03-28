@@ -32,6 +32,6 @@ namespace AutoTrust.Infrastructure.Repositories
         public async Task SaveChangesAsync(CancellationToken cancellationToken)
             => await _context.SaveChangesAsync(cancellationToken);
 
-        public IQueryable<T> GetQuery() => Set.AsNoTracking();
+        public IQueryable<T> GetQuery() => Set;
     }
 }

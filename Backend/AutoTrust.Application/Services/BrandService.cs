@@ -36,7 +36,8 @@ namespace AutoTrust.Application.Services
 
         private IQueryable<Brand> ApplyFilters(BrandFilterDto filterDto)
         {
-            var query = _repo.GetQuery();
+            var query = _repo.GetQuery()
+                .AsNoTracking();
 
             if (filterDto is AdminBrandFilterDto adminFilterDto && adminFilterDto.IsActive != null)
                 query = query.Where(b => b.IsActive == adminFilterDto.IsActive.Value);
@@ -106,6 +107,7 @@ namespace AutoTrust.Application.Services
         public async Task<PublicBrandDto> GetBrandAsync(int id, CancellationToken cancellationToken)
         {
             var brand = await _repo.GetQuery()
+                .AsNoTracking()
                 .Where(b => b.Id == id)
                 .ProjectTo<PublicBrandDto>(_mapper.ConfigurationProvider)
                 .FirstOrDefaultAsync(cancellationToken);
@@ -119,6 +121,7 @@ namespace AutoTrust.Application.Services
         public async Task<AdminBrandDto> GetBrandForAdminAsync(int id, CancellationToken cancellationToken)
         {
             var brand = await _repo.GetQuery()
+                .AsNoTracking()
                .Where(b => b.Id == id)
                .ProjectTo<AdminBrandDto>(_mapper.ConfigurationProvider)
                .FirstOrDefaultAsync(cancellationToken);

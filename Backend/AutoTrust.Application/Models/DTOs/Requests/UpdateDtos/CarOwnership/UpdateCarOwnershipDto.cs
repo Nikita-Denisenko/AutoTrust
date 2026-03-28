@@ -5,8 +5,10 @@ namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.CarOwnership
     public record UpdateCarOwnershipDto
     (
         [Range(0, int.MaxValue)]
-        decimal? MileageAfter,
+        decimal? MileageBefore,
 
-        DateOnly? ToDate
+        DateOnly? FromDate,
+
+        bool HadMajorRepair
     );
 }

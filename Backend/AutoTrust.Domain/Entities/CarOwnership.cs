@@ -1,4 +1,6 @@
-﻿namespace AutoTrust.Domain.Entities
+﻿using AutoTrust.Domain.ValueObjects;
+
+namespace AutoTrust.Domain.Entities
 {
     public class CarOwnership
     {
@@ -12,6 +14,7 @@
         public bool HadMajorRepair { get; private set; }
         public int CarId { get; private set; }
         public Car Car { get; private set; }
+        public Url BillOfSalePhotoUrl { get; private set; }
         public bool IsCurrent { get; private set; }
 
         private CarOwnership() { }
@@ -20,11 +23,10 @@
         (
             int userId,
             decimal mileageBefore,
-            decimal? mileageAfter,
             DateOnly fromDate,
-            DateOnly? toDate,
             bool hadMajorRepair,
-            int carId
+            int carId,
+            Url billOfSalePhotoUrl
         )
         {
             if (userId <= 0) 
@@ -36,16 +38,13 @@
             if (mileageBefore < 0) 
                 throw new ArgumentOutOfRangeException(nameof(mileageBefore), mileageBefore, "Mileage cannot be negative");
 
-            if (mileageAfter < 0)
-                throw new ArgumentOutOfRangeException(nameof(mileageAfter), mileageAfter, "Mileage cannot be negative");
-
             UserId = userId;
             MileageBefore = mileageBefore;
             FromDate = fromDate;
-            ToDate = toDate;
             HadMajorRepair = hadMajorRepair;
             CarId = carId;
-            IsCurrent = toDate == null;
+            IsCurrent = true;
+            BillOfSalePhotoUrl = billOfSalePhotoUrl;
         }
 
         public void MakeMajorRepair() 
@@ -56,12 +55,12 @@
             HadMajorRepair = true;
         }
 
-        public void EndOwnership(decimal mileageAfter)
+        public void EndOwnership()
         {
             if (!IsCurrent) 
                 throw new InvalidOperationException("Only current owner can end ownership!");
 
-            MileageAfter = mileageAfter;
+            MileageAfter = Car.EngineMileage;
             ToDate = DateOnly.FromDateTime(DateTime.UtcNow);
             IsCurrent = false;
         }

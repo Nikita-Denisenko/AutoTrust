@@ -15,7 +15,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
         decimal EngineMileage,
         int OwnershipsQuantity,
         ModelShortDto Model,
-        LocationDto Location,
         bool HasAccident,
         bool InSale,
         bool IsDeleted

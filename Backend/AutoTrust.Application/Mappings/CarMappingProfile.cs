@@ -17,32 +17,14 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Car, PublicCarDto>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
                 .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => src.StateNumber.Value))
-                .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory.Count))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name),
-                    new CountryShortDto
-                    (
-                        src.LocationCity.CountryId,
-                        src.LocationCity.Country.RuName,
-                        src.LocationCity.Country.EnName,
-                        src.LocationCity.Country.FlagImageUrl.Value
-                     ))));
+                .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory.Count));
 
             CreateMap<Car, AdminCarDto>()
                 .IncludeBase<Car, PublicCarDto>()
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
 
             CreateMap<Car, PublicCarListItemDto>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                    new LocationDto(new CityDto(src.LocationCityId, src.LocationCity.Name),
-                    new CountryShortDto
-                    (
-                        src.LocationCity.CountryId,
-                        src.LocationCity.Country.RuName,
-                        src.LocationCity.Country.EnName,
-                        src.LocationCity.Country.FlagImageUrl.Value
-                     ))));
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
 
             CreateMap<Car, AdminCarListItemDto>()
                 .IncludeBase<Car, PublicCarListItemDto>()
@@ -61,7 +43,6 @@ namespace AutoTrust.Application.Mappings
                     src.Color,
                     new StateNumber(src.StateNumber),
                     src.ModelId,
-                    src.LocationCityId,
                     src.HasAccident,
                     src.UserId,
                     src.FromDate,

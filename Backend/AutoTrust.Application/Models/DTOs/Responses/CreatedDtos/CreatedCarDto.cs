@@ -3,7 +3,6 @@
     public record CreatedCarDto
     (
         int Id,
-        int ModelId,
-        int LocationCityId
+        int ModelId
     );
 }

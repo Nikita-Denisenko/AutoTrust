@@ -12,7 +12,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
         ModelShortDto Model,
         string ImageUrl,
         CarColor Color,
-        LocationDto Location,
         bool InSale,
         bool IsDeleted
     );

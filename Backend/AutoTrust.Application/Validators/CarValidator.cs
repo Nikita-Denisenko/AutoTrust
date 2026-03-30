@@ -12,18 +12,27 @@ namespace AutoTrust.Application.Validators
     public class CarValidator : ICarValidator
     {
         private readonly IRepository<Car> _repo;
+        private readonly ILocationValidator _locationValidator;
 
-        public CarValidator(IRepository<Car> repo) => _repo = repo;
+        public CarValidator(IRepository<Car> repo, ILocationValidator locationValidator) 
+        {
+            _repo = repo;
+            _locationValidator = locationValidator;
+        }
 
         private async Task<bool> IsStateNumberUniqueForCreate(string stateNumber, CancellationToken cancellationToken)
         {
-            return !await _repo.GetQuery()
+            return !await _repo
+                .GetQuery()
+                .AsNoTracking()
                 .AnyAsync(c => c.StateNumber.Value == stateNumber, cancellationToken);  
         }
 
         private async Task<bool> IsStateNumberUniqueForUpdate(int id, string stateNumber, CancellationToken cancellationToken)
         {
-            return !await _repo.GetQuery()
+            return !await _repo
+                .GetQuery()
+                .AsNoTracking()
                 .AnyAsync(c => c.Id != id && c.StateNumber.Value == stateNumber, cancellationToken);
         }
 

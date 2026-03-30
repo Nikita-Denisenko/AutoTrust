@@ -13,10 +13,6 @@ namespace AutoTrust.Infrastructure.Configurations
             builder.Property(c => c.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.HasOne(c => c.LocationCity)
-                .WithMany(ci => ci.Cars)
-                .HasForeignKey(c => c.LocationCityId);
-
             builder.HasMany(c => c.OwnershipHistory)
                 .WithOne(oh => oh.Car)
                 .HasForeignKey(oh => oh.CarId)

@@ -29,10 +29,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         int ModelId,
 
         [Required]
-        [Range(1, int.MaxValue)]
-        int LocationCityId,
-
-        [Required]
         bool HasAccident,
 
         [Required]

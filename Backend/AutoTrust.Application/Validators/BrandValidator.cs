@@ -15,12 +15,16 @@ namespace AutoTrust.Application.Validators
         public BrandValidator(IRepository<Brand> repo) => _repo = repo;
 
         private async Task<bool> IsBrandNameUnique(string name, CancellationToken cancellationToken)
-            => !await _repo.GetQuery()
-            .AnyAsync(b => b.Name.ToLower() == name.ToLower(), cancellationToken);
+            => !await _repo
+                .GetQuery()
+                .AsNoTracking()
+                .AnyAsync(b => b.Name.ToLower() == name.ToLower(), cancellationToken);
 
         private async Task<bool> IsBrandNameUniqueForUpdate(int id, string name, CancellationToken cancellationToken)
-            => !await _repo.GetQuery()
-            .AnyAsync(b => b.Name.ToLower() == name.ToLower() && b.Id != id, cancellationToken);
+            => !await _repo
+                .GetQuery()
+                .AsNoTracking()
+                .AnyAsync(b => b.Name.ToLower() == name.ToLower() && b.Id != id, cancellationToken);
 
         public async Task<ValidationResult> CanCreate(CreateBrandDto dto, CancellationToken cancellationToken)
         {

@@ -15,8 +15,6 @@ namespace AutoTrust.Domain.Entities
         public ICollection<CarOwnership> OwnershipHistory { get; private set; } = [];
         public int ModelId { get; private set; }
         public Model Model { get; private set; }
-        public int LocationCityId { get; private set; }
-        public City LocationCity { get; private set; }
         public bool HasAccident { get; private set; } = false;
         public bool InSale { get; private set; } = false;
         public bool IsDeleted { get; private set; } = false;
@@ -31,7 +29,6 @@ namespace AutoTrust.Domain.Entities
             CarColor color,
             StateNumber stateNumber,
             int modelId,
-            int locationCityId,
             bool hasAccident,
             int userId,
             DateOnly fromDate,
@@ -56,14 +53,6 @@ namespace AutoTrust.Domain.Entities
                     "ModelId must be positive!"
                     );
 
-            if (locationCityId <= 0)
-                throw new ArgumentOutOfRangeException(
-                    nameof(locationCityId), 
-                    locationCityId, 
-                    "LocationCityId must be positive!"
-                    );
-
-
             Description = description;
             ReleaseYear = releaseYear;
             ImageUrl = imageUrl;
@@ -71,7 +60,6 @@ namespace AutoTrust.Domain.Entities
             StateNumber = stateNumber;
             EngineMileage = 0;
             ModelId = modelId;
-            LocationCityId = locationCityId;
             HasAccident = hasAccident;
             InSale = false;
 
@@ -81,7 +69,6 @@ namespace AutoTrust.Domain.Entities
                 0,
                 fromDate,
                 hadMajorRepair,
-                Id,
                 billOfSalePhotoUrl
             );
 
@@ -144,7 +131,6 @@ namespace AutoTrust.Domain.Entities
                 currentOwnership.MileageAfter!.Value,
                 DateOnly.FromDateTime(DateTime.UtcNow),
                 currentOwnership.HadMajorRepair,
-                Id,
                 billOfSalePhotoUrl
             );
 
@@ -158,6 +144,7 @@ namespace AutoTrust.Domain.Entities
 
             InSale = true;
         }
+
         public void TakeOffSale()
         {
             if (!InSale)
@@ -165,6 +152,7 @@ namespace AutoTrust.Domain.Entities
 
             InSale = false;
         }
+
         public void Delete()
         {
             if (IsDeleted)

@@ -25,15 +25,11 @@ namespace AutoTrust.Domain.Entities
             decimal mileageBefore,
             DateOnly fromDate,
             bool hadMajorRepair,
-            int carId,
             Url billOfSalePhotoUrl
         )
         {
             if (userId <= 0) 
                 throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
-
-            if (carId <= 0) 
-                throw new ArgumentOutOfRangeException(nameof(carId), carId, "CarId must be positive");
 
             if (mileageBefore < 0) 
                 throw new ArgumentOutOfRangeException(nameof(mileageBefore), mileageBefore, "Mileage cannot be negative");
@@ -42,7 +38,6 @@ namespace AutoTrust.Domain.Entities
             MileageBefore = mileageBefore;
             FromDate = fromDate;
             HadMajorRepair = hadMajorRepair;
-            CarId = carId;
             IsCurrent = true;
             BillOfSalePhotoUrl = billOfSalePhotoUrl;
         }

@@ -32,10 +32,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         bool HasAccident,
 
         [Required]
-        [Range(1, int.MaxValue)]
-        int UserId,
-
-        [Required]
         DateOnly FromDate,
 
         [Required]

@@ -6,7 +6,7 @@ namespace AutoTrust.Application.Interfaces.Validators
 {
     public interface ICarValidator
     {
-        public Task<ValidationResult> CanCreate(CreateCarDto dto, CancellationToken cancellationToken);
-        public Task<ValidationResult> CanUpdate(int id, UpdateCarDto dto, CancellationToken cancellationToken);
+        public Task<ValidationResult> CanCreateAsync(CreateCarDto dto, CancellationToken cancellationToken);
+        public Task<ValidationResult> CanUpdateAsync(int id, UpdateCarDto dto, CancellationToken cancellationToken);
     }
 }

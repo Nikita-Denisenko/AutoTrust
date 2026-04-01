@@ -13,7 +13,21 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Comment, AdminListingCommentDto>();
             CreateMap<Comment, AdminUserCommentDto>();
             CreateMap<Comment, CommentDto>();
-            CreateMap<CreateCommentDto, CommentDto>();
+
+            CreateMap<CreateCommentDto, Comment>()
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
+
+                    return new Comment(
+                        userId,
+                        src.ListingId,
+                        src.Text
+                    );
+                });
+
             CreateMap<Comment, CreatedCommentDto>();
         }
     }

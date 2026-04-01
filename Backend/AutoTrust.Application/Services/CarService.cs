@@ -20,17 +20,20 @@ namespace AutoTrust.Application.Services
     {
         private readonly IRepository<Car> _repo;
         private readonly ICarValidator _validator;
+        private readonly IUserValidator _userValidator;
         private readonly IMapper _mapper;
 
         public CarService
         (
             IRepository<Car> repo,
             ICarValidator validator,
+            IUserValidator userValidator,
             IMapper mapper
         )
         {
             _repo = repo;
             _validator = validator;
+            _userValidator = userValidator;
             _mapper = mapper;
         }
 
@@ -83,16 +86,16 @@ namespace AutoTrust.Application.Services
             return query;
         }
 
-        public async Task<CreatedCarDto> CreateCarAsync(CreateCarDto createCarDto, CancellationToken cancellationToken)
+        public async Task<CreatedCarDto> CreateCarAsync(int currentUserId, CreateCarDto createCarDto, CancellationToken cancellationToken)
         {
-            var validationResult = await _validator.CanCreate(createCarDto, cancellationToken);
+            var validationResult = await _validator.CanCreateAsync(createCarDto, cancellationToken);
 
             if (!validationResult.IsValid)
                 throw new InvalidOperationException(validationResult.ErrorMessage);
 
             try
             {
-                var car = _mapper.Map<Car>(createCarDto);
+                var car = _mapper.Map<Car>(createCarDto, opts => opts.Items["UserId"] = currentUserId);
 
                 await _repo.AddAsync(car, cancellationToken);
                 await _repo.SaveChangesAsync(cancellationToken);
@@ -175,7 +178,7 @@ namespace AutoTrust.Application.Services
 
         public async Task UpdateCarAsync(int id, UpdateCarDto updateCarDto, CancellationToken cancellationToken)
         {
-            var validationResult = await _validator.CanUpdate(id, updateCarDto, cancellationToken);
+            var validationResult = await _validator.CanUpdateAsync(id, updateCarDto, cancellationToken);
 
             if (!validationResult.IsValid)
                 throw new InvalidOperationException(validationResult.ErrorMessage);
@@ -239,6 +242,11 @@ namespace AutoTrust.Application.Services
 
         public async Task TransferOwnershipAsync(int id, TransferOwnershipDto transferOwnershipDto, CancellationToken cancellationToken)
         {
+            var (newOwnerExists, error) = await _userValidator.IsUserExistsAsync(transferOwnershipDto.NewOwnerId, cancellationToken);
+
+            if (!newOwnerExists)
+                throw new InvalidOperationException($"Failed to transfer Car ownership: {error}");
+
             var car = await _repo.GetQuery()
                 .Include(c => c.OwnershipHistory)
                 .FirstOrDefaultAsync(c => c.Id == id , cancellationToken)

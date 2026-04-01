@@ -16,9 +16,24 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Review, AdminReviewToUserListItemDto>();
             CreateMap<Review, ReviewDto>();
             CreateMap<Review, ReviewListItemDto>();
-            CreateMap<CreateReviewDto, Review>();
+
+            CreateMap<CreateReviewDto, Review>()
+                .ForMember(dest => dest.ReviewerId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("ReviewerId", out var reviewerIdObj) || reviewerIdObj is not int reviewerId)
+                        throw new InvalidOperationException("ReviewerId not provided");
+
+                    return new Review(
+                        src.Title,
+                        src.Stars,
+                        src.Message,
+                        reviewerId,
+                        src.ReceiverId
+                    );
+                });
+
             CreateMap<Review, CreatedReviewDto>();
         }
     }
 }
-

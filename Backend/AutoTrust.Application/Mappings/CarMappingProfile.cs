@@ -12,7 +12,7 @@ namespace AutoTrust.Application.Mappings
 {
     public class CarMappingProfile : Profile
     {
-        public CarMappingProfile() 
+        public CarMappingProfile()
         {
             CreateMap<Car, PublicCarDto>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
@@ -35,21 +35,26 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => Url.Create(src.ImageUrl)))
                 .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => new StateNumber(src.StateNumber)))
                 .ForMember(dest => dest.OwnershipHistory, opt => opt.Ignore())
-                .ConstructUsing(src => new Car
-                (
-                    src.Description,
-                    src.ReleaseYear,
-                    Url.Create(src.ImageUrl),
-                    src.Color,
-                    new StateNumber(src.StateNumber),
-                    src.ModelId,
-                    src.HasAccident,
-                    src.UserId,
-                    src.FromDate,
-                    src.HadMajorRepair,
-                    Url.Create(src.BillOfSalePhotoUrl)
-                ));
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
 
+                    return new Car
+                    (
+                        src.Description,
+                        src.ReleaseYear,
+                        Url.Create(src.ImageUrl),
+                        src.Color,
+                        new StateNumber(src.StateNumber),
+                        src.ModelId,
+                        src.HasAccident,
+                        userId,
+                        src.FromDate,
+                        src.HadMajorRepair,
+                        Url.Create(src.BillOfSalePhotoUrl)
+                    );
+                });
             CreateMap<Car, CreatedCarDto>();
         }
     }

@@ -14,7 +14,7 @@ namespace AutoTrust.Application.Mappings
 {
     public class ListingMappingProfile : Profile
     {
-        public ListingMappingProfile() 
+        public ListingMappingProfile()
         {
             CreateMap<BuyDetails, BuyInfoDto>()
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Model.Name))
@@ -109,15 +109,43 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.Car, opt => opt.MapFrom(src => src.SaleDetails!.Car))
                 .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions.Count));
 
-            CreateMap<CreateBuyListingDto, Listing>()
-                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => ListingType.Buy));
-
             CreateMap<CreateBuyListingDto, BuyDetails>();
-            
-            CreateMap<CreateSaleListingDto, Listing>()
-                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => ListingType.Sale));
+
+            CreateMap<CreateBuyListingDto, Listing>()
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => ListingType.Buy))
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
+
+                    return new Listing(
+                        src.Name,
+                        userId,
+                        src.Description,
+                        ListingType.Buy,
+                        src.CityId
+                    );
+                });
 
             CreateMap<CreateSaleListingDto, SaleDetails>();
+
+            CreateMap<CreateSaleListingDto, Listing>()
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => ListingType.Sale))
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
+
+                    return new Listing(
+                        src.Name,
+                        userId,
+                        src.Description,
+                        ListingType.Sale,
+                        src.CityId
+                    );
+                });
 
             CreateMap<Listing, CreatedListingDto>();
         }

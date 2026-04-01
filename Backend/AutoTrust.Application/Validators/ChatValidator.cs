@@ -13,7 +13,7 @@ namespace AutoTrust.Application.Validators
 
         public ChatValidator(IRepository<Chat> repo) => _repo = repo;
 
-        public async Task<ValidationResult> CanCreate(CreateChatDto dto, int currentUserId, CancellationToken cancellationToken)
+        public async Task<ValidationResult> CanCreateAsync(CreateChatDto dto, int currentUserId, CancellationToken cancellationToken)
         {
             if (dto.CompanionId == currentUserId)
                 return new ValidationResult(false, "User cannot create a chat with himself!");

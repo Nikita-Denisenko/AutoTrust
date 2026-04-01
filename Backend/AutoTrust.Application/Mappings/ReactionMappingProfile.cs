@@ -13,7 +13,22 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Reaction, AdminListingReactionDto>();
             CreateMap<Reaction, AdminUserReactionDto>();
             CreateMap<Reaction, ReactionDto>();
-            CreateMap<CreateReactionDto, Reaction>();
+
+            CreateMap<CreateReactionDto, Reaction>()
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
+
+                    return new Reaction(
+                        src.Emoji,
+                        src.Name,
+                        userId,
+                        src.ListingId
+                    );
+                });
+
             CreateMap<Reaction, CreatedReactionDto>();
         }
     }

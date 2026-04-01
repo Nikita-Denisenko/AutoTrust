@@ -20,10 +20,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 
         [Required]
         [Range(1, int.MaxValue)]
-        int ReviewerId,
-
-        [Required]
-        [Range(1, int.MaxValue)]
         int ReceiverId
     );
 }

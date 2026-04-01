@@ -68,7 +68,7 @@ namespace AutoTrust.Application.Services
 
         public async Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto, CancellationToken cancellationToken)
         {
-            var validationResult = await _validator.CanCreate(createBrandDto, cancellationToken);
+            var validationResult = await _validator.CanCreateAsync(createBrandDto, cancellationToken);
 
             if (!validationResult.IsValid)
                 throw new InvalidOperationException(validationResult.ErrorMessage);
@@ -152,7 +152,7 @@ namespace AutoTrust.Application.Services
 
         public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto, CancellationToken cancellationToken)
         {
-            var validationResult = await _validator.CanUpdate(id, updateBrandDto, cancellationToken);
+            var validationResult = await _validator.CanUpdateAsync(id, updateBrandDto, cancellationToken);
 
             if (!validationResult.IsValid)
                 throw new InvalidOperationException(validationResult.ErrorMessage);

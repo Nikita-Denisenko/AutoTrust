@@ -17,7 +17,19 @@ namespace AutoTrust.Application.Mappings
                 .IncludeBase<Message, MessageDto>()
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
 
-            CreateMap<CreateMessageDto, Message>();
+            CreateMap<CreateMessageDto, Message>()
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ConstructUsing((src, ctx) =>
+                {
+                    if (!ctx.Items.TryGetValue("UserId", out var userIdObj) || userIdObj is not int userId)
+                        throw new InvalidOperationException("UserId not provided");
+
+                    return new Message(
+                        src.Text,
+                        src.ChatId,
+                        userId
+                    );
+                });
 
             CreateMap<Message, CreatedMessageDto>();
         }    

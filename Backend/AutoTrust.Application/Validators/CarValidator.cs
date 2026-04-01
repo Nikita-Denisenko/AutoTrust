@@ -20,7 +20,7 @@ namespace AutoTrust.Application.Validators
             _locationValidator = locationValidator;
         }
 
-        private async Task<bool> IsStateNumberUniqueForCreate(string stateNumber, CancellationToken cancellationToken)
+        private async Task<bool> IsStateNumberUniqueForCreateAsync(string stateNumber, CancellationToken cancellationToken)
         {
             return !await _repo
                 .GetQuery()
@@ -28,7 +28,7 @@ namespace AutoTrust.Application.Validators
                 .AnyAsync(c => c.StateNumber.Value == stateNumber, cancellationToken);  
         }
 
-        private async Task<bool> IsStateNumberUniqueForUpdate(int id, string stateNumber, CancellationToken cancellationToken)
+        private async Task<bool> IsStateNumberUniqueForUpdateAsync(int id, string stateNumber, CancellationToken cancellationToken)
         {
             return !await _repo
                 .GetQuery()
@@ -36,16 +36,16 @@ namespace AutoTrust.Application.Validators
                 .AnyAsync(c => c.Id != id && c.StateNumber.Value == stateNumber, cancellationToken);
         }
 
-        public async Task<ValidationResult> CanCreate(CreateCarDto dto, CancellationToken cancellationToken)
+        public async Task<ValidationResult> CanCreateAsync(CreateCarDto dto, CancellationToken cancellationToken)
         {
-            var result = await IsStateNumberUniqueForCreate(dto.StateNumber, cancellationToken);
+            var result = await IsStateNumberUniqueForCreateAsync(dto.StateNumber, cancellationToken);
             return new ValidationResult(result, result ? null : "Car with this state number already exists!");
         }
 
-        public async Task<ValidationResult> CanUpdate(int id, UpdateCarDto dto, CancellationToken cancellationToken)
+        public async Task<ValidationResult> CanUpdateAsync(int id, UpdateCarDto dto, CancellationToken cancellationToken)
         {
             var stateNumber = dto.StateNumber;
-            var result = stateNumber == null || await IsStateNumberUniqueForUpdate(id, stateNumber, cancellationToken);
+            var result = stateNumber == null || await IsStateNumberUniqueForUpdateAsync(id, stateNumber, cancellationToken);
             return new ValidationResult(result, result ? null : "Car with this state number already exists!");
         }
     }

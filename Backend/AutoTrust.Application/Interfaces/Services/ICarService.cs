@@ -12,7 +12,7 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, CancellationToken cancellationToken);
         public Task<AdminCarDto> GetCarForAdminAsync(int id, CancellationToken cancellationToken);
         public Task<List<AdminCarListItemDto>> GetCarsForAdminAsync(AdminCarFilterDto filterDto, CancellationToken cancellationToken);
-        public Task<CreatedCarDto> CreateCarAsync(CreateCarDto createCarDto, CancellationToken cancellationToken);
+        public Task<CreatedCarDto> CreateCarAsync(int currentUserId, CreateCarDto createCarDto, CancellationToken cancellationToken);
         public Task UpdateCarAsync(int id, UpdateCarDto updateCarDto, CancellationToken cancellationToken);
         public Task DeleteCarAsync(int id, CancellationToken cancellationToken);
     }

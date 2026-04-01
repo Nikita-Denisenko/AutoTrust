@@ -20,7 +20,7 @@ namespace AutoTrust.Application.Validators
             _carRepo = carRepo;
         }
 
-        public async Task<ValidationResult> IsSaleValid (int userId, int carId, CancellationToken cancellationToken)
+        public async Task<ValidationResult> IsSaleValidAsync(int userId, int carId, CancellationToken cancellationToken)
         {
             if(!await _carRepo
                 .GetQuery()

@@ -11,8 +11,13 @@ namespace AutoTrust.Application.Validators
     public class BrandValidator : IBrandValidator
     {
         private readonly IRepository<Brand> _repo;
+        private readonly ILocationValidator _locationValidator;
 
-        public BrandValidator(IRepository<Brand> repo) => _repo = repo;
+        public BrandValidator(IRepository<Brand> repo, ILocationValidator locationValidator)
+        {
+            _repo = repo;
+            _locationValidator = locationValidator;
+        }
 
         private async Task<bool> IsBrandNameUniqueAsync(string name, CancellationToken cancellationToken)
             => !await _repo
@@ -28,6 +33,11 @@ namespace AutoTrust.Application.Validators
 
         public async Task<ValidationResult> CanCreateAsync(CreateBrandDto dto, CancellationToken cancellationToken)
         {
+            var (isValid, error) = await _locationValidator.CountryExistsAsync(dto.CountryId, cancellationToken);
+
+            if (!isValid) 
+                return new ValidationResult(false, error);
+
             var result = await IsBrandNameUniqueAsync(dto.Name, cancellationToken);
             return new ValidationResult(result, result ? null : "Brand with this name already exists.");
         }

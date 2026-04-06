@@ -2,25 +2,27 @@
 {
     public class Chat
     {
-        public int Id { get; private set; } 
-        public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
+        public int Id { get; private set; }
+        private readonly List<ChatParticipant> _chatParticipants = [];
+        public IReadOnlyCollection<ChatParticipant> ChatParticipants => _chatParticipants;
         public ICollection<Message> Messages { get; private set; } = [];
         public DateTime CreatedAt { get; private set; }
-        public int? PinnedMessageId { get; private set; }
+        public Message? PinnedMessage { get; private set; }
 
-        public Chat() 
+        private Chat() { }
+
+        public Chat(int user1Id, int user2Id)
         {
+            if (user1Id == user2Id)
+                throw new InvalidOperationException("Cannot create chat with yourself");
+
+            _chatParticipants.Add(new ChatParticipant(user1Id));
+            _chatParticipants.Add(new ChatParticipant(user2Id));
             CreatedAt = DateTime.UtcNow;
         }
 
-        public void PinMessage(int messageId)
-        {
-            if (messageId <= 0)
-                throw new ArgumentOutOfRangeException(nameof(messageId), messageId, "MessageId must be positive!");
+        public void PinMessage(Message message) => PinnedMessage = message;
 
-            PinnedMessageId = messageId;
-        } 
-
-        public void UnpinCurrentMessage() => PinnedMessageId = null;
+        public void UnpinCurrentMessage() => PinnedMessage = null;
     }
 }

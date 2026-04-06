@@ -10,11 +10,19 @@ namespace AutoTrust.Application.Validators
     public class ChatValidator : IChatValidator
     {
         private readonly IRepository<Chat> _repo;
+        private readonly IRepository<User> _userRepo;
 
-        public ChatValidator(IRepository<Chat> repo) => _repo = repo;
+        public ChatValidator(IRepository<Chat> repo, IRepository<User> userRepo)
+        {
+            _repo = repo;
+            _userRepo = userRepo;
+        }
 
         public async Task<ValidationResult> CanCreateAsync(CreateChatDto dto, int currentUserId, CancellationToken cancellationToken)
         {
+            if (!await _userRepo.GetQuery().AsNoTracking().AnyAsync(u => u.Id == dto.CompanionId, cancellationToken))
+                return new ValidationResult(false, $"Companion with ID {dto.CompanionId} does not exists!");
+
             if (dto.CompanionId == currentUserId)
                 return new ValidationResult(false, "User cannot create a chat with himself!");
 

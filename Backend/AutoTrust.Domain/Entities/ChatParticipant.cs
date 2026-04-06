@@ -10,20 +10,12 @@
 
         private ChatParticipant() { }
 
-        public ChatParticipant
-        (
-            int userId,
-            int chatId
-        )
+        public ChatParticipant(int userId)
         {
             if (userId <= 0)
                 throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserId must be positive");
 
-            if (chatId <= 0)
-                throw new ArgumentOutOfRangeException(nameof(chatId), chatId, "ChatId must be positive!");
-
             UserId = userId;
-            ChatId = chatId;
         }
     }
 }

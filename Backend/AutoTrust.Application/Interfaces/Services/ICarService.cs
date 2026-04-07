@@ -9,7 +9,7 @@ namespace AutoTrust.Application.Interfaces.Services
     public interface ICarService
     {
         public Task<PublicCarDto> GetCarAsync(int id, CancellationToken cancellationToken);
-        public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, CancellationToken cancellationToken);
+        public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, int userId, CancellationToken cancellationToken);
         public Task<AdminCarDto> GetCarForAdminAsync(int id, CancellationToken cancellationToken);
         public Task<List<AdminCarListItemDto>> GetCarsForAdminAsync(AdminCarFilterDto filterDto, CancellationToken cancellationToken);
         public Task<CreatedCarDto> CreateCarAsync(int currentUserId, CreateCarDto createCarDto, CancellationToken cancellationToken);

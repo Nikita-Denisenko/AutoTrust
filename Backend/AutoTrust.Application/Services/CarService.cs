@@ -37,7 +37,7 @@ namespace AutoTrust.Application.Services
             _mapper = mapper;
         }
 
-        private IQueryable<Car> ApplyFilters(CarFilterDto filterDto)
+        private IQueryable<Car> ApplyFilters(CarFilterDto filterDto, int? userId = null)
         {
             var query = _repo.GetQuery()
                 .AsNoTracking();
@@ -46,6 +46,19 @@ namespace AutoTrust.Application.Services
                 query = query.Where(c => c.IsDeleted == adminFilterDto.IsDeleted.Value);
             else
                 query = query.Where(c => !c.IsDeleted);
+
+            if (filterDto is AdminCarFilterDto adminDto)
+            {
+                if (adminDto.UserId != null)
+                {
+                    if (adminDto.OnlyCurrent)
+                        query = query.Where(c => c.OwnershipHistory.OrderBy(co => co.FromDate).Last().UserId == adminDto.UserId);
+                    else
+                        query = query.Where(c => c.OwnershipHistory.Any(oh => oh.UserId == adminDto.UserId));
+                }
+            }
+            else
+                query = query.Where(c => c.OwnershipHistory.OrderBy(co => co.FromDate).Last().UserId == userId);
 
             if (filterDto.Color != null)
                 query = query.Where(c => c.Color == filterDto.Color);
@@ -158,9 +171,9 @@ namespace AutoTrust.Application.Services
             return car;
         }
 
-        public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, CancellationToken cancellationToken)
+        public Task<List<PublicCarListItemDto>> GetCarsAsync(CarFilterDto filterDto, int userId, CancellationToken cancellationToken)
         {
-            var query = ApplyFilters(filterDto);
+            var query = ApplyFilters(filterDto, userId);
 
             return _mapper
                 .ProjectTo<PublicCarListItemDto>(query)

@@ -2,6 +2,7 @@
 {
     public record AdminCarFilterDto
     (
-        bool? IsDeleted = null
+        bool? IsDeleted = null,
+        int? UserId = null
     ) : CarFilterDto;
 }

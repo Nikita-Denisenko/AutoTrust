@@ -49,6 +49,6 @@
         }
 
         public void Delete() => IsDeleted = true;
-        public void Read() => IsRead = true;
+        public void MarkAsRead() => IsRead = true;
     }
 }

@@ -42,8 +42,9 @@ namespace AutoTrust.Application.Services
             var query = _repo.GetQuery()
                 .AsNoTracking();
 
-            if (filterDto is AdminCarFilterDto adminFilterDto && adminFilterDto.IsDeleted != null)
-                query = query.Where(c => c.IsDeleted == adminFilterDto.IsDeleted.Value);
+            if (filterDto is AdminCarFilterDto adminFilterDto) 
+                if (adminFilterDto.IsDeleted != null)
+                    query = query.Where(c => c.IsDeleted == adminFilterDto.IsDeleted.Value);
             else
                 query = query.Where(c => !c.IsDeleted);
 

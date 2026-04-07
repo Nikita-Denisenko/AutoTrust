@@ -39,8 +39,9 @@ namespace AutoTrust.Application.Services
             var query = _repo.GetQuery()
                 .AsNoTracking();
 
-            if (filterDto is AdminBrandFilterDto adminFilterDto && adminFilterDto.IsActive != null)
-                query = query.Where(b => b.IsActive == adminFilterDto.IsActive.Value);
+            if (filterDto is AdminBrandFilterDto adminFilterDto) 
+                if (adminFilterDto.IsActive != null)
+                    query = query.Where(b => b.IsActive == adminFilterDto.IsActive.Value);
             else
                 query = query.Where(b => b.IsActive);
 
@@ -175,7 +176,7 @@ namespace AutoTrust.Application.Services
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                throw new InvalidOperationException($"Failed to create brand: {ex.Message}", ex);
+                throw new InvalidOperationException($"Failed to update brand: {ex.Message}", ex);
             }
             catch (ArgumentException ex)
             {

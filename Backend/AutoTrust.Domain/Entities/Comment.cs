@@ -48,6 +48,6 @@
 
         public void Delete() => IsDeleted = true;
         public void Block() => IsBlocked = true;
-        public void UnBlock() => IsBlocked = false;
+        public void Unblock() => IsBlocked = false;
     }
 }

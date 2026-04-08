@@ -10,8 +10,7 @@ namespace AutoTrust.Application.Mappings
     {
         public CommentMappingProfile() 
         {
-            CreateMap<Comment, AdminListingCommentDto>();
-            CreateMap<Comment, AdminUserCommentDto>();
+            CreateMap<Comment, AdminCommentDto>();
             CreateMap<Comment, CommentDto>();
 
             CreateMap<CreateCommentDto, Comment>()

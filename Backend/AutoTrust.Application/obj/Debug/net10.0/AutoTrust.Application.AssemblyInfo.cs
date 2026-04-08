@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoTrust.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fee9a929c29392095aa19396e7e643e4ca32c753")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b3e84b9a5e80c5c7f95edb5e764bb147e30bc59")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoTrust.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoTrust.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

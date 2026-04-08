@@ -105,7 +105,7 @@ namespace AutoTrust.Application.Services
             if (!await messages.AnyAsync(cancellationToken))
                 throw new InvalidOperationException("Messages to delete were not found!");
 
-            if (!await messages.AllAsync(m => m.UserId == currentUserId, cancellationToken))
+            if (await messages.AnyAsync(m => m.UserId != currentUserId, cancellationToken))
                 throw new InvalidOperationException("User cannot delete other user's messages!");
 
             foreach (var message in messages)

@@ -79,7 +79,7 @@ namespace AutoTrust.Application.Services
 
             try
             {
-                var message = _mapper.Map<Message>(dto);
+                var message = _mapper.Map<Message>(dto, opts => opts.Items["UserId"] = currentUserId);
 
                 await _repo.AddAsync(message, cancellationToken);
                 await _repo.SaveChangesAsync(cancellationToken);

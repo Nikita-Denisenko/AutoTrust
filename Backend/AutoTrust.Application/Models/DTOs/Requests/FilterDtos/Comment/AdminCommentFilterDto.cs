@@ -3,6 +3,7 @@
     public record AdminCommentFilterDto
     (
         int? UserId = null,
-        int? ListingId = null
+        int? ListingId = null,
+        bool? IsDeleted = null
     ) : CommentFilterDto;
 }

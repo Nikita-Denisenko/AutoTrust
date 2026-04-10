@@ -39,9 +39,11 @@ namespace AutoTrust.Application.Services
             var query = _repo.GetQuery()
                 .AsNoTracking();
 
-            if (filterDto is AdminBrandFilterDto adminFilterDto) 
+            if (filterDto is AdminBrandFilterDto adminFilterDto)
+            {
                 if (adminFilterDto.IsActive != null)
                     query = query.Where(b => b.IsActive == adminFilterDto.IsActive.Value);
+            }
             else
                 query = query.Where(b => b.IsActive);
 

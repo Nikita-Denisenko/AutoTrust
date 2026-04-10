@@ -11,9 +11,9 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task<CreatedCommentDto> CreateCommentAsync(int currentUserId, CreateCommentDto dto, CancellationToken cancellationToken);
         public Task<List<CommentDto>> GetCommentsAsync(int listingId, CommentFilterDto filterDto, CancellationToken cancellationToken);
         public Task<List<AdminCommentDto>> GetCommentsForAdminAsync(AdminCommentFilterDto adminFilterDto, CancellationToken cancellationToken);
-        public Task UpdateCommentAsync(int Id, int currentUserId, UpdateCommentDto dto, CancellationToken cancellationToken);
-        public Task DeleteCommentAsync(int Id, int currentUserId, CancellationToken cancellationToken);
-        public Task BlockCommentByAdminAsync(int Id, CancellationToken cancellationToken);
-        public Task UnblockCommentByAdminAsync(int Id, CancellationToken cancellationToken);
+        public Task UpdateCommentAsync(int id, int currentUserId, UpdateCommentDto dto, CancellationToken cancellationToken);
+        public Task DeleteCommentAsync(int id, int currentUserId, CancellationToken cancellationToken);
+        public Task BlockCommentByAdminAsync(int id, CancellationToken cancellationToken);
+        public Task UnblockCommentByAdminAsync(int id, CancellationToken cancellationToken);
     }
 }

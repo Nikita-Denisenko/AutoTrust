@@ -3,24 +3,108 @@
   "WorkspaceRootPath": "D:\\Projects\\AutoTrust\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\commentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\commentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|d:\\projects\\autotrust\\backend\\autotrust.infrastructure\\configurations\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|solutionrelative:autotrust.infrastructure\\configurations\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\validators\\iuservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\validators\\iuservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\validators\\isalelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\validators\\isalelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\commentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\commentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\commentmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\commentmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\admincommentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\admincommentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\updatedtos\\comment\\updatecommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\updatedtos\\comment\\updatecommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\carmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\carmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\chatmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\chatmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\messagemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\messagemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\commentdtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,36 +115,8 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\createdtos\\createcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\updatedtos\\comment\\updatecommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\updatedtos\\comment\\updatecommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|d:\\projects\\autotrust\\backend\\autotrust.infrastructure\\configurations\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|solutionrelative:autotrust.infrastructure\\configurations\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\admincommentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\admincommentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\commentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\filterdtos\\comment\\commentfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\commentdtos\\admincommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\responses\\readdtos\\commentdtos\\admincommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\commentmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\commentmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\responses\\readdtos\\messagedtos\\adminmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,28 +155,8 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\messagevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\messagemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\messagemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\car\\admincarfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\filterdtos\\car\\admincarfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\filterdtos\\car\\carfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,22 +191,6 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\createdtos\\createmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\services\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\services\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\buydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -197,10 +217,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|d:\\projects\\autotrust\\backend\\autotrust.domain\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\chatmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\chatmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\chatvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -279,14 +295,6 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\validators\\ireviewvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\validators\\isalelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\validators\\isalelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\interfaces\\validators\\iuservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\interfaces\\validators\\iuservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -299,10 +307,6 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\reactionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\salelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\salelistingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -313,10 +317,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\followvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\followvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\commentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\validators\\commentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\validators\\brandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -403,10 +403,6 @@
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\updatedtos\\brand\\updatebranddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\accountmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\accountmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\createdtos\\createfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\createdtos\\createfollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -443,10 +439,6 @@
       "RelativeMoniker": "D:0:0:{762F98EB-7BB8-4FAF-9579-CEB33D680BCA}|AutoTrust.Domain\\AutoTrust.Domain.csproj|solutionrelative:autotrust.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\brandmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\brandmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\createdtos\\createchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\models\\dtos\\requests\\createdtos\\createchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -481,10 +473,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|d:\\projects\\autotrust\\backend\\autotrust.infrastructure\\configurations\\carconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD9B08A-C663-4C64-96EA-D056D8DFFA9F}|AutoTrust.Infrastructure\\AutoTrust.Infrastructure.csproj|solutionrelative:autotrust.infrastructure\\configurations\\carconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\mappings\\carownershipmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|solutionrelative:autotrust.application\\mappings\\carownershipmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58F8F757-D941-4674-BFF9-14292F1201EC}|AutoTrust.Application\\AutoTrust.Application.csproj|d:\\projects\\autotrust\\backend\\autotrust.application\\models\\dtos\\requests\\actions\\car\\transferownershipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -874,7 +862,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\User.cs",
@@ -888,7 +876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ChatConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\ChatConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\ChatConfiguration.cs",
@@ -902,163 +890,138 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "CommentFilterDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T18:49:35.562Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CommentService.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\CommentService.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CommentService.cs",
               "RelativeToolTip": "AutoTrust.Application\\Services\\CommentService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAAMEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T20:33:12.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IMessageService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IMessageService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IMessageService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IMessageService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IMessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAB3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T20:22:50.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICommentService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:21:06.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateCommentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T19:05:30.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Message.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
-              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Message.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA8wDMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T18:42:49.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MessageService.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\MessageService.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\MessageService.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\MessageService.cs",
               "RelativeToolTip": "AutoTrust.Application\\Services\\MessageService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwMMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAmwEUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T17:53:37.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateCommentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\ChatService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\ChatService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\ChatService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Services\\ChatService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAIwLcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T19:09:49.98Z",
+              "WhenOpened": "2026-04-06T16:51:58.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:46:35.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\UserValidator.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\UserValidator.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\UserValidator.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Validators\\UserValidator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:34:50.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ISaleListingValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:46:18.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "CarService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CarService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\CarService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CarService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Services\\CarService.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAwB4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T16:39:34.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CommentValidator.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\CommentValidator.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\CommentValidator.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\CommentValidator.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Validators\\CommentValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:40:12.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Comment.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Comment.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Comment.cs",
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T18:42:42.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CommentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T18:50:23.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminCommentFilterDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:14:44.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "CommentFilterDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\CommentFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T18:49:35.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdminCommentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T18:50:22.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "CommentMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\CommentMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\CommentMappingProfile.cs",
@@ -1071,7 +1034,211 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminCommentFilterDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Comment\\AdminCommentFilterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T19:14:44.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\BrandService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\BrandService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\BrandService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Services\\BrandService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:54:07.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\AccountService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\AccountService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Services\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:28:55.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IBrandService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T20:52:40.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:18:18.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdateCommentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Comment\\UpdateCommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T19:09:49.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CarMappingProfile.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\CarMappingProfile.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\CarMappingProfile.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\CarMappingProfile.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Mappings\\CarMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T09:34:05.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ChatMappingProfile.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T20:35:26.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MessageMappingProfile.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:49:32.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ICarService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T20:53:29.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IChatService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T16:59:38.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ICommentService.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T19:21:06.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Message.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Message.cs",
+              "RelativeToolTip": "AutoTrust.Domain\\Entities\\Message.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA8wDMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T18:42:49.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreateCommentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateCommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T19:05:30.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\CommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T18:50:23.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminCommentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
+              "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
+              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
+              "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CommentDtos\\AdminCommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T18:50:22.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "AdminMessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\AdminMessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\AdminMessageDto.cs",
@@ -1079,12 +1246,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\AdminMessageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:41:47.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T20:41:47.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "MessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
@@ -1092,12 +1258,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\MessageDtos\\MessageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T20:41:56.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:41:56.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 31,
               "Title": "PublicCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
@@ -1105,12 +1270,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T14:24:14.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T14:24:14.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 32,
               "Title": "AdminCarListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
@@ -1118,12 +1282,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarListItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T14:47:53.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T14:47:53.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 33,
               "Title": "AdminCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
@@ -1131,12 +1294,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\AdminCarDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T14:41:53.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T14:41:53.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 34,
               "Title": "SharedMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\SharedMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\SharedMappingProfile.cs",
@@ -1144,12 +1306,11 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\SharedMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T16:37:55.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T16:37:55.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 36,
               "Title": "MessageFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Message\\MessageFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Message\\MessageFilterDto.cs",
@@ -1161,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 37,
               "Title": "MessageValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\MessageValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\MessageValidator.cs",
@@ -1173,7 +1334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 35,
               "Title": "AdminMessageFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Message\\AdminMessageFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Message\\AdminMessageFilterDto.cs",
@@ -1185,31 +1346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\AccountService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwGgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T17:28:55.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MessageMappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:49:32.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "AdminCarFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Car\\AdminCarFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Car\\AdminCarFilterDto.cs",
@@ -1221,43 +1358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CarService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CarService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\CarService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\CarService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Services\\CarService.cs",
-              "ViewState": "AgIAAAABAAAAAAAAAAAAwBoBAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T16:39:34.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ChatService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\ChatService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\ChatService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\ChatService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Services\\ChatService.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAuwLcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T16:51:58.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BrandService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\BrandService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Services\\BrandService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Services\\BrandService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Services\\BrandService.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAwwLAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T18:54:07.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "CarFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Car\\CarFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Car\\CarFilterDto.cs",
@@ -1269,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "IMessageValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IMessageValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IMessageValidator.cs",
@@ -1281,7 +1382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 41,
               "Title": "DeleteMessagesDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Message\\DeleteMessagesDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Message\\DeleteMessagesDto.cs",
@@ -1293,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 42,
               "Title": "MarkAsReadMessagesDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Message\\MarkAsReadMessagesDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Message\\MarkAsReadMessagesDto.cs",
@@ -1305,7 +1406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 44,
               "Title": "ChangePasswordDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangePasswordDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangePasswordDto.cs",
@@ -1317,7 +1418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 46,
               "Title": "CreateMessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateMessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateMessageDto.cs",
@@ -1329,7 +1430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 43,
               "Title": "ChangeEmailDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangeEmailDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangeEmailDto.cs",
@@ -1341,7 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 45,
               "Title": "ChangePhoneDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangePhoneDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Account\\ChangePhoneDto.cs",
@@ -1353,55 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IChatService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IChatService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T16:59:38.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ICarService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICarService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:53:29.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IBrandService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IBrandService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:52:40.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IAccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T16:18:18.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "BuyDetails.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\BuyDetails.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\BuyDetails.cs",
@@ -1413,7 +1466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "Chat.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Chat.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Chat.cs",
@@ -1425,7 +1478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "CarOwnership.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\CarOwnership.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\CarOwnership.cs",
@@ -1437,7 +1490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "Brand.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Brand.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Brand.cs",
@@ -1449,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "ChatParticipant.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\ChatParticipant.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\ChatParticipant.cs",
@@ -1461,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "Car.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Car.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Car.cs",
@@ -1473,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "City.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\City.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\City.cs",
@@ -1485,19 +1538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "ChatMappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:35:26.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "ReviewConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\ReviewConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\ReviewConfiguration.cs",
@@ -1509,7 +1550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "UserChatInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatInfoDto.cs",
@@ -1521,7 +1562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "ChatValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\ChatValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\ChatValidator.cs",
@@ -1533,7 +1574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "AdminChatDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\AdminChatDto.cs",
@@ -1545,7 +1586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "INotificationValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\INotificationValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\INotificationValidator.cs",
@@ -1557,7 +1598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "IReactionValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IReactionValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IReactionValidator.cs",
@@ -1569,7 +1610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "ICommentValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ICommentValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\ICommentValidator.cs",
@@ -1581,7 +1622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "ILocationValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ILocationValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\ILocationValidator.cs",
@@ -1593,7 +1634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "AutoTrust.Application.csproj",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\AutoTrust.Application.csproj",
               "RelativeDocumentMoniker": "AutoTrust.Application\\AutoTrust.Application.csproj",
@@ -1605,7 +1646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "NotificationValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\NotificationValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\NotificationValidator.cs",
@@ -1617,7 +1658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "ModelValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\ModelValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\ModelValidator.cs",
@@ -1629,7 +1670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "IChatValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IChatValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IChatValidator.cs",
@@ -1641,7 +1682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "ICarValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ICarValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\ICarValidator.cs",
@@ -1653,7 +1694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "IBrandValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IBrandValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IBrandValidator.cs",
@@ -1665,7 +1706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "IAccountValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IAccountValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IAccountValidator.cs",
@@ -1677,7 +1718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "UpdateModelInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Model\\UpdateModelInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Model\\UpdateModelInfoDto.cs",
@@ -1689,7 +1730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "IFollowValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IFollowValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IFollowValidator.cs",
@@ -1701,7 +1742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "IModelValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IModelValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IModelValidator.cs",
@@ -1713,7 +1754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "IReviewValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IReviewValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IReviewValidator.cs",
@@ -1725,31 +1766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "ISaleListingValidator.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Validators\\ISaleListingValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T16:46:18.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "IUserValidator.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T16:46:35.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 73,
               "Title": "UserMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\UserMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\UserMappingProfile.cs",
@@ -1761,7 +1778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 74,
               "Title": "ReviewValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\ReviewValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\ReviewValidator.cs",
@@ -1773,7 +1790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 75,
               "Title": "ReactionValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\ReactionValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\ReactionValidator.cs",
@@ -1785,19 +1802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "UserValidator.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\UserValidator.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\UserValidator.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\UserValidator.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Validators\\UserValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T16:34:50.867Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "SaleListingValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\SaleListingValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\SaleListingValidator.cs",
@@ -1809,7 +1814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "LocationValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\LocationValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\LocationValidator.cs",
@@ -1821,7 +1826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "FollowValidator.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\FollowValidator.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\FollowValidator.cs",
@@ -1830,18 +1835,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-25T16:30:05.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "CommentValidator.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\CommentValidator.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Validators\\CommentValidator.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Validators\\CommentValidator.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Validators\\CommentValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T16:40:12.679Z"
             },
             {
               "$type": "Document",
@@ -2098,18 +2091,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 100,
-              "Title": "AccountMappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\AccountMappingProfile.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\AccountMappingProfile.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\AccountMappingProfile.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Mappings\\AccountMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T19:42:43.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 101,
               "Title": "CreateFollowDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateFollowDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateFollowDto.cs",
@@ -2121,7 +2102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 101,
               "Title": "FollowMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\FollowMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\FollowMappingProfile.cs",
@@ -2133,7 +2114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 102,
               "Title": "ModelMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ModelMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\ModelMappingProfile.cs",
@@ -2145,7 +2126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 103,
               "Title": "ListingMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ListingMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\ListingMappingProfile.cs",
@@ -2157,7 +2138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 104,
               "Title": "ReviewMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\ReviewMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\ReviewMappingProfile.cs",
@@ -2169,7 +2150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 105,
               "Title": "NotificationMappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\NotificationMappingProfile.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\NotificationMappingProfile.cs",
@@ -2181,7 +2162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 106,
               "Title": "CreateReviewDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateReviewDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateReviewDto.cs",
@@ -2193,7 +2174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 107,
               "Title": "CreateSaleListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateSaleListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateSaleListingDto.cs",
@@ -2205,7 +2186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 108,
               "Title": "Listing.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Entities\\Listing.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Entities\\Listing.cs",
@@ -2217,19 +2198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
-              "Title": "BrandMappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\BrandMappingProfile.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\BrandMappingProfile.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\BrandMappingProfile.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Mappings\\BrandMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T19:40:42.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 109,
               "Title": "CreateChatDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\CreateDtos\\CreateChatDto.cs",
@@ -2241,7 +2210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 110,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\AuthDtos\\RegisterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\AuthDtos\\RegisterDto.cs",
@@ -2253,7 +2222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 111,
               "Title": "AccountConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\AccountConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\AccountConfiguration.cs",
@@ -2265,7 +2234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 112,
               "Title": "Repository.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Repositories\\Repository.cs",
@@ -2277,7 +2246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 113,
               "Title": "SaleDetailsConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\SaleDetailsConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\SaleDetailsConfiguration.cs",
@@ -2289,7 +2258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 114,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\UserConfiguration.cs",
@@ -2301,7 +2270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 115,
               "Title": "PublicCarListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarDtos\\PublicCarListItemDto.cs",
@@ -2313,7 +2282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 116,
               "Title": "CreatedCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarDto.cs",
@@ -2325,7 +2294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 117,
               "Title": "CarConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CarConfiguration.cs",
@@ -2337,19 +2306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
-              "Title": "CarOwnershipMappingProfile.cs",
-              "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\CarOwnershipMappingProfile.cs",
-              "RelativeDocumentMoniker": "AutoTrust.Application\\Mappings\\CarOwnershipMappingProfile.cs",
-              "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Mappings\\CarOwnershipMappingProfile.cs",
-              "RelativeToolTip": "AutoTrust.Application\\Mappings\\CarOwnershipMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T19:54:49.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 118,
               "Title": "TransferOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Car\\TransferOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\Actions\\Car\\TransferOwnershipDto.cs",
@@ -2361,7 +2318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 119,
               "Title": "UpdateCarDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Car\\UpdateCarDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Car\\UpdateCarDto.cs",
@@ -2373,7 +2330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 120,
               "Title": "UpdateCarOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\CarOwnership\\UpdateCarOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\CarOwnership\\UpdateCarOwnershipDto.cs",
@@ -2385,7 +2342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 121,
               "Title": "UpdateListingInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateListingInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateListingInfoDto.cs",
@@ -2397,7 +2354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 122,
               "Title": "UpdateBuyListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateBuyListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateBuyListingDto.cs",
@@ -2409,7 +2366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 123,
               "Title": "UpdateSaleListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateSaleListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Listing\\UpdateSaleListingDto.cs",
@@ -2421,7 +2378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 124,
               "Title": "UpdateMessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Message\\UpdateMessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Message\\UpdateMessageDto.cs",
@@ -2433,7 +2390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 125,
               "Title": "ValidationResult.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Common\\ValidationResult.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Common\\ValidationResult.cs",
@@ -2445,7 +2402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 126,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\AuthDtos\\LoginDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\AuthDtos\\LoginDto.cs",
@@ -2457,7 +2414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 127,
               "Title": "UserShortDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserShortDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserShortDto.cs",
@@ -2469,7 +2426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 128,
               "Title": "UserProfileListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserProfileListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserProfileListItemDto.cs",
@@ -2481,7 +2438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 129,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\UserProfileDto.cs",
@@ -2493,7 +2450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 130,
               "Title": "AdminUserListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\AdminUserListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\AdminUserListItemDto.cs",
@@ -2505,7 +2462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 131,
               "Title": "AdminUserDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\AdminUserDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\UserDtos\\AdminUserDto.cs",
@@ -2517,7 +2474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 133,
               "Title": "AdminAccountDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountDto.cs",
@@ -2529,7 +2486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 132,
               "Title": "AdminAccountListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AdminAccountListItemDto.cs",
@@ -2541,7 +2498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 134,
               "Title": "AccountDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\AccountDtos\\AccountDto.cs",
@@ -2553,7 +2510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 135,
               "Title": "ReviewListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\ReviewListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\ReviewListItemDto.cs",
@@ -2565,7 +2522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 136,
               "Title": "ReviewDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\ReviewDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\ReviewDto.cs",
@@ -2577,7 +2534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 137,
               "Title": "ModelConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\ModelConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\ModelConfiguration.cs",
@@ -2589,7 +2546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 138,
               "Title": "FollowConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\FollowConfiguration.cs",
@@ -2601,7 +2558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 139,
               "Title": "ListingConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\ListingConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\ListingConfiguration.cs",
@@ -2613,7 +2570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 140,
               "Title": "MessageConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\MessageConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\MessageConfiguration.cs",
@@ -2625,7 +2582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 141,
               "Title": "NotificationConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\NotificationConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\NotificationConfiguration.cs",
@@ -2637,7 +2594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 142,
               "Title": "CreatedReviewDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReviewDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReviewDto.cs",
@@ -2649,7 +2606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 143,
               "Title": "AdminReviewByUserDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewByUserDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewByUserDto.cs",
@@ -2661,7 +2618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 144,
               "Title": "AdminReviewToUserListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewToUserListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewToUserListItemDto.cs",
@@ -2673,7 +2630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 145,
               "Title": "AdminReviewByUserListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewByUserListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewByUserListItemDto.cs",
@@ -2685,7 +2642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 146,
               "Title": "AdminReviewToUserDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewToUserDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReviewDtos\\AdminReviewToUserDto.cs",
@@ -2697,7 +2654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 147,
               "Title": "CreatedReactionDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReactionDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedReactionDto.cs",
@@ -2709,7 +2666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 148,
               "Title": "ReactionDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\ReactionDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\ReactionDto.cs",
@@ -2721,7 +2678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 149,
               "Title": "AdminUserReactionDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\AdminUserReactionDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\AdminUserReactionDto.cs",
@@ -2733,7 +2690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 150,
               "Title": "AdminListingReactionDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\AdminListingReactionDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ReactionDtos\\AdminListingReactionDto.cs",
@@ -2745,7 +2702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 152,
               "Title": "AdminNotificationDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\AdminNotificationDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\AdminNotificationDto.cs",
@@ -2757,7 +2714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 153,
               "Title": "NotificationDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\NotificationDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\NotificationDto.cs",
@@ -2769,7 +2726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 151,
               "Title": "CreatedNotificationDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedNotificationDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedNotificationDto.cs",
@@ -2781,7 +2738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 154,
               "Title": "AdminNotificationListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\AdminNotificationListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\AdminNotificationListItemDto.cs",
@@ -2793,7 +2750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 155,
               "Title": "NotificationListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\NotificationListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\NotificationDtos\\NotificationListItemDto.cs",
@@ -2805,7 +2762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 157,
               "Title": "PublicBrandListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandListItemDto.cs",
@@ -2817,7 +2774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 161,
+              "DocumentIndex": 158,
               "Title": "ModelDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelDto.cs",
@@ -2829,7 +2786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 156,
               "Title": "CreatedModelDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedModelDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedModelDto.cs",
@@ -2841,7 +2798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 162,
+              "DocumentIndex": 159,
               "Title": "AdminBrandFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Brand\\AdminBrandFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Brand\\AdminBrandFilterDto.cs",
@@ -2853,7 +2810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 163,
+              "DocumentIndex": 160,
               "Title": "ModelListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelListItemDto.cs",
@@ -2865,7 +2822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 164,
+              "DocumentIndex": 161,
               "Title": "ModelShortDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelShortDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\ModelShortDto.cs",
@@ -2877,7 +2834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 165,
+              "DocumentIndex": 162,
               "Title": "BrandFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Brand\\BrandFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Brand\\BrandFilterDto.cs",
@@ -2889,7 +2846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 166,
+              "DocumentIndex": 163,
               "Title": "AdminModelDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\AdminModelDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ModelDtos\\AdminModelDto.cs",
@@ -2901,7 +2858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 168,
+              "DocumentIndex": 165,
               "Title": "BrandShortDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\BrandShortDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\BrandShortDto.cs",
@@ -2913,7 +2870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 169,
+              "DocumentIndex": 166,
               "Title": "AdminBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandDto.cs",
@@ -2925,7 +2882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 170,
+              "DocumentIndex": 167,
               "Title": "AdminBrandListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\AdminBrandListItemDto.cs",
@@ -2937,7 +2894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 167,
+              "DocumentIndex": 164,
               "Title": "PublicBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\BrandDtos\\PublicBrandDto.cs",
@@ -2949,7 +2906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 171,
+              "DocumentIndex": 168,
               "Title": "UserChatListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ChatDtos\\UserChatListItemDto.cs",
@@ -2961,7 +2918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 173,
+              "DocumentIndex": 170,
               "Title": "SaleListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\SaleListingDtos\\SaleListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\SaleListingDtos\\SaleListingDto.cs",
@@ -2973,7 +2930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 172,
+              "DocumentIndex": 169,
               "Title": "CreatedListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedListingDto.cs",
@@ -2985,7 +2942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 174,
+              "DocumentIndex": 171,
               "Title": "AdminListingDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\AdminListingDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\AdminListingDto.cs",
@@ -2997,7 +2954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 175,
+              "DocumentIndex": 172,
               "Title": "ListingShortDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\ListingShortDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\ListingShortDto.cs",
@@ -3009,7 +2966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 176,
+              "DocumentIndex": 173,
               "Title": "SaleInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\SaleListingDtos\\SaleInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\ListingDtos\\SaleListingDtos\\SaleInfoDto.cs",
@@ -3021,7 +2978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 177,
+              "DocumentIndex": 174,
               "Title": "CreatedFollowDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedFollowDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedFollowDto.cs",
@@ -3033,7 +2990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 178,
+              "DocumentIndex": 175,
               "Title": "UserFollowDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowDto.cs",
@@ -3045,7 +3002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 179,
+              "DocumentIndex": 176,
               "Title": "UserFollowerDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowerDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\FollowDtos\\UserFollowerDto.cs",
@@ -3057,7 +3014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 180,
+              "DocumentIndex": 177,
               "Title": "CreatedChatDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedChatDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedChatDto.cs",
@@ -3069,7 +3026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 181,
+              "DocumentIndex": 178,
               "Title": "CreatedCommentDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCommentDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCommentDto.cs",
@@ -3081,7 +3038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 182,
+              "DocumentIndex": 179,
               "Title": "CityDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CityDtos\\CityDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CityDtos\\CityDto.cs",
@@ -3093,7 +3050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 183,
+              "DocumentIndex": 180,
               "Title": "CreatedMessageDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedMessageDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedMessageDto.cs",
@@ -3105,7 +3062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 185,
+              "DocumentIndex": 182,
               "Title": "PublicUserOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicUserOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicUserOwnershipDto.cs",
@@ -3117,7 +3074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 186,
+              "DocumentIndex": 183,
               "Title": "PublicCarOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicCarOwnershipDto.cs",
@@ -3129,7 +3086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 184,
+              "DocumentIndex": 181,
               "Title": "AdminOwnershipListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipListItemDto.cs",
@@ -3141,7 +3098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 187,
+              "DocumentIndex": 184,
               "Title": "PublicOwnershipListItemDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\PublicOwnershipListItemDto.cs",
@@ -3153,7 +3110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 188,
+              "DocumentIndex": 185,
               "Title": "AdminOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\CarOwnershipDtos\\AdminOwnershipDto.cs",
@@ -3165,7 +3122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 189,
+              "DocumentIndex": 186,
               "Title": "CreatedCarOwnershipDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarOwnershipDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedCarOwnershipDto.cs",
@@ -3177,7 +3134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 190,
+              "DocumentIndex": 187,
               "Title": "CarOrderParam.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Enums\\OrderParams\\CarOrderParam.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Enums\\OrderParams\\CarOrderParam.cs",
@@ -3189,7 +3146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 191,
+              "DocumentIndex": 188,
               "Title": "AdminAccountFilterDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Account\\AdminAccountFilterDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Account\\AdminAccountFilterDto.cs",
@@ -3201,7 +3158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 192,
+              "DocumentIndex": 189,
               "Title": "StateNumber.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\ValueObjects\\StateNumber.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\ValueObjects\\StateNumber.cs",
@@ -3213,7 +3170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 193,
+              "DocumentIndex": 190,
               "Title": "CreatedBrandDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedBrandDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\CreatedDtos\\CreatedBrandDto.cs",
@@ -3225,7 +3182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 194,
+              "DocumentIndex": 191,
               "Title": "CountryConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CountryConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CountryConfiguration.cs",
@@ -3237,7 +3194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 195,
+              "DocumentIndex": 192,
               "Title": "CommentConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CommentConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CommentConfiguration.cs",
@@ -3249,7 +3206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 196,
+              "DocumentIndex": 193,
               "Title": "CityConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CityConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CityConfiguration.cs",
@@ -3261,7 +3218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 197,
+              "DocumentIndex": 194,
               "Title": "ChatParticipantConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\ChatParticipantConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\ChatParticipantConfiguration.cs",
@@ -3273,7 +3230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 198,
+              "DocumentIndex": 195,
               "Title": "CarOwnershipConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\CarOwnershipConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\CarOwnershipConfiguration.cs",
@@ -3285,7 +3242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 199,
+              "DocumentIndex": 196,
               "Title": "BuyDetailsConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\BuyDetailsConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\BuyDetailsConfiguration.cs",
@@ -3297,7 +3254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 200,
+              "DocumentIndex": 197,
               "Title": "BrandConfiguration.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Configurations\\BrandConfiguration.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Configurations\\BrandConfiguration.cs",
@@ -3309,7 +3266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 201,
+              "DocumentIndex": 198,
               "Title": "UpdateUserInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\User\\UpdateUserInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\User\\UpdateUserInfoDto.cs",
@@ -3321,7 +3278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 202,
+              "DocumentIndex": 199,
               "Title": "UpdateAvatarUrlDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\User\\UpdateAvatarUrlDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\User\\UpdateAvatarUrlDto.cs",
@@ -3333,7 +3290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 203,
+              "DocumentIndex": 200,
               "Title": "UpdateReviewDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Review\\UpdateReviewDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Requests\\UpdateDtos\\Review\\UpdateReviewDto.cs",
@@ -3345,7 +3302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 204,
+              "DocumentIndex": 201,
               "Title": "LocationDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\LocationDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\LocationDto.cs",
@@ -3357,7 +3314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 205,
+              "DocumentIndex": 202,
               "Title": "CountryShortDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CountryDtos\\CountryShortDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CountryDtos\\CountryShortDto.cs",
@@ -3369,7 +3326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 206,
+              "DocumentIndex": 203,
               "Title": "CountryInfoDto.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CountryDtos\\CountryInfoDto.cs",
               "RelativeDocumentMoniker": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CountryDtos\\CountryInfoDto.cs",
@@ -3381,7 +3338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 207,
+              "DocumentIndex": 204,
               "Title": "BrandOrderParam.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Enums\\OrderParams\\BrandOrderParam.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Enums\\OrderParams\\BrandOrderParam.cs",
@@ -3393,7 +3350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 208,
+              "DocumentIndex": 205,
               "Title": "AdminAccountOrderParam.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Enums\\OrderParams\\AdminAccountOrderParam.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Enums\\OrderParams\\AdminAccountOrderParam.cs",
@@ -3405,7 +3362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 209,
+              "DocumentIndex": 206,
               "Title": "Phone.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\ValueObjects\\Phone.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\ValueObjects\\Phone.cs",
@@ -3417,7 +3374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 210,
+              "DocumentIndex": 207,
               "Title": "Email.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\ValueObjects\\Email.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\ValueObjects\\Email.cs",
@@ -3429,7 +3386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 211,
+              "DocumentIndex": 208,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Interfaces\\IRepository.cs",
@@ -3441,7 +3398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 212,
+              "DocumentIndex": 209,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AutoTrust.Infrastructure\\Data\\AppDbContext.cs",
@@ -3453,7 +3410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 213,
+              "DocumentIndex": 210,
               "Title": "BirthDate.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\ValueObjects\\BirthDate.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\ValueObjects\\BirthDate.cs",
@@ -3465,7 +3422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 214,
+              "DocumentIndex": 211,
               "Title": "CarColor.cs",
               "DocumentMoniker": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Domain\\Enums\\CarColor.cs",
               "RelativeDocumentMoniker": "AutoTrust.Domain\\Enums\\CarColor.cs",

@@ -28,7 +28,5 @@
             TargetId = targetId;
             FollowedAt = DateTime.UtcNow;
         }
-
-        public void Delete() => IsDeleted = true;
     }
 }

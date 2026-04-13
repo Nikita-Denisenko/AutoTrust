@@ -55,7 +55,7 @@ namespace AutoTrust.Application.Services
 
             try
             {
-                var follow = _mapper.Map<Follow>(dto);
+                var follow = _mapper.Map<Follow>(dto, opts => opts.Items["FollowerId"] = currentUserId);
 
                 await _repo.AddAsync(follow, cancellationToken);
                 await _repo.SaveChangesAsync(cancellationToken);

@@ -13,6 +13,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleL
         LocationDto Location,
         decimal Price,
         PublicCarDto Car,
+        string Description,
         int ReactionsQuantity
     );
 }

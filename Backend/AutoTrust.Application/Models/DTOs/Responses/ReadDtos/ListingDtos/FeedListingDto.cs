@@ -17,6 +17,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos
         LocationDto Location,
         BuyInfoDto? BuyInfoDto,
         SaleInfoDto? SaleInfoDto,
+        string Description,
         int ReactionsQuantity
     );
 }

@@ -19,6 +19,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyLi
         int MinReleaseYear,
         int MaxReleaseYear,
         CarColor? CarColor,
-        int ReactionsQuantity
+        int ReactionsQuantity,
+        string Description
     );
 }

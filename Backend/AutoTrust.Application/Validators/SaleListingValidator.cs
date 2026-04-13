@@ -20,12 +20,12 @@ namespace AutoTrust.Application.Validators
             _carRepo = carRepo;
         }
 
-        public async Task<ValidationResult> IsSaleValidAsync(int userId, int carId, CancellationToken cancellationToken)
+        public async Task<ValidationResult> IsValidAsync(int userId, int carId, CancellationToken cancellationToken)
         {
             if(!await _carRepo
                 .GetQuery()
                 .AsNoTracking()
-                .AnyAsync(c => c.Id == carId))
+                .AnyAsync(c => c.Id == carId, cancellationToken))
                 return new ValidationResult(false, $"Car with ID {carId} does not exist!");
 
             var user = await _userRepo.GetQuery()

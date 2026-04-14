@@ -14,6 +14,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleL
         decimal Price,
         PublicCarDto Car,
         string Description,
-        int ReactionsQuantity
+        int ReactionsQuantity,
+        bool IsActive
     );
 }

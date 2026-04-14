@@ -19,8 +19,8 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task UpdateListingInfoAsync(int id, int currentUserId, UpdateListingInfoDto dto, CancellationToken cancellationToken);
         public Task UpdateBuyListingAsync(int id, int currentUserId, UpdateBuyListingDto dto, CancellationToken cancellationToken);
         public Task UpdateSaleListingAsync(int id, int currentUserId, UpdateSaleListingDto dto, CancellationToken cancellationToken);
-        public Task DeleteAsync(int id, int currentUserId, CancellationToken cancellationToken);
-        public Task DeactivateAsync(int id, CancellationToken cancellationToken);
-        public Task ActivateAsync(int id, CancellationToken cancellationToken);
+        public Task DeleteListingAsync(int id, int currentUserId, CancellationToken cancellationToken);
+        public Task DeactivateListingAsync(int id, CancellationToken cancellationToken);
+        public Task ActivateListingAsync(int id, CancellationToken cancellationToken);
     }
 }

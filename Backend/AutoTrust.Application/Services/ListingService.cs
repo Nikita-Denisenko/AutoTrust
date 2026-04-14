@@ -22,24 +22,22 @@ namespace AutoTrust.Application.Services
         private readonly ISaleListingValidator _saleListingValidator;
         private readonly IBuyListingValidator _buyListingValidator;
         private readonly IMapper _mapper;
-        private readonly IUserValidator _userValidator;
 
         public ListingService
         (
             IRepository<Listing> repo, 
             ISaleListingValidator validator,
             IBuyListingValidator buyListingValidator,
-            IMapper mapper, 
-            IUserValidator userValidator)
+            IMapper mapper       
+         )
         {
             _repo = repo;
             _saleListingValidator = validator;
             _buyListingValidator = buyListingValidator;
             _mapper = mapper;
-            _userValidator = userValidator;
         }
 
-        public async Task ActivateAsync(int id, CancellationToken cancellationToken)
+        public async Task ActivateListingAsync(int id, CancellationToken cancellationToken)
         {
             var listing = await _repo.GetByIdAsync(id, cancellationToken);
 
@@ -117,7 +115,7 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task DeactivateAsync(int id, CancellationToken cancellationToken)
+        public async Task DeactivateListingAsync(int id, CancellationToken cancellationToken)
         {
             var listing = await _repo.GetByIdAsync(id, cancellationToken);
 
@@ -129,7 +127,7 @@ namespace AutoTrust.Application.Services
             await _repo.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task DeleteAsync(int id, int currentUserId, CancellationToken cancellationToken)
+        public async Task DeleteListingAsync(int id, int currentUserId, CancellationToken cancellationToken)
         {
             var listing = await _repo.GetByIdAsync(id, cancellationToken);
 
@@ -148,7 +146,7 @@ namespace AutoTrust.Application.Services
         {
             var query = _repo.GetQuery().AsNoTracking();
 
-            query = query.Where(l => !l.IsDeleted);
+            query = query.Where(l => !l.IsDeleted && l.IsActive);
 
             if (filterDto.Type != null)
                 query = query.Where(l => l.Type == filterDto.Type);

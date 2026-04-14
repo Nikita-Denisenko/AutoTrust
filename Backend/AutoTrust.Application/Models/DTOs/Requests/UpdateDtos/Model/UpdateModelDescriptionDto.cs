@@ -2,14 +2,10 @@
 
 namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Model
 {
-    public record UpdateModelInfoDto
+    public record UpdateModelDescriptionDto
     (
-        [MinLength(2)]
-        [MaxLength(50)]
-        string? Name,
-
-        [MinLength(1)]
+        [MinLength(50)]
         [MaxLength(900)]
-        string? Description
+        string Description
     );
 }

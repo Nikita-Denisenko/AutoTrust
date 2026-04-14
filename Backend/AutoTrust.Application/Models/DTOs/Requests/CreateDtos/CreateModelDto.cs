@@ -10,7 +10,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         string Name,
 
         [Required]
-        [MinLength(1)]
+        [MinLength(50)]
         [MaxLength(900)]
         string Description,
 

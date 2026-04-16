@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.Actions.Message;
@@ -9,7 +10,6 @@ using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Message;
 using AutoTrust.Application.Models.DTOs.Responses.CreatedDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.MessageDtos;
 using AutoTrust.Domain.Entities;
-using AutoTrust.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 

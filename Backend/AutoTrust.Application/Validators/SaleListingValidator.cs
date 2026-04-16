@@ -1,11 +1,9 @@
 ﻿using AutoTrust.Application.Common;
 using AutoTrust.Application.Interfaces.Validators;
-using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
-using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Listing;
 using AutoTrust.Domain.Entities;
 using static AutoTrust.Domain.Enums.ListingType;
-using AutoTrust.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using AutoTrust.Application.Interfaces.Repositories;
 
 namespace AutoTrust.Application.Validators
 {

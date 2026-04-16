@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
@@ -7,7 +8,6 @@ using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Comment;
 using AutoTrust.Application.Models.DTOs.Responses.CreatedDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CommentDtos;
 using AutoTrust.Domain.Entities;
-using AutoTrust.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace AutoTrust.Application.Services

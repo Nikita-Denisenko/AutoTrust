@@ -1,4 +1,4 @@
-﻿using AutoTrust.Domain.Interfaces;
+﻿using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 

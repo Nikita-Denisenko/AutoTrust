@@ -3,9 +3,9 @@ using AutoTrust.Application.Models.DTOs.Requests.Actions.Account;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos;
 using AutoTrust.Domain.Entities;
-using AutoTrust.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using static AutoTrust.Domain.Enums.OrderParams.AdminAccountOrderParam;
+using AutoTrust.Application.Interfaces.Repositories;
 
 namespace AutoTrust.Application.Services
 {

@@ -1,4 +1,4 @@
-﻿namespace AutoTrust.Domain.Interfaces
+﻿namespace AutoTrust.Application.Interfaces.Repositories
 {
     public interface IRepository<T> where T : class
     {

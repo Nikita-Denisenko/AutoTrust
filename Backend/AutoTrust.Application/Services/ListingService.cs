@@ -9,10 +9,10 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos;
 using AutoTrust.Domain.Entities;
-using AutoTrust.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using static AutoTrust.Domain.Enums.ListingType;
 using AutoTrust.Domain.Enums.OrderParams;
+using AutoTrust.Application.Interfaces.Repositories;
 
 namespace AutoTrust.Application.Services
 {

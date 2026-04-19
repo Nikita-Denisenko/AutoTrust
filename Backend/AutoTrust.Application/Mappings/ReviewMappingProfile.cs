@@ -11,11 +11,8 @@ namespace AutoTrust.Application.Mappings
         public ReviewMappingProfile() 
         {
             CreateMap<Review, AdminReviewByUserDto>();
-            CreateMap<Review, AdminReviewByUserListItemDto>();
             CreateMap<Review, AdminReviewToUserDto>();
-            CreateMap<Review, AdminReviewToUserListItemDto>();
             CreateMap<Review, ReviewDto>();
-            CreateMap<Review, ReviewListItemDto>();
 
             CreateMap<CreateReviewDto, Review>()
                 .ForMember(dest => dest.ReviewerId, opt => opt.Ignore())

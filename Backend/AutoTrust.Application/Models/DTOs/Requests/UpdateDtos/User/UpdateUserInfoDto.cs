@@ -5,6 +5,12 @@ namespace AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.User
 {
     public record UpdateUserInfoDto
     (
+        string? Name,
+
+        string? Surname,
+
+        string? Patronymic,
+
         DateOnly? BirthDate,
 
         Gender? Gender,

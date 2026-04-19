@@ -47,7 +47,7 @@
             CreatedAt = DateTime.UtcNow;
         }
 
-        public void Update(string? newTitle, string? newMessage)
+        public void Update(string? newTitle, string? newMessage, int? newStars)
         {
             if (newTitle != null && string.IsNullOrWhiteSpace(newTitle))
                 throw new ArgumentException("Title cannot be empty!");
@@ -55,8 +55,12 @@
             if (newMessage != null && string.IsNullOrWhiteSpace(newMessage))
                 throw new ArgumentException("Message cannot be empty!");
 
+            if (!(newStars >= 1 && newStars <= 5))
+                throw new ArgumentOutOfRangeException("Stars must not be smaller than 1 and greater than 5!");
+
             Title = newTitle ?? Title;
             Message = newMessage ?? Message;
+            Stars = newStars ?? Stars;
         }
 
         public void Delete() => IsDeleted = true;

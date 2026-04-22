@@ -6,6 +6,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs
     public record LocationDto
     (
         CityDto City,
-        CountryShortDto Country
+        CountryDto Country
     );
 }

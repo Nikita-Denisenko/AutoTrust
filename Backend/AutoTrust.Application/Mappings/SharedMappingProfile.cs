@@ -18,7 +18,7 @@ namespace AutoTrust.Application.Mappings
 
             CreateMap<Model, ModelShortDto>();
 
-            CreateMap<Country, CountryShortDto>()
+            CreateMap<Country, CountryDto>()
                 .ForMember(dest => dest.FlagImageUrl, opt => opt.MapFrom(src => src.FlagImageUrl.Value));
 
             CreateMap<City, CityDto>();

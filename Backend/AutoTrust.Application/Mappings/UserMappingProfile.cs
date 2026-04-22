@@ -15,12 +15,13 @@ namespace AutoTrust.Application.Mappings
                .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                   new LocationDto(new CityDto(src.CityId, src.City.Name),
-                   new CountryShortDto
+                   new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
+                   new CountryDto
                    (
                        src.City.CountryId,
                        src.City.Country.RuName,
                        src.City.Country.EnName,
+                       src.City.Country.Code,
                        src.City.Country.FlagImageUrl.Value
                     ))));
 

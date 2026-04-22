@@ -3,6 +3,7 @@
     public record CityDto
     (
         int Id,
+        int CountryId,
         string Name
     );
 }

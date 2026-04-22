@@ -34,13 +34,15 @@ namespace AutoTrust.Application.Mappings
                             new CityDto
                             (
                                 src.CityId,
+                                src.City.CountryId,
                                 src.City.Name
                             ),
-                            new CountryShortDto
+                            new CountryDto
                             (
                                 src.City.CountryId,
                                 src.City.Country.RuName,
                                 src.City.Country.EnName,
+                                src.City.Country.Code,
                                 src.City.Country.FlagImageUrl.Value
                             )
                         )
@@ -66,13 +68,15 @@ namespace AutoTrust.Application.Mappings
                             new CityDto
                             (
                                 src.CityId,
+                                src.City.CountryId,
                                 src.City.Name
                             ),
-                            new CountryShortDto
+                            new CountryDto
                             (
                                 src.City.CountryId,
                                 src.City.Country.RuName,
                                 src.City.Country.EnName,
+                                src.City.Country.Code,
                                 src.City.Country.FlagImageUrl.Value
                             )
                         )
@@ -92,13 +96,15 @@ namespace AutoTrust.Application.Mappings
                             new CityDto
                             (
                                 src.CityId,
+                                src.City.CountryId,
                                 src.City.Name
                             ),
-                            new CountryShortDto
+                            new CountryDto
                             (
                                 src.City.CountryId,
                                 src.City.Country.RuName,
                                 src.City.Country.EnName,
+                                src.City.Country.Code,
                                 src.City.Country.FlagImageUrl.Value
                             )
                         )

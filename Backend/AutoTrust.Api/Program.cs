@@ -1,10 +1,11 @@
+using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Mappings;
 using AutoTrust.Application.Services;
 using AutoTrust.Application.Validators;
-using AutoTrust.Domain.Interfaces;
 using AutoTrust.Infrastructure.Data;
+using AutoTrust.Infrastructure.Seed;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -12,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
-var app = builder.Build();
+builder.Services.AddAutoMapper(typeof(SharedMappingProfile).Assembly);
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -36,14 +37,20 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-builder.Services.AddAutoMapper(typeof(SharedMappingProfile).Assembly);
-
 builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
 
 builder.Services.AddScoped<IBrandValidator, BrandValidator>();
 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
+
+var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    await CountrySeeder.SeedAsync(scope.ServiceProvider);
+    await CitySeeder.SeedAsync(scope.ServiceProvider);
+}
 
 // Configure the HTTP request pipeline.
 

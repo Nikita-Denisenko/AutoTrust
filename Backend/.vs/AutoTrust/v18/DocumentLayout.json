@@ -1069,7 +1069,7 @@
               "RelativeDocumentMoniker": "AutoTrust.Api\\Program.cs",
               "ToolTip": "D:\\Projects\\AutoTrust\\Backend\\AutoTrust.Api\\Program.cs",
               "RelativeToolTip": "AutoTrust.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAF4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T18:58:15.021Z",
               "EditorCaption": ""
@@ -1084,8 +1084,7 @@
               "RelativeToolTip": "AutoTrust.Infrastructure\\Seed\\CitySeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T18:53:35.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:53:35.283Z"
             },
             {
               "$type": "Document",
@@ -1097,8 +1096,7 @@
               "RelativeToolTip": "AutoTrust.Infrastructure\\Seed\\CountrySeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T18:53:21.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:53:21.821Z"
             },
             {
               "$type": "Document",
@@ -1110,8 +1108,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\SharedMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T16:37:55.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T16:37:55.368Z"
             },
             {
               "$type": "Document",
@@ -1123,8 +1120,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\AccountMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T08:59:01.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T08:59:01.992Z"
             },
             {
               "$type": "Document",
@@ -1136,8 +1132,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\BrandMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T17:36:34.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T17:36:34.092Z"
             },
             {
               "$type": "Document",
@@ -1149,8 +1144,7 @@
               "RelativeToolTip": "AutoTrust.Infrastructure\\Seed\\SeedData\\cities.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-22T18:55:08.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:55:08.701Z"
             },
             {
               "$type": "Document",
@@ -1162,8 +1156,7 @@
               "RelativeToolTip": "AutoTrust.Infrastructure\\Seed\\SeedData\\countries.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-22T18:54:34.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:54:34.312Z"
             },
             {
               "$type": "Document",
@@ -1175,8 +1168,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Services\\CountryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T18:45:24.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:45:24.476Z"
             },
             {
               "$type": "Document",
@@ -1188,8 +1180,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Requests\\FilterDtos\\Country\\CountryFilterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T18:43:12.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:43:12.726Z"
             },
             {
               "$type": "Document",
@@ -1201,8 +1192,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICountryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T18:05:53.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T18:05:53.835Z"
             },
             {
               "$type": "Document",
@@ -1214,8 +1204,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Services\\CityService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T17:48:37.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T17:48:37.854Z"
             },
             {
               "$type": "Document",
@@ -1227,8 +1216,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\UserMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T17:45:10.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T17:45:10.16Z"
             },
             {
               "$type": "Document",
@@ -1240,8 +1228,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICommentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:21:06.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-08T19:21:06.077Z"
             },
             {
               "$type": "Document",
@@ -1253,8 +1240,7 @@
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\Country.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T15:22:05.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T15:22:05.958Z"
             },
             {
               "$type": "Document",
@@ -1266,8 +1252,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\LocationMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T17:35:44.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T17:35:44.291Z"
             },
             {
               "$type": "Document",
@@ -1279,8 +1264,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\ReviewMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:39:03.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T14:39:03.777Z"
             },
             {
               "$type": "Document",
@@ -1292,8 +1276,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\IFollowService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T07:14:52.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T07:14:52.554Z"
             },
             {
               "$type": "Document",
@@ -1305,8 +1288,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\CarMappingProfile.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T09:34:05.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T09:34:05.08Z"
             },
             {
               "$type": "Document",
@@ -1318,8 +1300,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\ReactionMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T19:16:38.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T19:16:38.982Z"
             },
             {
               "$type": "Document",
@@ -1331,8 +1312,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\NotificationMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T17:37:13.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T17:37:13.407Z"
             },
             {
               "$type": "Document",
@@ -1344,8 +1324,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\ModelMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T16:38:25.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T16:38:25.422Z"
             },
             {
               "$type": "Document",
@@ -1357,8 +1336,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\MessageMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:49:32.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T14:49:32.174Z"
             },
             {
               "$type": "Document",
@@ -1370,8 +1348,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\ListingMappingProfile.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAgwJ8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T17:32:53.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T17:32:53.465Z"
             },
             {
               "$type": "Document",
@@ -1383,8 +1360,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\CarOwnershipMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T17:41:47.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T17:41:47.13Z"
             },
             {
               "$type": "Document",
@@ -1396,8 +1372,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\ChatMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T20:35:26.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T20:35:26.654Z"
             },
             {
               "$type": "Document",
@@ -1409,8 +1384,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\CommentMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T16:21:17.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T16:21:17.54Z"
             },
             {
               "$type": "Document",
@@ -1422,8 +1396,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CityDtos\\CityDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T16:19:32.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T16:19:32.013Z"
             },
             {
               "$type": "Document",
@@ -1435,8 +1408,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Mappings\\FollowMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T18:25:01.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T18:25:01.068Z"
             },
             {
               "$type": "Document",
@@ -1448,8 +1420,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\LocationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T20:22:54.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:22:54.931Z"
             },
             {
               "$type": "Document",
@@ -1461,8 +1432,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Models\\DTOs\\Responses\\ReadDtos\\LocationDTOs\\CountryDtos\\CountryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T20:03:43.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:03:43.428Z"
             },
             {
               "$type": "Document",
@@ -1474,8 +1444,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Services\\ICityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T16:46:25.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T16:46:25.161Z"
             },
             {
               "$type": "Document",
@@ -1487,8 +1456,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Validators\\LocationValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T17:41:55.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T17:41:55.67Z"
             },
             {
               "$type": "Document",
@@ -1500,8 +1468,7 @@
               "RelativeToolTip": "AutoTrust.Domain\\Entities\\City.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T20:30:01.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T20:30:01.84Z"
             },
             {
               "$type": "Document",
@@ -1513,8 +1480,7 @@
               "RelativeToolTip": "AutoTrust.Infrastructure\\Repositories\\Repository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T08:53:29.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T08:53:29.214Z"
             },
             {
               "$type": "Document",
@@ -1526,8 +1492,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Interfaces\\Validators\\IUserValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T16:46:35.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T16:46:35.393Z"
             },
             {
               "$type": "Document",
@@ -1539,8 +1504,7 @@
               "RelativeToolTip": "AutoTrust.Application\\Services\\ReviewService.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAuwKgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T15:09:18.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T15:09:18.682Z"
             },
             {
               "$type": "Document",
@@ -3292,8 +3256,7 @@
               "RelativeToolTip": "AutoTrust.Application\\AutoTrust.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-06T10:18:12.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T10:18:12.33Z"
             },
             {
               "$type": "Document",
@@ -3389,8 +3352,7 @@
               "RelativeToolTip": "AutoTrust.Domain\\AutoTrust.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-20T16:56:55.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T16:56:55.839Z"
             },
             {
               "$type": "Document",

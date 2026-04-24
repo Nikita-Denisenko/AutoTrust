@@ -6,6 +6,7 @@ using AutoTrust.Application.Services;
 using AutoTrust.Application.Validators;
 using AutoTrust.Infrastructure.Data;
 using AutoTrust.Infrastructure.Seed;
+using AutoTrust.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -39,7 +40,40 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
 
+
+builder.Services.AddScoped<IAccountValidator, AccountValidator>();
 builder.Services.AddScoped<IBrandValidator, BrandValidator>();
+builder.Services.AddScoped<IBuyListingValidator, BuyListingValidator>();
+builder.Services.AddScoped<ICarValidator, CarValidator>();
+builder.Services.AddScoped<IChatValidator, ChatValidator>();
+builder.Services.AddScoped<ICommentValidator, CommentValidator>();
+builder.Services.AddScoped<IFollowValidator, FollowValidator>();
+builder.Services.AddScoped<ILocationValidator, LocationValidator>();
+builder.Services.AddScoped<IMessageValidator, MessageValidator>();
+builder.Services.AddScoped<IModelValidator, ModelValidator>();
+builder.Services.AddScoped<INotificationValidator, NotificationValidator>();
+builder.Services.AddScoped<IReactionValidator, ReactionValidator>();
+builder.Services.AddScoped<IReviewValidator, ReviewValidator>();
+builder.Services.AddScoped<ISaleListingValidator, SaleListingValidator>();
+builder.Services.AddScoped<IUserValidator, UserValidator>();
+
+
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<IFollowService, FollowService>();
+builder.Services.AddScoped<IListingService, ListingService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<IModelService, ModelService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IReactionService, ReactionService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();

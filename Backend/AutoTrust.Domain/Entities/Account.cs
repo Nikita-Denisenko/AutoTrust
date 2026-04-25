@@ -1,4 +1,5 @@
-﻿using AutoTrust.Domain.ValueObjects;
+﻿using AutoTrust.Domain.Constants;
+using AutoTrust.Domain.ValueObjects;
 
 namespace AutoTrust.Domain.Entities
 {
@@ -12,6 +13,8 @@ namespace AutoTrust.Domain.Entities
         public User User { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public bool IsDeleted {  get; private set; } = false;
+        public string Role { get; private set; } = Roles.User;
+        
 
         private Account() { }
 

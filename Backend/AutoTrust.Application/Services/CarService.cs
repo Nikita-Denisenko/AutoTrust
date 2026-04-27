@@ -128,12 +128,16 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task DeleteCarAsync(int id, CancellationToken cancellationToken)
+        public async Task DeleteCarAsync(int id, int currentUserId, CancellationToken cancellationToken)
         {
             var car = await _repo.GetByIdAsync(id, cancellationToken);
 
             if (car == null)
                 throw new KeyNotFoundException($"Car by Id {id} was not found!");
+
+            var currentOwnership = car.OwnershipHistory.FirstOrDefault(o => o.IsCurrent);
+            if (currentOwnership == null || currentOwnership.UserId != currentUserId)
+                throw new InvalidOperationException("You can only delete your own cars");
 
             try
             {
@@ -192,7 +196,7 @@ namespace AutoTrust.Application.Services
                 .ToListAsync(cancellationToken);
         }
 
-        public async Task UpdateCarAsync(int id, UpdateCarDto updateCarDto, CancellationToken cancellationToken)
+        public async Task UpdateCarAsync(int id, int currentUserId, UpdateCarDto updateCarDto, CancellationToken cancellationToken)
         {
             var validationResult = await _validator.CanUpdateAsync(id, updateCarDto, cancellationToken);
 
@@ -201,6 +205,10 @@ namespace AutoTrust.Application.Services
 
             var car = await _repo.GetByIdAsync(id, cancellationToken)
                 ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+
+            var currentOwnership = car.OwnershipHistory.FirstOrDefault(o => o.IsCurrent);
+            if (currentOwnership == null || currentOwnership.UserId != currentUserId)
+                throw new InvalidOperationException("You can only update your own cars");
 
             try
             {
@@ -226,10 +234,15 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task MakeForSaleAsync(int id, CancellationToken cancellationToken)
+        public async Task MakeForSaleAsync(int id, int currentUserId, CancellationToken cancellationToken)
         {
             var car = await _repo.GetByIdAsync(id, cancellationToken)
                 ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+
+            var currentOwnership = car.OwnershipHistory.FirstOrDefault(o => o.IsCurrent);
+            if (currentOwnership == null || currentOwnership.UserId != currentUserId)
+                throw new InvalidOperationException("You can only put your own cars for sale");
+
             try
             {
                 car.MakeForSale();
@@ -241,10 +254,15 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task TakeOffSaleAsync(int id, CancellationToken cancellationToken)
+        public async Task TakeOffSaleAsync(int id, int currentUserId, CancellationToken cancellationToken)
         {
             var car = await _repo.GetByIdAsync(id, cancellationToken)
                 ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+
+            var currentOwnership = car.OwnershipHistory.FirstOrDefault(o => o.IsCurrent);
+            if (currentOwnership == null || currentOwnership.UserId != currentUserId)
+                throw new InvalidOperationException("You can only take off your own cars from sale");
+
             try
             {
                 car.TakeOffSale();
@@ -256,18 +274,22 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task TransferOwnershipAsync(int id, TransferOwnershipDto transferOwnershipDto, CancellationToken cancellationToken)
+        public async Task TransferOwnershipAsync(int id, int currentUserId, TransferOwnershipDto transferOwnershipDto, CancellationToken cancellationToken)
         {
+            var car = await _repo.GetQuery()
+                .Include(c => c.OwnershipHistory)
+                .FirstOrDefaultAsync(c => c.Id == id, cancellationToken)
+                ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
+
+            var currentOwnership = car.OwnershipHistory.FirstOrDefault(o => o.IsCurrent);
+            if (currentOwnership == null || currentOwnership.UserId != currentUserId)
+                throw new InvalidOperationException("You can only transfer ownership of your own cars");
+
             var (newOwnerExists, error) = await _userValidator.IsUserExistsAsync(transferOwnershipDto.NewOwnerId, cancellationToken);
 
             if (!newOwnerExists)
                 throw new InvalidOperationException($"Failed to transfer Car ownership: {error}");
 
-            var car = await _repo.GetQuery()
-                .Include(c => c.OwnershipHistory)
-                .FirstOrDefaultAsync(c => c.Id == id , cancellationToken)
-                
-                ?? throw new KeyNotFoundException($"Car by Id {id} was not found!");
             try
             {
                 car.TransferOwnership(transferOwnershipDto.NewOwnerId, Url.Create(transferOwnershipDto.BillOfSalePhotoUrl));

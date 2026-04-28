@@ -9,8 +9,8 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task<List<AdminAccountListItemDto>> GetAccountsForAdminAsync(AdminAccountFilterDto filterDto, CancellationToken cancellationToken);
         public Task<AccountDto> GetUserAccountAsync(int userId, CancellationToken cancellationToken);
         public Task<AdminAccountDto> GetAccountForAdminAsync(int id, CancellationToken cancellationToken);
-        public Task ChangeEmailAsync(ChangeEmailDto changeEmailDto, CancellationToken cancellationToken);
-        public Task ChangePasswordAsync(ChangePasswordDto changePasswordDto, CancellationToken cancellationToken);
-        public Task CgangePhoneAsync(ChangePhoneDto changePhoneDto, CancellationToken cancellationToken);
+        public Task ChangeEmailAsync(int userId, ChangeEmailDto changeEmailDto, CancellationToken cancellationToken);
+        public Task ChangePasswordAsync(int userId, ChangePasswordDto changePasswordDto, CancellationToken cancellationToken);
+        public Task ChangePhoneAsync(int userId, ChangePhoneDto changePhoneDto, CancellationToken cancellationToken);
     }
 }

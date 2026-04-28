@@ -67,8 +67,13 @@ namespace AutoTrust.Application.Services
                 if (cityDto.CountryId != russia.Id)
                     throw new InvalidOperationException("You can load only russian cities");
 
-                var city = new City(cityDto.Name, cityDto.CountryId);
+                bool exists = await _repo.GetQuery()
+                    .AnyAsync(c => c.Name == cityDto.Name && c.CountryId == cityDto.CountryId, cancellationToken);
 
+                if (exists)
+                    continue;
+
+                var city = new City(cityDto.Name, cityDto.CountryId);
                 await _repo.AddAsync(city, cancellationToken);
             }
 

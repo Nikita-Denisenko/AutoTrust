@@ -44,7 +44,12 @@ namespace AutoTrust.Domain.Entities
 
         public void ChangePhone(Phone newPhone)
         {
-            Phone = newPhone ?? throw new ArgumentNullException(nameof(newPhone));
+            Phone = newPhone;
+        }
+
+        public void ChangeEmail(Email newEmail)
+        {
+            Email = newEmail;
         }
 
         public void Delete() => IsDeleted = true;

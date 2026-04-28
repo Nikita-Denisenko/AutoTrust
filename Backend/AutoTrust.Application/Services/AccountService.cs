@@ -6,14 +6,20 @@ using AutoTrust.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using static AutoTrust.Domain.Enums.OrderParams.AdminAccountOrderParam;
 using AutoTrust.Application.Interfaces.Repositories;
+using AutoTrust.Domain.ValueObjects;
 
 namespace AutoTrust.Application.Services
 {
     public class AccountService : IAccountService
     {
         private readonly IRepository<Account> _repo;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public AccountService(IRepository<Account> repo) => _repo = repo;
+        public AccountService(IRepository<Account> repo, IPasswordHasher passwordHasher)
+        {
+            _repo = repo;
+            _passwordHasher = passwordHasher;
+        }
 
         public async Task<AccountDto> GetUserAccountAsync(int userId, CancellationToken cancellationToken)
         {
@@ -87,19 +93,64 @@ namespace AutoTrust.Application.Services
             ).ToListAsync(cancellationToken);
         }
 
-        public async Task ChangeEmailAsync(ChangeEmailDto changeEmailDto, CancellationToken cancellationToken)
+        public async Task ChangeEmailAsync(int userId, ChangeEmailDto changeEmailDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var account = await _repo.GetQuery().FirstOrDefaultAsync(a => a.UserId == userId, cancellationToken);
+
+            if (account == null)
+                throw new KeyNotFoundException($"You cannot change other users email!");
+
+            try
+            {
+                var email = new Email(changeEmailDto.Email);
+                account.ChangeEmail(email);
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new InvalidOperationException($"Failed to update email: {ex.Message}");
+            }
         }
 
-        public async Task ChangePasswordAsync(ChangePasswordDto changePasswordDto, CancellationToken cancellationToken)
+        public async Task ChangePasswordAsync(int userId, ChangePasswordDto changePasswordDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var account = await _repo.GetQuery().FirstOrDefaultAsync(a => a.UserId == userId, cancellationToken);
+
+            if (account == null)
+                throw new KeyNotFoundException($"You cannot change other users password!");
+
+            if (!_passwordHasher.VerifyPassword(changePasswordDto.OldPassword, account.PasswordHash))
+                throw new InvalidOperationException("Old Password was not verified!");
+
+            var password = changePasswordDto.NewPassword;
+
+            if (password.Length < 8)
+                throw new InvalidOperationException($"Password Lenth cannot be smaller than 8 symbols.");
+            
+            var passwordHash = _passwordHasher.HashPassword(password);
+
+            account.ChangePassword(passwordHash); 
+            await _repo.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task CgangePhoneAsync(ChangePhoneDto changePhoneDto, CancellationToken cancellationToken)
+        public async Task ChangePhoneAsync(int userId, ChangePhoneDto changePhoneDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var account = await _repo.GetQuery()
+                .FirstOrDefaultAsync(a => a.UserId == userId, cancellationToken);
+
+            if (account == null)
+                throw new KeyNotFoundException($"You cannot change other users Phone Number!");
+
+            try
+            {
+                var phone = new Phone(changePhoneDto.Phone);
+                account.ChangePhone(phone);
+                await _repo.SaveChangesAsync(cancellationToken);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new InvalidOperationException($"Failed to update phone number: {ex.Message}");
+            }
         }
     }
 }

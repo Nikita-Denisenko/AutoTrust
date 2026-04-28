@@ -6,6 +6,10 @@ namespace AutoTrust.Application.Models.DTOs.Requests.Actions.Account
     (
         [Required]
         [MinLength(8)]
-        string Password
+        string OldPassword,
+
+        [Required]
+        [MinLength(8)]
+        string NewPassword
     );
 }

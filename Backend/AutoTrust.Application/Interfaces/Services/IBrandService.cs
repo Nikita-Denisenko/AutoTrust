@@ -15,5 +15,6 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task<CreatedBrandDto> CreateBrandAsync(CreateBrandDto createBrandDto, CancellationToken cancellationToken);
         public Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto, CancellationToken cancellationToken);
         public Task DeleteBrandAsync(int id, CancellationToken cancellationToken);
+        public Task LoadBrandsAsync(string json, CancellationToken cancellationToken);
     }
 }

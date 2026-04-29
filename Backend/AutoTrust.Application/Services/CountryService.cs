@@ -8,6 +8,7 @@ using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace AutoTrust.Application.Services
 {
@@ -64,10 +65,10 @@ namespace AutoTrust.Application.Services
                 if (exists)
                     continue;
 
-                var flagUrl = Url.Create(countryDto.FlagImageUrl);
+                var flagUrl = Url.Create(countryDto.FlagImageUrl); 
                 var country = new Country(
-                    countryDto.EnName,
-                    countryDto.RuName,
+                    countryDto.EnName,   
+                    countryDto.RuName,   
                     countryDto.Code,
                     flagUrl
                 );
@@ -80,10 +81,17 @@ namespace AutoTrust.Application.Services
 
         private class CountryImportDto
         {
-            public string EnName { get; set; } = string.Empty;
-            public string RuName { get; set; } = string.Empty;
-            public string Code { get; set; } = string.Empty;
+            [JsonPropertyName("flag")]
             public string FlagImageUrl { get; set; } = string.Empty;
+
+            [JsonPropertyName("nameEn")]
+            public string EnName { get; set; } = string.Empty;
+
+            [JsonPropertyName("nameRu")]
+            public string RuName { get; set; } = string.Empty;
+
+            [JsonPropertyName("code")]
+            public string Code { get; set; } = string.Empty;
         }
     }
 }

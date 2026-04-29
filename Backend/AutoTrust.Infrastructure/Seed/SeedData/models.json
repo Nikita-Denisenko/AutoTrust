@@ -1,0 +1,656 @@
+﻿[
+  {
+    "name": "3 Series",
+    "brandCode": "BMW",
+    "description": "Бизнес-седан, икона управляемости.",
+    "imageUrl": ""
+  },
+  {
+    "name": "5 Series",
+    "brandCode": "BMW",
+    "description": "Бизнес-седан представительского класса.",
+    "imageUrl": ""
+  },
+  {
+    "name": "7 Series",
+    "brandCode": "BMW",
+    "description": "Флагманский седан с высокотехнологичным салоном.",
+    "imageUrl": ""
+  },
+  {
+    "name": "X3",
+    "brandCode": "BMW",
+    "description": "Компактный премиальный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "X5",
+    "brandCode": "BMW",
+    "description": "Среднеразмерный роскошный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "C-Class",
+    "brandCode": "Mercedes-Benz",
+    "description": "Компактный бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "E-Class",
+    "brandCode": "Mercedes-Benz",
+    "description": "Бизнес-седан среднего класса.",
+    "imageUrl": ""
+  },
+  {
+    "name": "S-Class",
+    "brandCode": "Mercedes-Benz",
+    "description": "Флагманский седан, законодатель технологий.",
+    "imageUrl": ""
+  },
+  {
+    "name": "GLC",
+    "brandCode": "Mercedes-Benz",
+    "description": "Популярный премиальный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "G-Class",
+    "brandCode": "Mercedes-Benz",
+    "description": "Легендарный внедорожник с узнаваемым дизайном.",
+    "imageUrl": ""
+  },
+  {
+    "name": "A3",
+    "brandCode": "Audi",
+    "description": "Компактный хетчбек и седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "A4",
+    "brandCode": "Audi",
+    "description": "Бизнес-седан с полным приводом.",
+    "imageUrl": ""
+  },
+  {
+    "name": "A6",
+    "brandCode": "Audi",
+    "description": "Бизнес-седан высокого класса.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Q5",
+    "brandCode": "Audi",
+    "description": "Самый популярный кроссовер Audi.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Q7",
+    "brandCode": "Audi",
+    "description": "Полноразмерный 7-местный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Golf",
+    "brandCode": "Volkswagen",
+    "description": "Легендарный хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Passat",
+    "brandCode": "Volkswagen",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tiguan",
+    "brandCode": "Volkswagen",
+    "description": "Самый продаваемый кроссовер Volkswagen.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Polo",
+    "brandCode": "Volkswagen",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Touareg",
+    "brandCode": "Volkswagen",
+    "description": "Флагманский внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "911",
+    "brandCode": "Porsche",
+    "description": "Легендарный спортивный автомобиль.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Cayenne",
+    "brandCode": "Porsche",
+    "description": "Роскошный спортивный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Macan",
+    "brandCode": "Porsche",
+    "description": "Компактный спортивный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Panamera",
+    "brandCode": "Porsche",
+    "description": "Четырехдверный спортивный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Taycan",
+    "brandCode": "Porsche",
+    "description": "Электрический седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Astra",
+    "brandCode": "Opel",
+    "description": "Компактный хетчбек и седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Corsa",
+    "brandCode": "Opel",
+    "description": "Субкомпактный хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Mokka",
+    "brandCode": "Opel",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Insignia",
+    "brandCode": "Opel",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Grandland",
+    "brandCode": "Opel",
+    "description": "Кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Solaris",
+    "brandCode": "Hyundai",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Elantra",
+    "brandCode": "Hyundai",
+    "description": "Компактный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Sonata",
+    "brandCode": "Hyundai",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tucson",
+    "brandCode": "Hyundai",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Santa Fe",
+    "brandCode": "Hyundai",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Rio",
+    "brandCode": "Kia",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Cerato",
+    "brandCode": "Kia",
+    "description": "Компактный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Optima",
+    "brandCode": "Kia",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Sportage",
+    "brandCode": "Kia",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Sorento",
+    "brandCode": "Kia",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Civic",
+    "brandCode": "Honda",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Accord",
+    "brandCode": "Honda",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "CR-V",
+    "brandCode": "Honda",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "HR-V",
+    "brandCode": "Honda",
+    "description": "Субкомпактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Pilot",
+    "brandCode": "Honda",
+    "description": "Полноразмерный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Camry",
+    "brandCode": "Toyota",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Corolla",
+    "brandCode": "Toyota",
+    "description": "Компактный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "RAV4",
+    "brandCode": "Toyota",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Land Cruiser",
+    "brandCode": "Toyota",
+    "description": "Легендарный рамный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Highlander",
+    "brandCode": "Toyota",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Qashqai",
+    "brandCode": "Nissan",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "X-Trail",
+    "brandCode": "Nissan",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Murano",
+    "brandCode": "Nissan",
+    "description": "Стильный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Patrol",
+    "brandCode": "Nissan",
+    "description": "Легендарный рамный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Leaf",
+    "brandCode": "Nissan",
+    "description": "Электрический хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Outlander",
+    "brandCode": "Mitsubishi",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "ASX",
+    "brandCode": "Mitsubishi",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Pajero",
+    "brandCode": "Mitsubishi",
+    "description": "Легендарный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Lancer",
+    "brandCode": "Mitsubishi",
+    "description": "Компактный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Eclipse Cross",
+    "brandCode": "Mitsubishi",
+    "description": "Кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "CX-5",
+    "brandCode": "Mazda",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "CX-30",
+    "brandCode": "Mazda",
+    "description": "Субкомпактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Mazda3",
+    "brandCode": "Mazda",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Mazda6",
+    "brandCode": "Mazda",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "MX-5",
+    "brandCode": "Mazda",
+    "description": "Легендарный родстер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Impreza",
+    "brandCode": "Subaru",
+    "description": "Компактный седан и хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Outback",
+    "brandCode": "Subaru",
+    "description": "Универсал повышенной проходимости.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Forester",
+    "brandCode": "Subaru",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Legacy",
+    "brandCode": "Subaru",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "BRZ",
+    "brandCode": "Subaru",
+    "description": "Заднеприводное купе.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Swift",
+    "brandCode": "Suzuki",
+    "description": "Субкомпактный хетчбек.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Vitara",
+    "brandCode": "Suzuki",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "SX4",
+    "brandCode": "Suzuki",
+    "description": "Субкомпактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Jimny",
+    "brandCode": "Suzuki",
+    "description": "Компактный рамный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Grand Vitara",
+    "brandCode": "Suzuki",
+    "description": "Среднеразмерный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Coolray",
+    "brandCode": "Geely",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Atlas",
+    "brandCode": "Geely",
+    "description": "Кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Emgrand",
+    "brandCode": "Geely",
+    "description": "Седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tugella",
+    "brandCode": "Geely",
+    "description": "Купе-кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Monjaro",
+    "brandCode": "Geely",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Haval Jolion",
+    "brandCode": "Great Wall",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Haval F7",
+    "brandCode": "Great Wall",
+    "description": "Кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Haval H9",
+    "brandCode": "Great Wall",
+    "description": "Рамный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Great Wall Poer",
+    "brandCode": "Great Wall",
+    "description": "Пикап.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Haval M6",
+    "brandCode": "Great Wall",
+    "description": "Бюджетный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tiggo 7 Pro",
+    "brandCode": "Chery",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tiggo 8 Pro",
+    "brandCode": "Chery",
+    "description": "Среднеразмерный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Tiggo 4",
+    "brandCode": "Chery",
+    "description": "Субкомпактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Arrizo 8",
+    "brandCode": "Chery",
+    "description": "Бизнес-седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Omoda C5",
+    "brandCode": "Chery",
+    "description": "Молодежный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Vesta",
+    "brandCode": "Lada",
+    "description": "Седан и универсал.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Granta",
+    "brandCode": "Lada",
+    "description": "Бюджетный седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Niva Travel",
+    "brandCode": "Lada",
+    "description": "Компактный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Niva Legend",
+    "brandCode": "Lada",
+    "description": "Легендарный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Largus",
+    "brandCode": "Lada",
+    "description": "Универсал.",
+    "imageUrl": ""
+  },
+  {
+    "name": "GAZelle Next",
+    "brandCode": "GAZ",
+    "description": "Легкий коммерческий грузовик.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Sobol",
+    "brandCode": "GAZ",
+    "description": "Коммерческий фургон.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Valdai",
+    "brandCode": "GAZ",
+    "description": "Среднетоннажный грузовик.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Sadko",
+    "brandCode": "GAZ",
+    "description": "Вездеходный грузовик.",
+    "imageUrl": ""
+  },
+  {
+    "name": "GAZon Next",
+    "brandCode": "GAZ",
+    "description": "Среднетоннажный грузовик.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Patriot",
+    "brandCode": "UAZ",
+    "description": "Внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Hunter",
+    "brandCode": "UAZ",
+    "description": "Легендарный внедорожник.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Pickup",
+    "brandCode": "UAZ",
+    "description": "Пикап.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Profi",
+    "brandCode": "UAZ",
+    "description": "Легкий коммерческий грузовик.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Cargo",
+    "brandCode": "UAZ",
+    "description": "Фургон.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Moskvich 3",
+    "brandCode": "Moskvich",
+    "description": "Компактный кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Moskvich 6",
+    "brandCode": "Moskvich",
+    "description": "Седан.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Moskvich 5",
+    "brandCode": "Moskvich",
+    "description": "Кроссовер.",
+    "imageUrl": ""
+  },
+  {
+    "name": "Moskvich 3e",
+    "brandCode": "Moskvich",
+    "description": "Электрический кроссовер.",
+    "imageUrl": ""
+  }
+]

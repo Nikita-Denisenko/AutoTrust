@@ -109,6 +109,8 @@ using (var scope = app.Services.CreateScope())
 {
     await CountrySeeder.SeedAsync(scope.ServiceProvider);
     await CitySeeder.SeedAsync(scope.ServiceProvider);
+    await BrandSeeder.SeedAsync(scope.ServiceProvider);
+    await ModelSeeder.SeedAsync(scope.ServiceProvider);
 }
 
 // Configure the HTTP request pipeline.

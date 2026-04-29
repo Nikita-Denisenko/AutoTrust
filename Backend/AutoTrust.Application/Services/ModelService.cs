@@ -11,6 +11,8 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
 using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace AutoTrust.Application.Services
 {
@@ -183,6 +185,64 @@ namespace AutoTrust.Application.Services
             {
                 throw new InvalidOperationException($"Failed to update image: {ex.Message}", ex);
             }
+        }
+
+        public async Task LoadModelsAsync(string json, CancellationToken cancellationToken)
+        {
+            var modelDtos = JsonSerializer.Deserialize<List<ModelImportDto>>(json);
+
+            if (modelDtos == null || !modelDtos.Any())
+                throw new InvalidOperationException("No models to load");
+
+            foreach (var modelDto in modelDtos)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                var brand = await _brandRepo.GetQuery()
+                    .FirstOrDefaultAsync(b => b.Name == modelDto.BrandCode, cancellationToken);
+
+                if (brand == null)
+                {
+                    Console.WriteLine($"Brand '{modelDto.BrandCode}' not found. Skipping model '{modelDto.Name}'.");
+                    continue;
+                }
+
+                bool exists = await _repo.GetQuery()
+                    .AnyAsync(m => m.Name == modelDto.Name && m.BrandId == brand.Id, cancellationToken);
+
+                if (exists)
+                    continue;
+
+                var imageUrl = string.IsNullOrWhiteSpace(modelDto.ImageUrl)
+                    ? null
+                    : Url.Create(modelDto.ImageUrl);
+
+                var model = new Model(
+                    modelDto.Name,
+                    modelDto.Description,
+                    imageUrl,
+                    brand.Id
+                );
+
+                await _repo.AddAsync(model, cancellationToken);
+            }
+
+            await _repo.SaveChangesAsync(cancellationToken);
+        }
+
+        private class ModelImportDto
+        {
+            [JsonPropertyName("name")]
+            public string Name { get; set; } = string.Empty;
+
+            [JsonPropertyName("brandCode")]
+            public string BrandCode { get; set; } = string.Empty;
+
+            [JsonPropertyName("description")]
+            public string Description { get; set; } = string.Empty;
+
+            [JsonPropertyName("imageUrl")]
+            public string ImageUrl { get; set; } = string.Empty;
         }
     }
 }

@@ -17,5 +17,6 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task UpdateModelImageAsync(int id, UpdateModelImageDto dto, CancellationToken cancellationToken);
         public Task UpdateModelDescriptionAsync(int id, UpdateModelDescriptionDto dto, CancellationToken cancellationToken);
         public Task DeleteModelAsync(int id, CancellationToken cancellationToken);
+        public Task LoadModelsAsync(string json, CancellationToken cancellationToken);
     }
 }

@@ -8,6 +8,7 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos
 using AutoTrust.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace AutoTrust.Application.Services
 {
@@ -55,7 +56,7 @@ namespace AutoTrust.Application.Services
                 throw new InvalidOperationException("No cities to load");
 
             var russia = await _countryRepo.GetQuery()
-                .FirstOrDefaultAsync(c => c.EnName.ToUpper() == "RUSSIA", cancellationToken);
+                .FirstOrDefaultAsync(c => c.Code.ToLower() == "ru", cancellationToken);
 
             if (russia == null)
                 throw new InvalidOperationException("Russia not found in database. Load countries first.");
@@ -64,16 +65,13 @@ namespace AutoTrust.Application.Services
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
-                if (cityDto.CountryId != russia.Id)
-                    throw new InvalidOperationException("You can load only russian cities");
-
                 bool exists = await _repo.GetQuery()
-                    .AnyAsync(c => c.Name == cityDto.Name && c.CountryId == cityDto.CountryId, cancellationToken);
+                    .AnyAsync(c => c.Name == cityDto.Name && c.CountryId == russia.Id, cancellationToken);
 
                 if (exists)
                     continue;
 
-                var city = new City(cityDto.Name, cityDto.CountryId);
+                var city = new City(cityDto.Name, russia.Id);
                 await _repo.AddAsync(city, cancellationToken);
             }
 
@@ -82,8 +80,8 @@ namespace AutoTrust.Application.Services
 
         private class CityImportDto
         {
+            [JsonPropertyName("name")]
             public string Name { get; set; } = string.Empty;
-            public int CountryId { get; set; }
         }
     }
 }

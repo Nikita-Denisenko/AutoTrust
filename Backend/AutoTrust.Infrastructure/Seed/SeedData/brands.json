@@ -1,0 +1,134 @@
+﻿[
+  {
+    "name": "BMW",
+    "description": "Немецкий производитель премиальных автомобилей, мотоциклов и двигателей.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg",
+    "countryCode": "de"
+  },
+  {
+    "name": "Mercedes-Benz",
+    "description": "Немецкий автоконцерн, производящий легковые автомобили премиум-класса.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg",
+    "countryCode": "de"
+  },
+  {
+    "name": "Audi",
+    "description": "Немецкая автомобилестроительная компания, входящая в концерн Volkswagen Group.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg",
+    "countryCode": "de"
+  },
+  {
+    "name": "Volkswagen",
+    "description": "Немецкий автопроизводитель, известный своими надежными и доступными автомобилями.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg",
+    "countryCode": "de"
+  },
+  {
+    "name": "Porsche",
+    "description": "Немецкий производитель спортивных автомобилей и внедорожников премиум-класса.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Porsche_logo.png",
+    "countryCode": "de"
+  },
+  {
+    "name": "Opel",
+    "description": "Немецкий автопроизводитель, выпускающий доступные и практичные автомобили.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Opel-logo-2017.svg",
+    "countryCode": "de"
+  },
+  {
+    "name": "Hyundai",
+    "description": "Южнокорейский автоконцерн, один из крупнейших в мире.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg",
+    "countryCode": "kr"
+  },
+  {
+    "name": "Kia",
+    "description": "Южнокорейский производитель автомобилей, входящий в группу Hyundai.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Kia_Motors_logo.svg",
+    "countryCode": "kr"
+  },
+  {
+    "name": "Honda",
+    "description": "Японский производитель автомобилей, мотоциклов и силовой техники.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Honda_logo.svg",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Toyota",
+    "description": "Крупнейший японский автопроизводитель, лидер по надежности.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_corolla_Logo.png",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Nissan",
+    "description": "Японский автопроизводитель, часть альянса Renault-Nissan-Mitsubishi.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nissan_logo.png",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Mitsubishi",
+    "description": "Японский производитель автомобилей и техники.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mitsubishi_logo.svg",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Mazda",
+    "description": "Японский автопроизводитель, известный дизайном и технологиями.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Mazda_logo.svg",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Subaru",
+    "description": "Японский производитель автомобилей с полным приводом и оппозитными двигателями.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Subaru_logo.svg",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Suzuki",
+    "description": "Японский производитель компактных автомобилей и мотоциклов.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Suzuki_logo.svg",
+    "countryCode": "jp"
+  },
+  {
+    "name": "Geely",
+    "description": "Китайский автоконцерн, владелец Volvo, Lotus, Polestar.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Geely_logo.svg",
+    "countryCode": "cn"
+  },
+  {
+    "name": "Great Wall",
+    "description": "Китайский производитель внедорожников и пикапов.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Great_Wall_Motors_logo.png",
+    "countryCode": "cn"
+  },
+  {
+    "name": "Chery",
+    "description": "Китайский автопроизводитель, активно развивающий экспорт.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Chery_logo.svg",
+    "countryCode": "cn"
+  },
+  {
+    "name": "Lada",
+    "description": "Российский производитель легковых автомобилей, флагман АвтоВАЗа.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Lada_logo.svg",
+    "countryCode": "ru"
+  },
+  {
+    "name": "GAZ",
+    "description": "Горьковский автомобильный завод, производитель грузовиков и легковых автомобилей.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/GAZ_logo.png",
+    "countryCode": "ru"
+  },
+  {
+    "name": "UAZ",
+    "description": "Ульяновский автомобильный завод, производитель внедорожников.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/UAZ_logo.png",
+    "countryCode": "ru"
+  },
+  {
+    "name": "Moskvich",
+    "description": "Московский автомобильный завод, возрожденный производитель современных автомобилей.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Moskvich_logo.png",
+    "countryCode": "ru"
+  }
+]

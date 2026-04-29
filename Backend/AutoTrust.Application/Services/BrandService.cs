@@ -12,26 +12,30 @@ using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.Enums.OrderParams;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace AutoTrust.Application.Services
 {
     public class BrandService : IBrandService
     {
         private readonly IRepository<Brand> _repo;
+        private readonly IRepository<Country> _countryRepo;
         private readonly IBrandValidator _validator;
         private readonly IMapper _mapper;
 
         public BrandService
         (
-            IRepository<Brand> repo, 
-            IBrandValidator validator, 
-            IMapper mapper
+            IRepository<Brand> repo,
+            IBrandValidator validator,
+            IMapper mapper,
+            IRepository<Country> countryRepo
         )
         {
             _repo = repo;
             _validator = validator;
             _mapper = mapper;
-
+            _countryRepo = countryRepo;
         }
 
         private IQueryable<Brand> ApplyFilters(BrandFilterDto filterDto)
@@ -184,6 +188,55 @@ namespace AutoTrust.Application.Services
             {
                 throw new InvalidOperationException($"Failed to update brand: {ex.Message}", ex);
             }
+        }
+        public async Task LoadBrandsAsync(string json, CancellationToken cancellationToken)
+        {
+            var brandDtos = JsonSerializer.Deserialize<List<BrandImportDto>>(json);
+
+            if (brandDtos == null || !brandDtos.Any())
+                throw new InvalidOperationException("No brands to load");
+
+            foreach (var brandDto in brandDtos)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                var country = await _countryRepo.GetQuery()
+                    .FirstOrDefaultAsync(c => c.Code == brandDto.CountryCode, cancellationToken);
+
+                if (country == null)
+                {
+                    Console.WriteLine($"Country with code {brandDto.CountryCode} not found. Skipping brand {brandDto.Name}");
+                    continue;
+                }
+
+                bool exists = await _repo.GetQuery()
+                    .AnyAsync(b => b.Name == brandDto.Name, cancellationToken);
+
+                if (exists)
+                    continue;
+
+                var logoUrl = Url.Create(brandDto.LogoUrl);
+                var brand = new Brand(brandDto.Name, brandDto.Description, logoUrl, country.Id);
+
+                await _repo.AddAsync(brand, cancellationToken);
+            }
+
+            await _repo.SaveChangesAsync(cancellationToken);
+        }
+
+        private class BrandImportDto
+        {
+            [JsonPropertyName("name")]
+            public string Name { get; set; } = string.Empty;
+
+            [JsonPropertyName("description")]
+            public string Description { get; set; } = string.Empty;
+
+            [JsonPropertyName("logoUrl")]
+            public string LogoUrl { get; set; } = string.Empty;
+
+            [JsonPropertyName("countryCode")]
+            public string CountryCode { get; set; } = string.Empty;
         }
     }
 }

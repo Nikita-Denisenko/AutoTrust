@@ -14,7 +14,6 @@ namespace AutoTrust.Application.Interfaces.Services
         public Task<List<ModelListItemDto>> GetModelsAsync(ModelFilterDto filterDto, CancellationToken cancellationToken);
         public Task<List<AdminModelListItemDto>> GetModelsForAdminAsync(AdminModelFilterDto adminFilterDto, CancellationToken cancellationToken);
         public Task RenameModelAsync(int id, RenameModelDto dto, CancellationToken cancellationToken);
-        public Task UpdateModelImageAsync(int id, UpdateModelImageDto dto, CancellationToken cancellationToken);
         public Task UpdateModelDescriptionAsync(int id, UpdateModelDescriptionDto dto, CancellationToken cancellationToken);
         public Task DeleteModelAsync(int id, CancellationToken cancellationToken);
         public Task LoadModelsAsync(string json, CancellationToken cancellationToken);

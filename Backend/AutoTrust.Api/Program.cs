@@ -5,6 +5,7 @@ using AutoTrust.Application.Mappings;
 using AutoTrust.Application.Services;
 using AutoTrust.Application.Validators;
 using AutoTrust.Infrastructure.Data;
+using AutoTrust.Infrastructure.Repositories;
 using AutoTrust.Infrastructure.Seed;
 using AutoTrust.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -41,7 +42,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 
 builder.Services.AddScoped<IAccountValidator, AccountValidator>();

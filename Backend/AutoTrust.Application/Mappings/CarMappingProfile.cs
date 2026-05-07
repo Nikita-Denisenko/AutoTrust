@@ -20,14 +20,16 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory.Count));
 
             CreateMap<Car, AdminCarDto>()
-                .IncludeBase<Car, PublicCarDto>()
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
+                .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => src.StateNumber.Value))
+                .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory.Count))
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
 
             CreateMap<Car, PublicCarListItemDto>()
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
 
             CreateMap<Car, AdminCarListItemDto>()
-                .IncludeBase<Car, PublicCarListItemDto>()
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value))
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted))
                 .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.OwnershipHistory.First(co => co.IsCurrent).UserId));
 

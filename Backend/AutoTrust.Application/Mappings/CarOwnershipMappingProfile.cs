@@ -18,14 +18,16 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name));
 
             CreateMap<CarOwnership, PublicOwnershipListItemDto>()
-                .IncludeBase<CarOwnership, PublicUserOwnershipDto>();
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.Name))
+                .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name));
 
             CreateMap<CarOwnership, AdminOwnershipDto>()
-                .IncludeBase<CarOwnership, PublicCarOwnershipDto>()
+                .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name))
                 .ForMember(dest => dest.CarId, opt => opt.MapFrom(src => src.CarId));
 
             CreateMap<CarOwnership, AdminOwnershipListItemDto>()
-                .IncludeBase<CarOwnership, AdminOwnershipDto>();
+                .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Car.Model.Name))
+                .ForMember(dest => dest.CarId, opt => opt.MapFrom(src => src.CarId));
 
             CreateMap<CarOwnership, CreatedCarOwnershipDto>();
         }

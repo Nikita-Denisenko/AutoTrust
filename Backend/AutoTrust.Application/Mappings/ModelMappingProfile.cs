@@ -11,21 +11,11 @@ namespace AutoTrust.Application.Mappings
     {
         public ModelMappingProfile() 
         {
-            CreateMap<Model, AdminModelDto>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
-
-            CreateMap<Model, AdminModelListItemDto>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
-
-            CreateMap<Model, ModelDto>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
-
-            CreateMap<Model, ModelListItemDto>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl.Value));
-
-            CreateMap<CreateModelDto, Model>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => Url.Create(src.ImageUrl)));
-
+            CreateMap<Model, AdminModelDto>();
+            CreateMap<Model, AdminModelListItemDto>();
+            CreateMap<Model, ModelDto>();
+            CreateMap<Model, ModelListItemDto>();
+            CreateMap<CreateModelDto, Model>();
             CreateMap<Model, CreatedModelDto>();
         }
     }

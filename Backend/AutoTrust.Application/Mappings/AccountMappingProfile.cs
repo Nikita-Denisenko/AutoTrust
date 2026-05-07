@@ -14,7 +14,8 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone.Value));
 
             CreateMap<Account, AdminAccountDto>()
-                .IncludeBase<Account, AccountDto>();
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email.Value))
+                .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone.Value));
 
             CreateMap<Account, AdminAccountListItemDto>()
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email.Value));

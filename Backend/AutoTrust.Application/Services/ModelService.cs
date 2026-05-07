@@ -171,22 +171,6 @@ namespace AutoTrust.Application.Services
             }
         }
 
-        public async Task UpdateModelImageAsync(int id, UpdateModelImageDto dto, CancellationToken cancellationToken)
-        {
-            var model = await _repo.GetByIdAsync(id, cancellationToken)
-                ?? throw new KeyNotFoundException($"Model with ID {id} was not found!");
-
-            try
-            {
-                model.UpdateImage(Url.Create(dto.ImageUrl));
-                await _repo.SaveChangesAsync(cancellationToken);
-            }
-            catch (ArgumentException ex)
-            {
-                throw new InvalidOperationException($"Failed to update image: {ex.Message}", ex);
-            }
-        }
-
         public async Task LoadModelsAsync(string json, CancellationToken cancellationToken)
         {
             var modelDtos = JsonSerializer.Deserialize<List<ModelImportDto>>(json);
@@ -220,7 +204,6 @@ namespace AutoTrust.Application.Services
                 var model = new Model(
                     modelDto.Name,
                     modelDto.Description,
-                    imageUrl,
                     brand.Id
                 );
 

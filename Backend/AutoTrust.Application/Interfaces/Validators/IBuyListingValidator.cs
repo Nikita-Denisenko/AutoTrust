@@ -8,6 +8,6 @@ namespace AutoTrust.Application.Interfaces.Validators
     public interface IBuyListingValidator
     {
         public Task<ValidationResult> CanCreateAsync(CreateBuyListingDto dto, CancellationToken cancellationToken);
-        public Task<ValidationResult> CanUpdateAsync(UpdateBuyListingDto dto, CancellationToken cancellationToken)
+        public Task<ValidationResult> CanUpdateAsync(UpdateBuyListingDto dto, CancellationToken cancellationToken);
     }
 }

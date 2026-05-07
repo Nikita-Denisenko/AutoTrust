@@ -15,10 +15,6 @@ namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
         string Description,
 
         [Required]
-        [Url]
-        string ImageUrl,
-
-        [Required]
         [Range(1, int.MaxValue)]
         int BrandId
     );

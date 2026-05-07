@@ -170,32 +170,6 @@ namespace AutoTrust.Api.Controllers
         }
 
         [Authorize(Roles = Roles.Admin)]
-        [HttpPatch("{id:int}/image")]
-        public async Task<IActionResult> UpdateModelImage(
-            [FromRoute] int id,
-            [FromBody] UpdateModelImageDto dto,
-            CancellationToken cancellationToken)
-        {
-            try
-            {
-                await _service.UpdateModelImageAsync(id, dto, cancellationToken);
-                return Ok($"Model image with ID {id} was successfully updated.");
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
-
-        [Authorize(Roles = Roles.Admin)]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteModel(
             [FromRoute] int id,

@@ -10,7 +10,7 @@ namespace AutoTrust.Infrastructure.Seed
             using var scope = serviceProvider.CreateScope();
             var brandService = scope.ServiceProvider.GetRequiredService<IBrandService>();
 
-            var json = await File.ReadAllTextAsync("Seed/SeedData/brands.json");
+            var json = await File.ReadAllTextAsync("SeedData/brands.json");
             await brandService.LoadBrandsAsync(json, CancellationToken.None);
         }
     }

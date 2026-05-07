@@ -10,11 +10,9 @@ namespace AutoTrust.Application.Mappings
     {
         public MessageMappingProfile() 
         {
-            CreateMap<Message, MessageDto>()
-                .IncludeMembers(src => src.User);
+            CreateMap<Message, MessageDto>();
 
             CreateMap<Message, AdminMessageDto>()
-                .IncludeBase<Message, MessageDto>()
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
 
             CreateMap<CreateMessageDto, Message>()

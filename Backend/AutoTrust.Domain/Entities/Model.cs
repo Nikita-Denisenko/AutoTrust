@@ -7,7 +7,6 @@ namespace AutoTrust.Domain.Entities
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public Url ImageUrl { get; private set; }
         public int BrandId { get; private set; }
         public Brand Brand { get; private set; }
         public bool IsActive { get; private set; } = true;
@@ -19,7 +18,6 @@ namespace AutoTrust.Domain.Entities
         (
             string name, 
             string description,
-            Url imageUrl,
             int brandId 
         )
         {
@@ -34,7 +32,6 @@ namespace AutoTrust.Domain.Entities
 
             Name = name;
             Description = description;
-            ImageUrl = imageUrl;
             BrandId = brandId;
         }
 
@@ -52,12 +49,6 @@ namespace AutoTrust.Domain.Entities
                 throw new ArgumentException("Description cannot be empty!");
 
             Description = newDescription;
-        }
-
-
-        public void UpdateImage(Url newImageUrl)
-        {
-            ImageUrl = newImageUrl;
         }
 
         public void Deactivate() => IsActive = false;

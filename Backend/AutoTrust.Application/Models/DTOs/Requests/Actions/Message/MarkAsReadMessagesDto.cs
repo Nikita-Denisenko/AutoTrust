@@ -5,6 +5,9 @@ namespace AutoTrust.Application.Models.DTOs.Requests.Actions.Message
     public record MarkAsReadMessagesDto
     (
         [Required]
-        List<int> MessageIds
+        List<int> MessageIds,
+
+        [Required]
+        int ChatId
     );
 }

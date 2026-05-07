@@ -29,7 +29,11 @@ namespace AutoTrust.Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            throw new NotImplementedException();
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseMySql("Server=localhost;Port=3306;Database=AutoTrust;User=root;Password=root;",
+                    new MySqlServerVersion(new Version(8, 0, 0)));
+            }
         }
 
 

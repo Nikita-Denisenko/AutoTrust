@@ -7,7 +7,6 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos
         int Id,
         string Name,
         string Description,
-        string ImageUrl,
         BrandShortDto Brand
     );
 }

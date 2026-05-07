@@ -10,7 +10,7 @@ namespace AutoTrust.Infrastructure.Seed
             using var scope = serviceProvider.CreateScope();
             var cityService = scope.ServiceProvider.GetRequiredService<ICityService>();
 
-            var json = await File.ReadAllTextAsync("Seed/SeedData/cities.json");
+            var json = await File.ReadAllTextAsync("SeedData/cities.json");
             await cityService.LoadCitiesAsync(json, CancellationToken.None);
         }
     }

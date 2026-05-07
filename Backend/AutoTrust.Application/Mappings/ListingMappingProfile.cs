@@ -18,7 +18,7 @@ namespace AutoTrust.Application.Mappings
         {
             CreateMap<BuyDetails, BuyInfoDto>()
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Model.Name))
-                .ForMember(dest => dest.ModelImageUrl, opt => opt.MapFrom(src => src.Model.ImageUrl.Value))
+                .ForMember(dest => dest.BrandImageUrl, opt => opt.MapFrom(src => src.Model.Brand.LogoUrl))
                 .ForMember(dest => dest.CarColor, opt => opt.MapFrom(src => src.CarColor));
 
             CreateMap<SaleDetails, SaleInfoDto>()
@@ -53,7 +53,30 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions.Count));
 
             CreateMap<Listing, AdminListingDto>()
-                .IncludeBase<Listing, FeedListingDto>()
+                .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User))
+                .ForMember(dest => dest.Location, opt => opt
+                    .MapFrom(src => new LocationDto
+                        (
+                            new CityDto
+                            (
+                                src.CityId,
+                                src.City.CountryId,
+                                src.City.Name
+                            ),
+                            new CountryDto
+                            (
+                                src.City.CountryId,
+                                src.City.Country.RuName,
+                                src.City.Country.EnName,
+                                src.City.Country.Code,
+                                src.City.Country.FlagImageUrl.Value
+                            )
+                        )
+                     )
+                )
+                .ForMember(dest => dest.BuyInfoDto, opt => opt.MapFrom(src => src.BuyDetails))
+                .ForMember(dest => dest.SaleInfoDto, opt => opt.MapFrom(src => src.SaleDetails))
+                .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions.Count))
                 .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted))
                 .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive));
 
@@ -61,7 +84,7 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User))
                 .ForMember(dest => dest.ModelId, opt => opt.MapFrom(src => src.BuyDetails!.ModelId))
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.BuyDetails!.Model.Name))
-                .ForMember(dest => dest.ModelImageUrl, opt => opt.MapFrom(src => src.BuyDetails!.Model.ImageUrl.Value))
+                .ForMember(dest => dest.BrandImageUrl, opt => opt.MapFrom(src => src.BuyDetails!.Model.Brand.LogoUrl))
                 .ForMember(dest => dest.Location, opt => opt
                     .MapFrom(src => new LocationDto
                         (

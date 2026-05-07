@@ -13,7 +13,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyLi
         LocationDto Location,
         int ModelId,
         string ModelName,
-        string ModelImageUrl,
+        string BrandImageUrl,
         decimal MinPrice,
         decimal MaxPrice,
         int MinReleaseYear,

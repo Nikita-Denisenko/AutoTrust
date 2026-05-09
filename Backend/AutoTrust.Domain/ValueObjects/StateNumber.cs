@@ -6,6 +6,8 @@ namespace AutoTrust.Domain.ValueObjects
     {
         public string Value { get; private set; }
 
+        public StateNumber() { }
+
         public StateNumber(string stateNumber)
         {
             if (!IsValid(stateNumber))

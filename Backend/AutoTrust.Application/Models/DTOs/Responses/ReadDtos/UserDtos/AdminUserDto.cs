@@ -15,6 +15,9 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
         string AboutInfo,
         LocationDto Location,
         bool IsDeleted,
-        bool IsBlocked
+        bool IsBlocked,
+        int ReviewsQuantity,
+        int FollowersQuantity,
+        int FollowingsQuantity
     );
 }

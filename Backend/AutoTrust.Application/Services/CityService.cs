@@ -52,7 +52,7 @@ namespace AutoTrust.Application.Services
         {
             var cityDtos = JsonSerializer.Deserialize<List<CityImportDto>>(json);
 
-            if (cityDtos == null || !cityDtos.Any())
+            if (cityDtos == null || cityDtos.Count == 0)
                 throw new InvalidOperationException("No cities to load");
 
             var russia = await _countryRepo.GetQuery()

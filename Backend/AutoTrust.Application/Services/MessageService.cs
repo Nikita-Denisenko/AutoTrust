@@ -105,6 +105,9 @@ namespace AutoTrust.Application.Services
             if (!await messages.AnyAsync(cancellationToken))
                 throw new InvalidOperationException("Messages to delete were not found!");
 
+            if (await messages.AnyAsync(m => m.ChatId != dto.ChatId, cancellationToken))
+                throw new InvalidOperationException("Users cannot delete messages in multiple chats at once.");
+
             if (await messages.AnyAsync(m => m.UserId != currentUserId, cancellationToken))
                 throw new InvalidOperationException("User cannot delete other user's messages!");
 

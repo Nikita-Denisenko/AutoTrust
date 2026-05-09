@@ -20,10 +20,13 @@ namespace AutoTrust.Domain.Entities
         public ICollection<ChatParticipant> ChatParticipants { get; private set; } = [];
         public ICollection<CarOwnership> CarOwnerships { get; private set; } = [];
         public ICollection<Comment> Comments { get; private set; } = [];
-        public ICollection<Follow> Follows { get; private set; } = [];
+        public ICollection<Follow> Followings { get; private set; } = [];
+        public ICollection<Follow> Followers { get; private set; } = [];
         public ICollection<Notification> Notifications { get; private set; } = [];
         public ICollection<Reaction> Reactions { get; private set; } = [];
-        public ICollection<Review> Reviews { get; private set; } = [];
+        public ICollection<Review> WrittenReviews { get; private set; } = []; 
+        public ICollection<Review> ReceivedReviews { get; private set; } = []; 
+
 
         public bool IsDeleted { get; private set; } = false;
         public bool IsBlocked { get; private set; } = false;

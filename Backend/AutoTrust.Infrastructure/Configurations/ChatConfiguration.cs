@@ -19,8 +19,8 @@ namespace AutoTrust.Infrastructure.Configurations
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(ch => ch.PinnedMessage)
-                .WithOne(m => m.Chat)
-                .HasForeignKey<Message>(m => m.ChatId)
+                .WithOne(m => m.PinningChat)
+                .HasForeignKey<Message>(m => m.PinningChatId)
                 .OnDelete(DeleteBehavior.SetNull);
         }
     }

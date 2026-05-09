@@ -5,6 +5,9 @@ namespace AutoTrust.Application.Models.DTOs.Requests.Actions.Message
     public record DeleteMessagesDto
     (
         [Required] 
-        List<int> MessageIds
+        List<int> MessageIds,
+        
+        [Required]
+        int ChatId
     );
 }

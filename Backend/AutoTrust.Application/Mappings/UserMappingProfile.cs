@@ -14,7 +14,7 @@ namespace AutoTrust.Application.Mappings
             CreateMap<User, UserProfileDto>()
                .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
+               .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
                    new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
                    new CountryDto
                    (
@@ -23,11 +23,14 @@ namespace AutoTrust.Application.Mappings
                        src.City.Country.EnName,
                        src.City.Country.Code,
                        src.City.Country.FlagImageUrl.Value
-                    ))));
+                    ))))
+               .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
+               .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
+               .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count));
 
             CreateMap<User, AdminUserDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
-               .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
+                .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
                    new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
                    new CountryDto
@@ -37,7 +40,10 @@ namespace AutoTrust.Application.Mappings
                        src.City.Country.EnName,
                        src.City.Country.Code,
                        src.City.Country.FlagImageUrl.Value
-                    ))));
+                    ))))
+                .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
+                .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
+                .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count));
 
             CreateMap<User, AdminUserListItemDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
@@ -51,7 +57,9 @@ namespace AutoTrust.Application.Mappings
                        src.City.Country.EnName,
                        src.City.Country.Code,
                        src.City.Country.FlagImageUrl.Value
-                    ))));
+                    ))))
+                .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count));
+
 
             CreateMap<User, UserProfileListItemDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
@@ -65,7 +73,8 @@ namespace AutoTrust.Application.Mappings
                        src.City.Country.EnName,
                        src.City.Country.Code,
                        src.City.Country.FlagImageUrl.Value
-                    ))));
+                    ))))
+                .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count));
         }
     }
 }

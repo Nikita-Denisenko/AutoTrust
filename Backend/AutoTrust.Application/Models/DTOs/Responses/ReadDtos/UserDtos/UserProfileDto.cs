@@ -13,6 +13,9 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
         string? AvatarUrl,
         Gender Gender,
         string AboutInfo,
-        LocationDto Location
+        LocationDto Location,
+        int ReviewsQuantity,
+        int FollowersQuantity,
+        int FollowingsQuantity
     );
 }

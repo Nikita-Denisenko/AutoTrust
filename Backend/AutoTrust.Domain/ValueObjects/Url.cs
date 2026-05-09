@@ -9,6 +9,8 @@
             Value = value;
         }
 
+        public Url() { }
+
         public static Url Create(string url)
         {
             if (string.IsNullOrWhiteSpace(url))

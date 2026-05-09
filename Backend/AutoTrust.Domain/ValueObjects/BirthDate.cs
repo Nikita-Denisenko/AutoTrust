@@ -4,6 +4,8 @@
     {
         public DateOnly Value { get; }
 
+        public BirthDate() { }
+
         private BirthDate(DateOnly value)
         {
             Value = value;

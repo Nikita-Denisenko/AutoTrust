@@ -6,6 +6,8 @@
         public string Text { get; private set; }
         public int ChatId { get; private set; }
         public Chat Chat { get; private set; }
+        public int? PinningChatId { get; private set; }
+        public Chat? PinningChat { get; private set; }
         public User User { get; private set; }
         public int UserId { get; private set; }
         public bool IsRead { get; private set; } = false;

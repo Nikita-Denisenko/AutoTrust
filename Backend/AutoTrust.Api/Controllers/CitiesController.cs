@@ -7,7 +7,6 @@ namespace AutoTrust.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class CitiesController : ControllerBase
     {
         private readonly ICityService _service;
@@ -18,6 +17,7 @@ namespace AutoTrust.Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetCities(
             [FromQuery] CityFilterDto filterDto,
             CancellationToken cancellationToken)

@@ -3,7 +3,7 @@
     public record CityFilterDto
     (
         int Page = 1,
-        int Size = 20,
+        int Size = 1000,
         string SearchText = "",
         int? CountryId = null,
         bool SortByAsc = true

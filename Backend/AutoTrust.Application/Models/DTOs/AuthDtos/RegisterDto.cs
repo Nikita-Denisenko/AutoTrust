@@ -22,7 +22,7 @@ namespace AutoTrust.Application.Models.DTOs.AuthDtos
 
         DateOnly BirthDate,
 
-        Gender Gender,
+        string Gender,
 
         [Required]
         [Range(1, int.MaxValue)]

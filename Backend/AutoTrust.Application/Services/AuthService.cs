@@ -2,6 +2,7 @@
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Models.DTOs.AuthDtos;
 using AutoTrust.Domain.Entities;
+using AutoTrust.Domain.Enums;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,8 +29,9 @@ namespace AutoTrust.Application.Services
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto dto, CancellationToken ct)
         {
+            var emailToFind = new Email(dto.Email);
             var existingAccount = await _accountRepo.GetQuery()
-                .FirstOrDefaultAsync(a => a.Email.Value == dto.Email, ct);
+                .FirstOrDefaultAsync(a => a.Email == emailToFind, ct);
 
             if (existingAccount != null)
                 throw new InvalidOperationException("Account already exists");
@@ -40,7 +42,7 @@ namespace AutoTrust.Application.Services
                 dto.Surname,
                 dto.Patronymic,
                 birthDate,
-                dto.Gender,
+                Enum.Parse<Gender>(dto.Gender),
                 dto.CityId
             );
 
@@ -61,9 +63,10 @@ namespace AutoTrust.Application.Services
 
         public async Task<AuthResponseDto> LoginAsync(LoginDto dto, CancellationToken ct)
         {
+            var emailToFind = new Email(dto.Email);
             var account = await _accountRepo.GetQuery()
                 .Include(a => a.User)
-                .FirstOrDefaultAsync(a => a.Email.Value == dto.Email, ct);
+                .FirstOrDefaultAsync(a => a.Email == emailToFind, ct);
 
             if (account == null || !_passwordHasher.VerifyPassword(dto.Password, account.PasswordHash))
                 throw new InvalidOperationException("Invalid email or password");

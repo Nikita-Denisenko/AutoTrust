@@ -26,7 +26,9 @@ namespace AutoTrust.Application.Mappings
                     ))))
                .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
                .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
-               .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count));
+               .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count))
+               .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender.ToString()));
+
 
             CreateMap<User, AdminUserDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
@@ -43,7 +45,8 @@ namespace AutoTrust.Application.Mappings
                     ))))
                 .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
                 .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
-                .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count));
+                .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender.ToString()));
 
             CreateMap<User, AdminUserListItemDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))

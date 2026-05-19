@@ -1,10 +1,10 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos
 {
-    public record PublicBrandListItemDto
-    (
-        int Id,
-        string Name,
-        string LogoUrl,
-        int CarQuantity
-    );
+    public class PublicBrandListItemDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string LogoUrl { get; set; }
+        public int CarQuantity { get; set; }
+    }
 }

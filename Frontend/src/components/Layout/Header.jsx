@@ -98,6 +98,11 @@ const Header = () => {
                   <li className="nav-item">
                     <Link className="nav-link fs-5 px-2 py-1 rounded-3 text-white nav-link-custom" to="/listings/buy">Покупки</Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link fs-5 px-2 py-1 rounded-3 text-white nav-link-custom" to="/search">
+                      🔍 Поиск
+                    </Link>
+                  </li>
                   
                   <li className="nav-item dropdown ms-2">
                     <button 

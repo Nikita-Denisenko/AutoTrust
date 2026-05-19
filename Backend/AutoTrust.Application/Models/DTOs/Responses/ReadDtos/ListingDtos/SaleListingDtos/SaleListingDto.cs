@@ -4,17 +4,17 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos
 {
-    public record SaleListingDto
-    (
-        int Id,
-        UserShortDto Author,
-        DateTime CreatedAt,
-        DateTime? UpdatedAt,
-        LocationDto Location,
-        decimal Price,
-        PublicCarDto Car,
-        string Description,
-        int ReactionsQuantity,
-        bool IsActive
-    );
+    public class SaleListingDto
+    {
+        public int Id { get; set; }
+        public UserShortDto Author { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public LocationDto Location { get; set; }
+        public decimal Price { get; set; }
+        public PublicCarDto Car { get; set; }
+        public string Description { get; set; }
+        public int ReactionsQuantity { get; set; }
+        public bool IsActive { get; set; }
+    }
 }

@@ -9,6 +9,7 @@ import ChatsPage from './pages/ChatsPage';
 import SaleListingsPage from './pages/SaleListingsPage';
 import BuyListingsPage from './pages/BuyListingsPage';
 import { AuthProvider } from './contexts/AuthContext';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/listings/sale" element={<SaleListingsPage />} />
           <Route path="/listings/buy" element={<BuyListingsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

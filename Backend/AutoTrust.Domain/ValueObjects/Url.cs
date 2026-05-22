@@ -9,12 +9,12 @@
             Value = value;
         }
 
-        public Url() { }
-
         public static Url Create(string url)
         {
             if (string.IsNullOrWhiteSpace(url))
-                throw new ArgumentException("Url cannot be empty");
+            {
+                throw new ArgumentException($"Url cannot be null or empty. Call stack: {Environment.StackTrace}");
+            }
 
             if (!Uri.TryCreate(url, UriKind.Absolute, out var uri) ||
                 (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))

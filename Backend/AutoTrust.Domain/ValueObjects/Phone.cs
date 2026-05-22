@@ -20,6 +20,5 @@ namespace AutoTrust.Domain.ValueObjects
 
             return regex.IsMatch(phone); 
         }
-
     };
 }

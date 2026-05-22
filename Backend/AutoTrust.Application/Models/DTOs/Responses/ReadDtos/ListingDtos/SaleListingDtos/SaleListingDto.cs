@@ -12,7 +12,7 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleL
         public DateTime? UpdatedAt { get; set; }
         public LocationDto Location { get; set; }
         public decimal Price { get; set; }
-        public PublicCarDto Car { get; set; }
+        public PublicCarDto? Car { get; set; }
         public string Description { get; set; }
         public int ReactionsQuantity { get; set; }
         public bool IsActive { get; set; }

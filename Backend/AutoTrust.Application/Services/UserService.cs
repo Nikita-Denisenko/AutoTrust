@@ -3,12 +3,15 @@ using AutoMapper.QueryableExtensions;
 using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
+using AutoTrust.Application.Models.DTOs.AuthDtos;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.User;
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.User;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 using AutoTrust.Domain.Entities;
+using AutoTrust.Domain.Enums;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace AutoTrust.Application.Services
 {
@@ -16,16 +19,22 @@ namespace AutoTrust.Application.Services
     {
         private readonly IRepository<User> _repo;
         private readonly IUserValidator _userValidator;
+        private readonly IPasswordHasher _passwordHasher;
+        private readonly IRepository<Account> _accountRepo;
         private readonly IMapper _mapper;
 
         public UserService(
             IRepository<User> repo,
             IUserValidator userValidator,
-            IMapper mapper)
+            IMapper mapper,
+            IPasswordHasher passwordHasher,
+            IRepository<Account> accountRepo)
         {
             _repo = repo;
             _userValidator = userValidator;
             _mapper = mapper;
+            _passwordHasher = passwordHasher;
+            _accountRepo = accountRepo;
         }
 
         private IQueryable<User> ApplyFilters(UserFilterDto filterDto, bool isAdmin = false)

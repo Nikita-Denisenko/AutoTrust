@@ -197,10 +197,6 @@ namespace AutoTrust.Application.Services
                 if (exists)
                     continue;
 
-                var imageUrl = string.IsNullOrWhiteSpace(modelDto.ImageUrl)
-                    ? null
-                    : Url.Create(modelDto.ImageUrl);
-
                 var model = new Model(
                     modelDto.Name,
                     modelDto.Description,
@@ -223,9 +219,6 @@ namespace AutoTrust.Application.Services
 
             [JsonPropertyName("description")]
             public string Description { get; set; } = string.Empty;
-
-            [JsonPropertyName("imageUrl")]
-            public string ImageUrl { get; set; } = string.Empty;
         }
     }
 }

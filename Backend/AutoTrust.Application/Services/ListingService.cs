@@ -1,18 +1,25 @@
 ﻿using AutoMapper;
+using AutoTrust.Application.Interfaces.Repositories;
 using AutoTrust.Application.Interfaces.Services;
 using AutoTrust.Application.Interfaces.Validators;
 using AutoTrust.Application.Models.DTOs.Requests.CreateDtos;
 using AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Listing;
 using AutoTrust.Application.Models.DTOs.Requests.UpdateDtos.Listing;
 using AutoTrust.Application.Models.DTOs.Responses.CreatedDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.BrandDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos;
 using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CityDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos;
+using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 using AutoTrust.Domain.Entities;
+using AutoTrust.Domain.Enums.OrderParams;
 using Microsoft.EntityFrameworkCore;
 using static AutoTrust.Domain.Enums.ListingType;
-using AutoTrust.Domain.Enums.OrderParams;
-using AutoTrust.Application.Interfaces.Repositories;
 
 namespace AutoTrust.Application.Services
 {
@@ -201,6 +208,8 @@ namespace AutoTrust.Application.Services
         {
             var query = _repo.GetQuery().AsNoTracking();
 
+            query = query.Where(l => l.UserId == userId);
+
             query = query.Where(l => !l.IsDeleted);
 
             query = query.Where(l => l.Type == Buy);
@@ -256,56 +265,57 @@ namespace AutoTrust.Application.Services
         {
             var query = _repo.GetQuery().AsNoTracking();
 
+            query = query.Where(l => l.UserId == userId);
             query = query.Where(l => !l.IsDeleted);
-
             query = query.Where(l => l.Type == Sale);
 
             if (filterDto.CityId != null)
                 query = query.Where(l => l.CityId == filterDto.CityId);
 
-            query = query.Where(l => l.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
+            if (!string.IsNullOrWhiteSpace(filterDto.SearchText))
+                query = query.Where(l => l.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
 
             if (filterDto.ModelId != null)
-                query = query.Where(l => l.SaleDetails!.Car.ModelId == filterDto.ModelId);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.ModelId == filterDto.ModelId);
 
             if (filterDto.MinPrice != null)
-                query = query.Where(l => l.SaleDetails!.Price >= filterDto.MinPrice);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Price >= filterDto.MinPrice);
 
             if (filterDto.MaxPrice != null)
-                query = query.Where(l => l.SaleDetails!.Price <= filterDto.MaxPrice);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Price <= filterDto.MaxPrice);
 
             if (filterDto.MinReleaseYear != null)
-                query = query.Where(l => l.SaleDetails!.Car.ReleaseYear >= filterDto.MinReleaseYear);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.ReleaseYear >= filterDto.MinReleaseYear);
 
             if (filterDto.MaxReleaseYear != null)
-                query = query.Where(l => l.SaleDetails!.Car.ReleaseYear <= filterDto.MaxReleaseYear);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.ReleaseYear <= filterDto.MaxReleaseYear);
 
             if (filterDto.Color != null)
-                query = query.Where(l => l.SaleDetails!.Car.Color == filterDto.Color);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.Color == filterDto.Color);
 
             if (filterDto.MinEngineMileage != null)
-                query = query.Where(l => l.SaleDetails!.Car.EngineMileage >= filterDto.MinEngineMileage);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.EngineMileage >= filterDto.MinEngineMileage);
 
             if (filterDto.MaxEngineMileage != null)
-                query = query.Where(l => l.SaleDetails!.Car.EngineMileage <= filterDto.MaxEngineMileage);
+                query = query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null && l.SaleDetails.Car.EngineMileage <= filterDto.MaxEngineMileage);
 
             query = filterDto.OrderParam switch
             {
                 SaleListingOrderParam.ReleaseYear => filterDto.SortByAsc
-                    ? query.OrderBy(l => l.SaleDetails!.Car.ReleaseYear)
-                    : query.OrderByDescending(l => l.SaleDetails!.Car.ReleaseYear),
+                    ? query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderBy(l => l.SaleDetails!.Car!.ReleaseYear)
+                    : query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderByDescending(l => l.SaleDetails!.Car!.ReleaseYear),
 
                 SaleListingOrderParam.Price => filterDto.SortByAsc
-                    ? query.OrderBy(l => l.SaleDetails!.Price)
-                    : query.OrderByDescending(l => l.SaleDetails!.Price),
+                    ? query.Where(l => l.SaleDetails != null).OrderBy(l => l.SaleDetails!.Price)
+                    : query.Where(l => l.SaleDetails != null).OrderByDescending(l => l.SaleDetails!.Price),
 
                 SaleListingOrderParam.EngineMileage => filterDto.SortByAsc
-                    ? query.OrderBy(l => l.SaleDetails!.Car.EngineMileage)
-                    : query.OrderByDescending(l => l.SaleDetails!.Car.EngineMileage),
+                    ? query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderBy(l => l.SaleDetails!.Car!.EngineMileage)
+                    : query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderByDescending(l => l.SaleDetails!.Car!.EngineMileage),
 
                 SaleListingOrderParam.OwnersQuantity => filterDto.SortByAsc
-                    ? query.OrderBy(l => l.SaleDetails!.Car.OwnershipHistory.Count)
-                    : query.OrderByDescending(l => l.SaleDetails!.Car.OwnershipHistory.Count),
+                    ? query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderBy(l => l.SaleDetails!.Car!.OwnershipHistory.Count)
+                    : query.Where(l => l.SaleDetails != null && l.SaleDetails.Car != null).OrderByDescending(l => l.SaleDetails!.Car!.OwnershipHistory.Count),
 
                 _ => filterDto.SortByAsc
                     ? query.OrderBy(l => l.CreatedAt)
@@ -316,9 +326,66 @@ namespace AutoTrust.Application.Services
                 .Skip((filterDto.Page - 1) * filterDto.Size)
                 .Take(filterDto.Size);
 
-            return await _mapper
-                .ProjectTo<SaleListingDto>(query)
-                .ToListAsync(cancellationToken);
+            var result = await query.Select(l => new SaleListingDto
+            {
+                Id = l.Id,
+                Author = new UserShortDto
+                (
+                    l.User.Id,
+                    l.User.Name,
+                    l.User.Surname,
+                    l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
+                ),
+                CreatedAt = l.CreatedAt,
+                UpdatedAt = l.UpdatedAt,
+                Location = new LocationDto
+                (
+                    new CityDto
+                    (
+                        l.City.Id,
+                        l.City.CountryId,
+                        l.City.Name
+                    ),
+                    new CountryDto
+                    (
+                        l.City.Country.Id,
+                        l.City.Country.RuName,
+                        l.City.Country.EnName,
+                        l.City.Country.Code,
+                        l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
+                    )
+                ),
+                Price = l.SaleDetails != null ? l.SaleDetails.Price : 0,
+                Car = l.SaleDetails != null && l.SaleDetails.Car != null ? new PublicCarDto
+                {
+                    Id = l.SaleDetails.Car.Id,
+                    Description = l.SaleDetails.Car.Description,
+                    ReleaseYear = l.SaleDetails.Car.ReleaseYear,
+                    ImageUrl = l.SaleDetails.Car.ImageUrl != null ? l.SaleDetails.Car.ImageUrl.Value : null,
+                    Color = l.SaleDetails.Car.Color,
+                    StateNumber = l.SaleDetails.Car.StateNumber != null ? l.SaleDetails.Car.StateNumber.Value : null,
+                    EngineMileage = l.SaleDetails.Car.EngineMileage,
+                    OwnershipsQuantity = l.SaleDetails.Car.OwnershipHistory.Count,
+                    Model = new ModelShortDto
+                    (
+                        l.SaleDetails.Car.Model.Id,
+                        l.SaleDetails.Car.Model.Name,
+                        new BrandShortDto
+                        (
+                            l.SaleDetails.Car.Model.Brand.Id,
+                            l.SaleDetails.Car.Model.Brand.Name,
+                            l.SaleDetails.Car.Model.Brand.LogoUrl != null ? l.SaleDetails.Car.Model.Brand.LogoUrl.Value : null
+                        )
+                    ),
+                    HasAccident = l.SaleDetails.Car.HasAccident,
+                    InSale = l.SaleDetails.Car.InSale
+                } : null,
+                Description = l.Description,
+                ReactionsQuantity = l.Reactions.Count,
+                IsActive = l.IsActive
+            }).ToListAsync(cancellationToken);
+
+            return result;
         }
 
         public async Task UpdateBuyListingAsync(int id, int currentUserId, UpdateBuyListingDto dto, CancellationToken cancellationToken)

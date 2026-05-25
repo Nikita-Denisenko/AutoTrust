@@ -2,13 +2,13 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos
 {
-    public record BuyInfoDto
-    (
-        int ModelId,
-        string ModelName,
-        string BrandImageUrl,
-        decimal MinPrice,
-        decimal MaxPrice,
-        CarColor? CarColor
-    );
+    public class BuyInfoDto
+    {
+        public int ModelId { get; set; }
+        public string ModelName { get; set; }
+        public string BrandImageUrl { get; set; }
+        public decimal MinPrice { get; set; }
+        public decimal MaxPrice { get; set; }
+        public CarColor? CarColor { get; set; }
+    }
 }

@@ -1,9 +1,9 @@
 ﻿using AutoTrust.Domain.Enums;
 
-namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Listing
+public class FeedListingFilterDto
 {
-    public record FeedListingFilterDto
-    (
-        ListingType? Type = null
-    ) : BaseListingFilterDto;
+    public int Page { get; set; } = 1;
+    public int Size { get; set; } = 20;
+    public int? CityId { get; set; }
+    public ListingType? Type { get; set; }
 }

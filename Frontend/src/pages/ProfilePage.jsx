@@ -60,6 +60,24 @@ const ProfilePage = () => {
     return `${brandName} ${modelName}`;
   };
 
+  const getColorName = (color) => {
+    const colors = {
+      Red: 'Красный',
+      Blue: 'Синий',
+      Black: 'Чёрный',
+      White: 'Белый',
+      Silver: 'Серебристый',
+      Gray: 'Серый',
+      Green: 'Зелёный',
+      Yellow: 'Жёлтый',
+      Orange: 'Оранжевый',
+      Brown: 'Коричневый',
+      Beige: 'Бежевый',
+      Gold: 'Золотой'
+    };
+    return colors[color] || color || 'Не указан';
+  };
+
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -166,76 +184,71 @@ const ProfilePage = () => {
     return;
   };
 
- const handleCreateListing = async () => {
-  // Принудительно получаем значения из DOM, если стейт не обновился
-  const cityIdValue = createForm.cityId || document.querySelector('select[name="cityId"]')?.value;
-  const carIdValue = createForm.carId || document.querySelector('select[name="carId"]')?.value;
-  const priceValue = createForm.price || document.querySelector('input[name="price"]')?.value;
+  const handleCreateListing = async () => {
+    const cityIdValue = createForm.cityId || document.querySelector('select[name="cityId"]')?.value;
+    const carIdValue = createForm.carId || document.querySelector('select[name="carId"]')?.value;
+    const priceValue = createForm.price || document.querySelector('input[name="price"]')?.value;
 
-  if (createType === 'sale' && !carIdValue) {
-    alert('Выберите автомобиль');
-    return;
-  }
-  if (!cityIdValue) {
-    alert('Выберите город');
-    return;
-  }
-  if (!priceValue || Number(priceValue) <= 0) {
-    alert('Введите корректную цену');
-    return;
-  }
-
-  try {
-    const endpoint = createType === 'sale' ? '/listings/sale' : '/listings/buy';
-    let payload;
-    
-    if (createType === 'sale') {
-      payload = {
-        name: createForm.name,
-        description: createForm.description,
-        price: Number(priceValue),
-        cityId: Number(cityIdValue),
-        carId: Number(carIdValue)
-      };
-    } else {
-      payload = {
-        name: createForm.name,
-        description: createForm.description,
-        cityId: Number(cityIdValue),
-        modelId: Number(createForm.modelId),
-        minPrice: createForm.minPrice ? Number(createForm.minPrice) : null,
-        maxPrice: createForm.maxPrice ? Number(createForm.maxPrice) : null,
-        minReleaseYear: createForm.minReleaseYear ? Number(createForm.minReleaseYear) : null,
-        maxReleaseYear: createForm.maxReleaseYear ? Number(createForm.maxReleaseYear) : null,
-        carColor: createForm.carColor || null
-      };
+    if (createType === 'sale' && !carIdValue) {
+      alert('Выберите автомобиль');
+      return;
     }
-    
-    console.log('Final payload:', payload);
-    
-    const response = await api.post(endpoint, payload);
-    console.log('Response:', response);
-    
-    setShowCreateModal(false);
-    fetchUserListings();
-    setCreateForm({
-      name: '',
-      description: '',
-      price: '',
-      cityId: '',
-      carId: '',
-      modelId: '',
-      minPrice: '',
-      maxPrice: '',
-      minReleaseYear: '',
-      maxReleaseYear: '',
-      carColor: ''
-    });
-  } catch (err) {
-    console.error('Ошибка создания объявления', err);
-    alert('Не удалось создать объявление');
-  }
-};
+    if (!cityIdValue) {
+      alert('Выберите город');
+      return;
+    }
+    if (!priceValue || Number(priceValue) <= 0) {
+      alert('Введите корректную цену');
+      return;
+    }
+
+    try {
+      const endpoint = createType === 'sale' ? '/listings/sale' : '/listings/buy';
+      let payload;
+      
+      if (createType === 'sale') {
+        payload = {
+          name: createForm.name,
+          description: createForm.description,
+          price: Number(priceValue),
+          cityId: Number(cityIdValue),
+          carId: Number(carIdValue)
+        };
+      } else {
+        payload = {
+          name: createForm.name,
+          description: createForm.description,
+          cityId: Number(cityIdValue),
+          modelId: Number(createForm.modelId),
+          minPrice: createForm.minPrice ? Number(createForm.minPrice) : null,
+          maxPrice: createForm.maxPrice ? Number(createForm.maxPrice) : null,
+          minReleaseYear: createForm.minReleaseYear ? Number(createForm.minReleaseYear) : null,
+          maxReleaseYear: createForm.maxReleaseYear ? Number(createForm.maxReleaseYear) : null,
+          carColor: createForm.carColor || null
+        };
+      }
+      
+      await api.post(endpoint, payload);
+      setShowCreateModal(false);
+      fetchUserListings();
+      setCreateForm({
+        name: '',
+        description: '',
+        price: '',
+        cityId: '',
+        carId: '',
+        modelId: '',
+        minPrice: '',
+        maxPrice: '',
+        minReleaseYear: '',
+        maxReleaseYear: '',
+        carColor: ''
+      });
+    } catch (err) {
+      console.error('Ошибка создания объявления', err);
+      alert('Не удалось создать объявление');
+    }
+  };
 
   const handleDeleteListing = async (id) => {
     setDeletingId(id);
@@ -308,24 +321,6 @@ const ProfilePage = () => {
     if (gender === 'Male') return 'Мужской';
     if (gender === 'Female') return 'Женский';
     return 'Не указан';
-  };
-
-  const getColorName = (color) => {
-    const colors = {
-      Red: 'Красный',
-      Blue: 'Синий',
-      Black: 'Чёрный',
-      White: 'Белый',
-      Silver: 'Серебристый',
-      Gray: 'Серый',
-      Green: 'Зелёный',
-      Yellow: 'Жёлтый',
-      Orange: 'Оранжевый',
-      Brown: 'Коричневый',
-      Beige: 'Бежевый',
-      Gold: 'Золотой'
-    };
-    return colors[color] || color || 'Не указан';
   };
 
   const styles = `
@@ -582,97 +577,103 @@ const ProfilePage = () => {
                       </div>
                     ) : listings.length > 0 ? (
                       <div className="row">
-                        {listings.map(listing => (
-                          <div className="col-12 mb-3" key={listing.id}>
-                            <div className="border rounded-3 p-4 h-100 listing-card">
-                              <div className="d-flex flex-column flex-md-row gap-4">
-                                {listing.type === 0 && listing.car?.imageUrl ? (
-                                  <img 
-                                    src={listing.car.imageUrl} 
-                                    alt={listing.name}
-                                    style={{ width: '100%', maxWidth: '200px', height: '150px', objectFit: 'cover', borderRadius: '12px' }}
-                                    onError={(e) => {
-                                      e.target.onerror = null;
-                                      e.target.src = 'https://placehold.co/200x150?text=No+Image';
-                                    }}
-                                  />
-                                ) : (
-                                  <div style={{ width: '100%', maxWidth: '200px', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <i className="bi bi-car-front" style={{ fontSize: '48px', color: '#999' }}></i>
-                                  </div>
-                                )}
-                                <div className="flex-grow-1">
-                                  <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
-                                    <h5 className="mb-0 fw-bold">{listing.name}</h5>
-                                    <span className={`badge ${listing.type === 0 ? 'bg-success' : 'bg-info'} px-3 py-2 rounded-pill`}>
-                                      {listing.type === 0 ? 'Продажа' : 'Покупка'}
-                                    </span>
-                                  </div>
-                                  <p className="text-muted mb-3" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                                    {listing.description?.length > 200 ? `${listing.description.substring(0, 200)}...` : listing.description}
-                                  </p>
-                                  <div className="row">
-                                    <div className="col-md-4">
-                                      <p className="text-muted mb-2">
-                                        <i className="bi bi-tag me-2"></i>
-                                        Цена: <span className="fw-bold text-primary">{listing.price?.toLocaleString()} ₽</span>
-                                      </p>
-                                    </div>
-                                    <div className="col-md-4">
-                                      <p className="text-muted mb-2">
-                                        <i className="bi bi-geo-alt me-2"></i>
-                                        {listing.location?.city?.name || 'Город не указан'}
-                                      </p>
-                                    </div>
-                                    <div className="col-md-4">
-                                      <p className="text-muted mb-2">
-                                        <i className="bi bi-heart me-2"></i>
-                                        {listing.reactionsQuantity || 0} реакций
-                                      </p>
-                                    </div>
-                                  </div>
-                                  {listing.type === 0 && listing.car && (
-                                    <div className="row mt-2 pt-2 border-top">
-                                      <div className="col-md-3">
-                                        <small className="text-muted">
-                                          <i className="bi bi-calendar3 me-1"></i>
-                                          {listing.car.releaseYear} г.
-                                        </small>
-                                      </div>
-                                      <div className="col-md-3">
-                                        <small className="text-muted">
-                                          <i className="bi bi-speedometer2 me-1"></i>
-                                          {listing.car.engineMileage?.toLocaleString()} км
-                                        </small>
-                                      </div>
-                                      <div className="col-md-3">
-                                        <small className="text-muted">
-                                          <i className="bi bi-palette me-1"></i>
-                                          {getColorName(listing.car.color)}
-                                        </small>
-                                      </div>
-                                      <div className="col-md-3">
-                                        <small className="text-muted">
-                                          <i className="bi bi-person me-1"></i>
-                                          {listing.car.ownershipsQuantity || 1} влад.
-                                        </small>
-                                      </div>
+                        {listings.map(listing => {
+                          const isSale = listingType === 'sale';
+                          const imageUrl = isSale 
+                            ? listing.car?.imageUrl 
+                            : listing.brandImageUrl;
+                          const priceDisplay = isSale 
+                            ? `${listing.price?.toLocaleString()} ₽`
+                            : `${listing.minPrice?.toLocaleString()} - ${listing.maxPrice?.toLocaleString()} ₽`;
+                          const modelDisplay = isSale 
+                            ? `${listing.car?.model?.brand?.name || ''} ${listing.car?.model?.name || ''}`.trim()
+                            : listing.modelName;
+                          const color = isSale ? listing.car?.color : listing.carColor;
+
+                          return (
+                            <div className="col-12 mb-3" key={listing.id}>
+                              <div className="border rounded-3 p-4 h-100 listing-card">
+                                <div className="d-flex flex-column flex-md-row gap-4">
+                                  {imageUrl ? (
+                                    <img 
+                                      src={imageUrl} 
+                                      alt={listing.name}
+                                      style={{ width: '100%', maxWidth: '200px', height: '150px', objectFit: 'cover', borderRadius: '12px' }}
+                                      onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = 'https://placehold.co/200x150?text=No+Image';
+                                      }}
+                                    />
+                                  ) : (
+                                    <div style={{ width: '100%', maxWidth: '200px', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                      <i className="bi bi-car-front" style={{ fontSize: '48px', color: '#999' }}></i>
                                     </div>
                                   )}
-                                  <div className="d-flex gap-2 mt-3">
-                                    <button 
-                                      className="btn btn-sm btn-outline-danger rounded-pill px-3"
-                                      onClick={() => handleDeleteListing(listing.id)}
-                                    >
-                                      <i className="bi bi-trash me-1"></i>
-                                      Удалить
-                                    </button>
+                                  <div className="flex-grow-1">
+                                    <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                                      <h5 className="mb-0 fw-bold">{listing.name}</h5>
+                                      <span className={`badge ${isSale ? 'bg-success' : 'bg-info'} px-3 py-2 rounded-pill`}>
+                                        {isSale ? 'Продажа' : 'Покупка'}
+                                      </span>
+                                    </div>
+                                    <p className="text-muted mb-3" style={{ fontSize: '14px', lineHeight: '1.5' }}>
+                                      {listing.description?.length > 200 ? `${listing.description.substring(0, 200)}...` : listing.description}
+                                    </p>
+                                    <div className="row">
+                                      <div className="col-md-4">
+                                        <p className="text-muted mb-2">
+                                          <i className="bi bi-tag me-2"></i>
+                                          Цена: <span className="fw-bold text-primary">{priceDisplay}</span>
+                                        </p>
+                                      </div>
+                                      <div className="col-md-4">
+                                        <p className="text-muted mb-2">
+                                          <i className="bi bi-geo-alt me-2"></i>
+                                          {listing.location?.city?.name || 'Город не указан'}
+                                        </p>
+                                      </div>
+                                      <div className="col-md-4">
+                                        <p className="text-muted mb-2">
+                                          <i className="bi bi-heart me-2"></i>
+                                          {listing.reactionsQuantity || 0}
+                                        </p>
+                                      </div>
+                                    </div>
+                                    {(modelDisplay || color) && (
+                                      <div className="row mt-2 pt-2 border-top">
+                                        {modelDisplay && (
+                                          <div className="col-md-6">
+                                            <small className="text-muted">
+                                              <i className="bi bi-car-front me-1"></i>
+                                              {modelDisplay}
+                                            </small>
+                                          </div>
+                                        )}
+                                        {color && (
+                                          <div className="col-md-6">
+                                            <small className="text-muted">
+                                              <i className="bi bi-palette me-1"></i>
+                                              {getColorName(color)}
+                                            </small>
+                                          </div>
+                                        )}
+                                      </div>
+                                    )}
+                                    <div className="d-flex gap-2 mt-3">
+                                      <button 
+                                        className="btn btn-sm btn-outline-danger rounded-pill px-3"
+                                        onClick={() => handleDeleteListing(listing.id)}
+                                      >
+                                        <i className="bi bi-trash me-1"></i>
+                                        Удалить
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     ) : (
                       <div className="text-center py-5">

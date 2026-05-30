@@ -185,8 +185,8 @@ const FeedPage = () => {
         .badge-accident {
           background: linear-gradient(135deg, #ef4444, #dc2626);
           border-radius: 40px;
-          padding: 4px 10px;
-          font-size: 11px;
+          padding: 6px 16px;
+          font-size: 13px;
           font-weight: 600;
           color: white;
           display: inline-block;
@@ -194,8 +194,8 @@ const FeedPage = () => {
         .badge-clean {
           background: linear-gradient(135deg, #10b981, #059669);
           border-radius: 40px;
-          padding: 4px 10px;
-          font-size: 11px;
+          padding: 6px 16px;
+          font-size: 13px;
           font-weight: 600;
           color: white;
           display: inline-block;
@@ -254,102 +254,107 @@ const FeedPage = () => {
               )}
 
               <div className="d-flex flex-column gap-4">
-                {listings.map((listing, index) => (
-                  <div 
-                    key={listing.id} 
-                    className="listing-card"
-                    ref={index === listings.length - 1 ? lastListingRef : null}
-                  >
-                    {listing.saleInfoDto?.carImageUrl && (
-                      <img 
-                        src={listing.saleInfoDto.carImageUrl} 
-                        alt={listing.name}
-                        className="listing-image"
-                        onError={(e) => { e.target.style.display = 'none'; }}
-                      />
-                    )}
-                    <div className="p-5">
-                      <div className="d-flex justify-content-between align-items-start mb-3">
-                        <div className="d-flex gap-2">
-                          <span className="badge-sale">
-                            {getTypeText(listing.type)}
-                          </span>
-                          {listing.saleInfoDto?.hasAccident ? (
-                            <span className="badge-accident">Была в ДТП</span>
-                          ) : (
-                            <span className="badge-clean">Без ДТП</span>
-                          )}
-                        </div>
-                        <small className="text-muted">
-                          <i className="bi bi-clock me-1"></i>
-                          {formatDate(listing.createdAt)}
-                        </small>
-                      </div>
-
-                      <h3 className="fw-bold mb-3">{listing.name}</h3>
-
-                      {listing.saleInfoDto && (
-                        <>
-                          <div className="listing-price mb-3">
-                            {listing.saleInfoDto.price?.toLocaleString()} ₽
-                          </div>
-                          
-                          <div className="d-flex flex-wrap gap-2 mb-3">
-                            <div className="spec-item">
-                              <i className="bi bi-calendar spec-icon"></i>
-                              <span>{listing.saleInfoDto.releaseYear} г.</span>
-                            </div>
-                            <div className="spec-item">
-                              <i className="bi bi-speedometer2 spec-icon"></i>
-                              <span>{formatMileage(listing.saleInfoDto.mileage)} км</span>
-                            </div>
-                            {listing.saleInfoDto.carColor && (
-                              <div className="spec-item">
-                                <i className="bi bi-palette spec-icon"></i>
-                                <span>{getColorName(listing.saleInfoDto.carColor)}</span>
-                              </div>
-                            )}
-                            {listing.saleInfoDto.modelName && (
-                              <div className="spec-item">
-                                <i className="bi bi-car-front spec-icon"></i>
-                                <span>{listing.saleInfoDto.modelName}</span>
-                              </div>
-                            )}
-                            {listing.saleInfoDto.ownershipsQuantity > 0 && (
-                              <div className="spec-item">
-                                <i className="bi bi-people spec-icon"></i>
-                                <span>{listing.saleInfoDto.ownershipsQuantity} влад.</span>
-                              </div>
-                            )}
-                          </div>
-                        </>
+                {listings.map((listing, index) => {
+                  const saleInfo = listing.saleInfoDto;
+                  return (
+                    <div 
+                      key={listing.id} 
+                      className="listing-card"
+                      ref={index === listings.length - 1 ? lastListingRef : null}
+                    >
+                      {saleInfo?.carImageUrl && (
+                        <img 
+                          src={saleInfo.carImageUrl} 
+                          alt={listing.name}
+                          className="listing-image"
+                          onError={(e) => { e.target.style.display = 'none'; }}
+                        />
                       )}
-
-                      <div className="listing-description mb-4">
-                        <p className="text-secondary">
-                          {listing.description}
-                        </p>
-                      </div>
-
-                      <div className="d-flex justify-content-between align-items-center pt-3 border-top">
-                        <div className="d-flex align-items-center gap-3">
-                          <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
-                            <i className="bi bi-geo-alt me-1"></i>
-                            {listing.location?.city?.name || 'Город не указан'}
+                      <div className="p-5">
+                        <div className="d-flex justify-content-between align-items-start mb-3">
+                          <div className="d-flex gap-2">
+                            <span className="badge-sale">
+                              {getTypeText(listing.type)}
+                            </span>
+                            {saleInfo && (saleInfo.hasAccident ? (
+                              <span className="badge-accident">Была в ДТП</span>
+                            ) : (
+                              <span className="badge-clean">Без ДТП</span>
+                            ))}
                           </div>
-                          <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
-                            <i className="bi bi-person me-1"></i>
-                            {listing.author?.surname} {listing.author?.name}
-                          </div>
+                          <small className="text-muted">
+                            <i className="bi bi-clock me-1"></i>
+                            {formatDate(listing.createdAt)}
+                          </small>
                         </div>
-                        <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
-                          <i className="bi bi-heart me-1"></i>
-                          {listing.reactionsQuantity || 0}
+
+                        <h3 className="fw-bold mb-3">{listing.name}</h3>
+
+                        {saleInfo && (
+                          <>
+                            <div className="listing-price mb-3">
+                              {saleInfo.price?.toLocaleString()} ₽
+                            </div>
+                            
+                            <div className="d-flex flex-wrap gap-2 mb-3">
+                              {saleInfo.releaseYear > 0 && (
+                                <div className="spec-item">
+                                  <i className="bi bi-calendar spec-icon"></i>
+                                  <span>{saleInfo.releaseYear} г.</span>
+                                </div>
+                              )}
+                              <div className="spec-item">
+                                <i className="bi bi-speedometer2 spec-icon"></i>
+                                <span>{formatMileage(saleInfo.mileage)} км</span>
+                              </div>
+                              {saleInfo.carColor && (
+                                <div className="spec-item">
+                                  <i className="bi bi-palette spec-icon"></i>
+                                  <span>{getColorName(saleInfo.carColor)}</span>
+                                </div>
+                              )}
+                              {saleInfo.modelName && (
+                                <div className="spec-item">
+                                  <i className="bi bi-car-front spec-icon"></i>
+                                  <span>{saleInfo.modelName}</span>
+                                </div>
+                              )}
+                              {saleInfo.ownershipsQuantity > 0 && (
+                                <div className="spec-item">
+                                  <i className="bi bi-people spec-icon"></i>
+                                  <span>{saleInfo.ownershipsQuantity} влад.</span>
+                                </div>
+                              )}
+                            </div>
+                          </>
+                        )}
+
+                        <div className="listing-description mb-4">
+                          <p className="text-secondary">
+                            {listing.description}
+                          </p>
+                        </div>
+
+                        <div className="d-flex justify-content-between align-items-center pt-3 border-top">
+                          <div className="d-flex align-items-center gap-3">
+                            <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
+                              <i className="bi bi-geo-alt me-1"></i>
+                              {listing.location?.city?.name || 'Город не указан'}
+                            </div>
+                            <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
+                              <i className="bi bi-person me-1"></i>
+                              {listing.author?.surname} {listing.author?.name}
+                            </div>
+                          </div>
+                          <div className="d-flex align-items-center text-muted" style={{ fontSize: '14px' }}>
+                            <i className="bi bi-heart me-1"></i>
+                            {listing.reactionsQuantity || 0}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {loadingMore && (

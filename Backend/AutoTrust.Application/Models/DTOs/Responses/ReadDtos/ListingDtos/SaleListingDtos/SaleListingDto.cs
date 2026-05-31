@@ -4,7 +4,7 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos
 {
-    public class SaleListingDto
+    public record class SaleListingDto
     {
         public int Id { get; set; }
         public UserShortDto Author { get; set; }

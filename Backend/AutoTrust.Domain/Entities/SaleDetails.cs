@@ -8,6 +8,7 @@
         public int CarId { get; private set; }
         public Car Car { get; private set; }
         public decimal Price { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
         private SaleDetails() { }
 
@@ -38,5 +39,7 @@
             CarId = carId ?? CarId;
             Price = newPrice ?? Price;
         }
+
+        public void Delete() => IsDeleted = true;
     }
 }

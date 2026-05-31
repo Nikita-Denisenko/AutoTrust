@@ -3,27 +3,27 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AutoTrust.Application.Models.DTOs.Requests.CreateDtos
 {
-    public record CreateSaleListingDto
-    (
+    public class CreateSaleListingDto
+    {
         [Required]
         [MaxLength(40)]
-        string Name,
+        public string Name { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(4500)]
-        string Description,
+        public string Description { get; set; }
 
         [Required]
         [Range(1, int.MaxValue)]
-        int CityId,
-        
+        public int CityId { get; set; }
+
         [Required]
         [Range(1, int.MaxValue)]
-        int CarId,
-        
+        public int CarId { get; set; }
+
         [Required]
         [Range(0, int.MaxValue)]
-        decimal Price
-    );
+        public decimal Price { get; set; }
+    }
 }

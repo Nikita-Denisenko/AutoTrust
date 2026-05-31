@@ -4,7 +4,7 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
 {
-    public class PublicCarDto
+    public record class PublicCarDto
     {
         public int Id { get; set; }
         public string Description { get; set; }

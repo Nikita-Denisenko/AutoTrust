@@ -26,6 +26,20 @@ const ProfilePage = () => {
   const [loadingAddCar, setLoadingAddCar] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
+  const [showEditListingModal, setShowEditListingModal] = useState(false);
+  const [editingListing, setEditingListing] = useState(null);
+  const [editListingForm, setEditListingForm] = useState({
+    name: '',
+    description: '',
+    price: '',
+    carId: '',
+    modelId: '',
+    minPrice: '',
+    maxPrice: '',
+    minReleaseYear: '',
+    maxReleaseYear: '',
+    carColor: ''
+  });
   const [addCarForm, setAddCarForm] = useState({
     modelId: '',
     releaseYear: '',
@@ -186,20 +200,24 @@ const ProfilePage = () => {
 
   const handleCreateListing = async () => {
     const cityIdValue = createForm.cityId || document.querySelector('select[name="cityId"]')?.value;
-    const carIdValue = createForm.carId || document.querySelector('select[name="carId"]')?.value;
-    const priceValue = createForm.price || document.querySelector('input[name="price"]')?.value;
 
-    if (createType === 'sale' && !carIdValue) {
-      alert('Выберите автомобиль');
-      return;
-    }
     if (!cityIdValue) {
       alert('Выберите город');
       return;
     }
-    if (!priceValue || Number(priceValue) <= 0) {
-      alert('Введите корректную цену');
-      return;
+
+    if (createType === 'sale') {
+      const carIdValue = createForm.carId || document.querySelector('select[name="carId"]')?.value;
+      const priceValue = createForm.price || document.querySelector('input[name="price"]')?.value;
+      
+      if (!carIdValue) {
+        alert('Выберите автомобиль');
+        return;
+      }
+      if (!priceValue || Number(priceValue) <= 0) {
+        alert('Введите корректную цену');
+        return;
+      }
     }
 
     try {
@@ -207,6 +225,9 @@ const ProfilePage = () => {
       let payload;
       
       if (createType === 'sale') {
+        const carIdValue = createForm.carId || document.querySelector('select[name="carId"]')?.value;
+        const priceValue = createForm.price || document.querySelector('input[name="price"]')?.value;
+        
         payload = {
           name: createForm.name,
           description: createForm.description,
@@ -247,6 +268,74 @@ const ProfilePage = () => {
     } catch (err) {
       console.error('Ошибка создания объявления', err);
       alert('Не удалось создать объявление');
+    }
+  };
+
+  const handleEditListing = (listing) => {
+    const isSale = listingType === 'sale';
+    setEditingListing(listing);
+    if (isSale) {
+      setEditListingForm({
+        name: listing.name || '',
+        description: listing.description || '',
+        price: listing.price || '',
+        carId: listing.car?.id || '',
+        modelId: '',
+        minPrice: '',
+        maxPrice: '',
+        minReleaseYear: '',
+        maxReleaseYear: '',
+        carColor: ''
+      });
+    } else {
+      setEditListingForm({
+        name: listing.name || '',
+        description: listing.description || '',
+        price: '',
+        carId: '',
+        modelId: listing.modelId || '',
+        minPrice: listing.minPrice || '',
+        maxPrice: listing.maxPrice || '',
+        minReleaseYear: listing.minReleaseYear || '',
+        maxReleaseYear: listing.maxReleaseYear || '',
+        carColor: listing.carColor || ''
+      });
+    }
+    setShowEditListingModal(true);
+  };
+
+  const handleUpdateListing = async () => {
+    try {
+      // Обновляем название и описание
+      await api.patch(`/listings/${editingListing.id}/info`, {
+        name: editListingForm.name,
+        description: editListingForm.description
+      });
+
+      const isSale = listingType === 'sale';
+      if (isSale) {
+        await api.patch(`/listings/${editingListing.id}/sale`, {
+          carId: editListingForm.carId ? Number(editListingForm.carId) : null,
+          price: editListingForm.price ? Number(editListingForm.price) : null
+        });
+      } else {
+        await api.patch(`/listings/${editingListing.id}/buy`, {
+          modelId: editListingForm.modelId ? Number(editListingForm.modelId) : null,
+          minPrice: editListingForm.minPrice ? Number(editListingForm.minPrice) : null,
+          maxPrice: editListingForm.maxPrice ? Number(editListingForm.maxPrice) : null,
+          minReleaseYear: editListingForm.minReleaseYear ? Number(editListingForm.minReleaseYear) : null,
+          maxReleaseYear: editListingForm.maxReleaseYear ? Number(editListingForm.maxReleaseYear) : null,
+          carColor: editListingForm.carColor || null
+        });
+      }
+
+      setShowEditListingModal(false);
+      setEditingListing(null);
+      fetchUserListings();
+      alert('Объявление обновлено');
+    } catch (err) {
+      console.error('Ошибка обновления объявления', err);
+      alert('Не удалось обновить объявление');
     }
   };
 
@@ -598,7 +687,7 @@ const ProfilePage = () => {
                                     <img 
                                       src={imageUrl} 
                                       alt={listing.name}
-                                      style={{ width: '100%', maxWidth: '200px', height: '150px', objectFit: 'cover', borderRadius: '12px' }}
+                                      style={{ width: '100%', maxWidth: '200px', height: '150px', objectFit: 'contain', backgroundColor: '#f8f9fa', borderRadius: '12px', padding: '8px' }}
                                       onError={(e) => {
                                         e.target.onerror = null;
                                         e.target.src = 'https://placehold.co/200x150?text=No+Image';
@@ -660,6 +749,13 @@ const ProfilePage = () => {
                                       </div>
                                     )}
                                     <div className="d-flex gap-2 mt-3">
+                                      <button 
+                                        className="btn btn-sm btn-outline-primary rounded-pill px-3"
+                                        onClick={() => handleEditListing(listing)}
+                                      >
+                                        <i className="bi bi-pencil me-1"></i>
+                                        Редактировать
+                                      </button>
                                       <button 
                                         className="btn btn-sm btn-outline-danger rounded-pill px-3"
                                         onClick={() => handleDeleteListing(listing.id)}
@@ -730,12 +826,33 @@ const ProfilePage = () => {
                                         <i className="bi bi-palette me-2"></i>
                                         Цвет: {getColorName(car.color)}
                                       </p>
+                                      <p className="text-muted mb-2">
+                                        <i className="bi bi-tag me-2"></i>
+                                        Статус: <span className={car.inSale ? 'text-success fw-semibold' : 'text-secondary'}>
+                                          {car.inSale ? 'В продаже' : 'Не продаётся'}
+                                        </span>
+                                      </p>
                                     </div>
                                     <div className="col-md-6">
                                       <p className="text-muted mb-2">
-                                        <i className="bi bi-tag me-2"></i>
-                                        Статус: {car.inSale ? 'В продаже' : 'Не продаётся'}
+                                        <i className="bi bi-speedometer2 me-2"></i>
+                                        {car.engineMileage?.toLocaleString()} км
                                       </p>
+                                      <p className="text-muted mb-2">
+                                        <i className="bi bi-person me-2"></i>
+                                        {car.ownershipsQuantity || 1} влад.
+                                      </p>
+                                      {car.hasAccident ? (
+                                        <p className="text-danger mb-2">
+                                          <i className="bi bi-exclamation-triangle me-2"></i>
+                                          Была в ДТП
+                                        </p>
+                                      ) : (
+                                        <p className="text-success mb-2">
+                                          <i className="bi bi-check-circle me-2"></i>
+                                          Без ДТП
+                                        </p>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
@@ -758,6 +875,165 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Модалка редактирования объявления */}
+      {showEditListingModal && editingListing && (
+        <div className="modal show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} onClick={() => setShowEditListingModal(false)}>
+          <div className="modal-dialog modal-dialog-centered modal-lg" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content rounded-4">
+              <div className="modal-header border-0" style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)', color: 'white' }}>
+                <h5 className="modal-title fw-bold">Редактировать объявление</h5>
+                <button type="button" className="btn-close btn-close-white" onClick={() => setShowEditListingModal(false)}></button>
+              </div>
+              <div className="modal-body p-4">
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Название</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    maxLength={40}
+                    value={editListingForm.name}
+                    onChange={(e) => setEditListingForm({ ...editListingForm, name: e.target.value })}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Описание</label>
+                  <textarea
+                    className="form-control"
+                    rows="3"
+                    maxLength={4500}
+                    value={editListingForm.description}
+                    onChange={(e) => setEditListingForm({ ...editListingForm, description: e.target.value })}
+                  />
+                </div>
+
+                {listingType === 'sale' ? (
+                  <>
+                    <div className="mb-3">
+                      <label className="form-label fw-semibold">Автомобиль</label>
+                      <select
+                        className="form-select"
+                        value={editListingForm.carId}
+                        onChange={(e) => setEditListingForm({ ...editListingForm, carId: e.target.value })}
+                      >
+                        <option value="">Выберите автомобиль</option>
+                        {cars.map(car => (
+                          <option key={car.id} value={car.id}>
+                            {getCarTitle(car)} ({car.releaseYear})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label fw-semibold">Цена (₽)</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        min="0"
+                        step="1000"
+                        value={editListingForm.price}
+                        onChange={(e) => setEditListingForm({ ...editListingForm, price: e.target.value })}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="mb-3">
+                      <label className="form-label fw-semibold">Модель</label>
+                      <select
+                        className="form-select"
+                        value={editListingForm.modelId}
+                        onChange={(e) => setEditListingForm({ ...editListingForm, modelId: e.target.value })}
+                      >
+                        <option value="">Выберите модель</option>
+                        {models.map(model => (
+                          <option key={model.id} value={model.id}>
+                            {getModelDisplayName(model)}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-3">
+                        <label className="form-label fw-semibold">Мин. цена (₽)</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          min="0"
+                          step="1000"
+                          value={editListingForm.minPrice}
+                          onChange={(e) => setEditListingForm({ ...editListingForm, minPrice: e.target.value })}
+                        />
+                      </div>
+                      <div className="col-md-6 mb-3">
+                        <label className="form-label fw-semibold">Макс. цена (₽)</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          min="0"
+                          step="1000"
+                          value={editListingForm.maxPrice}
+                          onChange={(e) => setEditListingForm({ ...editListingForm, maxPrice: e.target.value })}
+                        />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-3">
+                        <label className="form-label fw-semibold">Мин. год выпуска</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          min="1900"
+                          max={new Date().getFullYear()}
+                          value={editListingForm.minReleaseYear}
+                          onChange={(e) => setEditListingForm({ ...editListingForm, minReleaseYear: e.target.value })}
+                        />
+                      </div>
+                      <div className="col-md-6 mb-3">
+                        <label className="form-label fw-semibold">Макс. год выпуска</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          min="1900"
+                          max={new Date().getFullYear()}
+                          value={editListingForm.maxReleaseYear}
+                          onChange={(e) => setEditListingForm({ ...editListingForm, maxReleaseYear: e.target.value })}
+                        />
+                      </div>
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label fw-semibold">Цвет</label>
+                      <select
+                        className="form-select"
+                        value={editListingForm.carColor}
+                        onChange={(e) => setEditListingForm({ ...editListingForm, carColor: e.target.value })}
+                      >
+                        <option value="">Любой</option>
+                        <option value="Red">Красный</option>
+                        <option value="Blue">Синий</option>
+                        <option value="Black">Чёрный</option>
+                        <option value="White">Белый</option>
+                        <option value="Silver">Серебристый</option>
+                        <option value="Gray">Серый</option>
+                        <option value="Green">Зелёный</option>
+                        <option value="Yellow">Жёлтый</option>
+                        <option value="Orange">Оранжевый</option>
+                        <option value="Brown">Коричневый</option>
+                        <option value="Beige">Бежевый</option>
+                        <option value="Gold">Золотой</option>
+                      </select>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div className="modal-footer border-0 bg-light">
+                <button className="btn btn-secondary rounded-pill px-4" onClick={() => setShowEditListingModal(false)}>Отмена</button>
+                <button className="btn btn-primary rounded-pill px-4" onClick={handleUpdateListing}>Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Модалка подтверждения удаления */}
       {showDeleteConfirm && (
@@ -817,7 +1093,7 @@ const ProfilePage = () => {
                             src={selectedCar.imageUrl} 
                             alt={getCarTitle(selectedCar)}
                             className="img-fluid rounded-3"
-                            style={{ maxHeight: '400px', width: '100%', objectFit: 'cover', borderRadius: '16px' }}
+                            style={{ maxHeight: '400px', width: '100%', objectFit: 'contain', borderRadius: '16px' }}
                             onError={(e) => {
                               e.target.onerror = null;
                               e.target.src = 'https://placehold.co/600x400?text=No+Image';
@@ -1076,20 +1352,10 @@ const ProfilePage = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Цена (₽)</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    min="0"
-                    step="1000"
-                    value={createForm.price}
-                    onChange={(e) => setCreateForm({ ...createForm, price: e.target.value })}
-                  />
-                </div>
-                <div className="mb-3">
                   <label className="form-label">Город</label>
                   <select
                     className="form-select"
+                    name="cityId"
                     value={createForm.cityId}
                     onChange={(e) => setCreateForm({ ...createForm, cityId: e.target.value })}
                   >
@@ -1103,21 +1369,36 @@ const ProfilePage = () => {
                 </div>
 
                 {createType === 'sale' ? (
-                  <div className="mb-3">
-                    <label className="form-label">Автомобиль</label>
-                    <select
-                      className="form-select"
-                      value={createForm.carId}
-                      onChange={(e) => setCreateForm({ ...createForm, carId: e.target.value })}
-                    >
-                      <option value="">Выберите автомобиль</option>
-                      {cars.map(car => (
-                        <option key={car.id} value={car.id}>
-                          {getCarTitle(car)} ({car.releaseYear})
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  <>
+                    <div className="mb-3">
+                      <label className="form-label">Автомобиль</label>
+                      <select
+                        className="form-select"
+                        name="carId"
+                        value={createForm.carId}
+                        onChange={(e) => setCreateForm({ ...createForm, carId: e.target.value })}
+                      >
+                        <option value="">Выберите автомобиль</option>
+                        {cars.map(car => (
+                          <option key={car.id} value={car.id}>
+                            {getCarTitle(car)} ({car.releaseYear})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label">Цена (₽)</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        name="price"
+                        min="0"
+                        step="1000"
+                        value={createForm.price}
+                        onChange={(e) => setCreateForm({ ...createForm, price: e.target.value })}
+                      />
+                    </div>
+                  </>
                 ) : (
                   <>
                     <div className="mb-3">
@@ -1142,6 +1423,7 @@ const ProfilePage = () => {
                           type="number"
                           className="form-control"
                           min="0"
+                          step="1000"
                           value={createForm.minPrice}
                           onChange={(e) => setCreateForm({ ...createForm, minPrice: e.target.value })}
                         />
@@ -1152,6 +1434,7 @@ const ProfilePage = () => {
                           type="number"
                           className="form-control"
                           min="0"
+                          step="1000"
                           value={createForm.maxPrice}
                           onChange={(e) => setCreateForm({ ...createForm, maxPrice: e.target.value })}
                         />

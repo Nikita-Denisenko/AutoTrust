@@ -6,7 +6,7 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos
 {
-    public class FeedListingDto
+    public record class FeedListingDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

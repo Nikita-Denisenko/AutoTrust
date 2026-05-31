@@ -4,7 +4,7 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos
 {
-    public class BuyListingDto
+    public record class BuyListingDto
     {
         public int Id { get; set; }
         public UserShortDto Author { get; set; }

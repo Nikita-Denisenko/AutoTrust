@@ -14,6 +14,7 @@ namespace AutoTrust.Domain.Entities
         public int MinReleaseYear { get; private set; }
         public int MaxReleaseYear { get; private set; }
         public CarColor? CarColor { get; private set; }
+        public bool IsDeleted { get; private set; } = false;
 
         private BuyDetails() { }
 
@@ -114,5 +115,7 @@ namespace AutoTrust.Domain.Entities
             MaxReleaseYear = maxReleaseYear ?? MaxReleaseYear;
             CarColor = carColor;
         }
+
+        public void Delete() => IsDeleted = true;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos
 {
-    public class SaleInfoDto
+    public record class SaleInfoDto
     {
         public decimal Price { get; set; }
         public int CarId { get; set; }

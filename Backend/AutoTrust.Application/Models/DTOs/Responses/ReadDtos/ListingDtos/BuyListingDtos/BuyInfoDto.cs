@@ -2,7 +2,7 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos
 {
-    public class BuyInfoDto
+    public record class BuyInfoDto
     {
         public int ModelId { get; set; }
         public string ModelName { get; set; }

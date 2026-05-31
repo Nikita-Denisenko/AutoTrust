@@ -97,12 +97,21 @@ namespace AutoTrust.Application.Services
 
         public async Task DeleteListingAsync(int id, int currentUserId, CancellationToken cancellationToken)
         {
-            var listing = await _repo.GetByIdAsync(id, cancellationToken);
+            var listing = await _repo.GetQuery()
+                .Include(l => l.SaleDetails)
+                .Include(l => l.BuyDetails)
+                .FirstOrDefaultAsync(l => l.Id == id, cancellationToken);
             if (listing == null)
                 throw new KeyNotFoundException($"Listing with ID {id} was not found to delete");
             if (listing.UserId != currentUserId)
                 throw new InvalidOperationException($"User cannot delete other users listings!");
+
+            if (listing.Type == Sale)
+                listing.SaleDetails.Delete();
+            else listing.BuyDetails.Delete();
+
             listing.Delete();
+
             await _repo.SaveChangesAsync(cancellationToken);
         }
 

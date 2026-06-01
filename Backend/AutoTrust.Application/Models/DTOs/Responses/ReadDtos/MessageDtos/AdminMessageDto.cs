@@ -3,13 +3,13 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.MessageDtos
 {
     public record AdminMessageDto
-    (
-        int Id,
-        string Text,
-        int ChatId,
-        bool IsRead,
-        DateTime SentAt,
-        UserShortDto User,
-        bool IsDeleted
-    );
+    {
+        public int Id { get; init; }
+        public string Text { get; init; }
+        public int ChatId { get; init; }
+        public bool IsRead { get; init; }
+        public DateTime SentAt { get; init; }
+        public UserShortDto User { get; init; }
+        public bool IsDeleted { get; init; }
+    };
 }

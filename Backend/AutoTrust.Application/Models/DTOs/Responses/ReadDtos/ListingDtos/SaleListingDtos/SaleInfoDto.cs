@@ -2,16 +2,16 @@
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.SaleListingDtos
 {
-    public record class SaleInfoDto
+    public record SaleInfoDto
     {
-        public decimal Price { get; set; }
-        public int CarId { get; set; }
-        public string CarImageUrl { get; set; }
-        public string ModelName { get; set; }
-        public CarColor? CarColor { get; set; }
-        public int ReleaseYear { get; set; } 
-        public decimal Mileage { get; set; }
-        public int OwnershipsQuantity { get; set; }
-        public bool HasAccident {  get; set; }
+        public decimal Price { get; init; }
+        public int CarId { get; init; }
+        public string CarImageUrl { get; init; }
+        public string ModelName { get; init; }
+        public CarColor? CarColor { get; init; }
+        public int ReleaseYear { get; init; } 
+        public decimal Mileage { get; init; }
+        public int OwnershipsQuantity { get; init; }
+        public bool HasAccident {  get; init; }
     }
 }

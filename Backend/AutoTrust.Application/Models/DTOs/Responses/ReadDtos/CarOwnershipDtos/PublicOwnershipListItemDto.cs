@@ -1,12 +1,12 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarOwnershipDtos
 {
     public record PublicOwnershipListItemDto
-    (
-        int Id,
-        string UserName,
-        DateOnly FromDate,
-        DateOnly? ToDate,
-        string ModelName,
-        bool IsCurrent
-    );
+    {
+        public int Id { get; init; }
+        public string UserName { get; init; }
+        public DateOnly FromDate { get; init; }
+        public DateOnly? ToDate { get; init; }
+        public string ModelName { get; init; }
+        public bool IsCurrent {  get; init; }
+    };
 }

@@ -4,23 +4,23 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos.BuyListingDtos
 {
-    public record class BuyListingDto
+    public record BuyListingDto
     {
-        public int Id { get; set; }
-        public UserShortDto Author { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
-        public LocationDto Location { get; set; }
-        public int ModelId { get; set; }
-        public string ModelName { get; set; }
-        public string BrandImageUrl { get; set; }
-        public decimal MinPrice { get; set; }
-        public decimal MaxPrice { get; set; }
-        public int MinReleaseYear { get; set; }
-        public int MaxReleaseYear { get; set; }
-        public CarColor? CarColor { get; set; }
-        public int ReactionsQuantity { get; set; }
-        public string Description { get; set; }
-        public bool IsActive { get; set; }
+        public int Id { get; init; }
+        public UserShortDto Author { get; init; }
+        public DateTime CreatedAt { get; init; }
+        public DateTime? UpdatedAt { get; init; }
+        public LocationDto Location { get; init; }
+        public int ModelId { get; init; }
+        public string ModelName { get; init; }
+        public string BrandImageUrl { get; init; }
+        public decimal MinPrice { get; init; }
+        public decimal MaxPrice { get; init; }
+        public int MinReleaseYear { get; init; }
+        public int MaxReleaseYear { get; init; }
+        public CarColor? CarColor { get; init; }
+        public int ReactionsQuantity { get; init; }
+        public string Description { get; init; }
+        public bool IsActive { get; init; }
     }
 }

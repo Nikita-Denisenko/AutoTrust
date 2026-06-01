@@ -3,11 +3,11 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CommentDtos
 {
     public record CommentDto
-    (
-        int Id,
-        UserShortDto User,
-        string Text,
-        DateTime CreatedAt,
-        bool IsBlocked
-    );
+    {
+        public int Id { get; init; }
+        public UserShortDto User { get; init; }
+        public string Text { get; init; }
+        public DateTime CreatedAt { get; init; }
+        public bool IsBlocked { get; init; }
+    };
 }

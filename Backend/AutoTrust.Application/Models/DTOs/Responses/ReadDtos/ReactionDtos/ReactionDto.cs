@@ -3,10 +3,10 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReactionDtos
 {
     public record ReactionDto
-    (
-        int Id,
-        string Emoji,
-        UserShortDto User,
-        DateTime CreatedAt
-    );
+    {
+        public int Id { get; init; }
+        public string Emoji { get; init; }
+        public UserShortDto User { get; init; }
+        public DateTime CreatedAt { get; init; }
+    };
 }

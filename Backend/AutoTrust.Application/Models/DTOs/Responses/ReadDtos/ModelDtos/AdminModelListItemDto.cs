@@ -3,10 +3,10 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos
 {
     public record AdminModelListItemDto
-    (
-        int Id,
-        string Name,
-        BrandShortDto Brand,
-        bool IsActive
-    );
+    {
+        public int Id { get; init; }
+        public string Name { get; init; }
+        public BrandShortDto Brand { get; init; }
+        public bool IsActive { get; init; }
+    };
 }

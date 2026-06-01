@@ -1,10 +1,10 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos
 {
     public record UserShortDto
-    (
-       int Id,
-       string Name,
-       string Surname,
-       string? AvatarUrl
-    );
+    {
+        public int Id { get; init; }
+        public string Name { get; init; }
+        public string Surname { get; init; }
+        public string? AvatarUrl { get; init; }
+    };
 }

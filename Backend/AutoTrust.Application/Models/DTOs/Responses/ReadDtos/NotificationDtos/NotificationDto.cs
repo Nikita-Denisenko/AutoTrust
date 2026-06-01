@@ -1,10 +1,10 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.NotificationDtos
 {
     public record NotificationDto
-    (
-        string Title,
-        string Text,
-        bool IsRead,
-        DateTime CreatedAt
-    );
+    {
+        public string Title { get; init; }
+        public string Text { get; init; }
+        public bool IsRead { get; init; }
+        public DateTime CreatedAt { get; init; }
+    };
 }

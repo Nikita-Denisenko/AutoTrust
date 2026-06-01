@@ -1,7 +1,7 @@
 ﻿using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs;
 using AutoTrust.Domain.Enums;
 
-public record class UserProfileDto
+public record UserProfileDto
 {
     public int Id { get; set; }
     public required string Name { get; set; }

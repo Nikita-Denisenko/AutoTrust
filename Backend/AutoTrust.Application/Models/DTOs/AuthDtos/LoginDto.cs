@@ -14,3 +14,4 @@ namespace AutoTrust.Application.Models.DTOs.AuthDtos
         string Password
     );
 }
+ 

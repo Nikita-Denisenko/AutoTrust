@@ -3,9 +3,9 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ModelDtos
 {
     public record ModelListItemDto
-    (
-        int Id,
-        string Name,
-        BrandShortDto Brand
-    );
+    {
+        public int Id { get; init; }
+        public string Name { get; init; }
+        public BrandShortDto Brand { get; init; }
+    };
 }

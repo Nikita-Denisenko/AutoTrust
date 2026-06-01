@@ -4,8 +4,8 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryD
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs
 {
     public record LocationDto
-    (
-        CityDto City,
-        CountryDto Country
-    );
+    {
+        public CityDto City { get; init; }
+        public CountryDto Country { get; init; }
+    };
 }

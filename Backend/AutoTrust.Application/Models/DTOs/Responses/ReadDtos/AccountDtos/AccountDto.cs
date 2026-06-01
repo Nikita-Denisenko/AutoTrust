@@ -1,9 +1,9 @@
 ﻿namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.AccountDtos
 {
     public record AccountDto
-    (
-        string Email,
-        string Phone,
-        DateTime CreatedAt
-    );
+    {
+        public string Email { get; init; }
+        public string Phone { get; init; }
+        public DateTime CreatedAt { get; init; }
+    };
 }

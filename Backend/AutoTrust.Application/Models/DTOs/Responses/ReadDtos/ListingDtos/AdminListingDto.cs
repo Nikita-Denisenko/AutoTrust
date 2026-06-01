@@ -8,18 +8,18 @@ namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ListingDtos
 {
     public class AdminListingDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public UserShortDto Author { get; set; }
-        public ListingType Type { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
-        public LocationDto Location { get; set; }
-        public BuyInfoDto? BuyInfoDto { get; set; }
-        public SaleInfoDto? SaleInfoDto { get; set; }
-        public string Description { get; set; }
-        public int ReactionsQuantity { get; set; }
-        public bool IsDeleted { get; set; }
-        public bool IsActive { get; set; }
+        public int Id { get; init; }
+        public string Name { get; init; }
+        public UserShortDto Author { get; init; }
+        public ListingType Type { get; init; }
+        public DateTime CreatedAt { get; init; }
+        public DateTime? UpdatedAt { get; init; }
+        public LocationDto Location { get; init; }
+        public BuyInfoDto? BuyInfoDto { get; init; }
+        public SaleInfoDto? SaleInfoDto { get; init; }
+        public string Description { get; init; }
+        public int ReactionsQuantity { get; init; }
+        public bool IsDeleted { get; init; }
+        public bool IsActive { get; init; }
     }
 }

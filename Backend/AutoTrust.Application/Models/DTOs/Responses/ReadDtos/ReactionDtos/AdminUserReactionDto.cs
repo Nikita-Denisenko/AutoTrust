@@ -4,11 +4,11 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReactionDtos
 {
     public record AdminUserReactionDto
-    (
-        int Id,
-        string Emoji,
-        ListingShortDto Listing,
-        DateTime CreatedAt,
-        bool IsDeleted
-    );
+    {
+        public int Id { get; init; }
+        public string Emoji { get; init; }
+        public ListingShortDto Listing { get; init; }
+        public DateTime CreatedAt { get; init; }
+        public bool IsDeleted { get; init; }
+    };
 }

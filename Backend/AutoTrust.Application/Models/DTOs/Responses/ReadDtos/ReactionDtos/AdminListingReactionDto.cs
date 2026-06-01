@@ -3,11 +3,11 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ReactionDtos
 {
     public record AdminListingReactionDto
-    (
-        int Id,
-        string Emoji,
-        UserShortDto User,
-        DateTime CreatedAt,
-        bool IsDeleted
-    );
+    {
+        public int Id { get; init; }
+        public string Emoji { get; init; }
+        public UserShortDto User { get; init; }
+        public DateTime CreatedAt { get; init; }
+        public bool IsDeleted { get; init; }
+    };
 }

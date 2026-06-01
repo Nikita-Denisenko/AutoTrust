@@ -4,8 +4,8 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.UserDtos;
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.ChatDtos
 {
     public record UserChatInfoDto
-    (
-        UserShortDto Companion,
-        MessageDto PinnedMessage
-    );
+    {
+        public UserShortDto Companion { get; init; }
+        public MessageDto PinnedMessage { get; init; }
+    };
 }

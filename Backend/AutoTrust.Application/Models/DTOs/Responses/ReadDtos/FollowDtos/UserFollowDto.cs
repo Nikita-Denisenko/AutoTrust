@@ -3,8 +3,8 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.FollowDtos
 {
     public record UserFollowDto
-    (
-        int Id,
-        UserShortDto Target
-    );
+    {
+        public int Id { get; init; }
+        public UserShortDto Target { get; init; }
+    };
 }

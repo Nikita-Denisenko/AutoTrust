@@ -3,11 +3,11 @@
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.MessageDtos
 {
     public record MessageDto
-    (
-        int Id,
-        string Text,
-        UserShortDto User,
-        bool IsRead,
-        DateTime SentAt
-    );
+    {
+        public int Id { get; init; }
+        public string Text { get; init; }
+        public UserShortDto User { get; init; }
+        public bool IsRead { get; init; }
+        public DateTime SentAt { get; init; }
+    };
 }

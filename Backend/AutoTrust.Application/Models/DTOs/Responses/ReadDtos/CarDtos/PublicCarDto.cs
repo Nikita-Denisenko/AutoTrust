@@ -4,18 +4,18 @@ using AutoTrust.Domain.Enums;
 
 namespace AutoTrust.Application.Models.DTOs.Responses.ReadDtos.CarDtos
 {
-    public record class PublicCarDto
+    public record PublicCarDto
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public int ReleaseYear { get; set; }
-        public string ImageUrl { get; set; }
-        public CarColor Color { get; set; }
-        public string StateNumber { get; set; }
-        public decimal EngineMileage { get; set; }
-        public int OwnershipsQuantity { get; set; }
-        public ModelShortDto Model { get; set; }
-        public bool HasAccident { get; set; }
-        public bool InSale { get; set; }
+        public int Id { get; init; }
+        public string Description { get; init; }
+        public int ReleaseYear { get; init; }
+        public string ImageUrl { get; init; }
+        public CarColor Color { get; init; }
+        public string StateNumber { get; init; }
+        public decimal EngineMileage { get; init; }
+        public int OwnershipsQuantity { get; init; }
+        public ModelShortDto Model { get; init; }
+        public bool HasAccident { get; init; }
+        public bool InSale { get; init; }
     }
 }

@@ -46,6 +46,14 @@ AutoTrust — платформа, где каждый автомобиль по�
 
 <img width="1521" height="757" alt="image" src="https://github.com/user-attachments/assets/0d2d46d8-8dd2-45c4-9566-62a8539c03f3" />
 
+## Поиск пользователей
+
+<img width="1920" height="949" alt="image" src="https://github.com/user-attachments/assets/c4fe483d-d1e2-43bb-b002-592ca02926b2" />
+
+## Публичный профиль пользователя
+
+<img width="1920" height="952" alt="image" src="https://github.com/user-attachments/assets/930cc25f-3dac-4856-9226-9b75a69693e1" />
+
 
 ## Статус
 

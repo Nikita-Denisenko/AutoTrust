@@ -102,10 +102,10 @@ namespace AutoTrust.Application.Services
             var companion = chat.ChatParticipants.First(cp => cp.UserId != currentUserId);
 
             var userChatInfo = new UserChatInfoDto
-            (
-                _mapper.Map<UserShortDto>(companion),
-                _mapper.Map<MessageDto>(chat.PinnedMessage)
-            );
+            {
+               Companion = _mapper.Map<UserShortDto>(companion),
+               PinnedMessage = _mapper.Map<MessageDto>(chat.PinnedMessage)
+            };
 
             return userChatInfo;
         }
@@ -131,11 +131,11 @@ namespace AutoTrust.Application.Services
                 .Where(ch => ch.Messages.Count > 0 && ch.ChatParticipants.Any(cp => cp.UserId == currentUserId))
                 .OrderByDescending(ch => ch.Messages.OrderBy(m => m.SentAt).Last().SentAt)
                 .Select(ch => new UserChatListItemDto
-                (
-                    ch.Id,
-                    _mapper.Map<UserShortDto>(ch.ChatParticipants.First(cp => cp.UserId != currentUserId)),
-                    _mapper.Map<MessageDto>(ch.PinnedMessage))
-                )
+                {
+                    Id = ch.Id,
+                    Companion = _mapper.Map<UserShortDto>(ch.ChatParticipants.First(cp => cp.UserId != currentUserId)),
+                    LastMessage = _mapper.Map<MessageDto>(ch.Messages.Last()) 
+                })
                 .ToListAsync(cancellationToken);
 
             return chats;

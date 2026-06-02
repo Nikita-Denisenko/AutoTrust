@@ -58,7 +58,12 @@ namespace AutoTrust.Application.Services
             await _accountRepo.SaveChangesAsync(ct);
 
             var token = _jwtTokenGenerator.GenerateToken(account);
-            return new AuthResponseDto(token, account.Email.Value, account.Role);
+            return new AuthResponseDto
+            {
+                Token =token, 
+                Email = account.Email.Value, 
+                Role = account.Role
+            };         
         }
 
         public async Task<AuthResponseDto> LoginAsync(LoginDto dto, CancellationToken ct)
@@ -72,7 +77,12 @@ namespace AutoTrust.Application.Services
                 throw new InvalidOperationException("Invalid email or password");
 
             var token = _jwtTokenGenerator.GenerateToken(account);
-            return new AuthResponseDto(token, account.Email.Value, account.Role);
+            return new AuthResponseDto 
+            { 
+                Token = token, 
+                Email = account.Email.Value, 
+                Role = account.Role 
+            };
         }
     }
 }

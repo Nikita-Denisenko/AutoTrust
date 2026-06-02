@@ -15,15 +15,18 @@ namespace AutoTrust.Application.Mappings
                .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                   new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                   new CountryDto
-                   (
-                       src.City.CountryId,
-                       src.City.Country.RuName,
-                       src.City.Country.EnName,
-                       src.City.Country.Code,
-                       src.City.Country.FlagImageUrl.Value
-                    ))))
+                   new LocationDto
+                   {
+                       City = new CityDto { Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                       Country = new CountryDto
+                       {
+                           Id = src.City.CountryId,
+                           RuName = src.City.Country.RuName,
+                           EnName = src.City.Country.EnName,
+                           Code = src.City.Country.Code,
+                           FlagImageUrl = src.City.Country.FlagImageUrl.Value
+                       }
+                   }))
                .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
                .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
                .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count))
@@ -34,15 +37,18 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                 .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                   new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                   new CountryDto
-                   (
-                       src.City.CountryId,
-                       src.City.Country.RuName,
-                       src.City.Country.EnName,
-                       src.City.Country.Code,
-                       src.City.Country.FlagImageUrl.Value
-                    ))))
+                   new LocationDto
+                   {
+                       City = new CityDto { Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                       Country = new CountryDto
+                       {
+                           Id = src.City.CountryId,
+                           RuName = src.City.Country.RuName,
+                           EnName = src.City.Country.EnName,
+                           Code = src.City.Country.Code,
+                           FlagImageUrl = src.City.Country.FlagImageUrl.Value
+                       }
+                   }))
                 .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count))
                 .ForMember(dest => dest.ReviewsQuantity, opt => opt.MapFrom(src => src.ReceivedReviews.Count))
                 .ForMember(dest => dest.FollowingsQuantity, opt => opt.MapFrom(src => src.Followings.Count))
@@ -52,31 +58,37 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                   new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                   new CountryDto
-                   (
-                       src.City.CountryId,
-                       src.City.Country.RuName,
-                       src.City.Country.EnName,
-                       src.City.Country.Code,
-                       src.City.Country.FlagImageUrl.Value
-                    ))))
+                   new LocationDto
+                   {
+                       City = new CityDto { Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                       Country = new CountryDto
+                       {
+                           Id = src.City.CountryId,
+                           RuName = src.City.Country.RuName,
+                           EnName = src.City.Country.EnName,
+                           Code = src.City.Country.Code,
+                           FlagImageUrl = src.City.Country.FlagImageUrl.Value
+                       }
+                   }))
                 .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count));
 
 
             CreateMap<User, UserProfileListItemDto>()
                 .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDate.Value))
                 .ForMember(dest => dest.AvatarUrl, opt => opt.MapFrom(src => src.AvatarUrl == null ? null : src.AvatarUrl.Value))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                   new LocationDto(new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                   new CountryDto
-                   (
-                       src.City.CountryId,
-                       src.City.Country.RuName,
-                       src.City.Country.EnName,
-                       src.City.Country.Code,
-                       src.City.Country.FlagImageUrl.Value
-                    ))))
+               .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
+                   new LocationDto
+                   {
+                       City = new CityDto { Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                       Country = new CountryDto
+                       {
+                           Id = src.City.CountryId,
+                           RuName = src.City.Country.RuName,
+                           EnName = src.City.Country.EnName,
+                           Code = src.City.Country.Code,
+                           FlagImageUrl = src.City.Country.FlagImageUrl.Value
+                       }
+                   }))
                 .ForMember(dest => dest.FollowersQuantity, opt => opt.MapFrom(src => src.Followers.Count));
         }
     }

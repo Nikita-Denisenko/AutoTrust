@@ -30,11 +30,11 @@ namespace AutoTrust.Application.Services
                 throw new KeyNotFoundException($"Account by userId {userId} was not found!");
 
             return new AccountDto
-            (
-                account.Email.Value,
-                account.Phone.Value,
-                account.CreatedAt
-            );
+            {
+                Email = account.Email.Value,
+                Phone = account.Phone.Value,
+                CreatedAt = account.CreatedAt
+            };
         }
 
         public async Task<AdminAccountDto> GetAccountForAdminAsync(int id, CancellationToken cancellationToken)
@@ -47,14 +47,14 @@ namespace AutoTrust.Application.Services
                 throw new KeyNotFoundException($"Account by Id {id} was not found!");
 
             return new AdminAccountDto
-            (
-                id,
-                account.UserId,
-                account.Email.Value,
-                account.Phone.Value,
-                account.CreatedAt,
-                account.IsDeleted
-            );
+            {
+                Id = id,
+                UserId = account.UserId,
+                Email = account.Email.Value,
+                Phone = account.Phone.Value,
+                CreatedAt = account.CreatedAt,
+                IsDeleted = account.IsDeleted
+            };
         }
 
         public async Task<List<AdminAccountListItemDto>> GetAccountsForAdminAsync(AdminAccountFilterDto filterDto, CancellationToken cancellationToken)
@@ -85,12 +85,11 @@ namespace AutoTrust.Application.Services
                 .Take(filterDto.Size);
 
             return await query.Select(a => new AdminAccountListItemDto
-                (
-                    a.Id,
-                    a.UserId,
-                    a.Email.Value
-                )
-            ).ToListAsync(cancellationToken);
+            {
+                Id = a.Id,
+                UserId = a.UserId,
+                Email = a.Email.Value
+            }).ToListAsync(cancellationToken);
         }
 
         public async Task ChangeEmailAsync(int userId, ChangeEmailDto changeEmailDto, CancellationToken cancellationToken)

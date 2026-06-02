@@ -135,27 +135,27 @@ namespace AutoTrust.Application.Services
                 Id = l.Id,
                 Name = l.Name,
                 Author = new UserShortDto
-                (
-                    l.User.Id,
-                    l.User.Name,
-                    l.User.Surname,
-                    l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
-                ),
+                {
+                    Id = l.User.Id,
+                    Name = l.User.Name,
+                    Surname = l.User.Surname,
+                    AvatarUrl = l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
+                },
                 Type = l.Type,
                 CreatedAt = l.CreatedAt,
                 UpdatedAt = l.UpdatedAt,
                 Location = new LocationDto
-                (
-                    new CityDto(l.CityId, l.City.CountryId, l.City.Name),
-                    new CountryDto
-                    (
-                        l.City.Country.Id,
-                        l.City.Country.RuName,
-                        l.City.Country.EnName,
-                        l.City.Country.Code,
-                        l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
-                    )
-                ),
+                {
+                    City = new CityDto{ Id = l.CityId, CountryId = l.City.CountryId, Name = l.City.Name },
+                    Country = new CountryDto
+                    {
+                        Id = l.City.Country.Id,
+                        RuName = l.City.Country.RuName,
+                        EnName = l.City.Country.EnName,
+                        Code = l.City.Country.Code,
+                        FlagImageUrl = l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
+                    }
+                },
                 SaleInfoDto = l.SaleDetails != null ? new SaleInfoDto
                 {
                     Price = l.SaleDetails.Price,
@@ -204,27 +204,27 @@ namespace AutoTrust.Application.Services
                 Id = l.Id,
                 Name = l.Name,
                 Author = new UserShortDto
-                (
-                    l.User.Id,
-                    l.User.Name,
-                    l.User.Surname,
-                    l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
-                ),
+                {
+                    Id = l.User.Id,
+                    Name = l.User.Name,
+                    Surname = l.User.Surname,
+                    AvatarUrl = l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
+                },
                 Type = l.Type,
                 CreatedAt = l.CreatedAt,
                 UpdatedAt = l.UpdatedAt,
                 Location = new LocationDto
-                (
-                    new CityDto(l.CityId, l.City.CountryId, l.City.Name),
-                    new CountryDto
-                    (
-                        l.City.Country.Id,
-                        l.City.Country.RuName,
-                        l.City.Country.EnName,
-                        l.City.Country.Code,
-                        l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
-                    )
-                ),
+                {
+                    City = new CityDto { Id = l.CityId, CountryId = l.City.CountryId, Name = l.City.Name },
+                    Country = new CountryDto
+                    {
+                        Id = l.City.Country.Id,
+                        RuName = l.City.Country.RuName,
+                        EnName = l.City.Country.EnName,
+                        Code = l.City.Country.Code,
+                        FlagImageUrl = l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
+                    }
+                },
                 Description = l.Description,
                 ReactionsQuantity = l.Reactions.Count,
                 IsDeleted = l.IsDeleted,
@@ -275,26 +275,26 @@ namespace AutoTrust.Application.Services
             {
                 Id = l.Id,
                 Author = new UserShortDto
-                (
-                    l.User.Id,
-                    l.User.Name,
-                    l.User.Surname,
-                    l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
-                ),
+                {
+                    Id = l.User.Id,
+                    Name = l.User.Name,
+                    Surname = l.User.Surname,
+                    AvatarUrl = l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
+                },
                 CreatedAt = l.CreatedAt,
                 UpdatedAt = l.UpdatedAt,
                 Location = new LocationDto
-                (
-                    new CityDto(l.CityId, l.City.CountryId, l.City.Name),
-                    new CountryDto
-                    (
-                        l.City.Country.Id,
-                        l.City.Country.RuName,
-                        l.City.Country.EnName,
-                        l.City.Country.Code,
-                        l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
-                    )
-                ),
+                {
+                    City = new CityDto { Id = l.CityId, CountryId = l.City.CountryId, Name = l.City.Name },
+                    Country = new CountryDto
+                    {
+                        Id = l.City.Country.Id,
+                        RuName = l.City.Country.RuName,
+                        EnName = l.City.Country.EnName,
+                        Code = l.City.Country.Code,
+                        FlagImageUrl = l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
+                    }
+                },
                 ModelId = l.BuyDetails != null ? l.BuyDetails.ModelId : 0,
                 ModelName = l.BuyDetails != null && l.BuyDetails.Model != null ? l.BuyDetails.Model.Name : null,
                 BrandImageUrl = l.BuyDetails != null && l.BuyDetails.Model != null && l.BuyDetails.Model.Brand != null ? l.BuyDetails.Model.Brand.LogoUrl.Value : null,
@@ -362,26 +362,26 @@ namespace AutoTrust.Application.Services
             {
                 Id = l.Id,
                 Author = new UserShortDto
-                (
-                    l.User.Id,
-                    l.User.Name,
-                    l.User.Surname,
-                    l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
-                ),
+                {
+                    Id = l.User.Id,
+                    Name = l.User.Name,
+                    Surname = l.User.Surname,
+                    AvatarUrl = l.User.AvatarUrl != null ? l.User.AvatarUrl.Value : null
+                },
                 CreatedAt = l.CreatedAt,
                 UpdatedAt = l.UpdatedAt,
                 Location = new LocationDto
-                (
-                    new CityDto(l.CityId, l.City.CountryId, l.City.Name),
-                    new CountryDto
-                    (
-                        l.City.Country.Id,
-                        l.City.Country.RuName,
-                        l.City.Country.EnName,
-                        l.City.Country.Code,
-                        l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
-                    )
-                ),
+                {
+                    City = new CityDto { Id = l.CityId, CountryId = l.City.CountryId, Name = l.City.Name },
+                    Country = new CountryDto
+                    {
+                        Id = l.City.Country.Id,
+                        RuName = l.City.Country.RuName,
+                        EnName = l.City.Country.EnName,
+                        Code = l.City.Country.Code,
+                        FlagImageUrl = l.City.Country.FlagImageUrl != null ? l.City.Country.FlagImageUrl.Value : null
+                    }
+                },
                 Price = l.SaleDetails != null ? l.SaleDetails.Price : 0,
                 Car = l.SaleDetails != null && l.SaleDetails.Car != null ? new PublicCarDto
                 {
@@ -394,16 +394,16 @@ namespace AutoTrust.Application.Services
                     EngineMileage = l.SaleDetails.Car.EngineMileage,
                     OwnershipsQuantity = l.SaleDetails.Car.OwnershipHistory.Count,
                     Model = new ModelShortDto
-                    (
-                        l.SaleDetails.Car.Model.Id,
-                        l.SaleDetails.Car.Model.Name,
-                        new BrandShortDto
-                        (
-                            l.SaleDetails.Car.Model.Brand.Id,
-                            l.SaleDetails.Car.Model.Brand.Name,
-                            l.SaleDetails.Car.Model.Brand.LogoUrl != null ? l.SaleDetails.Car.Model.Brand.LogoUrl.Value : null
-                        )
-                    ),
+                    {
+                        Id = l.SaleDetails.Car.Model.Id,
+                        Name = l.SaleDetails.Car.Model.Name,
+                        Brand = new BrandShortDto
+                        {
+                            Id = l.SaleDetails.Car.Model.Brand.Id,
+                            Name = l.SaleDetails.Car.Model.Brand.Name,
+                            LogoUrl = l.SaleDetails.Car.Model.Brand.LogoUrl != null ? l.SaleDetails.Car.Model.Brand.LogoUrl.Value : null
+                        }
+                    },
                     HasAccident = l.SaleDetails.Car.HasAccident,
                     InSale = l.SaleDetails.Car.InSale
                 } : null,

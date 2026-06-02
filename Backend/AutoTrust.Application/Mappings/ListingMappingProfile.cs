@@ -39,10 +39,10 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Listing, FeedListingDto>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
-                    (
-                        new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                        new CountryDto(src.City.Country.Id, src.City.Country.RuName, src.City.Country.EnName, src.City.Country.Code, src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null)
-                    )))
+                {
+                    City = new CityDto{ Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                    Country = new CountryDto{ Id = src.City.Country.Id, RuName = src.City.Country.RuName, EnName = src.City.Country.EnName, Code = src.City.Country.Code, FlagImageUrl = src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null
+                }}))
                 .ForMember(dest => dest.BuyInfoDto, opt => opt.MapFrom(src => src.BuyDetails != null ? src.BuyDetails : null))
                 .ForMember(dest => dest.SaleInfoDto, opt => opt.MapFrom(src => src.SaleDetails != null ? src.SaleDetails : null))
                 .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions != null ? src.Reactions.Count : 0));
@@ -50,10 +50,10 @@ namespace AutoTrust.Application.Mappings
             CreateMap<Listing, AdminListingDto>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
-                    (
-                        new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                        new CountryDto(src.City.Country.Id, src.City.Country.RuName, src.City.Country.EnName, src.City.Country.Code, src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null)
-                    )))
+                {
+                   City = new CityDto{Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name},
+                   Country = new CountryDto{Id = src.City.Country.Id, RuName = src.City.Country.RuName, EnName = src.City.Country.EnName, Code = src.City.Country.Code, FlagImageUrl = src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null}
+                }))
                 .ForMember(dest => dest.BuyInfoDto, opt => opt.MapFrom(src => src.BuyDetails != null ? src.BuyDetails : null))
                 .ForMember(dest => dest.SaleInfoDto, opt => opt.MapFrom(src => src.SaleDetails != null ? src.SaleDetails : null))
                 .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions != null ? src.Reactions.Count : 0))
@@ -65,11 +65,11 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ModelId, opt => opt.MapFrom(src => src.BuyDetails == null ? 0 : src.BuyDetails.ModelId))
                 .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.BuyDetails == null ? null : src.BuyDetails.Model != null ? src.BuyDetails.Model.Name : null))
                 .ForMember(dest => dest.BrandImageUrl, opt => opt.MapFrom(src => src.BuyDetails == null ? null : src.BuyDetails.Model != null && src.BuyDetails.Model.Brand != null ? src.BuyDetails.Model.Brand.LogoUrl : null))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
-                    (
-                        new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                        new CountryDto(src.City.Country.Id, src.City.Country.RuName, src.City.Country.EnName, src.City.Country.Code, src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null)
-                    )))
+               .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
+                {
+                   City = new CityDto{Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name},
+                   Country = new CountryDto{Id = src.City.Country.Id, RuName = src.City.Country.RuName, EnName = src.City.Country.EnName, Code = src.City.Country.Code, FlagImageUrl = src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null}
+                }))
                 .ForMember(dest => dest.MinPrice, opt => opt.MapFrom(src => src.BuyDetails == null ? 0 : src.BuyDetails.MinPrice))
                 .ForMember(dest => dest.MaxPrice, opt => opt.MapFrom(src => src.BuyDetails == null ? 0 : src.BuyDetails.MaxPrice))
                 .ForMember(dest => dest.MinReleaseYear, opt => opt.MapFrom(src => src.BuyDetails == null ? 0 : src.BuyDetails.MinReleaseYear))
@@ -78,11 +78,11 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ReactionsQuantity, opt => opt.MapFrom(src => src.Reactions != null ? src.Reactions.Count : 0));
 
             CreateMap<Listing, SaleListingDto>()
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
-                    (
-                        new CityDto(src.CityId, src.City.CountryId, src.City.Name),
-                        new CountryDto(src.City.Country.Id, src.City.Country.RuName, src.City.Country.EnName, src.City.Country.Code, src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null)
-                    )))
+               .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.City == null || src.City.Country == null ? null : new LocationDto
+               {
+                   City = new CityDto { Id = src.CityId, CountryId = src.City.CountryId, Name = src.City.Name },
+                   Country = new CountryDto { Id = src.City.Country.Id, RuName = src.City.Country.RuName, EnName = src.City.Country.EnName, Code = src.City.Country.Code, FlagImageUrl = src.City.Country.FlagImageUrl != null ? src.City.Country.FlagImageUrl.Value : null }
+               }))
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.User))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.SaleDetails == null ? 0 : src.SaleDetails.Price))
                 .ForMember(dest => dest.Car, opt => opt.MapFrom(src => src.SaleDetails == null ? null : src.SaleDetails.Car))
@@ -92,11 +92,17 @@ namespace AutoTrust.Application.Mappings
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl == null ? null : src.ImageUrl.Value))
                 .ForMember(dest => dest.StateNumber, opt => opt.MapFrom(src => src.StateNumber == null ? null : src.StateNumber.Value))
                 .ForMember(dest => dest.Model, opt => opt.MapFrom(src => src.Model == null ? null : new ModelShortDto
-                (
-                    src.Model.Id,
-                    src.Model.Name,
-                    src.Model.Brand == null ? null : new BrandShortDto(src.Model.Brand.Id, src.Model.Brand.Name, src.Model.Brand.LogoUrl != null ? src.Model.Brand.LogoUrl.Value : null)
-                )))
+                {
+                    Id = src.Model.Id,
+                    Name = src.Model.Name,
+                    Brand = src.Model.Brand == null ? null : new BrandShortDto
+                    {
+                        Id = src.Model.Brand.Id,
+                        Name = src.Model.Brand.Name,
+                        LogoUrl = src.Model.Brand.LogoUrl != null
+                        ? src.Model.Brand.LogoUrl.Value : null
+                    }
+                }))
                 .ForMember(dest => dest.OwnershipsQuantity, opt => opt.MapFrom(src => src.OwnershipHistory != null ? src.OwnershipHistory.Count : 0));
 
             CreateMap<CreateBuyListingDto, BuyDetails>();

@@ -10,6 +10,7 @@ import SaleListingsPage from './pages/SaleListingsPage';
 import BuyListingsPage from './pages/BuyListingsPage';
 import { AuthProvider } from './contexts/AuthContext';
 import SearchPage from './pages/SearchPage';
+import PublicProfilePage from './pages/PublicProfilePage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/listings/buy" element={<BuyListingsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/profile/:userId" element={<PublicProfilePage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

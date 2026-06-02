@@ -182,6 +182,15 @@ const FeedPage = () => {
           color: white;
           display: inline-block;
         }
+        .badge-buy {
+          background: linear-gradient(135deg, #06b6d4, #0891b2);
+          border-radius: 40px;
+          padding: 6px 16px;
+          font-size: 13px;
+          font-weight: 600;
+          color: white;
+          display: inline-block;
+        }
         .badge-accident {
           background: linear-gradient(135deg, #ef4444, #dc2626);
           border-radius: 40px;
@@ -255,16 +264,41 @@ const FeedPage = () => {
 
               <div className="d-flex flex-column gap-4">
                 {listings.map((listing, index) => {
+                  const isSale = listing.type === 0 || listing.type === 'Sale';
                   const saleInfo = listing.saleInfoDto;
+                  const buyInfo = listing.buyInfoDto;
+                  
+                  // Для продажи: картинка из saleInfo.carImageUrl, для покупки: из buyInfo.brandImageUrl
+                  const imageUrl = isSale 
+                    ? saleInfo?.carImageUrl 
+                    : buyInfo?.brandImageUrl;
+                  
+                  // Для продажи: цена из saleInfo.price, для покупки: диапазон из buyInfo
+                  const priceDisplay = isSale 
+                    ? `${saleInfo?.price?.toLocaleString()} ₽`
+                    : buyInfo ? `${buyInfo.minPrice?.toLocaleString()} - ${buyInfo.maxPrice?.toLocaleString()} ₽` : '';
+                  
+                  // Для продажи: модель из saleInfo, для покупки: из buyInfo
+                  const modelName = isSale ? saleInfo?.modelName : buyInfo?.modelName;
+                  
+                  // Цвет
+                  const color = isSale ? saleInfo?.carColor : buyInfo?.carColor;
+                  
+                  // Пробег и год только для продажи
+                  const mileage = isSale ? saleInfo?.mileage : null;
+                  const releaseYear = isSale ? saleInfo?.releaseYear : null;
+                  const hasAccident = isSale ? saleInfo?.hasAccident : null;
+                  const ownershipsQuantity = isSale ? saleInfo?.ownershipsQuantity : null;
+
                   return (
                     <div 
                       key={listing.id} 
                       className="listing-card"
                       ref={index === listings.length - 1 ? lastListingRef : null}
                     >
-                      {saleInfo?.carImageUrl && (
+                      {imageUrl && (
                         <img 
-                          src={saleInfo.carImageUrl} 
+                          src={imageUrl} 
                           alt={listing.name}
                           className="listing-image"
                           onError={(e) => { e.target.style.display = 'none'; }}
@@ -273,14 +307,16 @@ const FeedPage = () => {
                       <div className="p-5">
                         <div className="d-flex justify-content-between align-items-start mb-3">
                           <div className="d-flex gap-2">
-                            <span className="badge-sale">
+                            <span className={isSale ? 'badge-sale' : 'badge-buy'}>
                               {getTypeText(listing.type)}
                             </span>
-                            {saleInfo && (saleInfo.hasAccident ? (
-                              <span className="badge-accident">Была в ДТП</span>
-                            ) : (
-                              <span className="badge-clean">Без ДТП</span>
-                            ))}
+                            {isSale && hasAccident !== null && (
+                              hasAccident ? (
+                                <span className="badge-accident">Была в ДТП</span>
+                              ) : (
+                                <span className="badge-clean">Без ДТП</span>
+                              )
+                            )}
                           </div>
                           <small className="text-muted">
                             <i className="bi bi-clock me-1"></i>
@@ -290,44 +326,42 @@ const FeedPage = () => {
 
                         <h3 className="fw-bold mb-3">{listing.name}</h3>
 
-                        {saleInfo && (
-                          <>
-                            <div className="listing-price mb-3">
-                              {saleInfo.price?.toLocaleString()} ₽
+                        <div className="listing-price mb-3">
+                          {priceDisplay}
+                        </div>
+                        
+                        <div className="d-flex flex-wrap gap-2 mb-3">
+                          {releaseYear && releaseYear > 0 && (
+                            <div className="spec-item">
+                              <i className="bi bi-calendar spec-icon"></i>
+                              <span>{releaseYear} г.</span>
                             </div>
-                            
-                            <div className="d-flex flex-wrap gap-2 mb-3">
-                              {saleInfo.releaseYear > 0 && (
-                                <div className="spec-item">
-                                  <i className="bi bi-calendar spec-icon"></i>
-                                  <span>{saleInfo.releaseYear} г.</span>
-                                </div>
-                              )}
-                              <div className="spec-item">
-                                <i className="bi bi-speedometer2 spec-icon"></i>
-                                <span>{formatMileage(saleInfo.mileage)} км</span>
-                              </div>
-                              {saleInfo.carColor && (
-                                <div className="spec-item">
-                                  <i className="bi bi-palette spec-icon"></i>
-                                  <span>{getColorName(saleInfo.carColor)}</span>
-                                </div>
-                              )}
-                              {saleInfo.modelName && (
-                                <div className="spec-item">
-                                  <i className="bi bi-car-front spec-icon"></i>
-                                  <span>{saleInfo.modelName}</span>
-                                </div>
-                              )}
-                              {saleInfo.ownershipsQuantity > 0 && (
-                                <div className="spec-item">
-                                  <i className="bi bi-people spec-icon"></i>
-                                  <span>{saleInfo.ownershipsQuantity} влад.</span>
-                                </div>
-                              )}
+                          )}
+                          {mileage !== null && mileage !== undefined && (
+                            <div className="spec-item">
+                              <i className="bi bi-speedometer2 spec-icon"></i>
+                              <span>{formatMileage(mileage)} км</span>
                             </div>
-                          </>
-                        )}
+                          )}
+                          {color && (
+                            <div className="spec-item">
+                              <i className="bi bi-palette spec-icon"></i>
+                              <span>{getColorName(color)}</span>
+                            </div>
+                          )}
+                          {modelName && (
+                            <div className="spec-item">
+                              <i className="bi bi-car-front spec-icon"></i>
+                              <span>{modelName}</span>
+                            </div>
+                          )}
+                          {ownershipsQuantity !== null && ownershipsQuantity > 0 && (
+                            <div className="spec-item">
+                              <i className="bi bi-people spec-icon"></i>
+                              <span>{ownershipsQuantity} влад.</span>
+                            </div>
+                          )}
+                        </div>
 
                         <div className="listing-description mb-4">
                           <p className="text-secondary">

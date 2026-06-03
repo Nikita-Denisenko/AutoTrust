@@ -7,7 +7,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Model
         int Page = 1,
         int Size = 20,
         int? BrandId = null,
-        string SearchText = "",
+        string? SearchText = null,
         bool SortByAsc = true
     );
 }

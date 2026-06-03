@@ -49,7 +49,10 @@ namespace AutoTrust.Application.Services
             if (filterDto.BrandId.HasValue)
                 query = query.Where(m => m.BrandId == filterDto.BrandId.Value);
 
-            query = query.Where(m => m.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
+            if (filterDto.SearchText != null)
+            {
+                query = query.Where(m => m.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
+            }
 
             query = filterDto.SortByAsc
                 ? query.OrderBy(m => m.Name)

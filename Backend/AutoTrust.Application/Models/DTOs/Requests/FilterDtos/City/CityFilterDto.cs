@@ -4,7 +4,7 @@
     (
         int Page = 1,
         int Size = 1000,
-        string SearchText = "",
+        string? SearchText = null,
         int? CountryId = null,
         bool SortByAsc = true
     );

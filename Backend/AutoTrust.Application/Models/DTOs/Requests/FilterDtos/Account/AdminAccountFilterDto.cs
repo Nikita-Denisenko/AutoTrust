@@ -8,7 +8,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Account
     (
         int Page = 1,
         int Size = 20,
-        string SearchText = "",
+        string? SearchText = null,
         bool? IsDeleted = null,
         AdminAccountOrderParam OrderParam = Email,
         bool ByAscending = true

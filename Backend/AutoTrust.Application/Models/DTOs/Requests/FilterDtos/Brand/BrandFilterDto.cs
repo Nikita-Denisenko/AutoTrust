@@ -7,7 +7,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Brand
     (
         int Page = 1,
         int Size = 20,
-        string SearchText = "",
+        string? SearchText = null,
         int? CountryId = null,
         BrandOrderParam OrderParam = Name,
         bool ByAscending = true

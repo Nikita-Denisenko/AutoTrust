@@ -51,7 +51,8 @@ namespace AutoTrust.Application.Services
             else
                 query = query.Where(b => b.IsActive);
 
-            query = query.Where(b => b.Name.Contains(filterDto.SearchText));
+            if (filterDto.SearchText != null)
+                query = query.Where(b => b.Name.Contains(filterDto.SearchText));
 
             if (filterDto.CountryId.HasValue)
                 query = query.Where(b => b.CountryId == filterDto.CountryId.Value);

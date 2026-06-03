@@ -35,11 +35,13 @@ namespace AutoTrust.Application.Services
                 .AsNoTracking()
                 .Where(f => followers ? f.TargetId == currentUserId : f.FollowerId == currentUserId);
 
-            query = followers
-                ? query.Where(f => (f.Follower.Name + f.Follower.Surname).ToLower().Contains(filterDto.SearchText.ToLower()))
-                : query.Where(f => (f.Target.Name + f.Target.Surname).ToLower().Contains(filterDto.SearchText.ToLower()));
-
-             query = query   
+            if (filterDto.SearchText != null) 
+            { 
+                query = followers
+                    ? query.Where(f => (f.Follower.Name + f.Follower.Surname).ToLower().Contains(filterDto.SearchText.ToLower()))
+                    : query.Where(f => (f.Target.Name + f.Target.Surname).ToLower().Contains(filterDto.SearchText.ToLower()));
+            }   
+            query = query   
                 .Skip((filterDto.Page - 1) * filterDto.Size)
                 .Take(filterDto.Size);
 

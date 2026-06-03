@@ -66,11 +66,14 @@ namespace AutoTrust.Application.Services
             if (filterDto.Color != null)
                 query = query.Where(c => c.Color == filterDto.Color);
 
-            query = query.Where
-            (
-                c => (c.Model.Name + c.Model.Brand.Name).ToLower()
-                     .Contains(filterDto.SearchText.ToLower())
-            );
+            if (filterDto.SearchText != null)
+            {
+                query = query.Where
+                (
+                    c => (c.Model.Name + c.Model.Brand.Name).ToLower()
+                        .Contains(filterDto.SearchText.ToLower())
+                );
+            }
 
             if (filterDto.InSale != null)
                 query = query.Where(c => c.InSale == filterDto.InSale);

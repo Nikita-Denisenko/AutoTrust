@@ -66,8 +66,11 @@ namespace AutoTrust.Application.Services
                     ? query.Where(a => a.IsDeleted) 
                     : query.Where(a => a.IsDeleted == false);
 
-            query = query
-                .Where(a => a.Email.Value.Contains(filterDto.SearchText));
+            if (filterDto.SearchText != null)
+            {
+                query = query
+             .Where(a => a.Email.Value.Contains(filterDto.SearchText));
+            }
 
             query = filterDto.OrderParam switch
             {

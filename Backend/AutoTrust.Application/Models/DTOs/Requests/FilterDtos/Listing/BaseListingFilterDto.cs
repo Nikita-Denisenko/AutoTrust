@@ -6,7 +6,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Listing
     (
         int Page = 1,
         int Size = 20,
-        string SearchText = "",
+        string? SearchText = null,
         int? CityId = null,
         bool SortByAsc = false
     );

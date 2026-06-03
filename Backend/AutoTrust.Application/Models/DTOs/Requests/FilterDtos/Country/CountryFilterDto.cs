@@ -4,7 +4,7 @@
     (
         int Page = 1,
         int Size = 20,
-        string SearchText = "",
+        string? SearchText = null,
         bool SortByAsc = true
     );
 }

@@ -9,7 +9,7 @@ namespace AutoTrust.Application.Models.DTOs.Requests.FilterDtos.Car
         int Page = 1,
         int Size = 10,
         bool OnlyCurrent = true,
-        string SearchText = "",
+        string? SearchText = null,
         CarColor? Color = null,
         bool? InSale = null,
         bool? HasAccident = null,

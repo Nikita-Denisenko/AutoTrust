@@ -190,7 +190,7 @@ namespace AutoTrust.Application.Services
                 query = query.Where(l => l.Type == adminFilterDto.Type);
             if (adminFilterDto.CityId != null)
                 query = query.Where(l => l.CityId == adminFilterDto.CityId);
-            if (!string.IsNullOrWhiteSpace(adminFilterDto.SearchText))
+            if (adminFilterDto.SearchText != null)
                 query = query.Where(l => l.Name.ToLower().Contains(adminFilterDto.SearchText.ToLower()));
 
             query = adminFilterDto.SortByAsc

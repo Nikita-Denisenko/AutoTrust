@@ -55,8 +55,11 @@ namespace AutoTrust.Application.Services
             else 
                 query = query.Where(m => !m.IsDeleted);
 
-            query = query.Where(m => m.Text.ToLower()
-                .Contains(filterDto.SearchText.ToLower()));
+            if (filterDto.SearchText != null)
+            {
+                query = query.Where(m => m.Text.ToLower()
+                    .Contains(filterDto.SearchText.ToLower()));
+            }
 
             if (filterDto is AdminMessageFilterDto dto)
                 query = dto.SortByAsc

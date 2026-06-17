@@ -17,6 +17,7 @@ namespace AutoTrust.Application.Services
         private readonly IRepository<City> _repo;
         private readonly IMapper _mapper;
         private readonly IRepository<Country> _countryRepo;
+        private readonly IRedisCacheService _cache;
 
         public CityService(IRepository<City> repo, IMapper mapper, IRepository<Country> countryRepo)
         {
@@ -25,27 +26,58 @@ namespace AutoTrust.Application.Services
             _countryRepo = countryRepo;
         }
 
-        public async Task<List<CityDto>> GetCitiesAsync(CityFilterDto filterDto, CancellationToken cancellationToken)
+        public async Task<List<CityDto>> GetCitiesAsync(CityFilterDto? filterDto, CancellationToken cancellationToken = default)
         {
+            var searchText = string.IsNullOrWhiteSpace(filterDto?.SearchText) ? "all" : filterDto.SearchText.Trim();
+            var countryId = filterDto?.CountryId;
+            var page = filterDto?.Page ?? 1;
+            var size = filterDto?.Size ?? 20;
+            var sortByAsc = filterDto?.SortByAsc ?? true;
+
+            if (page < 1) page = 1;
+
+            if (size < 1) size = 10;
+            if (size > 100) size = 100;
+
+            var countryIdStr = countryId?.ToString() ?? "all";
+            var cacheKey = $"cities_{searchText}_{countryIdStr}_{page}_{size}_{sortByAsc}";
+
+            var cached = await _cache.GetAsync<List<CityDto>>(cacheKey, cancellationToken);
+            if (cached != null)
+                return cached;
+
             var query = _repo.GetQuery().AsNoTracking();
 
-            if (!string.IsNullOrWhiteSpace(filterDto.SearchText))
-                query = query.Where(c => c.Name.Contains(filterDto.SearchText));
+            if (searchText != "all")
+            {
+                var search = searchText.ToLower();
+                query = query.Where(c =>
+                    c.Name.ToLower().Contains(search)
+                );
+            }
 
-            if (filterDto.CountryId.HasValue)
-                query = query.Where(c => c.CountryId == filterDto.CountryId.Value);
+            if (countryId.HasValue)
+                query = query.Where(c => c.CountryId == countryId.Value);
 
-            query = filterDto.SortByAsc
+            query = sortByAsc
                 ? query.OrderBy(c => c.Name)
                 : query.OrderByDescending(c => c.Name);
 
+   
             query = query
-                .Skip((filterDto.Page - 1) * filterDto.Size)
-                .Take(filterDto.Size);
+                .Skip((page - 1) * size)
+                .Take(size);
 
-            return await _mapper
+
+            var cities = await _mapper
                 .ProjectTo<CityDto>(query)
                 .ToListAsync(cancellationToken);
+
+
+            var ttl = cities.Any() ? TimeSpan.FromHours(1) : TimeSpan.FromMinutes(5);
+            await _cache.SetAsync(cacheKey, cities, ttl, cancellationToken);
+
+            return cities;
         }
 
         public async Task LoadCitiesAsync(string json, CancellationToken cancellationToken)

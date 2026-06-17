@@ -7,6 +7,7 @@ using AutoTrust.Application.Models.DTOs.Responses.ReadDtos.LocationDTOs.CountryD
 using AutoTrust.Domain.Entities;
 using AutoTrust.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -16,23 +17,37 @@ namespace AutoTrust.Application.Services
     {
         private readonly IRepository<Country> _repo;
         private readonly IMapper _mapper;
+        private readonly IRedisCacheService _cache;
 
-        public CountryService(IRepository<Country> repo, IMapper mapper)
+        public CountryService(IRepository<Country> repo, IMapper mapper, IRedisCacheService cache)
         {
             _repo = repo;
             _mapper = mapper;
+            _cache = cache;
         }
 
         public async Task<List<CountryDto>> GetCountriesAsync(CountryFilterDto filterDto, CancellationToken cancellationToken)
         {
+            var page = filterDto.Page < 1 ? 1 : filterDto.Page;
+            var size = filterDto.Size > 100 ? 100 : filterDto.Size;
+            var searchText = string.IsNullOrWhiteSpace(filterDto.SearchText) ? "all" : filterDto.SearchText.Trim();
+            var sortByAsc = filterDto.SortByAsc;
+
+            var cacheKey = $"countries_{page}_{size}_{searchText}_{sortByAsc}";
+
+            var cached = await _cache.GetAsync<List<CountryDto>>(cacheKey, cancellationToken);
+
+            if (cached != null)
+                return cached;
+
             var query = _repo.GetQuery().AsNoTracking();
 
-            if (!string.IsNullOrWhiteSpace(filterDto.SearchText))
+            if (searchText != "all")
             {
                 query = query.Where(c =>
-                    c.RuName.Contains(filterDto.SearchText) ||
-                    c.EnName.Contains(filterDto.SearchText) ||
-                    c.Code.Contains(filterDto.SearchText));
+                    c.RuName.Contains(searchText) ||
+                    c.EnName.Contains(searchText) ||
+                    c.Code.Contains(searchText));
             }
 
             query = filterDto.SortByAsc
@@ -40,12 +55,16 @@ namespace AutoTrust.Application.Services
                 : query.OrderByDescending(c => c.RuName);
 
             query = query
-                .Skip((filterDto.Page - 1) * filterDto.Size)
-                .Take(filterDto.Size);
+                .Skip((page - 1) * size)
+                .Take(size);
 
-            return await _mapper
+            var countries = await _mapper
                 .ProjectTo<CountryDto>(query)
                 .ToListAsync(cancellationToken);
+
+            await _cache.SetAsync<List<CountryDto>>(cacheKey, countries, TimeSpan.FromHours(1), cancellationToken);
+
+            return countries;
         }
 
         public async Task LoadCountriesAsync(string json, CancellationToken cancellationToken)

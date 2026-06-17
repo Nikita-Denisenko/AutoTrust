@@ -23,19 +23,23 @@ namespace AutoTrust.Application.Services
         private readonly IRepository<Country> _countryRepo;
         private readonly IBrandValidator _validator;
         private readonly IMapper _mapper;
+        private readonly IRedisCacheService _cache;
 
         public BrandService
         (
             IRepository<Brand> repo,
             IBrandValidator validator,
             IMapper mapper,
-            IRepository<Country> countryRepo
+            IRepository<Country> countryRepo,
+            IRedisCacheService cache
+
         )
         {
             _repo = repo;
             _validator = validator;
             _mapper = mapper;
             _countryRepo = countryRepo;
+            _cache = cache;
         }
 
         private IQueryable<Brand> ApplyFilters(BrandFilterDto filterDto)
@@ -51,7 +55,7 @@ namespace AutoTrust.Application.Services
             else
                 query = query.Where(b => b.IsActive);
 
-            if (filterDto.SearchText != null)
+            if (filterDto.SearchText != "all")
                 query = query.Where(b => b.Name.Contains(filterDto.SearchText));
 
             if (filterDto.CountryId.HasValue)
@@ -142,20 +146,58 @@ namespace AutoTrust.Application.Services
 
         public async Task<List<PublicBrandListItemDto>> GetBrandsAsync(BrandFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = ApplyFilters(filterDto);
+            var page = filterDto.Page < 1 ? 1 : filterDto.Page;
+            var size = filterDto.Size > 100 ? 100 : filterDto.Size;
+            var searchText = string.IsNullOrWhiteSpace(filterDto.SearchText) ? "all" : filterDto.SearchText.Trim();
+            var countryId = filterDto?.CountryId;
+            var countryIdStr = countryId?.ToString() ?? "all";
+            var orderParam = filterDto?.OrderParam ?? BrandOrderParam.Name;
+            var byAscending = filterDto?.ByAscending ?? true;
 
-            return await _mapper
-                .ProjectTo<PublicBrandListItemDto>(query)
-                .ToListAsync(cancellationToken);
+            var cacheKey = $"brands_{page}_{size}_{searchText}_{countryIdStr}_{orderParam}_{byAscending}";
+
+            var cached = await _cache.GetAsync<List<PublicBrandListItemDto>>(cacheKey, cancellationToken);
+            if (cached != null)
+                return cached;
+
+            var filters = new BrandFilterDto(page, size, searchText, countryId, orderParam, byAscending);
+
+            var query = ApplyFilters(filters);
+
+            var brands = await _mapper
+                 .ProjectTo<PublicBrandListItemDto>(query)
+                 .ToListAsync(cancellationToken);
+
+            await _cache.SetAsync(cacheKey, brands, TimeSpan.FromHours(1), cancellationToken);
+
+            return brands;
         }
 
         public async Task<List<AdminBrandListItemDto>> GetBrandsForAdminAsync(AdminBrandFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = ApplyFilters(filterDto);
+            var page = filterDto.Page < 1 ? 1 : filterDto.Page;
+            var size = filterDto.Size > 100 ? 100 : filterDto.Size;
+            var searchText = string.IsNullOrWhiteSpace(filterDto.SearchText) ? "all" : filterDto.SearchText.Trim();
+            var countryId = filterDto?.CountryId;
+            var countryIdStr = countryId?.ToString() ?? "all";
+            var orderParam = filterDto?.OrderParam ?? BrandOrderParam.Name;
+            var byAscending = filterDto?.ByAscending ?? true;
+            var isActive = filterDto?.IsActive;
+            var isActiveStr = isActive?.ToString() ?? "all";
 
-            return await _mapper
+            var cacheKey = $"brands_{page}_{size}_{searchText}_{countryIdStr}_{orderParam}_{byAscending}_{isActiveStr}";
+
+            var filters = new AdminBrandFilterDto(page, size, searchText, countryId, orderParam, byAscending, isActive);
+
+            var query = ApplyFilters(filters);
+
+            var brands = await _mapper
                 .ProjectTo<AdminBrandListItemDto>(query)
                 .ToListAsync(cancellationToken);
+
+            await _cache.SetAsync(cacheKey, brands, TimeSpan.FromHours(1), cancellationToken);
+
+            return brands;
         }
 
         public async Task UpdateBrandAsync(int id, UpdateBrandDto updateBrandDto, CancellationToken cancellationToken)

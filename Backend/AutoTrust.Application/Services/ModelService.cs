@@ -22,34 +22,38 @@ namespace AutoTrust.Application.Services
         private readonly IModelValidator _validator;
         private readonly IRepository<Brand> _brandRepo;
         private readonly IMapper _mapper;
+        private readonly IRedisCacheService _cache;
 
         public ModelService
         (
             IRepository<Model> repo,
             IModelValidator validator,
             IRepository<Brand> brandRepo,
-            IMapper mapper
+            IMapper mapper,
+            IRedisCacheService cache
+
         )
         {
             _repo = repo;
             _validator = validator;
             _brandRepo = brandRepo;
             _mapper = mapper;
+            _cache = cache;
         }
 
         private IQueryable<Model> ApplyFilters(ModelFilterDto filterDto)
         {
             var query = _repo.GetQuery().AsNoTracking();
 
-            if (filterDto is AdminModelFilterDto adminDto && adminDto.IsActive != null)
-                query = query.Where(m => m.IsActive == adminDto.IsActive.Value);
-            else
+            if (!(filterDto is AdminModelFilterDto))
                 query = query.Where(m => m.IsActive);
+            else if (filterDto is AdminModelFilterDto adminDto && adminDto.IsActive.HasValue)
+                query = query.Where(m => m.IsActive == adminDto.IsActive.Value);
 
             if (filterDto.BrandId.HasValue)
                 query = query.Where(m => m.BrandId == filterDto.BrandId.Value);
 
-            if (filterDto.SearchText != null)
+            if (filterDto.SearchText != "all")
             {
                 query = query.Where(m => m.Name.ToLower().Contains(filterDto.SearchText.ToLower()));
             }
@@ -132,14 +136,64 @@ namespace AutoTrust.Application.Services
 
         public async Task<List<ModelListItemDto>> GetModelsAsync(ModelFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = ApplyFilters(filterDto);
-            return await _mapper.ProjectTo<ModelListItemDto>(query).ToListAsync(cancellationToken);
+            var page = filterDto.Page < 1 ? 1 : filterDto.Page;
+            var size = filterDto.Size > 100 ? 100 : filterDto.Size;
+            var brandId = filterDto.BrandId;
+            var brandIdStr = brandId?.ToString() ?? "all";
+            var searchText = filterDto.SearchText?.Trim() ?? "all";
+            var sortByAsc = filterDto.SortByAsc;
+
+            var cacheKey = $"models_{page}_{size}_{brandIdStr}_{searchText}_{sortByAsc}";
+
+            var cached = await _cache.GetAsync<List<ModelListItemDto>>(cacheKey, cancellationToken);
+
+            if (cached != null)
+                return cached;
+
+            var filters = new ModelFilterDto(page, size, brandId, searchText, sortByAsc);
+            
+            var query = ApplyFilters(filters);
+            
+            var models = await _mapper
+                .ProjectTo<ModelListItemDto>(query)
+                .ToListAsync(cancellationToken);
+
+            var ttl = models.Any() ? TimeSpan.FromHours(1) : TimeSpan.FromMinutes(5);
+            await _cache.SetAsync(cacheKey, models, ttl, cancellationToken);
+
+            return models;
         }
 
         public async Task<List<AdminModelListItemDto>> GetModelsForAdminAsync(AdminModelFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = ApplyFilters(filterDto);
-            return await _mapper.ProjectTo<AdminModelListItemDto>(query).ToListAsync(cancellationToken);
+            var page = filterDto.Page < 1 ? 1 : filterDto.Page;
+            var size = filterDto.Size > 100 ? 100 : filterDto.Size;
+            var brandId = filterDto.BrandId;
+            var brandIdStr = brandId?.ToString() ?? "all";
+            var searchText = filterDto.SearchText?.Trim() ?? "all";
+            var sortByAsc = filterDto.SortByAsc;
+            var isActive = filterDto.IsActive;
+            var isActiveStr = isActive?.ToString() ?? "all";
+
+            var cacheKey = $"models_{page}_{size}_{brandIdStr}_{searchText}_{sortByAsc}_{isActiveStr}";
+
+            var cached = await _cache.GetAsync<List<AdminModelListItemDto>>(cacheKey, cancellationToken);
+
+            if (cached != null)
+                return cached;
+
+            var filters = new AdminModelFilterDto(page, size, brandId, searchText, sortByAsc, isActive);
+
+            var query = ApplyFilters(filters);
+
+            var models = await _mapper
+               .ProjectTo<AdminModelListItemDto>(query)
+               .ToListAsync(cancellationToken);
+
+            var ttl = models.Any() ? TimeSpan.FromHours(1) : TimeSpan.FromMinutes(5);
+            await _cache.SetAsync(cacheKey, models, ttl, cancellationToken);
+
+            return models;
         }
 
         public async Task RenameModelAsync(int id, RenameModelDto dto, CancellationToken cancellationToken)

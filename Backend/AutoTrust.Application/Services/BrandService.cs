@@ -149,7 +149,7 @@ namespace AutoTrust.Application.Services
             var page = filterDto.Page < 1 ? 1 : filterDto.Page;
             var size = filterDto.Size > 100 ? 100 : filterDto.Size;
             var searchText = string.IsNullOrWhiteSpace(filterDto.SearchText) ? "all" : filterDto.SearchText.Trim();
-            var countryId = filterDto?.CountryId;
+            var countryId = filterDto.CountryId;
             var countryIdStr = countryId?.ToString() ?? "all";
             var orderParam = filterDto?.OrderParam ?? BrandOrderParam.Name;
             var byAscending = filterDto?.ByAscending ?? true;
